@@ -13,6 +13,9 @@ public class CallBackOperator {
     @SerializedName("open_id")
     private String openId;
 
+    @SerializedName("union_id")
+    private String unionId;
+
     public String getTenantKey() {return this.tenantKey;}
 
     public void setTenantKey(String tenantKey) {this.tenantKey = tenantKey;}
@@ -24,4 +27,8 @@ public class CallBackOperator {
     public String getOpenId() {return this.openId;}
 
     public void setOpenId(String openId) {this.openId = openId;}
+
+    public String getUnionId() {return this.unionId;}
+
+    public void setUnionId(String unionId) {this.unionId = unionId;}
 }

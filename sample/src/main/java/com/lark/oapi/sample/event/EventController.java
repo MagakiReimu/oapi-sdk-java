@@ -199,7 +199,11 @@ public class EventController {
                 @Override
                 public P2URLPreviewGetResponse handle(P2URLPreviewGet event) throws Exception {
                     System.out.printf("[ P2URLPreviewGet access ], data: %s\n", Jsons.DEFAULT.toJson(event.getEvent()));
-                    return null;
+                    P2URLPreviewGetResponse resp = new P2URLPreviewGetResponse();
+                    URLPreviewGetInline inline = new URLPreviewGetInline();
+                    inline.setTitle("链接预览测试fromJavaSDK");
+                    resp.setInline(inline);
+                    return resp;
                 }
             })
             .build();

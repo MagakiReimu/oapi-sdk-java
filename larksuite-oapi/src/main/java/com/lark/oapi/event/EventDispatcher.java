@@ -146,7 +146,6 @@ public class EventDispatcher implements IHandler {
             return resp;
         }
 
-        // TODO cardcallback
         ICallBackHandler callBackHandler = eventType2CardCallBackHandler.get(eventType);
         if (callBackHandler != null) {
             // 装配参数
