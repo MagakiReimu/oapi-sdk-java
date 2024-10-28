@@ -1,7 +1,6 @@
 package com.lark.oapi.event.cardcallback.model;
 
 import com.google.gson.annotations.SerializedName;
-import com.lark.oapi.service.search.v2.model.CallbackAction;
 
 
 public class P2CardActionTriggerData {
@@ -12,7 +11,7 @@ public class P2CardActionTriggerData {
     private String token;
 
     @SerializedName("action")
-    private CallbackAction action;
+    private CallBackAction action;
 
     @SerializedName("host")
     private String host;
@@ -31,9 +30,9 @@ public class P2CardActionTriggerData {
 
     public void setToken(String token) {this.token = token;}
 
-    public CallbackAction getAction() {return this.action;}
+    public CallBackAction getAction() {return this.action;}
 
-    public void setAction(CallbackAction action) {this.action = action;}
+    public void setAction(CallBackAction action) {this.action = action;}
 
     public String getHost() {return this.host;}
 
