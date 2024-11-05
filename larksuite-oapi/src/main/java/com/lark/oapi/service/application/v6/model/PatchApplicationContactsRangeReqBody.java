@@ -131,10 +131,10 @@ public class PatchApplicationContactsRangeReqBody {
          * 更新范围方式
          * <p> 示例值：some
          *
-         * @param contactsRangeType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationContactsRangeContactsRangeTypeEnum}
+         * @param contactsRangeType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationContactsRangePatchApplicationContactsRangeContactsRangeTypeEnum}
          * @return
          */
-        public Builder contactsRangeType(com.lark.oapi.service.application.v6.enums.PatchApplicationContactsRangeContactsRangeTypeEnum contactsRangeType) {
+        public Builder contactsRangeType(com.lark.oapi.service.application.v6.enums.PatchApplicationContactsRangePatchApplicationContactsRangeContactsRangeTypeEnum contactsRangeType) {
             this.contactsRangeType = contactsRangeType.getValue();
             return this;
         }

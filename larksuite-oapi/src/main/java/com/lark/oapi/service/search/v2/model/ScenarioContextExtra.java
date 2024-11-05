@@ -41,6 +41,18 @@ public class ScenarioContextExtra {
      */
     @SerializedName("model_key")
     private String modelKey;
+    /**
+     * 检索时指定的文档 id, 多个 id 以`,`分隔
+     * <p> 示例值：123,456
+     */
+    @SerializedName("specified_obj_ids")
+    private String specifiedObjIds;
+    /**
+     * 推荐问题的 ID
+     * <p> 示例值：789
+     */
+    @SerializedName("suggest_query_id")
+    private String suggestQueryId;
 
     // builder 开始
     public ScenarioContextExtra() {
@@ -57,6 +69,16 @@ public class ScenarioContextExtra {
          * <p> 示例值：lark-online
          */
         this.modelKey = builder.modelKey;
+        /**
+         * 检索时指定的文档 id, 多个 id 以`,`分隔
+         * <p> 示例值：123,456
+         */
+        this.specifiedObjIds = builder.specifiedObjIds;
+        /**
+         * 推荐问题的 ID
+         * <p> 示例值：789
+         */
+        this.suggestQueryId = builder.suggestQueryId;
     }
 
     public static Builder newBuilder() {
@@ -79,6 +101,22 @@ public class ScenarioContextExtra {
         this.modelKey = modelKey;
     }
 
+    public String getSpecifiedObjIds() {
+        return this.specifiedObjIds;
+    }
+
+    public void setSpecifiedObjIds(String specifiedObjIds) {
+        this.specifiedObjIds = specifiedObjIds;
+    }
+
+    public String getSuggestQueryId() {
+        return this.suggestQueryId;
+    }
+
+    public void setSuggestQueryId(String suggestQueryId) {
+        this.suggestQueryId = suggestQueryId;
+    }
+
     public static class Builder {
         /**
          * Grounding ID
@@ -90,6 +128,16 @@ public class ScenarioContextExtra {
          * <p> 示例值：lark-online
          */
         private String modelKey;
+        /**
+         * 检索时指定的文档 id, 多个 id 以`,`分隔
+         * <p> 示例值：123,456
+         */
+        private String specifiedObjIds;
+        /**
+         * 推荐问题的 ID
+         * <p> 示例值：789
+         */
+        private String suggestQueryId;
 
         /**
          * Grounding ID
@@ -113,6 +161,32 @@ public class ScenarioContextExtra {
          */
         public Builder modelKey(String modelKey) {
             this.modelKey = modelKey;
+            return this;
+        }
+
+
+        /**
+         * 检索时指定的文档 id, 多个 id 以`,`分隔
+         * <p> 示例值：123,456
+         *
+         * @param specifiedObjIds
+         * @return
+         */
+        public Builder specifiedObjIds(String specifiedObjIds) {
+            this.specifiedObjIds = specifiedObjIds;
+            return this;
+        }
+
+
+        /**
+         * 推荐问题的 ID
+         * <p> 示例值：789
+         *
+         * @param suggestQueryId
+         * @return
+         */
+        public Builder suggestQueryId(String suggestQueryId) {
+            this.suggestQueryId = suggestQueryId;
             return this;
         }
 

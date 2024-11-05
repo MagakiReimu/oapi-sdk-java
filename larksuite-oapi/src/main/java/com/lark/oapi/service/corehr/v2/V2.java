@@ -18,6 +18,7 @@ import com.lark.oapi.service.corehr.v2.resource.*;
 import com.lark.oapi.service.corehr.v2.resource.Process;
 
 public class V2 {
+    private final Approver approver; // approver
     private final BasicInfoBank basicInfoBank; // basic_info.bank
     private final BasicInfoBankBranch basicInfoBankBranch; // basic_info.bank_branch
     private final BasicInfoCity basicInfoCity; // basic_info.city
@@ -43,6 +44,7 @@ public class V2 {
     private final JobGrade jobGrade; // job_grade
     private final JobLevel jobLevel; // job_level
     private final Location location; // location
+    private final LocationAddress locationAddress; // location.address
     private final Offboarding offboarding; // offboarding
     private final Person person; // person
     private final PreHire preHire; // 待入职
@@ -54,9 +56,11 @@ public class V2 {
     private final ProcessFormVariableData processFormVariableData; // process.form_variable_data
     private final ProcessNode processNode; // process.node
     private final ProcessStatus processStatus; // process.status
+    private final WorkforcePlan workforcePlan; // workforce_plan
     private final WorkforcePlanDetail workforcePlanDetail; // workforce_plan_detail
 
     public V2(Config config) {
+        this.approver = new Approver(config);
         this.basicInfoBank = new BasicInfoBank(config);
         this.basicInfoBankBranch = new BasicInfoBankBranch(config);
         this.basicInfoCity = new BasicInfoCity(config);
@@ -82,6 +86,7 @@ public class V2 {
         this.jobGrade = new JobGrade(config);
         this.jobLevel = new JobLevel(config);
         this.location = new Location(config);
+        this.locationAddress = new LocationAddress(config);
         this.offboarding = new Offboarding(config);
         this.person = new Person(config);
         this.preHire = new PreHire(config);
@@ -93,7 +98,12 @@ public class V2 {
         this.processFormVariableData = new ProcessFormVariableData(config);
         this.processNode = new ProcessNode(config);
         this.processStatus = new ProcessStatus(config);
+        this.workforcePlan = new WorkforcePlan(config);
         this.workforcePlanDetail = new WorkforcePlanDetail(config);
+    }
+
+    public Approver approver() {
+        return approver;
     }
 
     public BasicInfoBank basicInfoBank() {
@@ -196,6 +206,10 @@ public class V2 {
         return location;
     }
 
+    public LocationAddress locationAddress() {
+        return locationAddress;
+    }
+
     public Offboarding offboarding() {
         return offboarding;
     }
@@ -238,6 +252,10 @@ public class V2 {
 
     public ProcessStatus processStatus() {
         return processStatus;
+    }
+
+    public WorkforcePlan workforcePlan() {
+        return workforcePlan;
     }
 
     public WorkforcePlanDetail workforcePlanDetail() {

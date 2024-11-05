@@ -199,10 +199,10 @@ public class JobData {
     private String createdAt;
     /**
      * 周工作时长
-     * <p> 示例值：10
+     * <p> 示例值：10.1
      */
     @SerializedName("weekly_working_hours_v2")
-    private String weeklyWorkingHoursV2;
+    private Double weeklyWorkingHoursV2;
     /**
      * 人员子类型 ID
      * <p> 示例值：6890452208593372680
@@ -357,7 +357,7 @@ public class JobData {
         this.createdAt = builder.createdAt;
         /**
          * 周工作时长
-         * <p> 示例值：10
+         * <p> 示例值：10.1
          */
         this.weeklyWorkingHoursV2 = builder.weeklyWorkingHoursV2;
         /**
@@ -595,11 +595,11 @@ public class JobData {
         this.createdAt = createdAt;
     }
 
-    public String getWeeklyWorkingHoursV2() {
+    public Double getWeeklyWorkingHoursV2() {
         return this.weeklyWorkingHoursV2;
     }
 
-    public void setWeeklyWorkingHoursV2(String weeklyWorkingHoursV2) {
+    public void setWeeklyWorkingHoursV2(Double weeklyWorkingHoursV2) {
         this.weeklyWorkingHoursV2 = weeklyWorkingHoursV2;
     }
 
@@ -754,9 +754,9 @@ public class JobData {
         private String createdAt;
         /**
          * 周工作时长
-         * <p> 示例值：10
+         * <p> 示例值：10.1
          */
-        private String weeklyWorkingHoursV2;
+        private Double weeklyWorkingHoursV2;
         /**
          * 人员子类型 ID
          * <p> 示例值：6890452208593372680
@@ -1129,12 +1129,12 @@ public class JobData {
 
         /**
          * 周工作时长
-         * <p> 示例值：10
+         * <p> 示例值：10.1
          *
          * @param weeklyWorkingHoursV2
          * @return
          */
-        public Builder weeklyWorkingHoursV2(String weeklyWorkingHoursV2) {
+        public Builder weeklyWorkingHoursV2(Double weeklyWorkingHoursV2) {
             this.weeklyWorkingHoursV2 = weeklyWorkingHoursV2;
             return this;
         }

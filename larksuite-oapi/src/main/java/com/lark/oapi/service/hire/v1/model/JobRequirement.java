@@ -184,6 +184,12 @@ public class JobRequirement {
      */
     @SerializedName("job_id_list")
     private String[] jobIdList;
+    /**
+     * 职务 ID
+     * <p> 示例值：123
+     */
+    @SerializedName("employment_job_id")
+    private String employmentJobId;
 
     // builder 开始
     public JobRequirement() {
@@ -320,6 +326,11 @@ public class JobRequirement {
          * <p> 示例值：
          */
         this.jobIdList = builder.jobIdList;
+        /**
+         * 职务 ID
+         * <p> 示例值：123
+         */
+        this.employmentJobId = builder.employmentJobId;
     }
 
     public static Builder newBuilder() {
@@ -534,6 +545,14 @@ public class JobRequirement {
         this.jobIdList = jobIdList;
     }
 
+    public String getEmploymentJobId() {
+        return this.employmentJobId;
+    }
+
+    public void setEmploymentJobId(String employmentJobId) {
+        this.employmentJobId = employmentJobId;
+    }
+
     public static class Builder {
         /**
          * 招聘需求编号
@@ -665,6 +684,11 @@ public class JobRequirement {
          * <p> 示例值：
          */
         private String[] jobIdList;
+        /**
+         * 职务 ID
+         * <p> 示例值：123
+         */
+        private String employmentJobId;
 
         /**
          * 招聘需求编号
@@ -1000,6 +1024,19 @@ public class JobRequirement {
          */
         public Builder jobIdList(String[] jobIdList) {
             this.jobIdList = jobIdList;
+            return this;
+        }
+
+
+        /**
+         * 职务 ID
+         * <p> 示例值：123
+         *
+         * @param employmentJobId
+         * @return
+         */
+        public Builder employmentJobId(String employmentJobId) {
+            this.employmentJobId = employmentJobId;
             return this;
         }
 

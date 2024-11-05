@@ -133,10 +133,10 @@ public class PatchApplicationContactsRangeReq {
          * 成员id类型
          * <p> 示例值：open_id
          *
-         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationContactsRangeUserIdTypeEnum}
+         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationContactsRangePatchApplicationContactsRangeUserIDTypeEnum}
          * @return
          */
-        public Builder userIdType(com.lark.oapi.service.application.v6.enums.PatchApplicationContactsRangeUserIdTypeEnum userIdType) {
+        public Builder userIdType(com.lark.oapi.service.application.v6.enums.PatchApplicationContactsRangePatchApplicationContactsRangeUserIDTypeEnum userIdType) {
             this.userIdType = userIdType.getValue();
             return this;
         }
@@ -157,10 +157,10 @@ public class PatchApplicationContactsRangeReq {
          * 部门id 类型
          * <p> 示例值：open_department_id
          *
-         * @param departmentIdType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationContactsRangeDepartmentIdTypeEnum}
+         * @param departmentIdType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationContactsRangePatchApplicationContactsRangeDepartmentIDTypeEnum}
          * @return
          */
-        public Builder departmentIdType(com.lark.oapi.service.application.v6.enums.PatchApplicationContactsRangeDepartmentIdTypeEnum departmentIdType) {
+        public Builder departmentIdType(com.lark.oapi.service.application.v6.enums.PatchApplicationContactsRangePatchApplicationContactsRangeDepartmentIDTypeEnum departmentIdType) {
             this.departmentIdType = departmentIdType.getValue();
             return this;
         }

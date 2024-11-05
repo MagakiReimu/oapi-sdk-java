@@ -752,6 +752,21 @@ public class EventDispatcher implements IHandler {
          * @param handler
          * @return
          */
+        public Builder onP2CommonDataMetaDataUpdatedV1(CorehrService.P2CommonDataMetaDataUpdatedV1Handler handler) {
+            if (eventType2EventHandler.containsKey("corehr.common_data.meta_data.updated_v1")) {
+                throw new EventTypeAlreadyHasHandlerException("corehr.common_data.meta_data.updated_v1");
+            }
+            eventType2EventHandler.put("corehr.common_data.meta_data.updated_v1", handler);
+            return this;
+        }
+
+        /**
+         * <p> ,
+         * <p> 事件描述文档链接:<a href=""></a>
+         *
+         * @param handler
+         * @return
+         */
         public Builder onP2ContractCreatedV1(CorehrService.P2ContractCreatedV1Handler handler) {
             if (eventType2EventHandler.containsKey("corehr.contract.created_v1")) {
                 throw new EventTypeAlreadyHasHandlerException("corehr.contract.created_v1");
@@ -1959,6 +1974,21 @@ public class EventDispatcher implements IHandler {
                 throw new EventTypeAlreadyHasHandlerException("hire.talent.deleted_v1");
             }
             eventType2EventHandler.put("hire.talent.deleted_v1", handler);
+            return this;
+        }
+
+        /**
+         * <p> ,
+         * <p> 事件描述文档链接:<a href=""></a>
+         *
+         * @param handler
+         * @return
+         */
+        public Builder onP2TalentTagSubscriptionV1(HireService.P2TalentTagSubscriptionV1Handler handler) {
+            if (eventType2EventHandler.containsKey("hire.talent.tag_subscription_v1")) {
+                throw new EventTypeAlreadyHasHandlerException("hire.talent.tag_subscription_v1");
+            }
+            eventType2EventHandler.put("hire.talent.tag_subscription_v1", handler);
             return this;
         }
 

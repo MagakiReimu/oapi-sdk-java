@@ -70,6 +70,13 @@ public class LeaveBalancesLeaveReq {
     @Query
     @SerializedName("time_zone")
     private String timeZone;
+    /**
+     * 是否获取离职折算字段
+     * <p> 示例值：true
+     */
+    @Query
+    @SerializedName("include_offboard")
+    private Boolean includeOffboard;
 
     // builder 开始
     public LeaveBalancesLeaveReq() {
@@ -106,6 +113,11 @@ public class LeaveBalancesLeaveReq {
          * <p> 示例值：Asia/Shanghai
          */
         this.timeZone = builder.timeZone;
+        /**
+         * 是否获取离职折算字段
+         * <p> 示例值：true
+         */
+        this.includeOffboard = builder.includeOffboard;
     }
 
     public static Builder newBuilder() {
@@ -160,6 +172,14 @@ public class LeaveBalancesLeaveReq {
         this.timeZone = timeZone;
     }
 
+    public Boolean getIncludeOffboard() {
+        return this.includeOffboard;
+    }
+
+    public void setIncludeOffboard(Boolean includeOffboard) {
+        this.includeOffboard = includeOffboard;
+    }
+
     public static class Builder {
         private String pageToken; // 页码标识，获取第一页传空，每次查询会返回下一页的page_token
         private String pageSize; // 每页获取记录数量，最大20
@@ -167,6 +187,7 @@ public class LeaveBalancesLeaveReq {
         private String[] employmentIdList; // 员工 ID 列表，最大 100 个（不传则默认查询全部员工）
         private String userIdType; // 用户 ID 类型
         private String timeZone; // 查询时区
+        private Boolean includeOffboard; // 是否获取离职折算字段
 
 
         /**
@@ -255,6 +276,19 @@ public class LeaveBalancesLeaveReq {
          */
         public Builder timeZone(String timeZone) {
             this.timeZone = timeZone;
+            return this;
+        }
+
+
+        /**
+         * 是否获取离职折算字段
+         * <p> 示例值：true
+         *
+         * @param includeOffboard
+         * @return
+         */
+        public Builder includeOffboard(Boolean includeOffboard) {
+            this.includeOffboard = includeOffboard;
             return this;
         }
 

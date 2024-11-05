@@ -83,6 +83,12 @@ public class ProfileSettingPersonalInfo {
      */
     @SerializedName("custom_groups")
     private ProfileSettingCustomGroup[] customGroups;
+    /**
+     * 公民身份列表
+     * <p> 示例值：
+     */
+    @SerializedName("citizenship_statuses")
+    private ProfileSettingCitizenshipStatus[] citizenshipStatuses;
 
     // builder 开始
     public ProfileSettingPersonalInfo() {
@@ -134,6 +140,11 @@ public class ProfileSettingPersonalInfo {
          * <p> 示例值：
          */
         this.customGroups = builder.customGroups;
+        /**
+         * 公民身份列表
+         * <p> 示例值：
+         */
+        this.citizenshipStatuses = builder.citizenshipStatuses;
     }
 
     public static Builder newBuilder() {
@@ -212,6 +223,14 @@ public class ProfileSettingPersonalInfo {
         this.customGroups = customGroups;
     }
 
+    public ProfileSettingCitizenshipStatus[] getCitizenshipStatuses() {
+        return this.citizenshipStatuses;
+    }
+
+    public void setCitizenshipStatuses(ProfileSettingCitizenshipStatus[] citizenshipStatuses) {
+        this.citizenshipStatuses = citizenshipStatuses;
+    }
+
     public static class Builder {
         /**
          * 基本信息
@@ -258,6 +277,11 @@ public class ProfileSettingPersonalInfo {
          * <p> 示例值：
          */
         private ProfileSettingCustomGroup[] customGroups;
+        /**
+         * 公民身份列表
+         * <p> 示例值：
+         */
+        private ProfileSettingCitizenshipStatus[] citizenshipStatuses;
 
         /**
          * 基本信息
@@ -372,6 +396,19 @@ public class ProfileSettingPersonalInfo {
          */
         public Builder customGroups(ProfileSettingCustomGroup[] customGroups) {
             this.customGroups = customGroups;
+            return this;
+        }
+
+
+        /**
+         * 公民身份列表
+         * <p> 示例值：
+         *
+         * @param citizenshipStatuses
+         * @return
+         */
+        public Builder citizenshipStatuses(ProfileSettingCitizenshipStatus[] citizenshipStatuses) {
+            this.citizenshipStatuses = citizenshipStatuses;
             return this;
         }
 

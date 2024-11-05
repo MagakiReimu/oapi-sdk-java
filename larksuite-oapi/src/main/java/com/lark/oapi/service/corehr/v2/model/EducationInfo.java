@@ -59,6 +59,12 @@ public class EducationInfo {
      */
     @SerializedName("field_of_study")
     private String fieldOfStudy;
+    /**
+     * 自定义字段
+     * <p> 示例值：
+     */
+    @SerializedName("custom_fields")
+    private ObjectFieldData[] customFields;
 
     // builder 开始
     public EducationInfo() {
@@ -90,6 +96,11 @@ public class EducationInfo {
          * <p> 示例值：医学影像技术
          */
         this.fieldOfStudy = builder.fieldOfStudy;
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         */
+        this.customFields = builder.customFields;
     }
 
     public static Builder newBuilder() {
@@ -136,6 +147,14 @@ public class EducationInfo {
         this.fieldOfStudy = fieldOfStudy;
     }
 
+    public ObjectFieldData[] getCustomFields() {
+        return this.customFields;
+    }
+
+    public void setCustomFields(ObjectFieldData[] customFields) {
+        this.customFields = customFields;
+    }
+
     public static class Builder {
         /**
          * 学校名称
@@ -162,6 +181,11 @@ public class EducationInfo {
          * <p> 示例值：医学影像技术
          */
         private String fieldOfStudy;
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         */
+        private ObjectFieldData[] customFields;
 
         /**
          * 学校名称
@@ -224,6 +248,19 @@ public class EducationInfo {
          */
         public Builder fieldOfStudy(String fieldOfStudy) {
             this.fieldOfStudy = fieldOfStudy;
+            return this;
+        }
+
+
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         *
+         * @param customFields
+         * @return
+         */
+        public Builder customFields(ObjectFieldData[] customFields) {
+            this.customFields = customFields;
             return this;
         }
 

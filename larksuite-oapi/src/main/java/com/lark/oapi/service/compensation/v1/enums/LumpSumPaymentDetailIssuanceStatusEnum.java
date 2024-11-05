@@ -17,11 +17,8 @@ package com.lark.oapi.service.compensation.v1.enums;
  * 发放状态
  */
 public enum LumpSumPaymentDetailIssuanceStatusEnum {
-    TO_BE_ISSUED("to_be_issued"), // 待发放
+    TO_BE_ISSUED("to_be_issued"), // 应发放
     NOT_ISSUED("not_issued"), // 不发放
-    ISSUED("issued"), // 已发放
-    LOCKED("locked"), // 已锁定
-    RETURNED("returned"), // 已退回
     ;
     private String value;
 

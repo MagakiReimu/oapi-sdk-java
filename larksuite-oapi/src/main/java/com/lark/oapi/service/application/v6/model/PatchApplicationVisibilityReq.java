@@ -133,10 +133,10 @@ public class PatchApplicationVisibilityReq {
          * 部门id 类型
          * <p> 示例值：open_department_id
          *
-         * @param departmentIdType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationVisibilityDepartmentIdTypeEnum}
+         * @param departmentIdType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationVisibilityPatchApplicationVisibilityDepartmentIDTypeEnum}
          * @return
          */
-        public Builder departmentIdType(com.lark.oapi.service.application.v6.enums.PatchApplicationVisibilityDepartmentIdTypeEnum departmentIdType) {
+        public Builder departmentIdType(com.lark.oapi.service.application.v6.enums.PatchApplicationVisibilityPatchApplicationVisibilityDepartmentIDTypeEnum departmentIdType) {
             this.departmentIdType = departmentIdType.getValue();
             return this;
         }
@@ -157,10 +157,10 @@ public class PatchApplicationVisibilityReq {
          * open_id 类型
          * <p> 示例值：open_id
          *
-         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationVisibilityUserIdTypeEnum}
+         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationVisibilityPatchApplicationVisibilityUserIDTypeEnum}
          * @return
          */
-        public Builder userIdType(com.lark.oapi.service.application.v6.enums.PatchApplicationVisibilityUserIdTypeEnum userIdType) {
+        public Builder userIdType(com.lark.oapi.service.application.v6.enums.PatchApplicationVisibilityPatchApplicationVisibilityUserIDTypeEnum userIdType) {
             this.userIdType = userIdType.getValue();
             return this;
         }

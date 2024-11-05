@@ -194,10 +194,10 @@ public class UnderauditlistApplicationReq {
          * 此次调用中使用的用户ID的类型
          * <p> 示例值：
          *
-         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.UnderauditlistApplicationUserIdTypeEnum}
+         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.UnderauditlistApplicationListUnderAuditApplicationUserIDTypeEnum}
          * @return
          */
-        public Builder userIdType(com.lark.oapi.service.application.v6.enums.UnderauditlistApplicationUserIdTypeEnum userIdType) {
+        public Builder userIdType(com.lark.oapi.service.application.v6.enums.UnderauditlistApplicationListUnderAuditApplicationUserIDTypeEnum userIdType) {
             this.userIdType = userIdType.getValue();
             return this;
         }

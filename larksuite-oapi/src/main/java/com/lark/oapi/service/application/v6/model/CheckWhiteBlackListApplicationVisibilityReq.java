@@ -133,10 +133,10 @@ public class CheckWhiteBlackListApplicationVisibilityReq {
          * 此次请求传参中的user_id的类型
          * <p> 示例值：user_id
          *
-         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.CheckWhiteBlackListApplicationVisibilityUserIdTypeEnum}
+         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.CheckWhiteBlackListApplicationVisibilityCheckWhiteBlackListApplicationVisibilityUserIDTypeEnum}
          * @return
          */
-        public Builder userIdType(com.lark.oapi.service.application.v6.enums.CheckWhiteBlackListApplicationVisibilityUserIdTypeEnum userIdType) {
+        public Builder userIdType(com.lark.oapi.service.application.v6.enums.CheckWhiteBlackListApplicationVisibilityCheckWhiteBlackListApplicationVisibilityUserIDTypeEnum userIdType) {
             this.userIdType = userIdType.getValue();
             return this;
         }
@@ -157,10 +157,10 @@ public class CheckWhiteBlackListApplicationVisibilityReq {
          * 此次请求传参中的department_id的类型
          * <p> 示例值：department_id
          *
-         * @param departmentIdType {@link com.lark.oapi.service.application.v6.enums.CheckWhiteBlackListApplicationVisibilityDepartmentIdTypeEnum}
+         * @param departmentIdType {@link com.lark.oapi.service.application.v6.enums.CheckWhiteBlackListApplicationVisibilityCheckWhiteBlackListApplicationVisibilityDepartmentIDTypeEnum}
          * @return
          */
-        public Builder departmentIdType(com.lark.oapi.service.application.v6.enums.CheckWhiteBlackListApplicationVisibilityDepartmentIdTypeEnum departmentIdType) {
+        public Builder departmentIdType(com.lark.oapi.service.application.v6.enums.CheckWhiteBlackListApplicationVisibilityCheckWhiteBlackListApplicationVisibilityDepartmentIDTypeEnum departmentIdType) {
             this.departmentIdType = departmentIdType.getValue();
             return this;
         }

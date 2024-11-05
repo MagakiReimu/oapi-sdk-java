@@ -61,22 +61,22 @@ public class LlmConfig {
     private Integer n;
     /**
      * 默认0，越大模型结果越发散，如果为0默认每次取概率最高的作为next token。
-     * <p> 示例值：0
+     * <p> 示例值：0.0
      */
     @SerializedName("temperature")
-    private Integer temperature;
+    private Double temperature;
     /**
      * 默认0，>0惩罚模型输出已经在输出中出现过的token
-     * <p> 示例值：0
+     * <p> 示例值：0.0
      */
     @SerializedName("presence_penalty")
-    private Integer presencePenalty;
+    private Double presencePenalty;
     /**
      * 默认0，>0惩罚模型输出同样的token，输出次数越多惩罚越大
-     * <p> 示例值：0
+     * <p> 示例值：0.0
      */
     @SerializedName("frequency_penalty")
-    private Integer frequencyPenalty;
+    private Double frequencyPenalty;
 
     // builder 开始
     public LlmConfig() {
@@ -110,17 +110,17 @@ public class LlmConfig {
         this.n = builder.n;
         /**
          * 默认0，越大模型结果越发散，如果为0默认每次取概率最高的作为next token。
-         * <p> 示例值：0
+         * <p> 示例值：0.0
          */
         this.temperature = builder.temperature;
         /**
          * 默认0，>0惩罚模型输出已经在输出中出现过的token
-         * <p> 示例值：0
+         * <p> 示例值：0.0
          */
         this.presencePenalty = builder.presencePenalty;
         /**
          * 默认0，>0惩罚模型输出同样的token，输出次数越多惩罚越大
-         * <p> 示例值：0
+         * <p> 示例值：0.0
          */
         this.frequencyPenalty = builder.frequencyPenalty;
     }
@@ -169,27 +169,27 @@ public class LlmConfig {
         this.n = n;
     }
 
-    public Integer getTemperature() {
+    public Double getTemperature() {
         return this.temperature;
     }
 
-    public void setTemperature(Integer temperature) {
+    public void setTemperature(Double temperature) {
         this.temperature = temperature;
     }
 
-    public Integer getPresencePenalty() {
+    public Double getPresencePenalty() {
         return this.presencePenalty;
     }
 
-    public void setPresencePenalty(Integer presencePenalty) {
+    public void setPresencePenalty(Double presencePenalty) {
         this.presencePenalty = presencePenalty;
     }
 
-    public Integer getFrequencyPenalty() {
+    public Double getFrequencyPenalty() {
         return this.frequencyPenalty;
     }
 
-    public void setFrequencyPenalty(Integer frequencyPenalty) {
+    public void setFrequencyPenalty(Double frequencyPenalty) {
         this.frequencyPenalty = frequencyPenalty;
     }
 
@@ -221,19 +221,19 @@ public class LlmConfig {
         private Integer n;
         /**
          * 默认0，越大模型结果越发散，如果为0默认每次取概率最高的作为next token。
-         * <p> 示例值：0
+         * <p> 示例值：0.0
          */
-        private Integer temperature;
+        private Double temperature;
         /**
          * 默认0，>0惩罚模型输出已经在输出中出现过的token
-         * <p> 示例值：0
+         * <p> 示例值：0.0
          */
-        private Integer presencePenalty;
+        private Double presencePenalty;
         /**
          * 默认0，>0惩罚模型输出同样的token，输出次数越多惩罚越大
-         * <p> 示例值：0
+         * <p> 示例值：0.0
          */
-        private Integer frequencyPenalty;
+        private Double frequencyPenalty;
 
         /**
          * 模型名称
@@ -326,12 +326,12 @@ public class LlmConfig {
 
         /**
          * 默认0，越大模型结果越发散，如果为0默认每次取概率最高的作为next token。
-         * <p> 示例值：0
+         * <p> 示例值：0.0
          *
          * @param temperature
          * @return
          */
-        public Builder temperature(Integer temperature) {
+        public Builder temperature(Double temperature) {
             this.temperature = temperature;
             return this;
         }
@@ -339,12 +339,12 @@ public class LlmConfig {
 
         /**
          * 默认0，>0惩罚模型输出已经在输出中出现过的token
-         * <p> 示例值：0
+         * <p> 示例值：0.0
          *
          * @param presencePenalty
          * @return
          */
-        public Builder presencePenalty(Integer presencePenalty) {
+        public Builder presencePenalty(Double presencePenalty) {
             this.presencePenalty = presencePenalty;
             return this;
         }
@@ -352,12 +352,12 @@ public class LlmConfig {
 
         /**
          * 默认0，>0惩罚模型输出同样的token，输出次数越多惩罚越大
-         * <p> 示例值：0
+         * <p> 示例值：0.0
          *
          * @param frequencyPenalty
          * @return
          */
-        public Builder frequencyPenalty(Integer frequencyPenalty) {
+        public Builder frequencyPenalty(Double frequencyPenalty) {
             this.frequencyPenalty = frequencyPenalty;
             return this;
         }

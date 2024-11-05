@@ -46,7 +46,7 @@ public class JobChange {
      * <p> 示例值：4
      */
     @SerializedName("status")
-    private String status;
+    private Integer status;
     /**
      * 异动类型唯一标识
      * <p> 示例值：direct_leader_change
@@ -167,11 +167,11 @@ public class JobChange {
         this.employmentId = employmentId;
     }
 
-    public String getStatus() {
+    public Integer getStatus() {
         return this.status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
@@ -246,7 +246,7 @@ public class JobChange {
          * 异动状态
          * <p> 示例值：4
          */
-        private String status;
+        private Integer status;
         /**
          * 异动类型唯一标识
          * <p> 示例值：direct_leader_change
@@ -316,7 +316,7 @@ public class JobChange {
          * @param status
          * @return
          */
-        public Builder status(String status) {
+        public Builder status(Integer status) {
             this.status = status;
             return this;
         }

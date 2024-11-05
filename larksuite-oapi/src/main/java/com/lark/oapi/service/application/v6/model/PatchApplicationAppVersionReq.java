@@ -175,10 +175,10 @@ public class PatchApplicationAppVersionReq {
          * 此次调用中使用的用户ID的类型
          * <p> 示例值：
          *
-         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationAppVersionUserIdTypeEnum}
+         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationAppVersionUpdateAppVersionUserIDTypeEnum}
          * @return
          */
-        public Builder userIdType(com.lark.oapi.service.application.v6.enums.PatchApplicationAppVersionUserIdTypeEnum userIdType) {
+        public Builder userIdType(com.lark.oapi.service.application.v6.enums.PatchApplicationAppVersionUpdateAppVersionUserIDTypeEnum userIdType) {
             this.userIdType = userIdType.getValue();
             return this;
         }

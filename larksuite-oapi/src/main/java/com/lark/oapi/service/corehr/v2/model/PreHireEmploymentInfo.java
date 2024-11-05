@@ -78,6 +78,12 @@ public class PreHireEmploymentInfo {
     @SerializedName("direct_leader_id")
     private String directLeaderId;
     /**
+     * 虚线上级雇佣 ID ， 可以通过【搜索员工信息】接口获取
+     * <p> 示例值：7032210902531327521
+     */
+    @SerializedName("dotted_line_manager_id")
+    private String dottedLineManagerId;
+    /**
      * 职务 ID ,可以通过【批量查询职务】接口获取
      * <p> 示例值：6977976735715378724
      */
@@ -281,6 +287,60 @@ public class PreHireEmploymentInfo {
      */
     @SerializedName("seniority_date")
     private String seniorityDate;
+    /**
+     * 背调订单ID
+     * <p> 示例值：123
+     */
+    @SerializedName("background_check_order_id")
+    private String backgroundCheckOrderId;
+    /**
+     * 背调名称
+     * <p> 示例值：xxx
+     */
+    @SerializedName("background_check_order_name")
+    private String backgroundCheckOrderName;
+    /**
+     * 背调套餐
+     * <p> 示例值：xxx
+     */
+    @SerializedName("background_check_order_package_name")
+    private String backgroundCheckOrderPackageName;
+    /**
+     * 背调结果
+     * <p> 示例值：通过
+     */
+    @SerializedName("background_check_order_result")
+    private String backgroundCheckOrderResult;
+    /**
+     * 背调供应商
+     * <p> 示例值：xxx
+     */
+    @SerializedName("background_check_order_supplier_name")
+    private String backgroundCheckOrderSupplierName;
+    /**
+     * 背调账号名称
+     * <p> 示例值：xxx
+     */
+    @SerializedName("background_check_order_account_name")
+    private String backgroundCheckOrderAccountName;
+    /**
+     * 背调开始时间
+     * <p> 示例值：2023-01-10 10:29
+     */
+    @SerializedName("background_check_order_start_time")
+    private String backgroundCheckOrderStartTime;
+    /**
+     * 背调完成时间
+     * <p> 示例值：2023-01-10 10:29
+     */
+    @SerializedName("background_check_order_complete_time")
+    private String backgroundCheckOrderCompleteTime;
+    /**
+     * -| 背调状态，枚举值可查询【获取字段详情】接口获取，按如下参数查询即可： - custom_api_name：background_check_order_status - object_api_name：pre_hire
+     * <p> 示例值：
+     */
+    @SerializedName("background_check_order_status")
+    private Enum backgroundCheckOrderStatus;
 
     // builder 开始
     public PreHireEmploymentInfo() {
@@ -327,6 +387,11 @@ public class PreHireEmploymentInfo {
          * <p> 示例值：7032210902531327521
          */
         this.directLeaderId = builder.directLeaderId;
+        /**
+         * 虚线上级雇佣 ID ， 可以通过【搜索员工信息】接口获取
+         * <p> 示例值：7032210902531327521
+         */
+        this.dottedLineManagerId = builder.dottedLineManagerId;
         /**
          * 职务 ID ,可以通过【批量查询职务】接口获取
          * <p> 示例值：6977976735715378724
@@ -497,6 +562,51 @@ public class PreHireEmploymentInfo {
          * <p> 示例值：2023-01-10
          */
         this.seniorityDate = builder.seniorityDate;
+        /**
+         * 背调订单ID
+         * <p> 示例值：123
+         */
+        this.backgroundCheckOrderId = builder.backgroundCheckOrderId;
+        /**
+         * 背调名称
+         * <p> 示例值：xxx
+         */
+        this.backgroundCheckOrderName = builder.backgroundCheckOrderName;
+        /**
+         * 背调套餐
+         * <p> 示例值：xxx
+         */
+        this.backgroundCheckOrderPackageName = builder.backgroundCheckOrderPackageName;
+        /**
+         * 背调结果
+         * <p> 示例值：通过
+         */
+        this.backgroundCheckOrderResult = builder.backgroundCheckOrderResult;
+        /**
+         * 背调供应商
+         * <p> 示例值：xxx
+         */
+        this.backgroundCheckOrderSupplierName = builder.backgroundCheckOrderSupplierName;
+        /**
+         * 背调账号名称
+         * <p> 示例值：xxx
+         */
+        this.backgroundCheckOrderAccountName = builder.backgroundCheckOrderAccountName;
+        /**
+         * 背调开始时间
+         * <p> 示例值：2023-01-10 10:29
+         */
+        this.backgroundCheckOrderStartTime = builder.backgroundCheckOrderStartTime;
+        /**
+         * 背调完成时间
+         * <p> 示例值：2023-01-10 10:29
+         */
+        this.backgroundCheckOrderCompleteTime = builder.backgroundCheckOrderCompleteTime;
+        /**
+         * -| 背调状态，枚举值可查询【获取字段详情】接口获取，按如下参数查询即可： - custom_api_name：background_check_order_status - object_api_name：pre_hire
+         * <p> 示例值：
+         */
+        this.backgroundCheckOrderStatus = builder.backgroundCheckOrderStatus;
     }
 
     public static Builder newBuilder() {
@@ -565,6 +675,14 @@ public class PreHireEmploymentInfo {
 
     public void setDirectLeaderId(String directLeaderId) {
         this.directLeaderId = directLeaderId;
+    }
+
+    public String getDottedLineManagerId() {
+        return this.dottedLineManagerId;
+    }
+
+    public void setDottedLineManagerId(String dottedLineManagerId) {
+        this.dottedLineManagerId = dottedLineManagerId;
     }
 
     public String getJobId() {
@@ -839,6 +957,78 @@ public class PreHireEmploymentInfo {
         this.seniorityDate = seniorityDate;
     }
 
+    public String getBackgroundCheckOrderId() {
+        return this.backgroundCheckOrderId;
+    }
+
+    public void setBackgroundCheckOrderId(String backgroundCheckOrderId) {
+        this.backgroundCheckOrderId = backgroundCheckOrderId;
+    }
+
+    public String getBackgroundCheckOrderName() {
+        return this.backgroundCheckOrderName;
+    }
+
+    public void setBackgroundCheckOrderName(String backgroundCheckOrderName) {
+        this.backgroundCheckOrderName = backgroundCheckOrderName;
+    }
+
+    public String getBackgroundCheckOrderPackageName() {
+        return this.backgroundCheckOrderPackageName;
+    }
+
+    public void setBackgroundCheckOrderPackageName(String backgroundCheckOrderPackageName) {
+        this.backgroundCheckOrderPackageName = backgroundCheckOrderPackageName;
+    }
+
+    public String getBackgroundCheckOrderResult() {
+        return this.backgroundCheckOrderResult;
+    }
+
+    public void setBackgroundCheckOrderResult(String backgroundCheckOrderResult) {
+        this.backgroundCheckOrderResult = backgroundCheckOrderResult;
+    }
+
+    public String getBackgroundCheckOrderSupplierName() {
+        return this.backgroundCheckOrderSupplierName;
+    }
+
+    public void setBackgroundCheckOrderSupplierName(String backgroundCheckOrderSupplierName) {
+        this.backgroundCheckOrderSupplierName = backgroundCheckOrderSupplierName;
+    }
+
+    public String getBackgroundCheckOrderAccountName() {
+        return this.backgroundCheckOrderAccountName;
+    }
+
+    public void setBackgroundCheckOrderAccountName(String backgroundCheckOrderAccountName) {
+        this.backgroundCheckOrderAccountName = backgroundCheckOrderAccountName;
+    }
+
+    public String getBackgroundCheckOrderStartTime() {
+        return this.backgroundCheckOrderStartTime;
+    }
+
+    public void setBackgroundCheckOrderStartTime(String backgroundCheckOrderStartTime) {
+        this.backgroundCheckOrderStartTime = backgroundCheckOrderStartTime;
+    }
+
+    public String getBackgroundCheckOrderCompleteTime() {
+        return this.backgroundCheckOrderCompleteTime;
+    }
+
+    public void setBackgroundCheckOrderCompleteTime(String backgroundCheckOrderCompleteTime) {
+        this.backgroundCheckOrderCompleteTime = backgroundCheckOrderCompleteTime;
+    }
+
+    public Enum getBackgroundCheckOrderStatus() {
+        return this.backgroundCheckOrderStatus;
+    }
+
+    public void setBackgroundCheckOrderStatus(Enum backgroundCheckOrderStatus) {
+        this.backgroundCheckOrderStatus = backgroundCheckOrderStatus;
+    }
+
     public static class Builder {
         /**
          * 部门 ID ，可以通过【搜索部门信息】接口获取
@@ -880,6 +1070,11 @@ public class PreHireEmploymentInfo {
          * <p> 示例值：7032210902531327521
          */
         private String directLeaderId;
+        /**
+         * 虚线上级雇佣 ID ， 可以通过【搜索员工信息】接口获取
+         * <p> 示例值：7032210902531327521
+         */
+        private String dottedLineManagerId;
         /**
          * 职务 ID ,可以通过【批量查询职务】接口获取
          * <p> 示例值：6977976735715378724
@@ -1050,6 +1245,51 @@ public class PreHireEmploymentInfo {
          * <p> 示例值：2023-01-10
          */
         private String seniorityDate;
+        /**
+         * 背调订单ID
+         * <p> 示例值：123
+         */
+        private String backgroundCheckOrderId;
+        /**
+         * 背调名称
+         * <p> 示例值：xxx
+         */
+        private String backgroundCheckOrderName;
+        /**
+         * 背调套餐
+         * <p> 示例值：xxx
+         */
+        private String backgroundCheckOrderPackageName;
+        /**
+         * 背调结果
+         * <p> 示例值：通过
+         */
+        private String backgroundCheckOrderResult;
+        /**
+         * 背调供应商
+         * <p> 示例值：xxx
+         */
+        private String backgroundCheckOrderSupplierName;
+        /**
+         * 背调账号名称
+         * <p> 示例值：xxx
+         */
+        private String backgroundCheckOrderAccountName;
+        /**
+         * 背调开始时间
+         * <p> 示例值：2023-01-10 10:29
+         */
+        private String backgroundCheckOrderStartTime;
+        /**
+         * 背调完成时间
+         * <p> 示例值：2023-01-10 10:29
+         */
+        private String backgroundCheckOrderCompleteTime;
+        /**
+         * -| 背调状态，枚举值可查询【获取字段详情】接口获取，按如下参数查询即可： - custom_api_name：background_check_order_status - object_api_name：pre_hire
+         * <p> 示例值：
+         */
+        private Enum backgroundCheckOrderStatus;
 
         /**
          * 部门 ID ，可以通过【搜索部门信息】接口获取
@@ -1151,6 +1391,19 @@ public class PreHireEmploymentInfo {
          */
         public Builder directLeaderId(String directLeaderId) {
             this.directLeaderId = directLeaderId;
+            return this;
+        }
+
+
+        /**
+         * 虚线上级雇佣 ID ， 可以通过【搜索员工信息】接口获取
+         * <p> 示例值：7032210902531327521
+         *
+         * @param dottedLineManagerId
+         * @return
+         */
+        public Builder dottedLineManagerId(String dottedLineManagerId) {
+            this.dottedLineManagerId = dottedLineManagerId;
             return this;
         }
 
@@ -1605,6 +1858,123 @@ public class PreHireEmploymentInfo {
          */
         public Builder seniorityDate(String seniorityDate) {
             this.seniorityDate = seniorityDate;
+            return this;
+        }
+
+
+        /**
+         * 背调订单ID
+         * <p> 示例值：123
+         *
+         * @param backgroundCheckOrderId
+         * @return
+         */
+        public Builder backgroundCheckOrderId(String backgroundCheckOrderId) {
+            this.backgroundCheckOrderId = backgroundCheckOrderId;
+            return this;
+        }
+
+
+        /**
+         * 背调名称
+         * <p> 示例值：xxx
+         *
+         * @param backgroundCheckOrderName
+         * @return
+         */
+        public Builder backgroundCheckOrderName(String backgroundCheckOrderName) {
+            this.backgroundCheckOrderName = backgroundCheckOrderName;
+            return this;
+        }
+
+
+        /**
+         * 背调套餐
+         * <p> 示例值：xxx
+         *
+         * @param backgroundCheckOrderPackageName
+         * @return
+         */
+        public Builder backgroundCheckOrderPackageName(String backgroundCheckOrderPackageName) {
+            this.backgroundCheckOrderPackageName = backgroundCheckOrderPackageName;
+            return this;
+        }
+
+
+        /**
+         * 背调结果
+         * <p> 示例值：通过
+         *
+         * @param backgroundCheckOrderResult
+         * @return
+         */
+        public Builder backgroundCheckOrderResult(String backgroundCheckOrderResult) {
+            this.backgroundCheckOrderResult = backgroundCheckOrderResult;
+            return this;
+        }
+
+
+        /**
+         * 背调供应商
+         * <p> 示例值：xxx
+         *
+         * @param backgroundCheckOrderSupplierName
+         * @return
+         */
+        public Builder backgroundCheckOrderSupplierName(String backgroundCheckOrderSupplierName) {
+            this.backgroundCheckOrderSupplierName = backgroundCheckOrderSupplierName;
+            return this;
+        }
+
+
+        /**
+         * 背调账号名称
+         * <p> 示例值：xxx
+         *
+         * @param backgroundCheckOrderAccountName
+         * @return
+         */
+        public Builder backgroundCheckOrderAccountName(String backgroundCheckOrderAccountName) {
+            this.backgroundCheckOrderAccountName = backgroundCheckOrderAccountName;
+            return this;
+        }
+
+
+        /**
+         * 背调开始时间
+         * <p> 示例值：2023-01-10 10:29
+         *
+         * @param backgroundCheckOrderStartTime
+         * @return
+         */
+        public Builder backgroundCheckOrderStartTime(String backgroundCheckOrderStartTime) {
+            this.backgroundCheckOrderStartTime = backgroundCheckOrderStartTime;
+            return this;
+        }
+
+
+        /**
+         * 背调完成时间
+         * <p> 示例值：2023-01-10 10:29
+         *
+         * @param backgroundCheckOrderCompleteTime
+         * @return
+         */
+        public Builder backgroundCheckOrderCompleteTime(String backgroundCheckOrderCompleteTime) {
+            this.backgroundCheckOrderCompleteTime = backgroundCheckOrderCompleteTime;
+            return this;
+        }
+
+
+        /**
+         * -| 背调状态，枚举值可查询【获取字段详情】接口获取，按如下参数查询即可： - custom_api_name：background_check_order_status - object_api_name：pre_hire
+         * <p> 示例值：
+         *
+         * @param backgroundCheckOrderStatus
+         * @return
+         */
+        public Builder backgroundCheckOrderStatus(Enum backgroundCheckOrderStatus) {
+            this.backgroundCheckOrderStatus = backgroundCheckOrderStatus;
             return this;
         }
 

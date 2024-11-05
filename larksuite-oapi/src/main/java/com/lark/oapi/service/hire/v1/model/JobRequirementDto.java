@@ -208,6 +208,12 @@ public class JobRequirementDto {
      */
     @SerializedName("update_time")
     private String updateTime;
+    /**
+     * 职务 ID
+     * <p> 示例值：123
+     */
+    @SerializedName("employment_job_id")
+    private String employmentJobId;
 
     // builder 开始
     public JobRequirementDto() {
@@ -364,6 +370,11 @@ public class JobRequirementDto {
          * <p> 示例值：1718856006000
          */
         this.updateTime = builder.updateTime;
+        /**
+         * 职务 ID
+         * <p> 示例值：123
+         */
+        this.employmentJobId = builder.employmentJobId;
     }
 
     public static Builder newBuilder() {
@@ -610,6 +621,14 @@ public class JobRequirementDto {
         this.updateTime = updateTime;
     }
 
+    public String getEmploymentJobId() {
+        return this.employmentJobId;
+    }
+
+    public void setEmploymentJobId(String employmentJobId) {
+        this.employmentJobId = employmentJobId;
+    }
+
     public static class Builder {
         /**
          * 招聘需求 ID
@@ -761,6 +780,11 @@ public class JobRequirementDto {
          * <p> 示例值：1718856006000
          */
         private String updateTime;
+        /**
+         * 职务 ID
+         * <p> 示例值：123
+         */
+        private String employmentJobId;
 
         /**
          * 招聘需求 ID
@@ -1148,6 +1172,19 @@ public class JobRequirementDto {
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
+            return this;
+        }
+
+
+        /**
+         * 职务 ID
+         * <p> 示例值：123
+         *
+         * @param employmentJobId
+         * @return
+         */
+        public Builder employmentJobId(String employmentJobId) {
+            this.employmentJobId = employmentJobId;
             return this;
         }
 

@@ -640,10 +640,10 @@ public class Application {
          * 应用创建来源(目前仅Base应用返回)
          * <p> 示例值：base
          *
-         * @param createSource {@link com.lark.oapi.service.application.v6.enums.ApplicationCreateSourceEnum}
+         * @param createSource {@link com.lark.oapi.service.application.v6.enums.ApplicationApplicationCreateSourceEnum}
          * @return
          */
-        public Builder createSource(com.lark.oapi.service.application.v6.enums.ApplicationCreateSourceEnum createSource) {
+        public Builder createSource(com.lark.oapi.service.application.v6.enums.ApplicationApplicationCreateSourceEnum createSource) {
             this.createSource = createSource.getValue();
             return this;
         }
@@ -833,10 +833,10 @@ public class Application {
          * 移动端默认能力
          * <p> 示例值：gadget
          *
-         * @param mobileDefaultAbility {@link com.lark.oapi.service.application.v6.enums.ApplicationMobileDefaultAbilityEnum}
+         * @param mobileDefaultAbility {@link com.lark.oapi.service.application.v6.enums.ApplicationApplicationMobileDefaultAbilityEnum}
          * @return
          */
-        public Builder mobileDefaultAbility(com.lark.oapi.service.application.v6.enums.ApplicationMobileDefaultAbilityEnum mobileDefaultAbility) {
+        public Builder mobileDefaultAbility(com.lark.oapi.service.application.v6.enums.ApplicationApplicationMobileDefaultAbilityEnum mobileDefaultAbility) {
             this.mobileDefaultAbility = mobileDefaultAbility.getValue();
             return this;
         }
@@ -858,10 +858,10 @@ public class Application {
          * PC端默认能力
          * <p> 示例值：gadget
          *
-         * @param pcDefaultAbility {@link com.lark.oapi.service.application.v6.enums.ApplicationPcDefaultAbilityEnum}
+         * @param pcDefaultAbility {@link com.lark.oapi.service.application.v6.enums.ApplicationApplicationPcDefaultAbilityEnum}
          * @return
          */
-        public Builder pcDefaultAbility(com.lark.oapi.service.application.v6.enums.ApplicationPcDefaultAbilityEnum pcDefaultAbility) {
+        public Builder pcDefaultAbility(com.lark.oapi.service.application.v6.enums.ApplicationApplicationPcDefaultAbilityEnum pcDefaultAbility) {
             this.pcDefaultAbility = pcDefaultAbility.getValue();
             return this;
         }

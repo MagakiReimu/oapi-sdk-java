@@ -44,6 +44,8 @@ public class SearchEmployeeSample {
                         .phoneNumberList(new String[]{})
                         .emailAddressList(new String[]{})
                         .departmentIdListIncludeSub(new String[]{})
+                        .additionalNationalIdNumberList(new String[]{})
+                        .citizenshipStatusList(new String[]{})
                         .costCenterIdList(new String[]{})
                         .build())
                 .build();

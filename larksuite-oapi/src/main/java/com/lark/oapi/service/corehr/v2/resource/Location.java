@@ -48,6 +48,72 @@ public class Location {
 
 
     /**
+     * ，启停/停用地点
+     * <p> 官网API文档链接:<a href="https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=active&project=corehr&resource=location&version=v2">https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=active&project=corehr&resource=location&version=v2</a> ;
+     * <p> 使用Demo链接: <a href="https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/ActiveLocationSample.java">https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/ActiveLocationSample.java</a> ;
+     */
+    public ActiveLocationResp active(ActiveLocationReq req, RequestOptions reqOptions) throws Exception {
+        // 请求参数选项
+        if (reqOptions == null) {
+            reqOptions = new RequestOptions();
+        }
+
+        // 发起请求
+        RawResponse httpResponse = Transport.send(config, reqOptions, "POST"
+                , "/open-apis/corehr/v2/locations/active"
+                , Sets.newHashSet(AccessTokenType.Tenant)
+                , req);
+
+        // 反序列化
+        ActiveLocationResp resp = UnmarshalRespUtil.unmarshalResp(httpResponse, ActiveLocationResp.class);
+        if (resp == null) {
+            log.error(String.format(
+                    "%s,callError,req=%s,respHeader=%s,respStatusCode=%s,respBody=%s,", "/open-apis/corehr/v2/locations/active"
+                    , Jsons.DEFAULT.toJson(req), Jsons.DEFAULT.toJson(httpResponse.getHeaders()),
+                    httpResponse.getStatusCode(), new String(httpResponse.getBody(),
+                            StandardCharsets.UTF_8)));
+            throw new IllegalArgumentException("The result returned by the server is illegal");
+        }
+
+        resp.setRawResponse(httpResponse);
+        resp.setRequest(req);
+
+        return resp;
+    }
+
+    /**
+     * ，启停/停用地点
+     * <p> 官网API文档链接:<a href="https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=active&project=corehr&resource=location&version=v2">https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=active&project=corehr&resource=location&version=v2</a> ;
+     * <p> 使用Demo链接: <a href="https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/ActiveLocationSample.java">https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/ActiveLocationSample.java</a> ;
+     */
+    public ActiveLocationResp active(ActiveLocationReq req) throws Exception {
+        // 请求参数选项
+        RequestOptions reqOptions = new RequestOptions();
+
+        // 发起请求
+        RawResponse httpResponse = Transport.send(config, reqOptions, "POST"
+                , "/open-apis/corehr/v2/locations/active"
+                , Sets.newHashSet(AccessTokenType.Tenant)
+                , req);
+
+        // 反序列化
+        ActiveLocationResp resp = UnmarshalRespUtil.unmarshalResp(httpResponse, ActiveLocationResp.class);
+        if (resp == null) {
+            log.error(String.format(
+                    "%s,callError,req=%s,respHeader=%s,respStatusCode=%s,respBody=%s,", "/open-apis/corehr/v2/locations/active"
+                    , Jsons.DEFAULT.toJson(req), Jsons.DEFAULT.toJson(httpResponse.getHeaders()),
+                    httpResponse.getStatusCode(), new String(httpResponse.getBody(),
+                            StandardCharsets.UTF_8)));
+            throw new IllegalArgumentException("The result returned by the server is illegal");
+        }
+
+        resp.setRawResponse(httpResponse);
+        resp.setRequest(req);
+
+        return resp;
+    }
+
+    /**
      * ，通过地点 ID 批量获取地点信息
      * <p> 官网API文档链接:<a href="https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=batch_get&project=corehr&resource=location&version=v2">https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=batch_get&project=corehr&resource=location&version=v2</a> ;
      * <p> 使用Demo链接: <a href="https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/BatchGetLocationSample.java">https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/BatchGetLocationSample.java</a> ;
@@ -101,6 +167,72 @@ public class Location {
         if (resp == null) {
             log.error(String.format(
                     "%s,callError,req=%s,respHeader=%s,respStatusCode=%s,respBody=%s,", "/open-apis/corehr/v2/locations/batch_get"
+                    , Jsons.DEFAULT.toJson(req), Jsons.DEFAULT.toJson(httpResponse.getHeaders()),
+                    httpResponse.getStatusCode(), new String(httpResponse.getBody(),
+                            StandardCharsets.UTF_8)));
+            throw new IllegalArgumentException("The result returned by the server is illegal");
+        }
+
+        resp.setRawResponse(httpResponse);
+        resp.setRequest(req);
+
+        return resp;
+    }
+
+    /**
+     * ，更新地点
+     * <p> 官网API文档链接:<a href="https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=patch&project=corehr&resource=location&version=v2">https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=patch&project=corehr&resource=location&version=v2</a> ;
+     * <p> 使用Demo链接: <a href="https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/PatchLocationSample.java">https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/PatchLocationSample.java</a> ;
+     */
+    public PatchLocationResp patch(PatchLocationReq req, RequestOptions reqOptions) throws Exception {
+        // 请求参数选项
+        if (reqOptions == null) {
+            reqOptions = new RequestOptions();
+        }
+
+        // 发起请求
+        RawResponse httpResponse = Transport.send(config, reqOptions, "PATCH"
+                , "/open-apis/corehr/v2/locations/:location_id"
+                , Sets.newHashSet(AccessTokenType.Tenant)
+                , req);
+
+        // 反序列化
+        PatchLocationResp resp = UnmarshalRespUtil.unmarshalResp(httpResponse, PatchLocationResp.class);
+        if (resp == null) {
+            log.error(String.format(
+                    "%s,callError,req=%s,respHeader=%s,respStatusCode=%s,respBody=%s,", "/open-apis/corehr/v2/locations/:location_id"
+                    , Jsons.DEFAULT.toJson(req), Jsons.DEFAULT.toJson(httpResponse.getHeaders()),
+                    httpResponse.getStatusCode(), new String(httpResponse.getBody(),
+                            StandardCharsets.UTF_8)));
+            throw new IllegalArgumentException("The result returned by the server is illegal");
+        }
+
+        resp.setRawResponse(httpResponse);
+        resp.setRequest(req);
+
+        return resp;
+    }
+
+    /**
+     * ，更新地点
+     * <p> 官网API文档链接:<a href="https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=patch&project=corehr&resource=location&version=v2">https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=patch&project=corehr&resource=location&version=v2</a> ;
+     * <p> 使用Demo链接: <a href="https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/PatchLocationSample.java">https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/PatchLocationSample.java</a> ;
+     */
+    public PatchLocationResp patch(PatchLocationReq req) throws Exception {
+        // 请求参数选项
+        RequestOptions reqOptions = new RequestOptions();
+
+        // 发起请求
+        RawResponse httpResponse = Transport.send(config, reqOptions, "PATCH"
+                , "/open-apis/corehr/v2/locations/:location_id"
+                , Sets.newHashSet(AccessTokenType.Tenant)
+                , req);
+
+        // 反序列化
+        PatchLocationResp resp = UnmarshalRespUtil.unmarshalResp(httpResponse, PatchLocationResp.class);
+        if (resp == null) {
+            log.error(String.format(
+                    "%s,callError,req=%s,respHeader=%s,respStatusCode=%s,respBody=%s,", "/open-apis/corehr/v2/locations/:location_id"
                     , Jsons.DEFAULT.toJson(req), Jsons.DEFAULT.toJson(httpResponse.getHeaders()),
                     httpResponse.getStatusCode(), new String(httpResponse.getBody(),
                             StandardCharsets.UTF_8)));

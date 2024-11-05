@@ -74,6 +74,30 @@ public class DataAsset {
      */
     @SerializedName("items")
     private DataAssetItem[] items;
+    /**
+     * 连接状态失败信息
+     * <p> 示例值：连接超时
+     */
+    @SerializedName("connect_failed_reason")
+    private String connectFailedReason;
+    /**
+     * 数据连接类型
+     * <p> 示例值：direct
+     */
+    @SerializedName("connect_type")
+    private String connectType;
+    /**
+     * 创建时间，毫秒时间戳
+     * <p> 示例值：1711975665710
+     */
+    @SerializedName("created_time")
+    private String createdTime;
+    /**
+     * 更新时间，毫秒时间戳
+     * <p> 示例值：1711975665710
+     */
+    @SerializedName("updated_time")
+    private String updatedTime;
 
     // builder 开始
     public DataAsset() {
@@ -115,6 +139,26 @@ public class DataAsset {
          * <p> 示例值：
          */
         this.items = builder.items;
+        /**
+         * 连接状态失败信息
+         * <p> 示例值：连接超时
+         */
+        this.connectFailedReason = builder.connectFailedReason;
+        /**
+         * 数据连接类型
+         * <p> 示例值：direct
+         */
+        this.connectType = builder.connectType;
+        /**
+         * 创建时间，毫秒时间戳
+         * <p> 示例值：1711975665710
+         */
+        this.createdTime = builder.createdTime;
+        /**
+         * 更新时间，毫秒时间戳
+         * <p> 示例值：1711975665710
+         */
+        this.updatedTime = builder.updatedTime;
     }
 
     public static Builder newBuilder() {
@@ -177,6 +221,38 @@ public class DataAsset {
         this.items = items;
     }
 
+    public String getConnectFailedReason() {
+        return this.connectFailedReason;
+    }
+
+    public void setConnectFailedReason(String connectFailedReason) {
+        this.connectFailedReason = connectFailedReason;
+    }
+
+    public String getConnectType() {
+        return this.connectType;
+    }
+
+    public void setConnectType(String connectType) {
+        this.connectType = connectType;
+    }
+
+    public String getCreatedTime() {
+        return this.createdTime;
+    }
+
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
+    }
+
+    public String getUpdatedTime() {
+        return this.updatedTime;
+    }
+
+    public void setUpdatedTime(String updatedTime) {
+        this.updatedTime = updatedTime;
+    }
+
     public static class Builder {
         /**
          * 数据知识ID
@@ -213,6 +289,26 @@ public class DataAsset {
          * <p> 示例值：
          */
         private DataAssetItem[] items;
+        /**
+         * 连接状态失败信息
+         * <p> 示例值：连接超时
+         */
+        private String connectFailedReason;
+        /**
+         * 数据连接类型
+         * <p> 示例值：direct
+         */
+        private String connectType;
+        /**
+         * 创建时间，毫秒时间戳
+         * <p> 示例值：1711975665710
+         */
+        private String createdTime;
+        /**
+         * 更新时间，毫秒时间戳
+         * <p> 示例值：1711975665710
+         */
+        private String updatedTime;
 
         /**
          * 数据知识ID
@@ -325,6 +421,70 @@ public class DataAsset {
          */
         public Builder items(DataAssetItem[] items) {
             this.items = items;
+            return this;
+        }
+
+
+        /**
+         * 连接状态失败信息
+         * <p> 示例值：连接超时
+         *
+         * @param connectFailedReason
+         * @return
+         */
+        public Builder connectFailedReason(String connectFailedReason) {
+            this.connectFailedReason = connectFailedReason;
+            return this;
+        }
+
+
+        /**
+         * 数据连接类型
+         * <p> 示例值：direct
+         *
+         * @param connectType
+         * @return
+         */
+        public Builder connectType(String connectType) {
+            this.connectType = connectType;
+            return this;
+        }
+
+        /**
+         * 数据连接类型
+         * <p> 示例值：direct
+         *
+         * @param connectType {@link com.lark.oapi.service.aily.v1.enums.DataAssetConnectTypeEnum}
+         * @return
+         */
+        public Builder connectType(com.lark.oapi.service.aily.v1.enums.DataAssetConnectTypeEnum connectType) {
+            this.connectType = connectType.getValue();
+            return this;
+        }
+
+
+        /**
+         * 创建时间，毫秒时间戳
+         * <p> 示例值：1711975665710
+         *
+         * @param createdTime
+         * @return
+         */
+        public Builder createdTime(String createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+
+
+        /**
+         * 更新时间，毫秒时间戳
+         * <p> 示例值：1711975665710
+         *
+         * @param updatedTime
+         * @return
+         */
+        public Builder updatedTime(String updatedTime) {
+            this.updatedTime = updatedTime;
             return this;
         }
 

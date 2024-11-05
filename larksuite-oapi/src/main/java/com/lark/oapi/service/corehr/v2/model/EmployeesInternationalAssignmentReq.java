@@ -48,7 +48,7 @@ public class EmployeesInternationalAssignmentReq {
     @SerializedName("work_shift")
     private String workShift;
     /**
-     * 周工作时长
+     * 周工作时长;- 限制两位小数
      * <p> 示例值：8
      */
     @SerializedName("weekly_working_hours_v2")
@@ -84,7 +84,7 @@ public class EmployeesInternationalAssignmentReq {
     @SerializedName("job_family_id")
     private String jobFamilyId;
     /**
-     * 职级 ID;- 可通过[【批量查询职级】](https://open.feishu.cn/document//uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/job_level/list)获取
+     * 职级 ID;- 可通过[【批量查询职级】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/job_level/list)获取
      * <p> 示例值：7127921432117937708
      */
     @SerializedName("job_level_id")
@@ -156,12 +156,6 @@ public class EmployeesInternationalAssignmentReq {
     @SerializedName("international_assignment_expected_end_date")
     private String internationalAssignmentExpectedEndDate;
     /**
-     * 外派状态;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：international_assignment;  - custom_api_name：international_assignment_status
-     * <p> 示例值：on_assignment
-     */
-    @SerializedName("international_assignment_status")
-    private String internationalAssignmentStatus;
-    /**
      * 外派类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：international_assignment;  - custom_api_name：international_assignment_type
      * <p> 示例值：global_assignment
      */
@@ -201,7 +195,7 @@ public class EmployeesInternationalAssignmentReq {
          */
         this.workShift = builder.workShift;
         /**
-         * 周工作时长
+         * 周工作时长;- 限制两位小数
          * <p> 示例值：8
          */
         this.weeklyWorkingHoursV2 = builder.weeklyWorkingHoursV2;
@@ -231,7 +225,7 @@ public class EmployeesInternationalAssignmentReq {
          */
         this.jobFamilyId = builder.jobFamilyId;
         /**
-         * 职级 ID;- 可通过[【批量查询职级】](https://open.feishu.cn/document//uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/job_level/list)获取
+         * 职级 ID;- 可通过[【批量查询职级】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/job_level/list)获取
          * <p> 示例值：7127921432117937708
          */
         this.jobLevelId = builder.jobLevelId;
@@ -290,11 +284,6 @@ public class EmployeesInternationalAssignmentReq {
          * <p> 示例值：2024-01-02
          */
         this.internationalAssignmentExpectedEndDate = builder.internationalAssignmentExpectedEndDate;
-        /**
-         * 外派状态;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：international_assignment;  - custom_api_name：international_assignment_status
-         * <p> 示例值：on_assignment
-         */
-        this.internationalAssignmentStatus = builder.internationalAssignmentStatus;
         /**
          * 外派类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：international_assignment;  - custom_api_name：international_assignment_type
          * <p> 示例值：global_assignment
@@ -484,14 +473,6 @@ public class EmployeesInternationalAssignmentReq {
         this.internationalAssignmentExpectedEndDate = internationalAssignmentExpectedEndDate;
     }
 
-    public String getInternationalAssignmentStatus() {
-        return this.internationalAssignmentStatus;
-    }
-
-    public void setInternationalAssignmentStatus(String internationalAssignmentStatus) {
-        this.internationalAssignmentStatus = internationalAssignmentStatus;
-    }
-
     public String getInternationalAssignmentType() {
         return this.internationalAssignmentType;
     }
@@ -533,7 +514,7 @@ public class EmployeesInternationalAssignmentReq {
          */
         private String workShift;
         /**
-         * 周工作时长
+         * 周工作时长;- 限制两位小数
          * <p> 示例值：8
          */
         private Double weeklyWorkingHoursV2;
@@ -563,7 +544,7 @@ public class EmployeesInternationalAssignmentReq {
          */
         private String jobFamilyId;
         /**
-         * 职级 ID;- 可通过[【批量查询职级】](https://open.feishu.cn/document//uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/job_level/list)获取
+         * 职级 ID;- 可通过[【批量查询职级】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/job_level/list)获取
          * <p> 示例值：7127921432117937708
          */
         private String jobLevelId;
@@ -623,11 +604,6 @@ public class EmployeesInternationalAssignmentReq {
          */
         private String internationalAssignmentExpectedEndDate;
         /**
-         * 外派状态;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：international_assignment;  - custom_api_name：international_assignment_status
-         * <p> 示例值：on_assignment
-         */
-        private String internationalAssignmentStatus;
-        /**
          * 外派类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：international_assignment;  - custom_api_name：international_assignment_type
          * <p> 示例值：global_assignment
          */
@@ -683,7 +659,7 @@ public class EmployeesInternationalAssignmentReq {
 
 
         /**
-         * 周工作时长
+         * 周工作时长;- 限制两位小数
          * <p> 示例值：8
          *
          * @param weeklyWorkingHoursV2
@@ -761,7 +737,7 @@ public class EmployeesInternationalAssignmentReq {
 
 
         /**
-         * 职级 ID;- 可通过[【批量查询职级】](https://open.feishu.cn/document//uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/job_level/list)获取
+         * 职级 ID;- 可通过[【批量查询职级】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/job_level/list)获取
          * <p> 示例值：7127921432117937708
          *
          * @param jobLevelId
@@ -912,19 +888,6 @@ public class EmployeesInternationalAssignmentReq {
          */
         public Builder internationalAssignmentExpectedEndDate(String internationalAssignmentExpectedEndDate) {
             this.internationalAssignmentExpectedEndDate = internationalAssignmentExpectedEndDate;
-            return this;
-        }
-
-
-        /**
-         * 外派状态;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：international_assignment;  - custom_api_name：international_assignment_status
-         * <p> 示例值：on_assignment
-         *
-         * @param internationalAssignmentStatus
-         * @return
-         */
-        public Builder internationalAssignmentStatus(String internationalAssignmentStatus) {
-            this.internationalAssignmentStatus = internationalAssignmentStatus;
             return this;
         }
 

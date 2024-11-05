@@ -60,11 +60,41 @@ public class WikiPassageParam {
     @SerializedName("node_tokens")
     private String[] nodeTokens;
     /**
-     * 禁用搜索外链文档功能
+     * 排除space空间id
      * <p> 示例值：false
      */
-    @SerializedName("disable_search_link")
-    private Boolean disableSearchLink;
+    @SerializedName("excluded_space_ids")
+    private String[] excludedSpaceIds;
+    /**
+     * 排除文档id
+     * <p> 示例值：true
+     */
+    @SerializedName("excluded_obj_ids")
+    private String[] excludedObjIds;
+    /**
+     * 排除wiki的token
+     * <p> 示例值：true
+     */
+    @SerializedName("excluded_wiki_tokens")
+    private String[] excludedWikiTokens;
+    /**
+     * 排除wiki的node token
+     * <p> 示例值：
+     */
+    @SerializedName("excluded_node_tokens")
+    private String[] excludedNodeTokens;
+    /**
+     * 是否跨租户
+     * <p> 示例值：false
+     */
+    @SerializedName("enable_cross_tenant")
+    private Boolean enableCrossTenant;
+    /**
+     * 是否只搜公开
+     * <p> 示例值：false
+     */
+    @SerializedName("only_search_public")
+    private Boolean onlySearchPublic;
 
     // builder 开始
     public WikiPassageParam() {
@@ -97,10 +127,35 @@ public class WikiPassageParam {
          */
         this.nodeTokens = builder.nodeTokens;
         /**
-         * 禁用搜索外链文档功能
+         * 排除space空间id
          * <p> 示例值：false
          */
-        this.disableSearchLink = builder.disableSearchLink;
+        this.excludedSpaceIds = builder.excludedSpaceIds;
+        /**
+         * 排除文档id
+         * <p> 示例值：true
+         */
+        this.excludedObjIds = builder.excludedObjIds;
+        /**
+         * 排除wiki的token
+         * <p> 示例值：true
+         */
+        this.excludedWikiTokens = builder.excludedWikiTokens;
+        /**
+         * 排除wiki的node token
+         * <p> 示例值：
+         */
+        this.excludedNodeTokens = builder.excludedNodeTokens;
+        /**
+         * 是否跨租户
+         * <p> 示例值：false
+         */
+        this.enableCrossTenant = builder.enableCrossTenant;
+        /**
+         * 是否只搜公开
+         * <p> 示例值：false
+         */
+        this.onlySearchPublic = builder.onlySearchPublic;
     }
 
     public static Builder newBuilder() {
@@ -147,12 +202,52 @@ public class WikiPassageParam {
         this.nodeTokens = nodeTokens;
     }
 
-    public Boolean getDisableSearchLink() {
-        return this.disableSearchLink;
+    public String[] getExcludedSpaceIds() {
+        return this.excludedSpaceIds;
     }
 
-    public void setDisableSearchLink(Boolean disableSearchLink) {
-        this.disableSearchLink = disableSearchLink;
+    public void setExcludedSpaceIds(String[] excludedSpaceIds) {
+        this.excludedSpaceIds = excludedSpaceIds;
+    }
+
+    public String[] getExcludedObjIds() {
+        return this.excludedObjIds;
+    }
+
+    public void setExcludedObjIds(String[] excludedObjIds) {
+        this.excludedObjIds = excludedObjIds;
+    }
+
+    public String[] getExcludedWikiTokens() {
+        return this.excludedWikiTokens;
+    }
+
+    public void setExcludedWikiTokens(String[] excludedWikiTokens) {
+        this.excludedWikiTokens = excludedWikiTokens;
+    }
+
+    public String[] getExcludedNodeTokens() {
+        return this.excludedNodeTokens;
+    }
+
+    public void setExcludedNodeTokens(String[] excludedNodeTokens) {
+        this.excludedNodeTokens = excludedNodeTokens;
+    }
+
+    public Boolean getEnableCrossTenant() {
+        return this.enableCrossTenant;
+    }
+
+    public void setEnableCrossTenant(Boolean enableCrossTenant) {
+        this.enableCrossTenant = enableCrossTenant;
+    }
+
+    public Boolean getOnlySearchPublic() {
+        return this.onlySearchPublic;
+    }
+
+    public void setOnlySearchPublic(Boolean onlySearchPublic) {
+        this.onlySearchPublic = onlySearchPublic;
     }
 
     public static class Builder {
@@ -182,10 +277,35 @@ public class WikiPassageParam {
          */
         private String[] nodeTokens;
         /**
-         * 禁用搜索外链文档功能
+         * 排除space空间id
          * <p> 示例值：false
          */
-        private Boolean disableSearchLink;
+        private String[] excludedSpaceIds;
+        /**
+         * 排除文档id
+         * <p> 示例值：true
+         */
+        private String[] excludedObjIds;
+        /**
+         * 排除wiki的token
+         * <p> 示例值：true
+         */
+        private String[] excludedWikiTokens;
+        /**
+         * 排除wiki的node token
+         * <p> 示例值：
+         */
+        private String[] excludedNodeTokens;
+        /**
+         * 是否跨租户
+         * <p> 示例值：false
+         */
+        private Boolean enableCrossTenant;
+        /**
+         * 是否只搜公开
+         * <p> 示例值：false
+         */
+        private Boolean onlySearchPublic;
 
         /**
          * 是否要搜索wiki
@@ -253,14 +373,79 @@ public class WikiPassageParam {
 
 
         /**
-         * 禁用搜索外链文档功能
+         * 排除space空间id
          * <p> 示例值：false
          *
-         * @param disableSearchLink
+         * @param excludedSpaceIds
          * @return
          */
-        public Builder disableSearchLink(Boolean disableSearchLink) {
-            this.disableSearchLink = disableSearchLink;
+        public Builder excludedSpaceIds(String[] excludedSpaceIds) {
+            this.excludedSpaceIds = excludedSpaceIds;
+            return this;
+        }
+
+
+        /**
+         * 排除文档id
+         * <p> 示例值：true
+         *
+         * @param excludedObjIds
+         * @return
+         */
+        public Builder excludedObjIds(String[] excludedObjIds) {
+            this.excludedObjIds = excludedObjIds;
+            return this;
+        }
+
+
+        /**
+         * 排除wiki的token
+         * <p> 示例值：true
+         *
+         * @param excludedWikiTokens
+         * @return
+         */
+        public Builder excludedWikiTokens(String[] excludedWikiTokens) {
+            this.excludedWikiTokens = excludedWikiTokens;
+            return this;
+        }
+
+
+        /**
+         * 排除wiki的node token
+         * <p> 示例值：
+         *
+         * @param excludedNodeTokens
+         * @return
+         */
+        public Builder excludedNodeTokens(String[] excludedNodeTokens) {
+            this.excludedNodeTokens = excludedNodeTokens;
+            return this;
+        }
+
+
+        /**
+         * 是否跨租户
+         * <p> 示例值：false
+         *
+         * @param enableCrossTenant
+         * @return
+         */
+        public Builder enableCrossTenant(Boolean enableCrossTenant) {
+            this.enableCrossTenant = enableCrossTenant;
+            return this;
+        }
+
+
+        /**
+         * 是否只搜公开
+         * <p> 示例值：false
+         *
+         * @param onlySearchPublic
+         * @return
+         */
+        public Builder onlySearchPublic(Boolean onlySearchPublic) {
+            this.onlySearchPublic = onlySearchPublic;
             return this;
         }
 

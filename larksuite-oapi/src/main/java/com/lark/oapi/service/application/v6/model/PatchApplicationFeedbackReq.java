@@ -160,10 +160,10 @@ public class PatchApplicationFeedbackReq {
         /**
          * <p> 示例值：open_id
          *
-         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationFeedbackUserIdTypeEnum}
+         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.PatchApplicationFeedbackPatchApplicationFeedbackUserIDTypeEnum}
          * @return
          */
-        public Builder userIdType(com.lark.oapi.service.application.v6.enums.PatchApplicationFeedbackUserIdTypeEnum userIdType) {
+        public Builder userIdType(com.lark.oapi.service.application.v6.enums.PatchApplicationFeedbackPatchApplicationFeedbackUserIDTypeEnum userIdType) {
             this.userIdType = userIdType.getValue();
             return this;
         }

@@ -29,14 +29,7 @@ import com.lark.oapi.core.response.BaseResponse;
 
 public class ListProcessReq {
     /**
-     * 任务查询结束时间 (unix毫秒时间戳)，闭区间，开始时间和结束时间跨度不能超过31天
-     * <p> 示例值：1547654251506
-     */
-    @Query
-    @SerializedName("modify_time_to")
-    private String modifyTimeTo;
-    /**
-     * 查询状态列表
+     * 查询流程状态列表。
      * <p> 示例值：
      */
     @Query
@@ -64,6 +57,13 @@ public class ListProcessReq {
     @SerializedName("modify_time_from")
     private String modifyTimeFrom;
     /**
+     * 1. 任务查询结束时间，闭区间 2. 单位：ms。从1970年1月1日(UTC/GMT的午夜) 开始经过的毫秒数 3. 注意：开始时间和结束时间跨度不能超过31天 4. 示例值：1719549169735
+     * <p> 示例值：1547654251506
+     */
+    @Query
+    @SerializedName("modify_time_to")
+    private String modifyTimeTo;
+    /**
      * 流程定义ID
      * <p> 示例值：people_6961286846093788680_7081951411982077732
      */
@@ -77,12 +77,7 @@ public class ListProcessReq {
 
     public ListProcessReq(Builder builder) {
         /**
-         * 任务查询结束时间 (unix毫秒时间戳)，闭区间，开始时间和结束时间跨度不能超过31天
-         * <p> 示例值：1547654251506
-         */
-        this.modifyTimeTo = builder.modifyTimeTo;
-        /**
-         * 查询状态列表
+         * 查询流程状态列表。
          * <p> 示例值：
          */
         this.statuses = builder.statuses;
@@ -102,6 +97,11 @@ public class ListProcessReq {
          */
         this.modifyTimeFrom = builder.modifyTimeFrom;
         /**
+         * 1. 任务查询结束时间，闭区间 2. 单位：ms。从1970年1月1日(UTC/GMT的午夜) 开始经过的毫秒数 3. 注意：开始时间和结束时间跨度不能超过31天 4. 示例值：1719549169735
+         * <p> 示例值：1547654251506
+         */
+        this.modifyTimeTo = builder.modifyTimeTo;
+        /**
          * 流程定义ID
          * <p> 示例值：people_6961286846093788680_7081951411982077732
          */
@@ -110,14 +110,6 @@ public class ListProcessReq {
 
     public static Builder newBuilder() {
         return new Builder();
-    }
-
-    public String getModifyTimeTo() {
-        return this.modifyTimeTo;
-    }
-
-    public void setModifyTimeTo(String modifyTimeTo) {
-        this.modifyTimeTo = modifyTimeTo;
     }
 
     public Integer[] getStatuses() {
@@ -152,6 +144,14 @@ public class ListProcessReq {
         this.modifyTimeFrom = modifyTimeFrom;
     }
 
+    public String getModifyTimeTo() {
+        return this.modifyTimeTo;
+    }
+
+    public void setModifyTimeTo(String modifyTimeTo) {
+        this.modifyTimeTo = modifyTimeTo;
+    }
+
     public String getFlowDefinitionId() {
         return this.flowDefinitionId;
     }
@@ -161,29 +161,16 @@ public class ListProcessReq {
     }
 
     public static class Builder {
-        private String modifyTimeTo; // 任务查询结束时间 (unix毫秒时间戳)，闭区间，开始时间和结束时间跨度不能超过31天
-        private Integer[] statuses; // 查询状态列表
+        private Integer[] statuses; // 查询流程状态列表。
         private String pageToken; // 分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果
         private Integer pageSize; // 分页大小
         private String modifyTimeFrom; // 查询开始时间（unix毫秒时间戳），闭区间，开始时间和结束时间跨度不能超过31天
+        private String modifyTimeTo; // 1. 任务查询结束时间，闭区间 2. 单位：ms。从1970年1月1日(UTC/GMT的午夜) 开始经过的毫秒数 3. 注意：开始时间和结束时间跨度不能超过31天 4. 示例值：1719549169735
         private String flowDefinitionId; // 流程定义ID
 
 
         /**
-         * 任务查询结束时间 (unix毫秒时间戳)，闭区间，开始时间和结束时间跨度不能超过31天
-         * <p> 示例值：1547654251506
-         *
-         * @param modifyTimeTo
-         * @return
-         */
-        public Builder modifyTimeTo(String modifyTimeTo) {
-            this.modifyTimeTo = modifyTimeTo;
-            return this;
-        }
-
-
-        /**
-         * 查询状态列表
+         * 查询流程状态列表。
          * <p> 示例值：
          *
          * @param statuses
@@ -230,6 +217,19 @@ public class ListProcessReq {
          */
         public Builder modifyTimeFrom(String modifyTimeFrom) {
             this.modifyTimeFrom = modifyTimeFrom;
+            return this;
+        }
+
+
+        /**
+         * 1. 任务查询结束时间，闭区间 2. 单位：ms。从1970年1月1日(UTC/GMT的午夜) 开始经过的毫秒数 3. 注意：开始时间和结束时间跨度不能超过31天 4. 示例值：1719549169735
+         * <p> 示例值：1547654251506
+         *
+         * @param modifyTimeTo
+         * @return
+         */
+        public Builder modifyTimeTo(String modifyTimeTo) {
+            this.modifyTimeTo = modifyTimeTo;
             return this;
         }
 

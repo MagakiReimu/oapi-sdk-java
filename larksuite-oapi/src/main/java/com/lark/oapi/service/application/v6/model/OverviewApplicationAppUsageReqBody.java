@@ -206,10 +206,10 @@ public class OverviewApplicationAppUsageReqBody {
          * 能力类型，按能力类型进行筛选，返回对应能力的活跃数据
          * <p> 示例值：app
          *
-         * @param ability {@link com.lark.oapi.service.application.v6.enums.OverviewApplicationAppUsageAbilityEnum}
+         * @param ability {@link com.lark.oapi.service.application.v6.enums.OverviewApplicationAppUsageOverviewApplicationAppUsageAbilityEnum}
          * @return
          */
-        public Builder ability(com.lark.oapi.service.application.v6.enums.OverviewApplicationAppUsageAbilityEnum ability) {
+        public Builder ability(com.lark.oapi.service.application.v6.enums.OverviewApplicationAppUsageOverviewApplicationAppUsageAbilityEnum ability) {
             this.ability = ability.getValue();
             return this;
         }

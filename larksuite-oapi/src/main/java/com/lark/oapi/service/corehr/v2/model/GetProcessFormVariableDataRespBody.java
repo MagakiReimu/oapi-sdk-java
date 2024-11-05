@@ -34,6 +34,12 @@ public class GetProcessFormVariableDataRespBody {
      */
     @SerializedName("field_variable_values")
     private FieldVariableValue[] fieldVariableValues;
+    /**
+     * 流程实例id
+     * <p> 示例值：7368832822481536556
+     */
+    @SerializedName("process_id")
+    private String processId;
 
     public FieldVariableValue[] getFieldVariableValues() {
         return this.fieldVariableValues;
@@ -41,6 +47,14 @@ public class GetProcessFormVariableDataRespBody {
 
     public void setFieldVariableValues(FieldVariableValue[] fieldVariableValues) {
         this.fieldVariableValues = fieldVariableValues;
+    }
+
+    public String getProcessId() {
+        return this.processId;
+    }
+
+    public void setProcessId(String processId) {
+        this.processId = processId;
     }
 
 }

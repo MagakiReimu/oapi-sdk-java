@@ -39,8 +39,8 @@ public class DataAssetResource {
      * 数据知识资源类型
      * <p> 示例值：dataset
      */
-    @SerializedName("resouce_type")
-    private String resouceType;
+    @SerializedName("resource_type")
+    private String resourceType;
 
     // builder 开始
     public DataAssetResource() {
@@ -56,7 +56,7 @@ public class DataAssetResource {
          * 数据知识资源类型
          * <p> 示例值：dataset
          */
-        this.resouceType = builder.resouceType;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder newBuilder() {
@@ -71,12 +71,12 @@ public class DataAssetResource {
         this.resourceId = resourceId;
     }
 
-    public String getResouceType() {
-        return this.resouceType;
+    public String getResourceType() {
+        return this.resourceType;
     }
 
-    public void setResouceType(String resouceType) {
-        this.resouceType = resouceType;
+    public void setResourceType(String resourceType) {
+        this.resourceType = resourceType;
     }
 
     public static class Builder {
@@ -89,7 +89,7 @@ public class DataAssetResource {
          * 数据知识资源类型
          * <p> 示例值：dataset
          */
-        private String resouceType;
+        private String resourceType;
 
         /**
          * 数据知识资源ID
@@ -108,11 +108,11 @@ public class DataAssetResource {
          * 数据知识资源类型
          * <p> 示例值：dataset
          *
-         * @param resouceType
+         * @param resourceType
          * @return
          */
-        public Builder resouceType(String resouceType) {
-            this.resouceType = resouceType;
+        public Builder resourceType(String resourceType) {
+            this.resourceType = resourceType;
             return this;
         }
 
@@ -120,11 +120,11 @@ public class DataAssetResource {
          * 数据知识资源类型
          * <p> 示例值：dataset
          *
-         * @param resouceType {@link com.lark.oapi.service.aily.v1.enums.DataAssetResourceResouceTypeEnum}
+         * @param resourceType {@link com.lark.oapi.service.aily.v1.enums.DataAssetResourceResourceTypeEnum}
          * @return
          */
-        public Builder resouceType(com.lark.oapi.service.aily.v1.enums.DataAssetResourceResouceTypeEnum resouceType) {
-            this.resouceType = resouceType.getValue();
+        public Builder resourceType(com.lark.oapi.service.aily.v1.enums.DataAssetResourceResourceTypeEnum resourceType) {
+            this.resourceType = resourceType.getValue();
             return this;
         }
 

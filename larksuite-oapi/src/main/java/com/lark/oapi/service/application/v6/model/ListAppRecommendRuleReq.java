@@ -148,10 +148,10 @@ public class ListAppRecommendRuleReq {
          * 此次调用中使用的用户ID的类型
          * <p> 示例值：
          *
-         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.ListAppRecommendRuleUserIdTypeEnum}
+         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.ListAppRecommendRuleListAppRecommendRuleUserIDTypeEnum}
          * @return
          */
-        public Builder userIdType(com.lark.oapi.service.application.v6.enums.ListAppRecommendRuleUserIdTypeEnum userIdType) {
+        public Builder userIdType(com.lark.oapi.service.application.v6.enums.ListAppRecommendRuleListAppRecommendRuleUserIDTypeEnum userIdType) {
             this.userIdType = userIdType.getValue();
             return this;
         }

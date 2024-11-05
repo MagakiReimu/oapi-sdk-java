@@ -48,6 +48,72 @@ public class Company {
 
 
     /**
+     * ，
+     * <p> 官网API文档链接:<a href="https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=active&project=corehr&resource=company&version=v2">https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=active&project=corehr&resource=company&version=v2</a> ;
+     * <p> 使用Demo链接: <a href="https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/ActiveCompanySample.java">https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/ActiveCompanySample.java</a> ;
+     */
+    public ActiveCompanyResp active(ActiveCompanyReq req, RequestOptions reqOptions) throws Exception {
+        // 请求参数选项
+        if (reqOptions == null) {
+            reqOptions = new RequestOptions();
+        }
+
+        // 发起请求
+        RawResponse httpResponse = Transport.send(config, reqOptions, "POST"
+                , "/open-apis/corehr/v2/companies/active"
+                , Sets.newHashSet(AccessTokenType.Tenant)
+                , req);
+
+        // 反序列化
+        ActiveCompanyResp resp = UnmarshalRespUtil.unmarshalResp(httpResponse, ActiveCompanyResp.class);
+        if (resp == null) {
+            log.error(String.format(
+                    "%s,callError,req=%s,respHeader=%s,respStatusCode=%s,respBody=%s,", "/open-apis/corehr/v2/companies/active"
+                    , Jsons.DEFAULT.toJson(req), Jsons.DEFAULT.toJson(httpResponse.getHeaders()),
+                    httpResponse.getStatusCode(), new String(httpResponse.getBody(),
+                            StandardCharsets.UTF_8)));
+            throw new IllegalArgumentException("The result returned by the server is illegal");
+        }
+
+        resp.setRawResponse(httpResponse);
+        resp.setRequest(req);
+
+        return resp;
+    }
+
+    /**
+     * ，
+     * <p> 官网API文档链接:<a href="https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=active&project=corehr&resource=company&version=v2">https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=active&project=corehr&resource=company&version=v2</a> ;
+     * <p> 使用Demo链接: <a href="https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/ActiveCompanySample.java">https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/ActiveCompanySample.java</a> ;
+     */
+    public ActiveCompanyResp active(ActiveCompanyReq req) throws Exception {
+        // 请求参数选项
+        RequestOptions reqOptions = new RequestOptions();
+
+        // 发起请求
+        RawResponse httpResponse = Transport.send(config, reqOptions, "POST"
+                , "/open-apis/corehr/v2/companies/active"
+                , Sets.newHashSet(AccessTokenType.Tenant)
+                , req);
+
+        // 反序列化
+        ActiveCompanyResp resp = UnmarshalRespUtil.unmarshalResp(httpResponse, ActiveCompanyResp.class);
+        if (resp == null) {
+            log.error(String.format(
+                    "%s,callError,req=%s,respHeader=%s,respStatusCode=%s,respBody=%s,", "/open-apis/corehr/v2/companies/active"
+                    , Jsons.DEFAULT.toJson(req), Jsons.DEFAULT.toJson(httpResponse.getHeaders()),
+                    httpResponse.getStatusCode(), new String(httpResponse.getBody(),
+                            StandardCharsets.UTF_8)));
+            throw new IllegalArgumentException("The result returned by the server is illegal");
+        }
+
+        resp.setRawResponse(httpResponse);
+        resp.setRequest(req);
+
+        return resp;
+    }
+
+    /**
      * ，通过公司 ID 批量获取公司信息
      * <p> 官网API文档链接:<a href="https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=batch_get&project=corehr&resource=company&version=v2">https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=batch_get&project=corehr&resource=company&version=v2</a> ;
      * <p> 使用Demo链接: <a href="https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/BatchGetCompanySample.java">https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/BatchGetCompanySample.java</a> ;
@@ -101,6 +167,72 @@ public class Company {
         if (resp == null) {
             log.error(String.format(
                     "%s,callError,req=%s,respHeader=%s,respStatusCode=%s,respBody=%s,", "/open-apis/corehr/v2/companies/batch_get"
+                    , Jsons.DEFAULT.toJson(req), Jsons.DEFAULT.toJson(httpResponse.getHeaders()),
+                    httpResponse.getStatusCode(), new String(httpResponse.getBody(),
+                            StandardCharsets.UTF_8)));
+            throw new IllegalArgumentException("The result returned by the server is illegal");
+        }
+
+        resp.setRawResponse(httpResponse);
+        resp.setRequest(req);
+
+        return resp;
+    }
+
+    /**
+     * ，
+     * <p> 官网API文档链接:<a href="https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=query_recent_change&project=corehr&resource=company&version=v2">https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=query_recent_change&project=corehr&resource=company&version=v2</a> ;
+     * <p> 使用Demo链接: <a href="https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/QueryRecentChangeCompanySample.java">https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/QueryRecentChangeCompanySample.java</a> ;
+     */
+    public QueryRecentChangeCompanyResp queryRecentChange(QueryRecentChangeCompanyReq req, RequestOptions reqOptions) throws Exception {
+        // 请求参数选项
+        if (reqOptions == null) {
+            reqOptions = new RequestOptions();
+        }
+
+        // 发起请求
+        RawResponse httpResponse = Transport.send(config, reqOptions, "GET"
+                , "/open-apis/corehr/v2/companies/query_recent_change"
+                , Sets.newHashSet(AccessTokenType.Tenant)
+                , req);
+
+        // 反序列化
+        QueryRecentChangeCompanyResp resp = UnmarshalRespUtil.unmarshalResp(httpResponse, QueryRecentChangeCompanyResp.class);
+        if (resp == null) {
+            log.error(String.format(
+                    "%s,callError,req=%s,respHeader=%s,respStatusCode=%s,respBody=%s,", "/open-apis/corehr/v2/companies/query_recent_change"
+                    , Jsons.DEFAULT.toJson(req), Jsons.DEFAULT.toJson(httpResponse.getHeaders()),
+                    httpResponse.getStatusCode(), new String(httpResponse.getBody(),
+                            StandardCharsets.UTF_8)));
+            throw new IllegalArgumentException("The result returned by the server is illegal");
+        }
+
+        resp.setRawResponse(httpResponse);
+        resp.setRequest(req);
+
+        return resp;
+    }
+
+    /**
+     * ，
+     * <p> 官网API文档链接:<a href="https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=query_recent_change&project=corehr&resource=company&version=v2">https://open.feishu.cn/api-explorer?from=op_doc_tab&apiName=query_recent_change&project=corehr&resource=company&version=v2</a> ;
+     * <p> 使用Demo链接: <a href="https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/QueryRecentChangeCompanySample.java">https://github.com/larksuite/oapi-sdk-java/tree/v2_main/sample/src/main/java/com/lark/oapi/sample/apiall/corehrv2/QueryRecentChangeCompanySample.java</a> ;
+     */
+    public QueryRecentChangeCompanyResp queryRecentChange(QueryRecentChangeCompanyReq req) throws Exception {
+        // 请求参数选项
+        RequestOptions reqOptions = new RequestOptions();
+
+        // 发起请求
+        RawResponse httpResponse = Transport.send(config, reqOptions, "GET"
+                , "/open-apis/corehr/v2/companies/query_recent_change"
+                , Sets.newHashSet(AccessTokenType.Tenant)
+                , req);
+
+        // 反序列化
+        QueryRecentChangeCompanyResp resp = UnmarshalRespUtil.unmarshalResp(httpResponse, QueryRecentChangeCompanyResp.class);
+        if (resp == null) {
+            log.error(String.format(
+                    "%s,callError,req=%s,respHeader=%s,respStatusCode=%s,respBody=%s,", "/open-apis/corehr/v2/companies/query_recent_change"
                     , Jsons.DEFAULT.toJson(req), Jsons.DEFAULT.toJson(httpResponse.getHeaders()),
                     httpResponse.getStatusCode(), new String(httpResponse.getBody(),
                             StandardCharsets.UTF_8)));

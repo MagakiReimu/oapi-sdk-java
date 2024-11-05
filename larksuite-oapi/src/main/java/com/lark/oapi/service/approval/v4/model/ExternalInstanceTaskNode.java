@@ -125,6 +125,12 @@ public class ExternalInstanceTaskNode {
      */
     @SerializedName("node_name")
     private String nodeName;
+    /**
+     * 任务生成类型
+     * <p> 示例值：EXTERNAL_CONSIGN
+     */
+    @SerializedName("generate_type")
+    private String generateType;
 
     // builder 开始
     public ExternalInstanceTaskNode() {
@@ -211,6 +217,11 @@ public class ExternalInstanceTaskNode {
          * <p> 示例值：i18n@name
          */
         this.nodeName = builder.nodeName;
+        /**
+         * 任务生成类型
+         * <p> 示例值：EXTERNAL_CONSIGN
+         */
+        this.generateType = builder.generateType;
     }
 
     public static Builder newBuilder() {
@@ -345,6 +356,14 @@ public class ExternalInstanceTaskNode {
         this.nodeName = nodeName;
     }
 
+    public String getGenerateType() {
+        return this.generateType;
+    }
+
+    public void setGenerateType(String generateType) {
+        this.generateType = generateType;
+    }
+
     public static class Builder {
         /**
          * 审批实例内的唯一标识，用于更新审批任务时定位数据
@@ -426,6 +445,11 @@ public class ExternalInstanceTaskNode {
          * <p> 示例值：i18n@name
          */
         private String nodeName;
+        /**
+         * 任务生成类型
+         * <p> 示例值：EXTERNAL_CONSIGN
+         */
+        private String generateType;
 
         /**
          * 审批实例内的唯一标识，用于更新审批任务时定位数据
@@ -655,6 +679,31 @@ public class ExternalInstanceTaskNode {
          */
         public Builder nodeName(String nodeName) {
             this.nodeName = nodeName;
+            return this;
+        }
+
+
+        /**
+         * 任务生成类型
+         * <p> 示例值：EXTERNAL_CONSIGN
+         *
+         * @param generateType
+         * @return
+         */
+        public Builder generateType(String generateType) {
+            this.generateType = generateType;
+            return this;
+        }
+
+        /**
+         * 任务生成类型
+         * <p> 示例值：EXTERNAL_CONSIGN
+         *
+         * @param generateType {@link com.lark.oapi.service.approval.v4.enums.ExternalInstanceTaskNodeGenerateTypeEnum}
+         * @return
+         */
+        public Builder generateType(com.lark.oapi.service.approval.v4.enums.ExternalInstanceTaskNodeGenerateTypeEnum generateType) {
+            this.generateType = generateType.getValue();
             return this;
         }
 

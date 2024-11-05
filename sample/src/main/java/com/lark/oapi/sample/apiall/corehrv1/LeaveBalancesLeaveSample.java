@@ -23,6 +23,7 @@ public class LeaveBalancesLeaveSample {
                 .employmentIdList(new String[]{})
                 .userIdType("people_corehr_id")
                 .timeZone("Asia/Shanghai")
+                .includeOffboard(true)
                 .build();
 
         // 发起请求

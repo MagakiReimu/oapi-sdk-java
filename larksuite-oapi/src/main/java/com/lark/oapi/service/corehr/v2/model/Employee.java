@@ -417,8 +417,8 @@ public class Employee {
      * 自定义组织
      * <p> 示例值：{"custom_org_02":[{"id":"1","rate":"99"}]}
      */
-    @SerializedName("custom_org_str")
-    private String customOrgStr;
+    @SerializedName("custom_org")
+    private String customOrg;
 
     // builder 开始
     public Employee() {
@@ -749,7 +749,7 @@ public class Employee {
          * 自定义组织
          * <p> 示例值：{"custom_org_02":[{"id":"1","rate":"99"}]}
          */
-        this.customOrgStr = builder.customOrgStr;
+        this.customOrg = builder.customOrg;
     }
 
     public static Builder newBuilder() {
@@ -1268,12 +1268,12 @@ public class Employee {
         this.workShift = workShift;
     }
 
-    public String getCustomOrgStr() {
-        return this.customOrgStr;
+    public String getCustomOrg() {
+        return this.customOrg;
     }
 
-    public void setCustomOrgStr(String customOrgStr) {
-        this.customOrgStr = customOrgStr;
+    public void setCustomOrg(String customOrg) {
+        this.customOrg = customOrg;
     }
 
     public static class Builder {
@@ -1601,7 +1601,7 @@ public class Employee {
          * 自定义组织
          * <p> 示例值：{"custom_org_02":[{"id":"1","rate":"99"}]}
          */
-        private String customOrgStr;
+        private String customOrg;
 
         /**
          * 雇佣 ID;- 类型与 user_id_type 一致;- 请使用 employment_id_v2
@@ -2439,11 +2439,11 @@ public class Employee {
          * 自定义组织
          * <p> 示例值：{"custom_org_02":[{"id":"1","rate":"99"}]}
          *
-         * @param customOrgStr
+         * @param customOrg
          * @return
          */
-        public Builder customOrgStr(String customOrgStr) {
-            this.customOrgStr = customOrgStr;
+        public Builder customOrg(String customOrg) {
+            this.customOrg = customOrg;
             return this;
         }
 

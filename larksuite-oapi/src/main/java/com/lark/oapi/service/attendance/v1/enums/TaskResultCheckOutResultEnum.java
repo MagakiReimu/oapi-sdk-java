@@ -23,6 +23,7 @@ public enum TaskResultCheckOutResultEnum {
     EARLY("Early"), // 早退
     LATE("Late"), // 迟到
     LACK("Lack"), // 缺卡
+    TODO("Todo"), // 未打卡
     ;
     private String value;
 

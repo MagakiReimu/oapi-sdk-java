@@ -59,6 +59,12 @@ public class DialogSearchRequest {
      */
     @SerializedName("response_type")
     private Integer responseType;
+    /**
+     * passage_param
+     * <p> 示例值：
+     */
+    @SerializedName("passage_param")
+    private PassageParam passageParam;
 
     // builder 开始
     public DialogSearchRequest() {
@@ -90,6 +96,11 @@ public class DialogSearchRequest {
          * <p> 示例值：1
          */
         this.responseType = builder.responseType;
+        /**
+         * passage_param
+         * <p> 示例值：
+         */
+        this.passageParam = builder.passageParam;
     }
 
     public static Builder newBuilder() {
@@ -136,6 +147,14 @@ public class DialogSearchRequest {
         this.responseType = responseType;
     }
 
+    public PassageParam getPassageParam() {
+        return this.passageParam;
+    }
+
+    public void setPassageParam(PassageParam passageParam) {
+        this.passageParam = passageParam;
+    }
+
     public static class Builder {
         /**
          * 用户问题
@@ -162,6 +181,11 @@ public class DialogSearchRequest {
          * <p> 示例值：1
          */
         private Integer responseType;
+        /**
+         * passage_param
+         * <p> 示例值：
+         */
+        private PassageParam passageParam;
 
         /**
          * 用户问题
@@ -248,6 +272,19 @@ public class DialogSearchRequest {
          */
         public Builder responseType(com.lark.oapi.service.search.v2.enums.DialogSearchRequestResponseTypeEnum responseType) {
             this.responseType = responseType.getValue();
+            return this;
+        }
+
+
+        /**
+         * passage_param
+         * <p> 示例值：
+         *
+         * @param passageParam
+         * @return
+         */
+        public Builder passageParam(PassageParam passageParam) {
+            this.passageParam = passageParam;
             return this;
         }
 

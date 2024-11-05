@@ -45,7 +45,7 @@ public class CreateJobChangeRespBody {
      * <p> 示例值：4
      */
     @SerializedName("status")
-    private String status;
+    private Integer status;
     /**
      * 异动类型
      * <p> 示例值：direct_leader_change
@@ -99,11 +99,11 @@ public class CreateJobChangeRespBody {
         this.employmentId = employmentId;
     }
 
-    public String getStatus() {
+    public Integer getStatus() {
         return this.status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 

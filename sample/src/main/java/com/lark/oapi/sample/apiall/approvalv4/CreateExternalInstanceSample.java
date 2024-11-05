@@ -40,6 +40,7 @@ public class CreateExternalInstanceSample {
                         .trusteeshipUserIdType("user_id")
                         .trusteeshipUrls(TrusteeshipUrls.newBuilder().build())
                         .trusteeshipCacheConfig(TrusteeshipInstanceCacheConfig.newBuilder().build())
+                        .resourceRegion("")
                         .build())
                 .build();
 

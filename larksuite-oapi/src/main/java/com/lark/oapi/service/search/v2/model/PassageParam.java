@@ -53,6 +53,18 @@ public class PassageParam {
      */
     @SerializedName("helpdesk_param")
     private HelpdeskPassageParam helpdeskParam;
+    /**
+     * lingo_param
+     * <p> 示例值：
+     */
+    @SerializedName("lingo_param")
+    private LingoPassageParam lingoParam;
+    /**
+     * message_param
+     * <p> 示例值：
+     */
+    @SerializedName("message_param")
+    private MessagePassageParam messageParam;
 
     // builder 开始
     public PassageParam() {
@@ -79,6 +91,16 @@ public class PassageParam {
          * <p> 示例值：
          */
         this.helpdeskParam = builder.helpdeskParam;
+        /**
+         * lingo_param
+         * <p> 示例值：
+         */
+        this.lingoParam = builder.lingoParam;
+        /**
+         * message_param
+         * <p> 示例值：
+         */
+        this.messageParam = builder.messageParam;
     }
 
     public static Builder newBuilder() {
@@ -117,6 +139,22 @@ public class PassageParam {
         this.helpdeskParam = helpdeskParam;
     }
 
+    public LingoPassageParam getLingoParam() {
+        return this.lingoParam;
+    }
+
+    public void setLingoParam(LingoPassageParam lingoParam) {
+        this.lingoParam = lingoParam;
+    }
+
+    public MessagePassageParam getMessageParam() {
+        return this.messageParam;
+    }
+
+    public void setMessageParam(MessagePassageParam messageParam) {
+        this.messageParam = messageParam;
+    }
+
     public static class Builder {
         /**
          * 搜doc的相关参数
@@ -138,6 +176,16 @@ public class PassageParam {
          * <p> 示例值：
          */
         private HelpdeskPassageParam helpdeskParam;
+        /**
+         * lingo_param
+         * <p> 示例值：
+         */
+        private LingoPassageParam lingoParam;
+        /**
+         * message_param
+         * <p> 示例值：
+         */
+        private MessagePassageParam messageParam;
 
         /**
          * 搜doc的相关参数
@@ -187,6 +235,32 @@ public class PassageParam {
          */
         public Builder helpdeskParam(HelpdeskPassageParam helpdeskParam) {
             this.helpdeskParam = helpdeskParam;
+            return this;
+        }
+
+
+        /**
+         * lingo_param
+         * <p> 示例值：
+         *
+         * @param lingoParam
+         * @return
+         */
+        public Builder lingoParam(LingoPassageParam lingoParam) {
+            this.lingoParam = lingoParam;
+            return this;
+        }
+
+
+        /**
+         * message_param
+         * <p> 示例值：
+         *
+         * @param messageParam
+         * @return
+         */
+        public Builder messageParam(MessagePassageParam messageParam) {
+            this.messageParam = messageParam;
             return this;
         }
 

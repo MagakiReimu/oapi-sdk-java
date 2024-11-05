@@ -197,6 +197,12 @@ public class LeaveRequest {
      */
     @SerializedName("wd_paid_type")
     private Integer wdPaidType;
+    /**
+     * 请假更正流程信息
+     * <p> 示例值：
+     */
+    @SerializedName("leave_correct_process_info")
+    private LeaveProcessInfo[] leaveCorrectProcessInfo;
 
     // builder 开始
     public LeaveRequest() {
@@ -343,6 +349,11 @@ public class LeaveRequest {
          * <p> 示例值：1
          */
         this.wdPaidType = builder.wdPaidType;
+        /**
+         * 请假更正流程信息
+         * <p> 示例值：
+         */
+        this.leaveCorrectProcessInfo = builder.leaveCorrectProcessInfo;
     }
 
     public static Builder newBuilder() {
@@ -573,6 +584,14 @@ public class LeaveRequest {
         this.wdPaidType = wdPaidType;
     }
 
+    public LeaveProcessInfo[] getLeaveCorrectProcessInfo() {
+        return this.leaveCorrectProcessInfo;
+    }
+
+    public void setLeaveCorrectProcessInfo(LeaveProcessInfo[] leaveCorrectProcessInfo) {
+        this.leaveCorrectProcessInfo = leaveCorrectProcessInfo;
+    }
+
     public static class Builder {
         /**
          * 请假记录ID
@@ -714,6 +733,11 @@ public class LeaveRequest {
          * <p> 示例值：1
          */
         private Integer wdPaidType;
+        /**
+         * 请假更正流程信息
+         * <p> 示例值：
+         */
+        private LeaveProcessInfo[] leaveCorrectProcessInfo;
 
         /**
          * 请假记录ID
@@ -1075,6 +1099,19 @@ public class LeaveRequest {
          */
         public Builder wdPaidType(Integer wdPaidType) {
             this.wdPaidType = wdPaidType;
+            return this;
+        }
+
+
+        /**
+         * 请假更正流程信息
+         * <p> 示例值：
+         *
+         * @param leaveCorrectProcessInfo
+         * @return
+         */
+        public Builder leaveCorrectProcessInfo(LeaveProcessInfo[] leaveCorrectProcessInfo) {
+            this.leaveCorrectProcessInfo = leaveCorrectProcessInfo;
             return this;
         }
 

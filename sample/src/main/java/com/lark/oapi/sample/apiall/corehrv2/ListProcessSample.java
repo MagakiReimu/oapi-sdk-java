@@ -17,11 +17,11 @@ public class ListProcessSample {
 
         // 创建请求对象
         ListProcessReq req = ListProcessReq.newBuilder()
-                .modifyTimeTo("1547654251506")
                 .statuses(new Integer[]{})
                 .pageToken("7278949005675988535")
                 .pageSize(100)
                 .modifyTimeFrom("1547654251506")
+                .modifyTimeTo("1547654251506")
                 .flowDefinitionId("people_6961286846093788680_7081951411982077732")
                 .build();
 

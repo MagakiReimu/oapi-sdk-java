@@ -28,6 +28,8 @@ public class QueryEmployeesJobDataSample {
                         .effectiveDateEnd("2020-01-01")
                         .departmentId("6891251722631890445")
                         .employmentIds(new String[]{})
+                        .primaryJobData(true)
+                        .assignmentStartReasons(new String[]{})
                         .build())
                 .build();
 

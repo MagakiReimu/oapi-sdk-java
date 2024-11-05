@@ -197,6 +197,18 @@ public class JobData {
      */
     @SerializedName("service_company")
     private String serviceCompany;
+    /**
+     * 人员子类型 ID
+     * <p> 示例值：6890452208593372680
+     */
+    @SerializedName("employee_subtype_id")
+    private String employeeSubtypeId;
+    /**
+     * 岗位 ID，枚举值及详细信息可通过【查询单个岗位】接口查询获得
+     * <p> 示例值：6890452208593372679
+     */
+    @SerializedName("position_id")
+    private String positionId;
 
     // builder 开始
     public JobData() {
@@ -343,6 +355,16 @@ public class JobData {
          * <p> 示例值：6890452208593372680
          */
         this.serviceCompany = builder.serviceCompany;
+        /**
+         * 人员子类型 ID
+         * <p> 示例值：6890452208593372680
+         */
+        this.employeeSubtypeId = builder.employeeSubtypeId;
+        /**
+         * 岗位 ID，枚举值及详细信息可通过【查询单个岗位】接口查询获得
+         * <p> 示例值：6890452208593372679
+         */
+        this.positionId = builder.positionId;
     }
 
     public static Builder newBuilder() {
@@ -573,6 +595,22 @@ public class JobData {
         this.serviceCompany = serviceCompany;
     }
 
+    public String getEmployeeSubtypeId() {
+        return this.employeeSubtypeId;
+    }
+
+    public void setEmployeeSubtypeId(String employeeSubtypeId) {
+        this.employeeSubtypeId = employeeSubtypeId;
+    }
+
+    public String getPositionId() {
+        return this.positionId;
+    }
+
+    public void setPositionId(String positionId) {
+        this.positionId = positionId;
+    }
+
     public static class Builder {
         /**
          * 任职信息 ID
@@ -714,6 +752,16 @@ public class JobData {
          * <p> 示例值：6890452208593372680
          */
         private String serviceCompany;
+        /**
+         * 人员子类型 ID
+         * <p> 示例值：6890452208593372680
+         */
+        private String employeeSubtypeId;
+        /**
+         * 岗位 ID，枚举值及详细信息可通过【查询单个岗位】接口查询获得
+         * <p> 示例值：6890452208593372679
+         */
+        private String positionId;
 
         /**
          * 任职信息 ID
@@ -1075,6 +1123,32 @@ public class JobData {
          */
         public Builder serviceCompany(String serviceCompany) {
             this.serviceCompany = serviceCompany;
+            return this;
+        }
+
+
+        /**
+         * 人员子类型 ID
+         * <p> 示例值：6890452208593372680
+         *
+         * @param employeeSubtypeId
+         * @return
+         */
+        public Builder employeeSubtypeId(String employeeSubtypeId) {
+            this.employeeSubtypeId = employeeSubtypeId;
+            return this;
+        }
+
+
+        /**
+         * 岗位 ID，枚举值及详细信息可通过【查询单个岗位】接口查询获得
+         * <p> 示例值：6890452208593372679
+         *
+         * @param positionId
+         * @return
+         */
+        public Builder positionId(String positionId) {
+            this.positionId = positionId;
             return this;
         }
 

@@ -81,6 +81,7 @@ public class V1 {
     private final TalentObject talentObject; // talent_object
     private final TalentOperationLog talentOperationLog; // talent_operation_log
     private final TalentPool talentPool; // talent_pool
+    private final TalentTag talentTag; // talent_tag
     private final TerminationReason terminationReason; // termination_reason
     private final Test test; // test
     private final Todo todo; // 待办
@@ -158,6 +159,7 @@ public class V1 {
         this.talentObject = new TalentObject(config);
         this.talentOperationLog = new TalentOperationLog(config);
         this.talentPool = new TalentPool(config);
+        this.talentTag = new TalentTag(config);
         this.terminationReason = new TerminationReason(config);
         this.test = new Test(config);
         this.todo = new Todo(config);
@@ -425,6 +427,10 @@ public class V1 {
 
     public TalentPool talentPool() {
         return talentPool;
+    }
+
+    public TalentTag talentTag() {
+        return talentTag;
     }
 
     public TerminationReason terminationReason() {

@@ -274,6 +274,13 @@ public class CorehrService {
         return v2;
     }
 
+    public abstract static class P2CommonDataMetaDataUpdatedV1Handler implements IEventHandler<P2CommonDataMetaDataUpdatedV1> {
+        @Override
+        public P2CommonDataMetaDataUpdatedV1 getEvent() {
+            return new P2CommonDataMetaDataUpdatedV1();
+        }
+    }
+
     public abstract static class P2ContractCreatedV1Handler implements IEventHandler<P2ContractCreatedV1> {
         @Override
         public P2ContractCreatedV1 getEvent() {

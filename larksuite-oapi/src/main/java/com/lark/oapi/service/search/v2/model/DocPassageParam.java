@@ -59,6 +59,36 @@ public class DocPassageParam {
      */
     @SerializedName("disable_search_link")
     private Boolean disableSearchLink;
+    /**
+     * 排除文档id
+     * <p> 示例值：true
+     */
+    @SerializedName("excluded_obj_ids")
+    private String[] excludedObjIds;
+    /**
+     * 排除文档token
+     * <p> 示例值：true
+     */
+    @SerializedName("excluded_doc_tokens")
+    private String[] excludedDocTokens;
+    /**
+     * 排除的文件夹token
+     * <p> 示例值：
+     */
+    @SerializedName("excluded_folder_tokens")
+    private String[] excludedFolderTokens;
+    /**
+     * 是否跨租户
+     * <p> 示例值：false
+     */
+    @SerializedName("enable_cross_tenant")
+    private Boolean enableCrossTenant;
+    /**
+     * 是否只搜公开
+     * <p> 示例值：false
+     */
+    @SerializedName("only_search_public")
+    private Boolean onlySearchPublic;
 
     // builder 开始
     public DocPassageParam() {
@@ -90,6 +120,31 @@ public class DocPassageParam {
          * <p> 示例值：false
          */
         this.disableSearchLink = builder.disableSearchLink;
+        /**
+         * 排除文档id
+         * <p> 示例值：true
+         */
+        this.excludedObjIds = builder.excludedObjIds;
+        /**
+         * 排除文档token
+         * <p> 示例值：true
+         */
+        this.excludedDocTokens = builder.excludedDocTokens;
+        /**
+         * 排除的文件夹token
+         * <p> 示例值：
+         */
+        this.excludedFolderTokens = builder.excludedFolderTokens;
+        /**
+         * 是否跨租户
+         * <p> 示例值：false
+         */
+        this.enableCrossTenant = builder.enableCrossTenant;
+        /**
+         * 是否只搜公开
+         * <p> 示例值：false
+         */
+        this.onlySearchPublic = builder.onlySearchPublic;
     }
 
     public static Builder newBuilder() {
@@ -136,6 +191,46 @@ public class DocPassageParam {
         this.disableSearchLink = disableSearchLink;
     }
 
+    public String[] getExcludedObjIds() {
+        return this.excludedObjIds;
+    }
+
+    public void setExcludedObjIds(String[] excludedObjIds) {
+        this.excludedObjIds = excludedObjIds;
+    }
+
+    public String[] getExcludedDocTokens() {
+        return this.excludedDocTokens;
+    }
+
+    public void setExcludedDocTokens(String[] excludedDocTokens) {
+        this.excludedDocTokens = excludedDocTokens;
+    }
+
+    public String[] getExcludedFolderTokens() {
+        return this.excludedFolderTokens;
+    }
+
+    public void setExcludedFolderTokens(String[] excludedFolderTokens) {
+        this.excludedFolderTokens = excludedFolderTokens;
+    }
+
+    public Boolean getEnableCrossTenant() {
+        return this.enableCrossTenant;
+    }
+
+    public void setEnableCrossTenant(Boolean enableCrossTenant) {
+        this.enableCrossTenant = enableCrossTenant;
+    }
+
+    public Boolean getOnlySearchPublic() {
+        return this.onlySearchPublic;
+    }
+
+    public void setOnlySearchPublic(Boolean onlySearchPublic) {
+        this.onlySearchPublic = onlySearchPublic;
+    }
+
     public static class Builder {
         /**
          * 是否要搜索doc
@@ -162,6 +257,31 @@ public class DocPassageParam {
          * <p> 示例值：false
          */
         private Boolean disableSearchLink;
+        /**
+         * 排除文档id
+         * <p> 示例值：true
+         */
+        private String[] excludedObjIds;
+        /**
+         * 排除文档token
+         * <p> 示例值：true
+         */
+        private String[] excludedDocTokens;
+        /**
+         * 排除的文件夹token
+         * <p> 示例值：
+         */
+        private String[] excludedFolderTokens;
+        /**
+         * 是否跨租户
+         * <p> 示例值：false
+         */
+        private Boolean enableCrossTenant;
+        /**
+         * 是否只搜公开
+         * <p> 示例值：false
+         */
+        private Boolean onlySearchPublic;
 
         /**
          * 是否要搜索doc
@@ -224,6 +344,71 @@ public class DocPassageParam {
          */
         public Builder disableSearchLink(Boolean disableSearchLink) {
             this.disableSearchLink = disableSearchLink;
+            return this;
+        }
+
+
+        /**
+         * 排除文档id
+         * <p> 示例值：true
+         *
+         * @param excludedObjIds
+         * @return
+         */
+        public Builder excludedObjIds(String[] excludedObjIds) {
+            this.excludedObjIds = excludedObjIds;
+            return this;
+        }
+
+
+        /**
+         * 排除文档token
+         * <p> 示例值：true
+         *
+         * @param excludedDocTokens
+         * @return
+         */
+        public Builder excludedDocTokens(String[] excludedDocTokens) {
+            this.excludedDocTokens = excludedDocTokens;
+            return this;
+        }
+
+
+        /**
+         * 排除的文件夹token
+         * <p> 示例值：
+         *
+         * @param excludedFolderTokens
+         * @return
+         */
+        public Builder excludedFolderTokens(String[] excludedFolderTokens) {
+            this.excludedFolderTokens = excludedFolderTokens;
+            return this;
+        }
+
+
+        /**
+         * 是否跨租户
+         * <p> 示例值：false
+         *
+         * @param enableCrossTenant
+         * @return
+         */
+        public Builder enableCrossTenant(Boolean enableCrossTenant) {
+            this.enableCrossTenant = enableCrossTenant;
+            return this;
+        }
+
+
+        /**
+         * 是否只搜公开
+         * <p> 示例值：false
+         *
+         * @param onlySearchPublic
+         * @return
+         */
+        public Builder onlySearchPublic(Boolean onlySearchPublic) {
+            this.onlySearchPublic = onlySearchPublic;
             return this;
         }
 

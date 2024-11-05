@@ -187,10 +187,10 @@ public class ContactsRangeConfigurationApplicationReq {
          * 返回值的部门ID的类型
          * <p> 示例值：department_id
          *
-         * @param departmentIdType {@link com.lark.oapi.service.application.v6.enums.ContactsRangeConfigurationApplicationDepartmentIdTypeEnum}
+         * @param departmentIdType {@link com.lark.oapi.service.application.v6.enums.ContactsRangeConfigurationApplicationGetAppContactsRangeConfigurationDepartmentIDTypeEnum}
          * @return
          */
-        public Builder departmentIdType(com.lark.oapi.service.application.v6.enums.ContactsRangeConfigurationApplicationDepartmentIdTypeEnum departmentIdType) {
+        public Builder departmentIdType(com.lark.oapi.service.application.v6.enums.ContactsRangeConfigurationApplicationGetAppContactsRangeConfigurationDepartmentIDTypeEnum departmentIdType) {
             this.departmentIdType = departmentIdType.getValue();
             return this;
         }
@@ -211,10 +211,10 @@ public class ContactsRangeConfigurationApplicationReq {
          * 此次调用中使用的用户ID的类型
          * <p> 示例值：
          *
-         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.ContactsRangeConfigurationApplicationUserIdTypeEnum}
+         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.ContactsRangeConfigurationApplicationGetAppContactsRangeConfigurationUserIDTypeEnum}
          * @return
          */
-        public Builder userIdType(com.lark.oapi.service.application.v6.enums.ContactsRangeConfigurationApplicationUserIdTypeEnum userIdType) {
+        public Builder userIdType(com.lark.oapi.service.application.v6.enums.ContactsRangeConfigurationApplicationGetAppContactsRangeConfigurationUserIDTypeEnum userIdType) {
             this.userIdType = userIdType.getValue();
             return this;
         }

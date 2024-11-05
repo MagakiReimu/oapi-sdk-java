@@ -155,6 +155,12 @@ public class ProfileSettingPersonalBasicInfo {
      */
     @SerializedName("custom_fields")
     private ProfileSettingCustomField[] customFields;
+    /**
+     * 其他国籍（地区）ID
+     * <p> 示例值：6862995757234914827
+     */
+    @SerializedName("additional_nationalities")
+    private String[] additionalNationalities;
 
     // builder 开始
     public ProfileSettingPersonalBasicInfo() {
@@ -266,6 +272,11 @@ public class ProfileSettingPersonalBasicInfo {
          * <p> 示例值：
          */
         this.customFields = builder.customFields;
+        /**
+         * 其他国籍（地区）ID
+         * <p> 示例值：6862995757234914827
+         */
+        this.additionalNationalities = builder.additionalNationalities;
     }
 
     public static Builder newBuilder() {
@@ -440,6 +451,14 @@ public class ProfileSettingPersonalBasicInfo {
         this.customFields = customFields;
     }
 
+    public String[] getAdditionalNationalities() {
+        return this.additionalNationalities;
+    }
+
+    public void setAdditionalNationalities(String[] additionalNationalities) {
+        this.additionalNationalities = additionalNationalities;
+    }
+
     public static class Builder {
         /**
          * 法定姓名
@@ -546,6 +565,11 @@ public class ProfileSettingPersonalBasicInfo {
          * <p> 示例值：
          */
         private ProfileSettingCustomField[] customFields;
+        /**
+         * 其他国籍（地区）ID
+         * <p> 示例值：6862995757234914827
+         */
+        private String[] additionalNationalities;
 
         /**
          * 法定姓名
@@ -816,6 +840,19 @@ public class ProfileSettingPersonalBasicInfo {
          */
         public Builder customFields(ProfileSettingCustomField[] customFields) {
             this.customFields = customFields;
+            return this;
+        }
+
+
+        /**
+         * 其他国籍（地区）ID
+         * <p> 示例值：6862995757234914827
+         *
+         * @param additionalNationalities
+         * @return
+         */
+        public Builder additionalNationalities(String[] additionalNationalities) {
+            this.additionalNationalities = additionalNationalities;
             return this;
         }
 

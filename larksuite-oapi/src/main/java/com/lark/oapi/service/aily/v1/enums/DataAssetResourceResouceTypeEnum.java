@@ -17,7 +17,6 @@ package com.lark.oapi.service.aily.v1.enums;
  * 数据知识资源类型
  */
 public enum DataAssetResourceResouceTypeEnum {
-    OBJECT("object"), // 数据表
     DATASET("dataset"), // 数据视图
     VECTOR("vector"), // 知识视图
     ;

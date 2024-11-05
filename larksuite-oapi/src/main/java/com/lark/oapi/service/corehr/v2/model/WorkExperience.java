@@ -65,6 +65,12 @@ public class WorkExperience {
      */
     @SerializedName("department")
     private String department;
+    /**
+     * 自定义字段
+     * <p> 示例值：
+     */
+    @SerializedName("custom_fields")
+    private ObjectFieldData[] customFields;
 
     // builder 开始
     public WorkExperience() {
@@ -101,6 +107,11 @@ public class WorkExperience {
          * <p> 示例值：部门名称
          */
         this.department = builder.department;
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         */
+        this.customFields = builder.customFields;
     }
 
     public static Builder newBuilder() {
@@ -155,6 +166,14 @@ public class WorkExperience {
         this.department = department;
     }
 
+    public ObjectFieldData[] getCustomFields() {
+        return this.customFields;
+    }
+
+    public void setCustomFields(ObjectFieldData[] customFields) {
+        this.customFields = customFields;
+    }
+
     public static class Builder {
         /**
          * 公司名称
@@ -186,6 +205,11 @@ public class WorkExperience {
          * <p> 示例值：部门名称
          */
         private String department;
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         */
+        private ObjectFieldData[] customFields;
 
         /**
          * 公司名称
@@ -261,6 +285,19 @@ public class WorkExperience {
          */
         public Builder department(String department) {
             this.department = department;
+            return this;
+        }
+
+
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         *
+         * @param customFields
+         * @return
+         */
+        public Builder customFields(ObjectFieldData[] customFields) {
+            this.customFields = customFields;
             return this;
         }
 

@@ -65,6 +65,18 @@ public class QueryEmployeesJobDataReqBody {
      */
     @SerializedName("employment_ids")
     private String[] employmentIds;
+    /**
+     * 是否仅查询主职;- true：仅返回 primary_job_data 为 true 的任职记录;- false：仅返回 primary_job_data 为 false 的任职记录;- 不传：返回全部
+     * <p> 示例值：true
+     */
+    @SerializedName("primary_job_data")
+    private Boolean primaryJobData;
+    /**
+     * 任职原因;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：job_data;  - custom_api_name：assignment_start_reason
+     * <p> 示例值：
+     */
+    @SerializedName("assignment_start_reasons")
+    private String[] assignmentStartReasons;
 
     // builder 开始
     public QueryEmployeesJobDataReqBody() {
@@ -101,6 +113,16 @@ public class QueryEmployeesJobDataReqBody {
          * <p> 示例值：
          */
         this.employmentIds = builder.employmentIds;
+        /**
+         * 是否仅查询主职;- true：仅返回 primary_job_data 为 true 的任职记录;- false：仅返回 primary_job_data 为 false 的任职记录;- 不传：返回全部
+         * <p> 示例值：true
+         */
+        this.primaryJobData = builder.primaryJobData;
+        /**
+         * 任职原因;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：job_data;  - custom_api_name：assignment_start_reason
+         * <p> 示例值：
+         */
+        this.assignmentStartReasons = builder.assignmentStartReasons;
     }
 
     public static Builder newBuilder() {
@@ -155,6 +177,22 @@ public class QueryEmployeesJobDataReqBody {
         this.employmentIds = employmentIds;
     }
 
+    public Boolean getPrimaryJobData() {
+        return this.primaryJobData;
+    }
+
+    public void setPrimaryJobData(Boolean primaryJobData) {
+        this.primaryJobData = primaryJobData;
+    }
+
+    public String[] getAssignmentStartReasons() {
+        return this.assignmentStartReasons;
+    }
+
+    public void setAssignmentStartReasons(String[] assignmentStartReasons) {
+        this.assignmentStartReasons = assignmentStartReasons;
+    }
+
     public static class Builder {
         /**
          * 是否获取所有任职记录，true 为获取员工所有版本的任职记录，false 为仅获取当前生效的任职记录，默认为 false
@@ -186,6 +224,16 @@ public class QueryEmployeesJobDataReqBody {
          * <p> 示例值：
          */
         private String[] employmentIds;
+        /**
+         * 是否仅查询主职;- true：仅返回 primary_job_data 为 true 的任职记录;- false：仅返回 primary_job_data 为 false 的任职记录;- 不传：返回全部
+         * <p> 示例值：true
+         */
+        private Boolean primaryJobData;
+        /**
+         * 任职原因;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：job_data;  - custom_api_name：assignment_start_reason
+         * <p> 示例值：
+         */
+        private String[] assignmentStartReasons;
 
         /**
          * 是否获取所有任职记录，true 为获取员工所有版本的任职记录，false 为仅获取当前生效的任职记录，默认为 false
@@ -261,6 +309,32 @@ public class QueryEmployeesJobDataReqBody {
          */
         public Builder employmentIds(String[] employmentIds) {
             this.employmentIds = employmentIds;
+            return this;
+        }
+
+
+        /**
+         * 是否仅查询主职;- true：仅返回 primary_job_data 为 true 的任职记录;- false：仅返回 primary_job_data 为 false 的任职记录;- 不传：返回全部
+         * <p> 示例值：true
+         *
+         * @param primaryJobData
+         * @return
+         */
+        public Builder primaryJobData(Boolean primaryJobData) {
+            this.primaryJobData = primaryJobData;
+            return this;
+        }
+
+
+        /**
+         * 任职原因;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：job_data;  - custom_api_name：assignment_start_reason
+         * <p> 示例值：
+         *
+         * @param assignmentStartReasons
+         * @return
+         */
+        public Builder assignmentStartReasons(String[] assignmentStartReasons) {
+            this.assignmentStartReasons = assignmentStartReasons;
             return this;
         }
 

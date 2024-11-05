@@ -162,6 +162,18 @@ public class SearchEmployeeReqBody {
     @SerializedName("department_id_list_include_sub")
     private String[] departmentIdListIncludeSub;
     /**
+     * 其他国籍ID列表，精准匹配查询
+     * <p> 示例值：
+     */
+    @SerializedName("additional_national_id_number_list")
+    private String[] additionalNationalIdNumberList;
+    /**
+     * 公民身份类型列表，精确匹配查询
+     * <p> 示例值：
+     */
+    @SerializedName("citizenship_status_list")
+    private String[] citizenshipStatusList;
+    /**
      * 成本中心ID;- 可通过 [【搜索成本中心信息】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/corehr-v2/cost_center/search) 获取
      * <p> 示例值：
      */
@@ -283,6 +295,16 @@ public class SearchEmployeeReqBody {
          * <p> 示例值：
          */
         this.departmentIdListIncludeSub = builder.departmentIdListIncludeSub;
+        /**
+         * 其他国籍ID列表，精准匹配查询
+         * <p> 示例值：
+         */
+        this.additionalNationalIdNumberList = builder.additionalNationalIdNumberList;
+        /**
+         * 公民身份类型列表，精确匹配查询
+         * <p> 示例值：
+         */
+        this.citizenshipStatusList = builder.citizenshipStatusList;
         /**
          * 成本中心ID;- 可通过 [【搜索成本中心信息】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/corehr-v2/cost_center/search) 获取
          * <p> 示例值：
@@ -470,6 +492,22 @@ public class SearchEmployeeReqBody {
         this.departmentIdListIncludeSub = departmentIdListIncludeSub;
     }
 
+    public String[] getAdditionalNationalIdNumberList() {
+        return this.additionalNationalIdNumberList;
+    }
+
+    public void setAdditionalNationalIdNumberList(String[] additionalNationalIdNumberList) {
+        this.additionalNationalIdNumberList = additionalNationalIdNumberList;
+    }
+
+    public String[] getCitizenshipStatusList() {
+        return this.citizenshipStatusList;
+    }
+
+    public void setCitizenshipStatusList(String[] citizenshipStatusList) {
+        this.citizenshipStatusList = citizenshipStatusList;
+    }
+
     public String[] getCostCenterIdList() {
         return this.costCenterIdList;
     }
@@ -589,6 +627,16 @@ public class SearchEmployeeReqBody {
          * <p> 示例值：
          */
         private String[] departmentIdListIncludeSub;
+        /**
+         * 其他国籍ID列表，精准匹配查询
+         * <p> 示例值：
+         */
+        private String[] additionalNationalIdNumberList;
+        /**
+         * 公民身份类型列表，精确匹配查询
+         * <p> 示例值：
+         */
+        private String[] citizenshipStatusList;
         /**
          * 成本中心ID;- 可通过 [【搜索成本中心信息】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/corehr-v2/cost_center/search) 获取
          * <p> 示例值：
@@ -889,6 +937,32 @@ public class SearchEmployeeReqBody {
          */
         public Builder departmentIdListIncludeSub(String[] departmentIdListIncludeSub) {
             this.departmentIdListIncludeSub = departmentIdListIncludeSub;
+            return this;
+        }
+
+
+        /**
+         * 其他国籍ID列表，精准匹配查询
+         * <p> 示例值：
+         *
+         * @param additionalNationalIdNumberList
+         * @return
+         */
+        public Builder additionalNationalIdNumberList(String[] additionalNationalIdNumberList) {
+            this.additionalNationalIdNumberList = additionalNationalIdNumberList;
+            return this;
+        }
+
+
+        /**
+         * 公民身份类型列表，精确匹配查询
+         * <p> 示例值：
+         *
+         * @param citizenshipStatusList
+         * @return
+         */
+        public Builder citizenshipStatusList(String[] citizenshipStatusList) {
+            this.citizenshipStatusList = citizenshipStatusList;
             return this;
         }
 

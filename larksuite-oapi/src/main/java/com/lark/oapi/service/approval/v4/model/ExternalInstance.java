@@ -173,6 +173,12 @@ public class ExternalInstance {
      */
     @SerializedName("trusteeship_cache_config")
     private TrusteeshipInstanceCacheConfig trusteeshipCacheConfig;
+    /**
+     * 资源所在地区， 内部统计用字段， 不需要填
+     * <p> 示例值：""
+     */
+    @SerializedName("resource_region")
+    private String resourceRegion;
 
     // builder 开始
     public ExternalInstance() {
@@ -299,6 +305,11 @@ public class ExternalInstance {
          * <p> 示例值：
          */
         this.trusteeshipCacheConfig = builder.trusteeshipCacheConfig;
+        /**
+         * 资源所在地区， 内部统计用字段， 不需要填
+         * <p> 示例值：""
+         */
+        this.resourceRegion = builder.resourceRegion;
     }
 
     public static Builder newBuilder() {
@@ -497,6 +508,14 @@ public class ExternalInstance {
         this.trusteeshipCacheConfig = trusteeshipCacheConfig;
     }
 
+    public String getResourceRegion() {
+        return this.resourceRegion;
+    }
+
+    public void setResourceRegion(String resourceRegion) {
+        this.resourceRegion = resourceRegion;
+    }
+
     public static class Builder {
         /**
          * 审批定义 code， 创建审批定义返回的值，表示该实例属于哪个流程；该字段会影响到列表中该实例的标题，标题取自对应定义的 name 字段
@@ -618,6 +637,11 @@ public class ExternalInstance {
          * <p> 示例值：
          */
         private TrusteeshipInstanceCacheConfig trusteeshipCacheConfig;
+        /**
+         * 资源所在地区， 内部统计用字段， 不需要填
+         * <p> 示例值：""
+         */
+        private String resourceRegion;
 
         /**
          * 审批定义 code， 创建审批定义返回的值，表示该实例属于哪个流程；该字段会影响到列表中该实例的标题，标题取自对应定义的 name 字段
@@ -963,6 +987,19 @@ public class ExternalInstance {
          */
         public Builder trusteeshipCacheConfig(TrusteeshipInstanceCacheConfig trusteeshipCacheConfig) {
             this.trusteeshipCacheConfig = trusteeshipCacheConfig;
+            return this;
+        }
+
+
+        /**
+         * 资源所在地区， 内部统计用字段， 不需要填
+         * <p> 示例值：""
+         *
+         * @param resourceRegion
+         * @return
+         */
+        public Builder resourceRegion(String resourceRegion) {
+            this.resourceRegion = resourceRegion;
             return this;
         }
 

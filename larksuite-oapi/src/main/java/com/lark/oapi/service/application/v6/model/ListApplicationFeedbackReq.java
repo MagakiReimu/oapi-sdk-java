@@ -295,10 +295,10 @@ public class ListApplicationFeedbackReq {
         /**
          * <p> 示例值：open_id
          *
-         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.ListApplicationFeedbackUserIdTypeEnum}
+         * @param userIdType {@link com.lark.oapi.service.application.v6.enums.ListApplicationFeedbackListApplicationFeedbackUserIDTypeEnum}
          * @return
          */
-        public Builder userIdType(com.lark.oapi.service.application.v6.enums.ListApplicationFeedbackUserIdTypeEnum userIdType) {
+        public Builder userIdType(com.lark.oapi.service.application.v6.enums.ListApplicationFeedbackListApplicationFeedbackUserIDTypeEnum userIdType) {
             this.userIdType = userIdType.getValue();
             return this;
         }

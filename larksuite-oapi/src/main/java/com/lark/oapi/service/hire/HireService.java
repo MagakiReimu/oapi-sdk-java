@@ -80,6 +80,7 @@ import com.lark.oapi.service.hire.v1.resource.TalentFolder;
 import com.lark.oapi.service.hire.v1.resource.TalentObject;
 import com.lark.oapi.service.hire.v1.resource.TalentOperationLog;
 import com.lark.oapi.service.hire.v1.resource.TalentPool;
+import com.lark.oapi.service.hire.v1.resource.TalentTag;
 import com.lark.oapi.service.hire.v1.resource.TerminationReason;
 import com.lark.oapi.service.hire.v1.resource.Test;
 import com.lark.oapi.service.hire.v1.resource.Todo;
@@ -158,6 +159,7 @@ public class HireService {
     private final TalentObject talentObject; // talent_object
     private final TalentOperationLog talentOperationLog; // talent_operation_log
     private final TalentPool talentPool; // talent_pool
+    private final TalentTag talentTag; // talent_tag
     private final TerminationReason terminationReason; // termination_reason
     private final Test test; // test
     private final Todo todo; // 待办
@@ -236,6 +238,7 @@ public class HireService {
         this.talentObject = new TalentObject(config);
         this.talentOperationLog = new TalentOperationLog(config);
         this.talentPool = new TalentPool(config);
+        this.talentTag = new TalentTag(config);
         this.terminationReason = new TerminationReason(config);
         this.test = new Test(config);
         this.todo = new Todo(config);
@@ -509,6 +512,10 @@ public class HireService {
         return talentPool;
     }
 
+    public TalentTag talentTag() {
+        return talentTag;
+    }
+
     public TerminationReason terminationReason() {
         return terminationReason;
     }
@@ -627,6 +634,13 @@ public class HireService {
         @Override
         public P2TalentDeletedV1 getEvent() {
             return new P2TalentDeletedV1();
+        }
+    }
+
+    public abstract static class P2TalentTagSubscriptionV1Handler implements IEventHandler<P2TalentTagSubscriptionV1> {
+        @Override
+        public P2TalentTagSubscriptionV1 getEvent() {
+            return new P2TalentTagSubscriptionV1();
         }
     }
 }

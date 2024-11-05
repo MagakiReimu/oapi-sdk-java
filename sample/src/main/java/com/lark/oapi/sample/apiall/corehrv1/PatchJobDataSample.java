@@ -46,6 +46,8 @@ public class PatchJobDataSample {
                         .workShift(Enum.newBuilder().build())
                         .compensationType(Enum.newBuilder().build())
                         .serviceCompany("6890452208593372680")
+                        .employeeSubtypeId("6890452208593372680")
+                        .positionId("6890452208593372679")
                         .build())
                 .build();
 

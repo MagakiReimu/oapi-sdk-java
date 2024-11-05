@@ -25,6 +25,8 @@ public class BatchGetEmployeesJobDataSample {
                         .effectiveDateStart("2020-01-01")
                         .effectiveDateEnd("2020-01-01")
                         .dataDate("2020-01-01")
+                        .primaryJobData(true)
+                        .assignmentStartReasons(new String[]{})
                         .build())
                 .build();
 

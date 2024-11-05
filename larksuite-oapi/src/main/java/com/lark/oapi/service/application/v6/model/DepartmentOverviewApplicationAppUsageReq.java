@@ -112,10 +112,10 @@ public class DepartmentOverviewApplicationAppUsageReq {
          * 调用中使用的部门ID的类型
          * <p> 示例值：open_department_id
          *
-         * @param departmentIdType {@link com.lark.oapi.service.application.v6.enums.DepartmentOverviewApplicationAppUsageDepartmentIdTypeEnum}
+         * @param departmentIdType {@link com.lark.oapi.service.application.v6.enums.DepartmentOverviewApplicationAppUsageDepartmentOverviewApplicationAppUsageDepartmentIDTypeEnum}
          * @return
          */
-        public Builder departmentIdType(com.lark.oapi.service.application.v6.enums.DepartmentOverviewApplicationAppUsageDepartmentIdTypeEnum departmentIdType) {
+        public Builder departmentIdType(com.lark.oapi.service.application.v6.enums.DepartmentOverviewApplicationAppUsageDepartmentOverviewApplicationAppUsageDepartmentIDTypeEnum departmentIdType) {
             this.departmentIdType = departmentIdType.getValue();
             return this;
         }
