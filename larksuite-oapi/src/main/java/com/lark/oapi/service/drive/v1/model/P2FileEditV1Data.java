@@ -30,13 +30,13 @@ import com.lark.oapi.core.response.BaseResponse;
 public class P2FileEditV1Data {
     /**
      * 文档类型
-     * <p> 示例值：
+     * <p> 示例值：docx
      */
     @SerializedName("file_type")
     private String fileType;
     /**
      * 文档token
-     * <p> 示例值：
+     * <p> 示例值：TLLKdcpDro9ijQxA33ycNMabcef
      */
     @SerializedName("file_token")
     private String fileToken;
@@ -54,7 +54,7 @@ public class P2FileEditV1Data {
     private UserId[] subscriberIdList;
     /**
      * 表格的子SheetID，当表格发生编辑时将会包含此字段
-     * <p> 示例值：
+     * <p> 示例值：46cdf7
      */
     @SerializedName("sheet_id")
     private String sheetId;

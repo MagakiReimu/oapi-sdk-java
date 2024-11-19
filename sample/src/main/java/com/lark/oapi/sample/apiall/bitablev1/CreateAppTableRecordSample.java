@@ -19,6 +19,7 @@ public class CreateAppTableRecordSample {
                 .tableId("tblUa9vcYjWQYJCj")
                 .userIdType("user_id")
                 .clientToken("fe599b60-450f-46ff-b2ef-9f6675625b97")
+                .ignoreConsistencyCheck(true)
                 .appTableRecord(AppTableRecord.newBuilder()
                         .fields(new HashMap<String, Object>())
                         .build())

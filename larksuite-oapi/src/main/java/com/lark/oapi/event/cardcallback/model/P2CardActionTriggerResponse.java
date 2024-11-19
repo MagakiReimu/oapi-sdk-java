@@ -9,11 +9,19 @@ public class P2CardActionTriggerResponse {
     @SerializedName("card")
     private CallBackCard card;
 
-    public CallBackToast getToast() {return this.toast;}
+    public CallBackToast getToast() {
+        return this.toast;
+    }
 
-    public void setToast(CallBackToast toast) {this.toast = toast;}
+    public void setToast(CallBackToast toast) {
+        this.toast = toast;
+    }
 
-    public CallBackCard getCard() {return this.card;}
+    public CallBackCard getCard() {
+        return this.card;
+    }
 
-    public void setCard(CallBackCard card) {this.card = card;}
+    public void setCard(CallBackCard card) {
+        this.card = card;
+    }
 }

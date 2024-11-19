@@ -78,6 +78,12 @@ public class RecurringPaymentForCreate {
     @SerializedName("issuance_type")
     private String issuanceType;
     /**
+     * 发放频率
+     * <p> 示例值：year
+     */
+    @SerializedName("issuance_period")
+    private String issuancePeriod;
+    /**
      * 备注
      * <p> 示例值：这是个备注
      */
@@ -129,6 +135,11 @@ public class RecurringPaymentForCreate {
          * <p> 示例值：with_salary
          */
         this.issuanceType = builder.issuanceType;
+        /**
+         * 发放频率
+         * <p> 示例值：year
+         */
+        this.issuancePeriod = builder.issuancePeriod;
         /**
          * 备注
          * <p> 示例值：这是个备注
@@ -204,6 +215,14 @@ public class RecurringPaymentForCreate {
         this.issuanceType = issuanceType;
     }
 
+    public String getIssuancePeriod() {
+        return this.issuancePeriod;
+    }
+
+    public void setIssuancePeriod(String issuancePeriod) {
+        this.issuancePeriod = issuancePeriod;
+    }
+
     public String getRemark() {
         return this.remark;
     }
@@ -253,6 +272,11 @@ public class RecurringPaymentForCreate {
          * <p> 示例值：with_salary
          */
         private String issuanceType;
+        /**
+         * 发放频率
+         * <p> 示例值：year
+         */
+        private String issuancePeriod;
         /**
          * 备注
          * <p> 示例值：这是个备注
@@ -371,6 +395,31 @@ public class RecurringPaymentForCreate {
          */
         public Builder issuanceType(com.lark.oapi.service.compensation.v1.enums.RecurringPaymentForCreateIssuanceTypeEnum issuanceType) {
             this.issuanceType = issuanceType.getValue();
+            return this;
+        }
+
+
+        /**
+         * 发放频率
+         * <p> 示例值：year
+         *
+         * @param issuancePeriod
+         * @return
+         */
+        public Builder issuancePeriod(String issuancePeriod) {
+            this.issuancePeriod = issuancePeriod;
+            return this;
+        }
+
+        /**
+         * 发放频率
+         * <p> 示例值：year
+         *
+         * @param issuancePeriod {@link com.lark.oapi.service.compensation.v1.enums.RecurringPaymentForCreateIssuancePeriodEnum}
+         * @return
+         */
+        public Builder issuancePeriod(com.lark.oapi.service.compensation.v1.enums.RecurringPaymentForCreateIssuancePeriodEnum issuancePeriod) {
+            this.issuancePeriod = issuancePeriod.getValue();
             return this;
         }
 

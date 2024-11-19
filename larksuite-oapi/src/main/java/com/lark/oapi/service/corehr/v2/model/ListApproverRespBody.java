@@ -44,8 +44,8 @@ public class ListApproverRespBody {
      * 审批任务列表
      * <p> 示例值：
      */
-    @SerializedName("approvers")
-    private ApproverInfo[] approvers;
+    @SerializedName("approver_list")
+    private ApproverInfo[] approverList;
 
     public String getPageToken() {
         return this.pageToken;
@@ -63,12 +63,12 @@ public class ListApproverRespBody {
         this.hasMore = hasMore;
     }
 
-    public ApproverInfo[] getApprovers() {
-        return this.approvers;
+    public ApproverInfo[] getApproverList() {
+        return this.approverList;
     }
 
-    public void setApprovers(ApproverInfo[] approvers) {
-        this.approvers = approvers;
+    public void setApproverList(ApproverInfo[] approverList) {
+        this.approverList = approverList;
     }
 
 }

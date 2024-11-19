@@ -360,6 +360,12 @@ public class Employee {
     @SerializedName("pay_group_id")
     private String payGroupId;
     /**
+     * 所属外派薪资组 ID
+     * <p> 示例值：7164286667866966659
+     */
+    @SerializedName("assignment_pay_group_id")
+    private String assignmentPayGroupId;
+    /**
      * 是否外派
      * <p> 示例值：true
      */
@@ -700,6 +706,11 @@ public class Employee {
          * <p> 示例值：7164286667866966659
          */
         this.payGroupId = builder.payGroupId;
+        /**
+         * 所属外派薪资组 ID
+         * <p> 示例值：7164286667866966659
+         */
+        this.assignmentPayGroupId = builder.assignmentPayGroupId;
         /**
          * 是否外派
          * <p> 示例值：true
@@ -1196,6 +1207,14 @@ public class Employee {
         this.payGroupId = payGroupId;
     }
 
+    public String getAssignmentPayGroupId() {
+        return this.assignmentPayGroupId;
+    }
+
+    public void setAssignmentPayGroupId(String assignmentPayGroupId) {
+        this.assignmentPayGroupId = assignmentPayGroupId;
+    }
+
     public Boolean getInternationalAssignment() {
         return this.internationalAssignment;
     }
@@ -1552,6 +1571,11 @@ public class Employee {
          * <p> 示例值：7164286667866966659
          */
         private String payGroupId;
+        /**
+         * 所属外派薪资组 ID
+         * <p> 示例值：7164286667866966659
+         */
+        private String assignmentPayGroupId;
         /**
          * 是否外派
          * <p> 示例值：true
@@ -2314,6 +2338,19 @@ public class Employee {
          */
         public Builder payGroupId(String payGroupId) {
             this.payGroupId = payGroupId;
+            return this;
+        }
+
+
+        /**
+         * 所属外派薪资组 ID
+         * <p> 示例值：7164286667866966659
+         *
+         * @param assignmentPayGroupId
+         * @return
+         */
+        public Builder assignmentPayGroupId(String assignmentPayGroupId) {
+            this.assignmentPayGroupId = assignmentPayGroupId;
             return this;
         }
 

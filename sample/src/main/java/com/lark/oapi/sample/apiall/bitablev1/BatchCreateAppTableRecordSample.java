@@ -19,6 +19,7 @@ public class BatchCreateAppTableRecordSample {
                 .tableId("tblsRc9GRRXKqhvW")
                 .userIdType("user_id")
                 .clientToken("fe599b60-450f-46ff-b2ef-9f6675625b97")
+                .ignoreConsistencyCheck(true)
                 .batchCreateAppTableRecordReqBody(BatchCreateAppTableRecordReqBody.newBuilder()
                         .records(new AppTableRecord[]{})
                         .build())

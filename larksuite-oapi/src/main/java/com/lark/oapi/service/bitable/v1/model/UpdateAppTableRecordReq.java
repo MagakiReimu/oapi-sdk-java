@@ -36,6 +36,13 @@ public class UpdateAppTableRecordReq {
     @SerializedName("user_id_type")
     private String userIdType;
     /**
+     * 用于控制一致性读写，默认开启检查
+     * <p> 示例值：true
+     */
+    @Query
+    @SerializedName("ignore_consistency_check")
+    private Boolean ignoreConsistencyCheck;
+    /**
      * 多维表格的唯一标识符 [app_token 参数说明](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/bitable/notification#8121eebe)
      * <p> 示例值：appbcbWCzen6D8dezhoCH2RpMAh
      */
@@ -58,16 +65,21 @@ public class UpdateAppTableRecordReq {
     private String recordId;
     @Body
     private AppTableRecord body;
+
     // builder 开始
     public UpdateAppTableRecordReq() {
     }
-
     public UpdateAppTableRecordReq(Builder builder) {
         /**
          * 此次调用中使用的用户ID的类型
          * <p> 示例值：
          */
         this.userIdType = builder.userIdType;
+        /**
+         * 用于控制一致性读写，默认开启检查
+         * <p> 示例值：true
+         */
+        this.ignoreConsistencyCheck = builder.ignoreConsistencyCheck;
         /**
          * 多维表格的唯一标识符 [app_token 参数说明](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/bitable/notification#8121eebe)
          * <p> 示例值：appbcbWCzen6D8dezhoCH2RpMAh
@@ -96,6 +108,14 @@ public class UpdateAppTableRecordReq {
 
     public void setUserIdType(String userIdType) {
         this.userIdType = userIdType;
+    }
+
+    public Boolean getIgnoreConsistencyCheck() {
+        return this.ignoreConsistencyCheck;
+    }
+
+    public void setIgnoreConsistencyCheck(Boolean ignoreConsistencyCheck) {
+        this.ignoreConsistencyCheck = ignoreConsistencyCheck;
     }
 
     public String getAppToken() {
@@ -132,6 +152,7 @@ public class UpdateAppTableRecordReq {
 
     public static class Builder {
         private String userIdType; // 此次调用中使用的用户ID的类型
+        private Boolean ignoreConsistencyCheck; // 用于控制一致性读写，默认开启检查
         private String appToken; // 多维表格的唯一标识符 [app_token 参数说明](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/bitable/notification#8121eebe)
         private String tableId; // 多维表格数据表的唯一标识符 [table_id 参数说明](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/bitable/notification#735fe883)
         private String recordId; // 一条记录的唯一标识 id [record_id 参数说明](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/bitable/notification#15d8db94)
@@ -158,6 +179,18 @@ public class UpdateAppTableRecordReq {
          */
         public Builder userIdType(com.lark.oapi.service.bitable.v1.enums.UpdateAppTableRecordUserIdTypeEnum userIdType) {
             this.userIdType = userIdType.getValue();
+            return this;
+        }
+
+        /**
+         * 用于控制一致性读写，默认开启检查
+         * <p> 示例值：true
+         *
+         * @param ignoreConsistencyCheck
+         * @return
+         */
+        public Builder ignoreConsistencyCheck(Boolean ignoreConsistencyCheck) {
+            this.ignoreConsistencyCheck = ignoreConsistencyCheck;
             return this;
         }
 

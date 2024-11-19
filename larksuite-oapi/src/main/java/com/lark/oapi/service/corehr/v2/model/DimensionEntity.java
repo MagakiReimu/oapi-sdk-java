@@ -31,13 +31,13 @@ import com.lark.oapi.core.response.BaseResponse;
 public class DimensionEntity {
     /**
      * 维度key
-     * <p> 示例值："department"
+     * <p> 示例值：department
      */
     @SerializedName("dimension_key")
     private String dimensionKey;
     /**
      * 维度值
-     * <p> 示例值："7322790168290739756"
+     * <p> 示例值：7322790168290739756
      */
     @SerializedName("dimension_value")
     private String dimensionValue;
@@ -49,12 +49,12 @@ public class DimensionEntity {
     public DimensionEntity(Builder builder) {
         /**
          * 维度key
-         * <p> 示例值："department"
+         * <p> 示例值：department
          */
         this.dimensionKey = builder.dimensionKey;
         /**
          * 维度值
-         * <p> 示例值："7322790168290739756"
+         * <p> 示例值：7322790168290739756
          */
         this.dimensionValue = builder.dimensionValue;
     }
@@ -82,18 +82,18 @@ public class DimensionEntity {
     public static class Builder {
         /**
          * 维度key
-         * <p> 示例值："department"
+         * <p> 示例值：department
          */
         private String dimensionKey;
         /**
          * 维度值
-         * <p> 示例值："7322790168290739756"
+         * <p> 示例值：7322790168290739756
          */
         private String dimensionValue;
 
         /**
          * 维度key
-         * <p> 示例值："department"
+         * <p> 示例值：department
          *
          * @param dimensionKey
          * @return
@@ -106,7 +106,7 @@ public class DimensionEntity {
 
         /**
          * 维度值
-         * <p> 示例值："7322790168290739756"
+         * <p> 示例值：7322790168290739756
          *
          * @param dimensionValue
          * @return

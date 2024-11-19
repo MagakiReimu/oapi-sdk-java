@@ -298,7 +298,7 @@ public class Client {
             switch (mt) {
                 case EVENT:
                     Object r = this.eventHandler.doWithoutValidation(pl);
-                    if (r != null)  {
+                    if (r != null) {
                         response.setData(Jsons.DEFAULT.toJson(r).getBytes(StandardCharsets.UTF_8));
                     }
                     break;

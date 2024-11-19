@@ -36,6 +36,7 @@ public class V2 {
     private final CostCenterVersion costCenterVersion; // cost_center.version
     private final Department department; // department
     private final Employee employee; // employee
+    private final EmployeesAdditionalJob employeesAdditionalJob; // employees.additional_job
     private final EmployeesBp employeesBp; // employees.bp
     private final EmployeesJobData employeesJobData; // employees.job_data
     private final Job job; // job
@@ -78,6 +79,7 @@ public class V2 {
         this.costCenterVersion = new CostCenterVersion(config);
         this.department = new Department(config);
         this.employee = new Employee(config);
+        this.employeesAdditionalJob = new EmployeesAdditionalJob(config);
         this.employeesBp = new EmployeesBp(config);
         this.employeesJobData = new EmployeesJobData(config);
         this.job = new Job(config);
@@ -172,6 +174,10 @@ public class V2 {
 
     public Employee employee() {
         return employee;
+    }
+
+    public EmployeesAdditionalJob employeesAdditionalJob() {
+        return employeesAdditionalJob;
     }
 
     public EmployeesBp employeesBp() {

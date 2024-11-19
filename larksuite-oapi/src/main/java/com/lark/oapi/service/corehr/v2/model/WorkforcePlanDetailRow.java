@@ -39,11 +39,11 @@ public class WorkforcePlanDetailRow {
      * 预估在职人数
      * <p> 示例值：
      */
-    @SerializedName("eai_detail")
-    private WorkforcePlanEaiDetail eaiDetail;
+    @SerializedName("eai_details")
+    private WorkforcePlanEaiDetail[] eaiDetails;
     /**
      * 编制规划值
-     * <p> 示例值："12"
+     * <p> 示例值：12
      */
     @SerializedName("plan_value")
     private String planValue;
@@ -62,10 +62,10 @@ public class WorkforcePlanDetailRow {
          * 预估在职人数
          * <p> 示例值：
          */
-        this.eaiDetail = builder.eaiDetail;
+        this.eaiDetails = builder.eaiDetails;
         /**
          * 编制规划值
-         * <p> 示例值："12"
+         * <p> 示例值：12
          */
         this.planValue = builder.planValue;
     }
@@ -82,12 +82,12 @@ public class WorkforcePlanDetailRow {
         this.dimensions = dimensions;
     }
 
-    public WorkforcePlanEaiDetail getEaiDetail() {
-        return this.eaiDetail;
+    public WorkforcePlanEaiDetail[] getEaiDetails() {
+        return this.eaiDetails;
     }
 
-    public void setEaiDetail(WorkforcePlanEaiDetail eaiDetail) {
-        this.eaiDetail = eaiDetail;
+    public void setEaiDetails(WorkforcePlanEaiDetail[] eaiDetails) {
+        this.eaiDetails = eaiDetails;
     }
 
     public String getPlanValue() {
@@ -108,10 +108,10 @@ public class WorkforcePlanDetailRow {
          * 预估在职人数
          * <p> 示例值：
          */
-        private WorkforcePlanEaiDetail eaiDetail;
+        private WorkforcePlanEaiDetail[] eaiDetails;
         /**
          * 编制规划值
-         * <p> 示例值："12"
+         * <p> 示例值：12
          */
         private String planValue;
 
@@ -132,18 +132,18 @@ public class WorkforcePlanDetailRow {
          * 预估在职人数
          * <p> 示例值：
          *
-         * @param eaiDetail
+         * @param eaiDetails
          * @return
          */
-        public Builder eaiDetail(WorkforcePlanEaiDetail eaiDetail) {
-            this.eaiDetail = eaiDetail;
+        public Builder eaiDetails(WorkforcePlanEaiDetail[] eaiDetails) {
+            this.eaiDetails = eaiDetails;
             return this;
         }
 
 
         /**
          * 编制规划值
-         * <p> 示例值："12"
+         * <p> 示例值：12
          *
          * @param planValue
          * @return

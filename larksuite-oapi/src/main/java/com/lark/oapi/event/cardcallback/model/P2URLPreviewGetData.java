@@ -10,15 +10,27 @@ public class P2URLPreviewGetData {
     @SerializedName("context")
     private CallBackContext context;
 
-    public CallBackOperator getOperator() {return this.operator;}
+    public CallBackOperator getOperator() {
+        return this.operator;
+    }
 
-    public void setOperator(CallBackOperator operator) {this.operator = operator;}
+    public void setOperator(CallBackOperator operator) {
+        this.operator = operator;
+    }
 
-    public String getHost() {return this.host;}
+    public String getHost() {
+        return this.host;
+    }
 
-    public void setHost(String host) {this.host = host;}
+    public void setHost(String host) {
+        this.host = host;
+    }
 
-    public CallBackContext getContext() {return this.context;}
+    public CallBackContext getContext() {
+        return this.context;
+    }
 
-    public void setContext(CallBackContext context) {this.context = context;}
+    public void setContext(CallBackContext context) {
+        this.context = context;
+    }
 }

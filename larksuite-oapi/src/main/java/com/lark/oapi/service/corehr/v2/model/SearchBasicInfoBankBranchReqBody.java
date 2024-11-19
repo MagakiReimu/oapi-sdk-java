@@ -48,6 +48,18 @@ public class SearchBasicInfoBankBranchReqBody {
     @SerializedName("bank_branch_name_list")
     private String[] bankBranchNameList;
     /**
+     * 金融分支机构编码（联行号）列表，支持对金融分支机构编码精确搜索
+     * <p> 示例值：
+     */
+    @SerializedName("code_list")
+    private String[] codeList;
+    /**
+     * 金融分支机构名称（支行全称）列表，支持对金融分支机构名称精确搜索
+     * <p> 示例值：
+     */
+    @SerializedName("name_list")
+    private String[] nameList;
+    /**
      * 状态列表
      * <p> 示例值：
      */
@@ -86,6 +98,16 @@ public class SearchBasicInfoBankBranchReqBody {
          * <p> 示例值：
          */
         this.bankBranchNameList = builder.bankBranchNameList;
+        /**
+         * 金融分支机构编码（联行号）列表，支持对金融分支机构编码精确搜索
+         * <p> 示例值：
+         */
+        this.codeList = builder.codeList;
+        /**
+         * 金融分支机构名称（支行全称）列表，支持对金融分支机构名称精确搜索
+         * <p> 示例值：
+         */
+        this.nameList = builder.nameList;
         /**
          * 状态列表
          * <p> 示例值：
@@ -131,6 +153,22 @@ public class SearchBasicInfoBankBranchReqBody {
         this.bankBranchNameList = bankBranchNameList;
     }
 
+    public String[] getCodeList() {
+        return this.codeList;
+    }
+
+    public void setCodeList(String[] codeList) {
+        this.codeList = codeList;
+    }
+
+    public String[] getNameList() {
+        return this.nameList;
+    }
+
+    public void setNameList(String[] nameList) {
+        this.nameList = nameList;
+    }
+
     public Integer[] getStatusList() {
         return this.statusList;
     }
@@ -171,6 +209,16 @@ public class SearchBasicInfoBankBranchReqBody {
          * <p> 示例值：
          */
         private String[] bankBranchNameList;
+        /**
+         * 金融分支机构编码（联行号）列表，支持对金融分支机构编码精确搜索
+         * <p> 示例值：
+         */
+        private String[] codeList;
+        /**
+         * 金融分支机构名称（支行全称）列表，支持对金融分支机构名称精确搜索
+         * <p> 示例值：
+         */
+        private String[] nameList;
         /**
          * 状态列表
          * <p> 示例值：
@@ -222,6 +270,32 @@ public class SearchBasicInfoBankBranchReqBody {
          */
         public Builder bankBranchNameList(String[] bankBranchNameList) {
             this.bankBranchNameList = bankBranchNameList;
+            return this;
+        }
+
+
+        /**
+         * 金融分支机构编码（联行号）列表，支持对金融分支机构编码精确搜索
+         * <p> 示例值：
+         *
+         * @param codeList
+         * @return
+         */
+        public Builder codeList(String[] codeList) {
+            this.codeList = codeList;
+            return this;
+        }
+
+
+        /**
+         * 金融分支机构名称（支行全称）列表，支持对金融分支机构名称精确搜索
+         * <p> 示例值：
+         *
+         * @param nameList
+         * @return
+         */
+        public Builder nameList(String[] nameList) {
+            this.nameList = nameList;
             return this;
         }
 

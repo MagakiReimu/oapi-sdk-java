@@ -19,6 +19,7 @@ public class UpdateAppTableRecordSample {
                 .tableId("tblsRc9GRRXKqhvW")
                 .recordId("recqwIwhc6")
                 .userIdType("user_id")
+                .ignoreConsistencyCheck(true)
                 .appTableRecord(AppTableRecord.newBuilder()
                         .fields(new HashMap<String, Object>())
                         .build())

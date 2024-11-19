@@ -165,6 +165,18 @@ public class LumpSumPaymentOperateResult {
         }
 
         /**
+         * 操作结果状态码
+         * <p> 示例值：21270202
+         *
+         * @param code
+         * @return
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
          * 操作结果描述
          * <p> 示例值：uqniue id conflict
          *

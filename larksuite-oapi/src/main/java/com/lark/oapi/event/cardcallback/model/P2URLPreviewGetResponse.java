@@ -8,11 +8,19 @@ public class P2URLPreviewGetResponse {
     @SerializedName("card")
     private CallBackCard card;
 
-    public URLPreviewGetInline getInline() {return this.inline;}
+    public URLPreviewGetInline getInline() {
+        return this.inline;
+    }
 
-    public void setInline(URLPreviewGetInline inline) {this.inline = inline;}
+    public void setInline(URLPreviewGetInline inline) {
+        this.inline = inline;
+    }
 
-    public CallBackCard getCard() {return this.card;}
+    public CallBackCard getCard() {
+        return this.card;
+    }
 
-    public void setCard(CallBackCard card) {this.card = card;}
+    public void setCard(CallBackCard card) {
+        this.card = card;
+    }
 }

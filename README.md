@@ -46,7 +46,7 @@
 <dependency>
   <groupId>com.larksuite.oapi</groupId>
   <artifactId>oapi-sdk</artifactId>
-  <version>2.3.7</version>
+  <version>2.4.0</version>
 </dependency>
 ```
 - 如无法获取oapi-sdk依赖，请在 pom.xml 的 <project> 里增加 <repositories>
@@ -509,9 +509,9 @@ public class RawApiCall {
 
 更多 API 调用示例：[RawApiCall.java](./sample/src/main/java/com/lark/oapi/sample/rawapi/RawApiCall.java)
 
-## 处理消息事件回调
+## 处理事件订阅
 
-关于消息订阅相关的知识，可以点击[这里查看](https://open.feishu.cn/document/ukTMukTMukTM/uUTNz4SN1MjL1UzM)
+关于事件订阅相关的知识，可以点击[这里查看](https://open.feishu.cn/document/ukTMukTMukTM/uUTNz4SN1MjL1UzM)
 
 飞书开放平台开放的所有事件列表，可点击[这里查看](https://open.feishu.cn/document/ukTMukTMukTM/uYDNxYjL2QTM24iN0EjN/event-list)
 
@@ -733,6 +733,10 @@ public class EventController {
 ## 处理卡片行为回调
 
 关于卡片行为相关的知识，可点击[这里查看](https://open.feishu.cn/document/ukTMukTMukTM/uczM3QjL3MzN04yNzcDN)
+
+以下示例为处理消息卡片回传交互（旧）（card.action.trigger_v1）的写法。
+
+新版本卡片回传交互 (card.action.trigger) 请参考[event sample](./sample/src/main/java/com/lark/oapi/sample/event/EventController.java) 中 onP2CardActionTrigger
 
 ### 集成 Servlet 容器
 

@@ -30,7 +30,7 @@ import com.lark.oapi.core.response.BaseResponse;
 
 public class ProcessRevokeAndWithdraw {
     /**
-     * 按user_id_type类型传递。如果system_approval为false，则必填。否则非必填。
+     * 按照指定的用户ID类型传递对应的用户ID。
      * <p> 示例值：ou_91791271921729102012
      */
     @SerializedName("user_id")
@@ -48,7 +48,7 @@ public class ProcessRevokeAndWithdraw {
 
     public ProcessRevokeAndWithdraw(Builder builder) {
         /**
-         * 按user_id_type类型传递。如果system_approval为false，则必填。否则非必填。
+         * 按照指定的用户ID类型传递对应的用户ID。
          * <p> 示例值：ou_91791271921729102012
          */
         this.userId = builder.userId;
@@ -81,7 +81,7 @@ public class ProcessRevokeAndWithdraw {
 
     public static class Builder {
         /**
-         * 按user_id_type类型传递。如果system_approval为false，则必填。否则非必填。
+         * 按照指定的用户ID类型传递对应的用户ID。
          * <p> 示例值：ou_91791271921729102012
          */
         private String userId;
@@ -92,7 +92,7 @@ public class ProcessRevokeAndWithdraw {
         private String reason;
 
         /**
-         * 按user_id_type类型传递。如果system_approval为false，则必填。否则非必填。
+         * 按照指定的用户ID类型传递对应的用户ID。
          * <p> 示例值：ou_91791271921729102012
          *
          * @param userId

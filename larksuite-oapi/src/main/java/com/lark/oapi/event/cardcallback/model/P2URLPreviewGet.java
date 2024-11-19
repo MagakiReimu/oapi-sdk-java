@@ -7,7 +7,11 @@ public class P2URLPreviewGet extends BaseEventV2 {
     @SerializedName("event")
     private P2URLPreviewGetData event;
 
-    public P2URLPreviewGetData getEvent() {return this.event;}
+    public P2URLPreviewGetData getEvent() {
+        return this.event;
+    }
 
-    public void setEvent(P2URLPreviewGetData event) {this.event = event;}
+    public void setEvent(P2URLPreviewGetData event) {
+        this.event = event;
+    }
 }

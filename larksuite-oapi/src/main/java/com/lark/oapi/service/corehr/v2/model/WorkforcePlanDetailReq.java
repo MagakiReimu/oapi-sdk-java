@@ -31,10 +31,10 @@ import com.lark.oapi.core.response.BaseResponse;
 public class WorkforcePlanDetailReq {
     /**
      * 编制规划id
-     * <p> 示例值："7430330781544564268"
+     * <p> 示例值：7430330781544564268
      */
-    @SerializedName("workfore_plan_id")
-    private String workforePlanId;
+    @SerializedName("workforce_plan_id")
+    private String workforcePlanId;
     /**
      * 编制规划的多个明细行
      * <p> 示例值：
@@ -49,9 +49,9 @@ public class WorkforcePlanDetailReq {
     public WorkforcePlanDetailReq(Builder builder) {
         /**
          * 编制规划id
-         * <p> 示例值："7430330781544564268"
+         * <p> 示例值：7430330781544564268
          */
-        this.workforePlanId = builder.workforePlanId;
+        this.workforcePlanId = builder.workforcePlanId;
         /**
          * 编制规划的多个明细行
          * <p> 示例值：
@@ -63,12 +63,12 @@ public class WorkforcePlanDetailReq {
         return new Builder();
     }
 
-    public String getWorkforePlanId() {
-        return this.workforePlanId;
+    public String getWorkforcePlanId() {
+        return this.workforcePlanId;
     }
 
-    public void setWorkforePlanId(String workforePlanId) {
-        this.workforePlanId = workforePlanId;
+    public void setWorkforcePlanId(String workforcePlanId) {
+        this.workforcePlanId = workforcePlanId;
     }
 
     public WorkforcePlanDetailRow[] getItems() {
@@ -82,9 +82,9 @@ public class WorkforcePlanDetailReq {
     public static class Builder {
         /**
          * 编制规划id
-         * <p> 示例值："7430330781544564268"
+         * <p> 示例值：7430330781544564268
          */
-        private String workforePlanId;
+        private String workforcePlanId;
         /**
          * 编制规划的多个明细行
          * <p> 示例值：
@@ -93,13 +93,13 @@ public class WorkforcePlanDetailReq {
 
         /**
          * 编制规划id
-         * <p> 示例值："7430330781544564268"
+         * <p> 示例值：7430330781544564268
          *
-         * @param workforePlanId
+         * @param workforcePlanId
          * @return
          */
-        public Builder workforePlanId(String workforePlanId) {
-            this.workforePlanId = workforePlanId;
+        public Builder workforcePlanId(String workforcePlanId) {
+            this.workforcePlanId = workforcePlanId;
             return this;
         }
 

@@ -15,19 +15,35 @@ public class CallBackContext {
     @SerializedName("open_chat_id")
     private String openChatId;
 
-    public String getUrl() {return this.url;}
+    public String getUrl() {
+        return this.url;
+    }
 
-    public void setUrl(String url) {this.url = url;}
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
-    public String getPreviewToken() {return this.previewToken;}
+    public String getPreviewToken() {
+        return this.previewToken;
+    }
 
-    public void setPreviewToken(String previewToken) {this.previewToken = previewToken;}
+    public void setPreviewToken(String previewToken) {
+        this.previewToken = previewToken;
+    }
 
-    public String getOpenMessageId() {return this.openMessageId;}
+    public String getOpenMessageId() {
+        return this.openMessageId;
+    }
 
-    public void setOpenMessageId(String openMessageId) {this.openMessageId = openMessageId;}
+    public void setOpenMessageId(String openMessageId) {
+        this.openMessageId = openMessageId;
+    }
 
-    public String getOpenChatId() {return this.openChatId;}
+    public String getOpenChatId() {
+        return this.openChatId;
+    }
 
-    public void setOpenChatId(String openChatId) {this.openChatId = openChatId;}
+    public void setOpenChatId(String openChatId) {
+        this.openChatId = openChatId;
+    }
 }

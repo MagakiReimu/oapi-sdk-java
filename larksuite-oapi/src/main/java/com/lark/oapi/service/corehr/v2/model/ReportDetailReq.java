@@ -33,11 +33,11 @@ public class ReportDetailReq {
      * 编制规划id
      * <p> 示例值：7430330781544564268
      */
-    @SerializedName("wokforce_plan_id")
-    private String wokforcePlanId;
+    @SerializedName("workforce_plan_id")
+    private String workforcePlanId;
     /**
      * 集中填报id
-     * <p> 示例值："7430470688844023340"
+     * <p> 示例值：7430470688844023340
      */
     @SerializedName("centralized_reporting_project_id")
     private String centralizedReportingProjectId;
@@ -57,10 +57,10 @@ public class ReportDetailReq {
          * 编制规划id
          * <p> 示例值：7430330781544564268
          */
-        this.wokforcePlanId = builder.wokforcePlanId;
+        this.workforcePlanId = builder.workforcePlanId;
         /**
          * 集中填报id
-         * <p> 示例值："7430470688844023340"
+         * <p> 示例值：7430470688844023340
          */
         this.centralizedReportingProjectId = builder.centralizedReportingProjectId;
         /**
@@ -74,12 +74,12 @@ public class ReportDetailReq {
         return new Builder();
     }
 
-    public String getWokforcePlanId() {
-        return this.wokforcePlanId;
+    public String getWorkforcePlanId() {
+        return this.workforcePlanId;
     }
 
-    public void setWokforcePlanId(String wokforcePlanId) {
-        this.wokforcePlanId = wokforcePlanId;
+    public void setWorkforcePlanId(String workforcePlanId) {
+        this.workforcePlanId = workforcePlanId;
     }
 
     public String getCentralizedReportingProjectId() {
@@ -103,10 +103,10 @@ public class ReportDetailReq {
          * 编制规划id
          * <p> 示例值：7430330781544564268
          */
-        private String wokforcePlanId;
+        private String workforcePlanId;
         /**
          * 集中填报id
-         * <p> 示例值："7430470688844023340"
+         * <p> 示例值：7430470688844023340
          */
         private String centralizedReportingProjectId;
         /**
@@ -119,18 +119,18 @@ public class ReportDetailReq {
          * 编制规划id
          * <p> 示例值：7430330781544564268
          *
-         * @param wokforcePlanId
+         * @param workforcePlanId
          * @return
          */
-        public Builder wokforcePlanId(String wokforcePlanId) {
-            this.wokforcePlanId = wokforcePlanId;
+        public Builder workforcePlanId(String workforcePlanId) {
+            this.workforcePlanId = workforcePlanId;
             return this;
         }
 
 
         /**
          * 集中填报id
-         * <p> 示例值："7430470688844023340"
+         * <p> 示例值：7430470688844023340
          *
          * @param centralizedReportingProjectId
          * @return

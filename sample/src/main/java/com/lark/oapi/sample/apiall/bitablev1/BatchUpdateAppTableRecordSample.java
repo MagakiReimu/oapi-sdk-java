@@ -18,6 +18,7 @@ public class BatchUpdateAppTableRecordSample {
                 .appToken("appbcbWCzen6D8dezhoCH2RpMAh")
                 .tableId("tblsRc9GRRXKqhvW")
                 .userIdType("user_id")
+                .ignoreConsistencyCheck(true)
                 .batchUpdateAppTableRecordReqBody(BatchUpdateAppTableRecordReqBody.newBuilder()
                         .records(new AppTableRecord[]{})
                         .build())

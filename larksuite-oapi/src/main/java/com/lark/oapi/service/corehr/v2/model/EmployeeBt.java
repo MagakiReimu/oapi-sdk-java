@@ -318,6 +318,12 @@ public class EmployeeBt {
     @SerializedName("pay_group_id")
     private String payGroupId;
     /**
+     * 所属外派薪资组 ID
+     * <p> 示例值：7164286667866966659
+     */
+    @SerializedName("assignment_pay_group_id")
+    private String assignmentPayGroupId;
+    /**
      * 是否外派
      * <p> 示例值：true
      */
@@ -389,6 +395,12 @@ public class EmployeeBt {
      */
     @SerializedName("custom_org")
     private String customOrg;
+    /**
+     * 司龄调整信息
+     * <p> 示例值：
+     */
+    @SerializedName("seniority_adjust_information_list")
+    private SeniorityAdjustInformation[] seniorityAdjustInformationList;
 
     // builder 开始
     public EmployeeBt() {
@@ -636,6 +648,11 @@ public class EmployeeBt {
          */
         this.payGroupId = builder.payGroupId;
         /**
+         * 所属外派薪资组 ID
+         * <p> 示例值：7164286667866966659
+         */
+        this.assignmentPayGroupId = builder.assignmentPayGroupId;
+        /**
          * 是否外派
          * <p> 示例值：true
          */
@@ -695,6 +712,11 @@ public class EmployeeBt {
          * <p> 示例值：{"custom_org_02":[{"id":"1","rate":"99"}]}
          */
         this.customOrg = builder.customOrg;
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         */
+        this.seniorityAdjustInformationList = builder.seniorityAdjustInformationList;
     }
 
     public static Builder newBuilder() {
@@ -1085,6 +1107,14 @@ public class EmployeeBt {
         this.payGroupId = payGroupId;
     }
 
+    public String getAssignmentPayGroupId() {
+        return this.assignmentPayGroupId;
+    }
+
+    public void setAssignmentPayGroupId(String assignmentPayGroupId) {
+        this.assignmentPayGroupId = assignmentPayGroupId;
+    }
+
     public Boolean getInternationalAssignment() {
         return this.internationalAssignment;
     }
@@ -1179,6 +1209,14 @@ public class EmployeeBt {
 
     public void setCustomOrg(String customOrg) {
         this.customOrg = customOrg;
+    }
+
+    public SeniorityAdjustInformation[] getSeniorityAdjustInformationList() {
+        return this.seniorityAdjustInformationList;
+    }
+
+    public void setSeniorityAdjustInformationList(SeniorityAdjustInformation[] seniorityAdjustInformationList) {
+        this.seniorityAdjustInformationList = seniorityAdjustInformationList;
     }
 
     public static class Builder {
@@ -1423,6 +1461,11 @@ public class EmployeeBt {
          */
         private String payGroupId;
         /**
+         * 所属外派薪资组 ID
+         * <p> 示例值：7164286667866966659
+         */
+        private String assignmentPayGroupId;
+        /**
          * 是否外派
          * <p> 示例值：true
          */
@@ -1482,6 +1525,11 @@ public class EmployeeBt {
          * <p> 示例值：{"custom_org_02":[{"id":"1","rate":"99"}]}
          */
         private String customOrg;
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         */
+        private SeniorityAdjustInformation[] seniorityAdjustInformationList;
 
         /**
          * 雇佣 ID;- 类型与 user_id_type 一致
@@ -2108,6 +2156,19 @@ public class EmployeeBt {
 
 
         /**
+         * 所属外派薪资组 ID
+         * <p> 示例值：7164286667866966659
+         *
+         * @param assignmentPayGroupId
+         * @return
+         */
+        public Builder assignmentPayGroupId(String assignmentPayGroupId) {
+            this.assignmentPayGroupId = assignmentPayGroupId;
+            return this;
+        }
+
+
+        /**
          * 是否外派
          * <p> 示例值：true
          *
@@ -2259,6 +2320,19 @@ public class EmployeeBt {
          */
         public Builder customOrg(String customOrg) {
             this.customOrg = customOrg;
+            return this;
+        }
+
+
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         *
+         * @param seniorityAdjustInformationList
+         * @return
+         */
+        public Builder seniorityAdjustInformationList(SeniorityAdjustInformation[] seniorityAdjustInformationList) {
+            this.seniorityAdjustInformationList = seniorityAdjustInformationList;
             return this;
         }
 

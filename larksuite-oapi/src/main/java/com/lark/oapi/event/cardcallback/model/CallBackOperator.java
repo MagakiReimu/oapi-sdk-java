@@ -16,19 +16,35 @@ public class CallBackOperator {
     @SerializedName("union_id")
     private String unionId;
 
-    public String getTenantKey() {return this.tenantKey;}
+    public String getTenantKey() {
+        return this.tenantKey;
+    }
 
-    public void setTenantKey(String tenantKey) {this.tenantKey = tenantKey;}
+    public void setTenantKey(String tenantKey) {
+        this.tenantKey = tenantKey;
+    }
 
-    public String getUserId() {return this.userId;}
+    public String getUserId() {
+        return this.userId;
+    }
 
-    public void setUserId(String userId) {this.userId = userId;}
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
-    public String getOpenId() {return this.openId;}
+    public String getOpenId() {
+        return this.openId;
+    }
 
-    public void setOpenId(String openId) {this.openId = openId;}
+    public void setOpenId(String openId) {
+        this.openId = openId;
+    }
 
-    public String getUnionId() {return this.unionId;}
+    public String getUnionId() {
+        return this.unionId;
+    }
 
-    public void setUnionId(String unionId) {this.unionId = unionId;}
+    public void setUnionId(String unionId) {
+        this.unionId = unionId;
+    }
 }

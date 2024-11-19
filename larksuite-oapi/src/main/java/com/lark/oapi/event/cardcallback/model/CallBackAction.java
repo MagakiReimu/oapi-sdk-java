@@ -34,39 +34,75 @@ public class CallBackAction {
     @SerializedName("checked")
     private Boolean checked;
 
-    public Map<String, Object> getValue() {return this.value;}
+    public Map<String, Object> getValue() {
+        return this.value;
+    }
 
-    public void setValue(Map<String, Object> value) {this.value=value;}
+    public void setValue(Map<String, Object> value) {
+        this.value = value;
+    }
 
-    public String getTag() {return this.tag;}
+    public String getTag() {
+        return this.tag;
+    }
 
-    public void setTag(String tag) {this.tag=tag;}
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
 
-    public String getOption() {return this.option;}
+    public String getOption() {
+        return this.option;
+    }
 
-    public void setOption(String option) {this.option=option;}
+    public void setOption(String option) {
+        this.option = option;
+    }
 
-    public String getTimezone() {return this.timezone;}
+    public String getTimezone() {
+        return this.timezone;
+    }
 
-    public void setTimezone(String timezone) {this.timezone=timezone;}
+    public void setTimezone(String timezone) {
+        this.timezone = timezone;
+    }
 
-    public String getName() {return this.name;}
+    public String getName() {
+        return this.name;
+    }
 
-    public void setName(String name) {this.name = name;}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public Map<String, Object> getFormValue() {return this.formValue;}
+    public Map<String, Object> getFormValue() {
+        return this.formValue;
+    }
 
-    public void setFormValue(Map<String, Object> formValue) {this.formValue=formValue;}
+    public void setFormValue(Map<String, Object> formValue) {
+        this.formValue = formValue;
+    }
 
-    public String getInputValue() {return this.inputValue;}
+    public String getInputValue() {
+        return this.inputValue;
+    }
 
-    public void setInputValue(String inputValue) {this.inputValue=inputValue;}
+    public void setInputValue(String inputValue) {
+        this.inputValue = inputValue;
+    }
 
-    public List<String> getOptions() {return this.options;}
+    public List<String> getOptions() {
+        return this.options;
+    }
 
-    public void setOptions(List<String> options) {this.options=options;}
+    public void setOptions(List<String> options) {
+        this.options = options;
+    }
 
-    public Boolean getChecked() {return this.checked;}
+    public Boolean getChecked() {
+        return this.checked;
+    }
 
-    public void setChecked(Boolean checked) {this.checked=checked;}
+    public void setChecked(Boolean checked) {
+        this.checked = checked;
+    }
 }

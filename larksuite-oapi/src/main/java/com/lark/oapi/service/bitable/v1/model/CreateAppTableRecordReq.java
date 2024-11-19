@@ -43,6 +43,13 @@ public class CreateAppTableRecordReq {
     @SerializedName("client_token")
     private String clientToken;
     /**
+     * 用于控制一致性读写，默认开启检查
+     * <p> 示例值：true
+     */
+    @Query
+    @SerializedName("ignore_consistency_check")
+    private Boolean ignoreConsistencyCheck;
+    /**
      * 多维表格的唯一标识符 [app_token 参数说明](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/bitable/notification#8121eebe)
      * <p> 示例值：bascng7vrxcxpig7geggXiCtadY
      */
@@ -74,6 +81,11 @@ public class CreateAppTableRecordReq {
          * <p> 示例值：fe599b60-450f-46ff-b2ef-9f6675625b97
          */
         this.clientToken = builder.clientToken;
+        /**
+         * 用于控制一致性读写，默认开启检查
+         * <p> 示例值：true
+         */
+        this.ignoreConsistencyCheck = builder.ignoreConsistencyCheck;
         /**
          * 多维表格的唯一标识符 [app_token 参数说明](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/bitable/notification#8121eebe)
          * <p> 示例值：bascng7vrxcxpig7geggXiCtadY
@@ -107,6 +119,14 @@ public class CreateAppTableRecordReq {
         this.clientToken = clientToken;
     }
 
+    public Boolean getIgnoreConsistencyCheck() {
+        return this.ignoreConsistencyCheck;
+    }
+
+    public void setIgnoreConsistencyCheck(Boolean ignoreConsistencyCheck) {
+        this.ignoreConsistencyCheck = ignoreConsistencyCheck;
+    }
+
     public String getAppToken() {
         return this.appToken;
     }
@@ -134,6 +154,7 @@ public class CreateAppTableRecordReq {
     public static class Builder {
         private String userIdType; // 此次调用中使用的用户ID的类型
         private String clientToken; // 格式为标准的 uuid，操作的唯一标识，用于幂等的进行更新操作。此值为空表示将发起一次新的请求，此值非空表示幂等的进行更新操作。
+        private Boolean ignoreConsistencyCheck; // 用于控制一致性读写，默认开启检查
         private String appToken; // 多维表格的唯一标识符 [app_token 参数说明](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/bitable/notification#8121eebe)
         private String tableId; // 多维表格数据表的唯一标识符 [table_id 参数说明](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/bitable/notification#735fe883)
         private AppTableRecord body;
@@ -171,6 +192,18 @@ public class CreateAppTableRecordReq {
          */
         public Builder clientToken(String clientToken) {
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * 用于控制一致性读写，默认开启检查
+         * <p> 示例值：true
+         *
+         * @param ignoreConsistencyCheck
+         * @return
+         */
+        public Builder ignoreConsistencyCheck(Boolean ignoreConsistencyCheck) {
+            this.ignoreConsistencyCheck = ignoreConsistencyCheck;
             return this;
         }
 

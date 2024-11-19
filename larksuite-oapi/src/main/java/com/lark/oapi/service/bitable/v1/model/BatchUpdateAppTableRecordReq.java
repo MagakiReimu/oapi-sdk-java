@@ -36,6 +36,13 @@ public class BatchUpdateAppTableRecordReq {
     @SerializedName("user_id_type")
     private String userIdType;
     /**
+     * 用于控制一致性读写，默认开启检查
+     * <p> 示例值：true
+     */
+    @Query
+    @SerializedName("ignore_consistency_check")
+    private Boolean ignoreConsistencyCheck;
+    /**
      * bitable app token
      * <p> 示例值：appbcbWCzen6D8dezhoCH2RpMAh
      */
@@ -51,6 +58,7 @@ public class BatchUpdateAppTableRecordReq {
     private String tableId;
     @Body
     private BatchUpdateAppTableRecordReqBody body;
+
     // builder 开始
     public BatchUpdateAppTableRecordReq() {
     }
@@ -61,6 +69,11 @@ public class BatchUpdateAppTableRecordReq {
          * <p> 示例值：
          */
         this.userIdType = builder.userIdType;
+        /**
+         * 用于控制一致性读写，默认开启检查
+         * <p> 示例值：true
+         */
+        this.ignoreConsistencyCheck = builder.ignoreConsistencyCheck;
         /**
          * bitable app token
          * <p> 示例值：appbcbWCzen6D8dezhoCH2RpMAh
@@ -84,6 +97,14 @@ public class BatchUpdateAppTableRecordReq {
 
     public void setUserIdType(String userIdType) {
         this.userIdType = userIdType;
+    }
+
+    public Boolean getIgnoreConsistencyCheck() {
+        return this.ignoreConsistencyCheck;
+    }
+
+    public void setIgnoreConsistencyCheck(Boolean ignoreConsistencyCheck) {
+        this.ignoreConsistencyCheck = ignoreConsistencyCheck;
     }
 
     public String getAppToken() {
@@ -112,6 +133,7 @@ public class BatchUpdateAppTableRecordReq {
 
     public static class Builder {
         private String userIdType; // 此次调用中使用的用户ID的类型
+        private Boolean ignoreConsistencyCheck; // 用于控制一致性读写，默认开启检查
         private String appToken; // bitable app token
         private String tableId; // table id
         private BatchUpdateAppTableRecordReqBody body;
@@ -137,6 +159,18 @@ public class BatchUpdateAppTableRecordReq {
          */
         public Builder userIdType(com.lark.oapi.service.bitable.v1.enums.BatchUpdateAppTableRecordUserIdTypeEnum userIdType) {
             this.userIdType = userIdType.getValue();
+            return this;
+        }
+
+        /**
+         * 用于控制一致性读写，默认开启检查
+         * <p> 示例值：true
+         *
+         * @param ignoreConsistencyCheck
+         * @return
+         */
+        public Builder ignoreConsistencyCheck(Boolean ignoreConsistencyCheck) {
+            this.ignoreConsistencyCheck = ignoreConsistencyCheck;
             return this;
         }
 

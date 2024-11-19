@@ -22,27 +22,51 @@ public class P2CardActionTriggerData {
     @SerializedName("context")
     private CallBackContext context;
 
-    public CallBackOperator getOperator() {return this.operator;}
+    public CallBackOperator getOperator() {
+        return this.operator;
+    }
 
-    public void setOperator(CallBackOperator operator) {this.operator = operator;}
+    public void setOperator(CallBackOperator operator) {
+        this.operator = operator;
+    }
 
-    public String getToken() {return this.token;}
+    public String getToken() {
+        return this.token;
+    }
 
-    public void setToken(String token) {this.token = token;}
+    public void setToken(String token) {
+        this.token = token;
+    }
 
-    public CallBackAction getAction() {return this.action;}
+    public CallBackAction getAction() {
+        return this.action;
+    }
 
-    public void setAction(CallBackAction action) {this.action = action;}
+    public void setAction(CallBackAction action) {
+        this.action = action;
+    }
 
-    public String getHost() {return this.host;}
+    public String getHost() {
+        return this.host;
+    }
 
-    public void setHost(String host) {this.host = host;}
+    public void setHost(String host) {
+        this.host = host;
+    }
 
-    public String getDeliveryType() {return this.deliveryType;}
+    public String getDeliveryType() {
+        return this.deliveryType;
+    }
 
-    public void setDeliveryType(String deliveryType) {this.deliveryType = deliveryType;}
+    public void setDeliveryType(String deliveryType) {
+        this.deliveryType = deliveryType;
+    }
 
-    public CallBackContext getContext() {return this.context;}
+    public CallBackContext getContext() {
+        return this.context;
+    }
 
-    public void setContext(CallBackContext context) {this.context = context;}
+    public void setContext(CallBackContext context) {
+        this.context = context;
+    }
 }
