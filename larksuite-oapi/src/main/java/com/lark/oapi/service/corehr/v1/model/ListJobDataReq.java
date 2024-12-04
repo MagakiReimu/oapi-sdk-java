@@ -231,7 +231,6 @@ public class ListJobDataReq {
         private String userIdType; // 用户 ID 类型
         private String departmentIdType; // 此次调用中使用的部门 ID 类型
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：6994718879515739656
@@ -371,6 +370,7 @@ public class ListJobDataReq {
             this.departmentIdType = departmentIdType.getValue();
             return this;
         }
+
 
         public ListJobDataReq build() {
             return new ListJobDataReq(this);

@@ -113,6 +113,12 @@ public class TalentBasicInfo {
     @SerializedName("identification_number")
     private String identificationNumber;
     /**
+     * 证件信息
+     * <p> 示例值：
+     */
+    @SerializedName("identification")
+    private TalentIdentificationInfo identification;
+    /**
      * 生日
      * <p> 示例值：293016767159
      */
@@ -230,6 +236,11 @@ public class TalentBasicInfo {
          * <p> 示例值：511699199x1x111234
          */
         this.identificationNumber = builder.identificationNumber;
+        /**
+         * 证件信息
+         * <p> 示例值：
+         */
+        this.identification = builder.identification;
         /**
          * 生日
          * <p> 示例值：293016767159
@@ -383,6 +394,14 @@ public class TalentBasicInfo {
         this.identificationNumber = identificationNumber;
     }
 
+    public TalentIdentificationInfo getIdentification() {
+        return this.identification;
+    }
+
+    public void setIdentification(TalentIdentificationInfo identification) {
+        this.identification = identification;
+    }
+
     public Integer getBirthday() {
         return this.birthday;
     }
@@ -510,6 +529,11 @@ public class TalentBasicInfo {
          * <p> 示例值：511699199x1x111234
          */
         private String identificationNumber;
+        /**
+         * 证件信息
+         * <p> 示例值：
+         */
+        private TalentIdentificationInfo identification;
         /**
          * 生日
          * <p> 示例值：293016767159
@@ -724,6 +748,19 @@ public class TalentBasicInfo {
          */
         public Builder identificationNumber(String identificationNumber) {
             this.identificationNumber = identificationNumber;
+            return this;
+        }
+
+
+        /**
+         * 证件信息
+         * <p> 示例值：
+         *
+         * @param identification
+         * @return
+         */
+        public Builder identification(TalentIdentificationInfo identification) {
+            this.identification = identification;
             return this;
         }
 

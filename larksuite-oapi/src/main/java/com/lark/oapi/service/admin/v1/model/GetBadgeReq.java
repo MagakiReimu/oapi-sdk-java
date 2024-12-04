@@ -76,6 +76,7 @@ public class GetBadgeReq {
             return this;
         }
 
+
         public GetBadgeReq build() {
             return new GetBadgeReq(this);
         }

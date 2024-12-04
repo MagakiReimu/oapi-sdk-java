@@ -144,6 +144,7 @@ public class DeleteAppTableRecordReq {
             return this;
         }
 
+
         public DeleteAppTableRecordReq build() {
             return new DeleteAppTableRecordReq(this);
         }

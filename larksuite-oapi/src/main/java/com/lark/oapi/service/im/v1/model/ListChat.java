@@ -78,6 +78,12 @@ public class ListChat {
     @SerializedName("tenant_key")
     private String tenantKey;
     /**
+     * 群标签
+     * <p> 示例值：
+     */
+    @SerializedName("labels")
+    private String[] labels;
+    /**
      * 群状态
      * <p> 示例值：normal
      */
@@ -129,6 +135,11 @@ public class ListChat {
          * <p> 示例值：736588c9260f175e
          */
         this.tenantKey = builder.tenantKey;
+        /**
+         * 群标签
+         * <p> 示例值：
+         */
+        this.labels = builder.labels;
         /**
          * 群状态
          * <p> 示例值：normal
@@ -204,6 +215,14 @@ public class ListChat {
         this.tenantKey = tenantKey;
     }
 
+    public String[] getLabels() {
+        return this.labels;
+    }
+
+    public void setLabels(String[] labels) {
+        this.labels = labels;
+    }
+
     public String getChatStatus() {
         return this.chatStatus;
     }
@@ -253,6 +272,11 @@ public class ListChat {
          * <p> 示例值：736588c9260f175e
          */
         private String tenantKey;
+        /**
+         * 群标签
+         * <p> 示例值：
+         */
+        private String[] labels;
         /**
          * 群状态
          * <p> 示例值：normal
@@ -359,6 +383,19 @@ public class ListChat {
          */
         public Builder tenantKey(String tenantKey) {
             this.tenantKey = tenantKey;
+            return this;
+        }
+
+
+        /**
+         * 群标签
+         * <p> 示例值：
+         *
+         * @param labels
+         * @return
+         */
+        public Builder labels(String[] labels) {
+            this.labels = labels;
             return this;
         }
 

@@ -105,7 +105,6 @@ public class QueryReviewReq {
         private String[] userIds; // 目标用户id列表，最多5个
         private String[] periodIds; // period_id列表，最多5个
 
-
         /**
          * 此次调用中使用的用户ID的类型
          * <p> 示例值：
@@ -155,6 +154,7 @@ public class QueryReviewReq {
             this.periodIds = periodIds;
             return this;
         }
+
 
         public QueryReviewReq build() {
             return new QueryReviewReq(this);

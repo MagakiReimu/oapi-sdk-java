@@ -210,7 +210,6 @@ public class GetResourceReservationListReq {
         private Integer pageSize; // 分页尺寸大小
         private String pageToken; // 分页标记,第一次请求不填,表示从头开始遍历.下次遍历可采用该 page_token获取查询结果
 
-
         /**
          * 层级id
          * <p> 示例值：omb_57c9cc7d9a81e27e54c8fabfd02759e7
@@ -313,6 +312,7 @@ public class GetResourceReservationListReq {
             this.pageToken = pageToken;
             return this;
         }
+
 
         public GetResourceReservationListReq build() {
             return new GetResourceReservationListReq(this);

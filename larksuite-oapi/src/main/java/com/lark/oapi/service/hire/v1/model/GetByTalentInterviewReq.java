@@ -104,7 +104,6 @@ public class GetByTalentInterviewReq {
         private String userIdType; // 此次调用中使用的用户ID的类型
         private String jobLevelIdType; // 此次调用中使用的「职级 ID」的类型
 
-
         /**
          * 人才 ID
          * <p> 示例值：6949805467799537964
@@ -142,6 +141,7 @@ public class GetByTalentInterviewReq {
             this.jobLevelIdType = jobLevelIdType;
             return this;
         }
+
 
         public GetByTalentInterviewReq build() {
             return new GetByTalentInterviewReq(this);

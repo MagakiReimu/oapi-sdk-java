@@ -48,6 +48,7 @@ public class CreateJobRequirementSample {
                         .jobTypeId("6930815272790114324")
                         .jobIdList(new String[]{})
                         .employmentJobId("123")
+                        .positionId("123")
                         .build())
                 .build();
 

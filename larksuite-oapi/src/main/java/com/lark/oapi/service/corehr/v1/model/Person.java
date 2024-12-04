@@ -78,6 +78,12 @@ public class Person {
     @SerializedName("nationality_id")
     private String nationalityId;
     /**
+     * 国籍 ID，可通过【查询国籍信息】接口查询
+     * <p> 示例值：7075702732803278380
+     */
+    @SerializedName("nationality_id_v2")
+    private String nationalityIdV2;
+    /**
      * 民族 / 种族，枚举值可通过文档[【飞书人事枚举常量】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/feishu-people-enum-constant)民族（race）枚举定义部分获得
      * <p> 示例值：
      */
@@ -243,6 +249,11 @@ public class Person {
          * <p> 示例值：123456789
          */
         this.nationalityId = builder.nationalityId;
+        /**
+         * 国籍 ID，可通过【查询国籍信息】接口查询
+         * <p> 示例值：7075702732803278380
+         */
+        this.nationalityIdV2 = builder.nationalityIdV2;
         /**
          * 民族 / 种族，枚举值可通过文档[【飞书人事枚举常量】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/feishu-people-enum-constant)民族（race）枚举定义部分获得
          * <p> 示例值：
@@ -411,6 +422,14 @@ public class Person {
 
     public void setNationalityId(String nationalityId) {
         this.nationalityId = nationalityId;
+    }
+
+    public String getNationalityIdV2() {
+        return this.nationalityIdV2;
+    }
+
+    public void setNationalityIdV2(String nationalityIdV2) {
+        this.nationalityIdV2 = nationalityIdV2;
     }
 
     public Enum getRace() {
@@ -615,6 +634,11 @@ public class Person {
          */
         private String nationalityId;
         /**
+         * 国籍 ID，可通过【查询国籍信息】接口查询
+         * <p> 示例值：7075702732803278380
+         */
+        private String nationalityIdV2;
+        /**
          * 民族 / 种族，枚举值可通过文档[【飞书人事枚举常量】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/feishu-people-enum-constant)民族（race）枚举定义部分获得
          * <p> 示例值：
          */
@@ -815,6 +839,19 @@ public class Person {
          */
         public Builder nationalityId(String nationalityId) {
             this.nationalityId = nationalityId;
+            return this;
+        }
+
+
+        /**
+         * 国籍 ID，可通过【查询国籍信息】接口查询
+         * <p> 示例值：7075702732803278380
+         *
+         * @param nationalityIdV2
+         * @return
+         */
+        public Builder nationalityIdV2(String nationalityIdV2) {
+            this.nationalityIdV2 = nationalityIdV2;
             return this;
         }
 

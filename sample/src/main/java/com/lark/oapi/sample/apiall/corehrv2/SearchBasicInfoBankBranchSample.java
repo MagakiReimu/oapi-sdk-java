@@ -24,7 +24,6 @@ public class SearchBasicInfoBankBranchSample {
                         .bankBranchIdList(new String[]{})
                         .bankBranchNameList(new String[]{})
                         .codeList(new String[]{})
-                        .nameList(new String[]{})
                         .statusList(new Integer[]{})
                         .updateStartTime("2020-01-01 00:00:00")
                         .updateEndTime("2024-01-01 00:00:00")

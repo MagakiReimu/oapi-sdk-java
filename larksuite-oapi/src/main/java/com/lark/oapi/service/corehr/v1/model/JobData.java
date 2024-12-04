@@ -174,6 +174,12 @@ public class JobData {
     @SerializedName("cost_center_rate")
     private SupportCostCenterItem[] costCenterRate;
     /**
+     * 自定义字段
+     * <p> 示例值：
+     */
+    @SerializedName("custom_fields")
+    private ObjectFieldData[] customFields;
+    /**
      * 周工作时长v2
      * <p> 示例值：37.5
      */
@@ -335,6 +341,11 @@ public class JobData {
          * <p> 示例值：
          */
         this.costCenterRate = builder.costCenterRate;
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         */
+        this.customFields = builder.customFields;
         /**
          * 周工作时长v2
          * <p> 示例值：37.5
@@ -563,6 +574,14 @@ public class JobData {
         this.costCenterRate = costCenterRate;
     }
 
+    public ObjectFieldData[] getCustomFields() {
+        return this.customFields;
+    }
+
+    public void setCustomFields(ObjectFieldData[] customFields) {
+        this.customFields = customFields;
+    }
+
     public Double getWeeklyWorkingHoursV2() {
         return this.weeklyWorkingHoursV2;
     }
@@ -732,6 +751,11 @@ public class JobData {
          * <p> 示例值：
          */
         private SupportCostCenterItem[] costCenterRate;
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         */
+        private ObjectFieldData[] customFields;
         /**
          * 周工作时长v2
          * <p> 示例值：37.5
@@ -1071,6 +1095,19 @@ public class JobData {
          */
         public Builder costCenterRate(SupportCostCenterItem[] costCenterRate) {
             this.costCenterRate = costCenterRate;
+            return this;
+        }
+
+
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         *
+         * @param customFields
+         * @return
+         */
+        public Builder customFields(ObjectFieldData[] customFields) {
+            this.customFields = customFields;
             return this;
         }
 

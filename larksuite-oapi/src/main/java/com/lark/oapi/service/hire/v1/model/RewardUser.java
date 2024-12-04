@@ -46,6 +46,12 @@ public class RewardUser {
      */
     @SerializedName("department")
     private BasicDepartmentInfo department;
+    /**
+     * 内推人人员类型
+     * <p> 示例值：
+     */
+    @SerializedName("recruitment_type")
+    private Integer recruitmentType;
 
     // builder 开始
     public RewardUser() {
@@ -67,6 +73,11 @@ public class RewardUser {
          * <p> 示例值：
          */
         this.department = builder.department;
+        /**
+         * 内推人人员类型
+         * <p> 示例值：
+         */
+        this.recruitmentType = builder.recruitmentType;
     }
 
     public static Builder newBuilder() {
@@ -97,6 +108,14 @@ public class RewardUser {
         this.department = department;
     }
 
+    public Integer getRecruitmentType() {
+        return this.recruitmentType;
+    }
+
+    public void setRecruitmentType(Integer recruitmentType) {
+        this.recruitmentType = recruitmentType;
+    }
+
     public static class Builder {
         /**
          * 人员 ID
@@ -113,6 +132,11 @@ public class RewardUser {
          * <p> 示例值：
          */
         private BasicDepartmentInfo department;
+        /**
+         * 内推人人员类型
+         * <p> 示例值：
+         */
+        private Integer recruitmentType;
 
         /**
          * 人员 ID
@@ -149,6 +173,19 @@ public class RewardUser {
          */
         public Builder department(BasicDepartmentInfo department) {
             this.department = department;
+            return this;
+        }
+
+
+        /**
+         * 内推人人员类型
+         * <p> 示例值：
+         *
+         * @param recruitmentType
+         * @return
+         */
+        public Builder recruitmentType(Integer recruitmentType) {
+            this.recruitmentType = recruitmentType;
             return this;
         }
 

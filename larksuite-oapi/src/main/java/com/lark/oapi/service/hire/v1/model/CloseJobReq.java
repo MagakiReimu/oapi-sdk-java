@@ -75,6 +75,7 @@ public class CloseJobReq {
             return this;
         }
 
+
         public CloseJobReq build() {
             return new CloseJobReq(this);
         }

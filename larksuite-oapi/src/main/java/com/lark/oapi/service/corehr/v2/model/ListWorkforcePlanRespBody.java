@@ -40,6 +40,18 @@ public class ListWorkforcePlanRespBody {
      */
     @SerializedName("total")
     private Integer total;
+    /**
+     * 分页标识
+     * <p> 示例值：34523459
+     */
+    @SerializedName("page_token")
+    private String pageToken;
+    /**
+     * 是否有下一页
+     * <p> 示例值：true
+     */
+    @SerializedName("has_more")
+    private Boolean hasMore;
 
     public WorkforcePlan[] getItems() {
         return this.items;
@@ -57,5 +69,20 @@ public class ListWorkforcePlanRespBody {
         this.total = total;
     }
 
+    public String getPageToken() {
+        return this.pageToken;
+    }
+
+    public void setPageToken(String pageToken) {
+        this.pageToken = pageToken;
+    }
+
+    public Boolean getHasMore() {
+        return this.hasMore;
+    }
+
+    public void setHasMore(Boolean hasMore) {
+        this.hasMore = hasMore;
+    }
 
 }

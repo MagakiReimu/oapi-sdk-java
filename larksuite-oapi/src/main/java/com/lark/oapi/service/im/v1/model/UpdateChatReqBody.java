@@ -102,6 +102,18 @@ public class UpdateChatReqBody {
     @SerializedName("membership_approval")
     private String membershipApproval;
     /**
+     * 群标签
+     * <p> 示例值：
+     */
+    @SerializedName("labels")
+    private String[] labels;
+    /**
+     * 群快捷组件列表
+     * <p> 示例值：
+     */
+    @SerializedName("toolkit_ids")
+    private String[] toolkitIds;
+    /**
      * 防泄密模式设置
      * <p> 示例值：
      */
@@ -131,6 +143,12 @@ public class UpdateChatReqBody {
      */
     @SerializedName("video_conference_setting")
     private String videoConferenceSetting;
+    /**
+     * 谁可以管理置顶
+     * <p> 示例值：all_members
+     */
+    @SerializedName("pin_manage_setting")
+    private String pinManageSetting;
     /**
      * 隐藏群成员人数设置
      * <p> 示例值：all_members
@@ -204,6 +222,16 @@ public class UpdateChatReqBody {
          */
         this.membershipApproval = builder.membershipApproval;
         /**
+         * 群标签
+         * <p> 示例值：
+         */
+        this.labels = builder.labels;
+        /**
+         * 群快捷组件列表
+         * <p> 示例值：
+         */
+        this.toolkitIds = builder.toolkitIds;
+        /**
          * 防泄密模式设置
          * <p> 示例值：
          */
@@ -228,6 +256,11 @@ public class UpdateChatReqBody {
          * <p> 示例值：all_members
          */
         this.videoConferenceSetting = builder.videoConferenceSetting;
+        /**
+         * 谁可以管理置顶
+         * <p> 示例值：all_members
+         */
+        this.pinManageSetting = builder.pinManageSetting;
         /**
          * 隐藏群成员人数设置
          * <p> 示例值：all_members
@@ -335,6 +368,22 @@ public class UpdateChatReqBody {
         this.membershipApproval = membershipApproval;
     }
 
+    public String[] getLabels() {
+        return this.labels;
+    }
+
+    public void setLabels(String[] labels) {
+        this.labels = labels;
+    }
+
+    public String[] getToolkitIds() {
+        return this.toolkitIds;
+    }
+
+    public void setToolkitIds(String[] toolkitIds) {
+        this.toolkitIds = toolkitIds;
+    }
+
     public RestrictedModeSetting getRestrictedModeSetting() {
         return this.restrictedModeSetting;
     }
@@ -373,6 +422,14 @@ public class UpdateChatReqBody {
 
     public void setVideoConferenceSetting(String videoConferenceSetting) {
         this.videoConferenceSetting = videoConferenceSetting;
+    }
+
+    public String getPinManageSetting() {
+        return this.pinManageSetting;
+    }
+
+    public void setPinManageSetting(String pinManageSetting) {
+        this.pinManageSetting = pinManageSetting;
     }
 
     public String getHideMemberCountSetting() {
@@ -445,6 +502,16 @@ public class UpdateChatReqBody {
          */
         private String membershipApproval;
         /**
+         * 群标签
+         * <p> 示例值：
+         */
+        private String[] labels;
+        /**
+         * 群快捷组件列表
+         * <p> 示例值：
+         */
+        private String[] toolkitIds;
+        /**
          * 防泄密模式设置
          * <p> 示例值：
          */
@@ -469,6 +536,11 @@ public class UpdateChatReqBody {
          * <p> 示例值：all_members
          */
         private String videoConferenceSetting;
+        /**
+         * 谁可以管理置顶
+         * <p> 示例值：all_members
+         */
+        private String pinManageSetting;
         /**
          * 隐藏群成员人数设置
          * <p> 示例值：all_members
@@ -632,6 +704,32 @@ public class UpdateChatReqBody {
 
 
         /**
+         * 群标签
+         * <p> 示例值：
+         *
+         * @param labels
+         * @return
+         */
+        public Builder labels(String[] labels) {
+            this.labels = labels;
+            return this;
+        }
+
+
+        /**
+         * 群快捷组件列表
+         * <p> 示例值：
+         *
+         * @param toolkitIds
+         * @return
+         */
+        public Builder toolkitIds(String[] toolkitIds) {
+            this.toolkitIds = toolkitIds;
+            return this;
+        }
+
+
+        /**
          * 防泄密模式设置
          * <p> 示例值：
          *
@@ -728,6 +826,31 @@ public class UpdateChatReqBody {
          */
         public Builder videoConferenceSetting(com.lark.oapi.service.im.v1.enums.UpdateChatVideoConferenceSettingTypeEnum videoConferenceSetting) {
             this.videoConferenceSetting = videoConferenceSetting.getValue();
+            return this;
+        }
+
+
+        /**
+         * 谁可以管理置顶
+         * <p> 示例值：all_members
+         *
+         * @param pinManageSetting
+         * @return
+         */
+        public Builder pinManageSetting(String pinManageSetting) {
+            this.pinManageSetting = pinManageSetting;
+            return this;
+        }
+
+        /**
+         * 谁可以管理置顶
+         * <p> 示例值：all_members
+         *
+         * @param pinManageSetting {@link com.lark.oapi.service.im.v1.enums.UpdateChatPinManageSettingTypeEnum}
+         * @return
+         */
+        public Builder pinManageSetting(com.lark.oapi.service.im.v1.enums.UpdateChatPinManageSettingTypeEnum pinManageSetting) {
+            this.pinManageSetting = pinManageSetting.getValue();
             return this;
         }
 

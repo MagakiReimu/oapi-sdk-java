@@ -105,7 +105,6 @@ public class BatchGetOkrReq {
         private String[] okrIds; // OKR ID 列表，最多10个
         private String lang; // 请求OKR的语言版本（比如@的人名），lang=en_us/zh_cn，请求 Query中
 
-
         /**
          * 此次调用中使用的用户ID的类型
          * <p> 示例值：
@@ -155,6 +154,7 @@ public class BatchGetOkrReq {
             this.lang = lang;
             return this;
         }
+
 
         public BatchGetOkrReq build() {
             return new BatchGetOkrReq(this);

@@ -47,6 +47,12 @@ public class DataAssetImportKnowledgeLarkDoc {
      */
     @SerializedName("with_sub_docs")
     private Boolean withSubDocs;
+    /**
+     * 文档链接
+     * <p> 示例值：https://abc.feihsu.cn/docx/abcd123
+     */
+    @SerializedName("url")
+    private String url;
 
     // builder 开始
     public DataAssetImportKnowledgeLarkDoc() {
@@ -68,6 +74,11 @@ public class DataAssetImportKnowledgeLarkDoc {
          * <p> 示例值：
          */
         this.withSubDocs = builder.withSubDocs;
+        /**
+         * 文档链接
+         * <p> 示例值：https://abc.feihsu.cn/docx/abcd123
+         */
+        this.url = builder.url;
     }
 
     public static Builder newBuilder() {
@@ -98,6 +109,14 @@ public class DataAssetImportKnowledgeLarkDoc {
         this.withSubDocs = withSubDocs;
     }
 
+    public String getUrl() {
+        return this.url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     public static class Builder {
         /**
          * 云文档类型
@@ -114,6 +133,11 @@ public class DataAssetImportKnowledgeLarkDoc {
          * <p> 示例值：
          */
         private Boolean withSubDocs;
+        /**
+         * 文档链接
+         * <p> 示例值：https://abc.feihsu.cn/docx/abcd123
+         */
+        private String url;
 
         /**
          * 云文档类型
@@ -162,6 +186,19 @@ public class DataAssetImportKnowledgeLarkDoc {
          */
         public Builder withSubDocs(Boolean withSubDocs) {
             this.withSubDocs = withSubDocs;
+            return this;
+        }
+
+
+        /**
+         * 文档链接
+         * <p> 示例值：https://abc.feihsu.cn/docx/abcd123
+         *
+         * @param url
+         * @return
+         */
+        public Builder url(String url) {
+            this.url = url;
             return this;
         }
 

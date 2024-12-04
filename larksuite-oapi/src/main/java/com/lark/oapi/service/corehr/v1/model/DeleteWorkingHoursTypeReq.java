@@ -76,6 +76,7 @@ public class DeleteWorkingHoursTypeReq {
             return this;
         }
 
+
         public DeleteWorkingHoursTypeReq build() {
             return new DeleteWorkingHoursTypeReq(this);
         }

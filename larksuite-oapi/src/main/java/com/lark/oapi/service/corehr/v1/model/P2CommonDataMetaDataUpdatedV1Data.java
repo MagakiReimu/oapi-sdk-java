@@ -34,6 +34,12 @@ public class P2CommonDataMetaDataUpdatedV1Data {
      */
     @SerializedName("api_name")
     private String apiName;
+    /**
+     * 变更的字段
+     * <p> 示例值：
+     */
+    @SerializedName("field_changes")
+    private String[] fieldChanges;
 
     public String getApiName() {
         return this.apiName;
@@ -41,6 +47,14 @@ public class P2CommonDataMetaDataUpdatedV1Data {
 
     public void setApiName(String apiName) {
         this.apiName = apiName;
+    }
+
+    public String[] getFieldChanges() {
+        return this.fieldChanges;
+    }
+
+    public void setFieldChanges(String[] fieldChanges) {
+        this.fieldChanges = fieldChanges;
     }
 
 }

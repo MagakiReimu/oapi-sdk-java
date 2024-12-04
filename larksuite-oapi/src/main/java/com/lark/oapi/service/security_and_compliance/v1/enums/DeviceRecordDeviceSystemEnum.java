@@ -23,6 +23,7 @@ public enum DeviceRecordDeviceSystemEnum {
     IOS("iOS"), // ios
     LINUX("Linux"), // linux
     HARMONY("Harmony"), // harmony
+    OPENHARMONY("OpenHarmony"), // OpenHarmony
     ;
     private String value;
 

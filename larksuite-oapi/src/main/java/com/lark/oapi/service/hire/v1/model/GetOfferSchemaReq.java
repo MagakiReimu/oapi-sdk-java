@@ -75,6 +75,7 @@ public class GetOfferSchemaReq {
             return this;
         }
 
+
         public GetOfferSchemaReq build() {
             return new GetOfferSchemaReq(this);
         }

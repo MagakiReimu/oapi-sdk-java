@@ -83,7 +83,6 @@ public class ListRoleReq {
         private String pageToken; // 下一页页码
         private Integer pageSize; // 每页获取记录数量
 
-
         /**
          * 下一页页码
          * <p> 示例值：eyJvZmZzZXQiOjEwLCJ0aW1lc3RhbXAiOjE2Mjc1NTUyMjM2NzIsImlkIjpudWxsfQ==
@@ -108,6 +107,7 @@ public class ListRoleReq {
             this.pageSize = pageSize;
             return this;
         }
+
 
         public ListRoleReq build() {
             return new ListRoleReq(this);

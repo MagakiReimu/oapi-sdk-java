@@ -60,6 +60,30 @@ public class Address {
     @SerializedName("region_id")
     private String regionId;
     /**
+     * 城市（该字段待作废，请勿使用）
+     * <p> 示例值：6863333254578046471
+     */
+    @SerializedName("city_id")
+    private String cityId;
+    /**
+     * 区/县（该字段待作废，请勿使用）
+     * <p> 示例值：6863333516579440141
+     */
+    @SerializedName("distinct_id")
+    private String distinctId;
+    /**
+     * 城市
+     * <p> 示例值：6863333254578046471
+     */
+    @SerializedName("city_id_v2")
+    private String cityIdV2;
+    /**
+     * 区/县
+     * <p> 示例值：6863333516579440141
+     */
+    @SerializedName("district_id_v2")
+    private String districtIdV2;
+    /**
      * 地址行 1
      * <p> 示例值：丹佛测试地址-纽埃时区
      */
@@ -253,6 +277,26 @@ public class Address {
          */
         this.regionId = builder.regionId;
         /**
+         * 城市（该字段待作废，请勿使用）
+         * <p> 示例值：6863333254578046471
+         */
+        this.cityId = builder.cityId;
+        /**
+         * 区/县（该字段待作废，请勿使用）
+         * <p> 示例值：6863333516579440141
+         */
+        this.distinctId = builder.distinctId;
+        /**
+         * 城市
+         * <p> 示例值：6863333254578046471
+         */
+        this.cityIdV2 = builder.cityIdV2;
+        /**
+         * 区/县
+         * <p> 示例值：6863333516579440141
+         */
+        this.districtIdV2 = builder.districtIdV2;
+        /**
          * 地址行 1
          * <p> 示例值：丹佛测试地址-纽埃时区
          */
@@ -431,6 +475,38 @@ public class Address {
 
     public void setRegionId(String regionId) {
         this.regionId = regionId;
+    }
+
+    public String getCityId() {
+        return this.cityId;
+    }
+
+    public void setCityId(String cityId) {
+        this.cityId = cityId;
+    }
+
+    public String getDistinctId() {
+        return this.distinctId;
+    }
+
+    public void setDistinctId(String distinctId) {
+        this.distinctId = distinctId;
+    }
+
+    public String getCityIdV2() {
+        return this.cityIdV2;
+    }
+
+    public void setCityIdV2(String cityIdV2) {
+        this.cityIdV2 = cityIdV2;
+    }
+
+    public String getDistrictIdV2() {
+        return this.districtIdV2;
+    }
+
+    public void setDistrictIdV2(String districtIdV2) {
+        this.districtIdV2 = districtIdV2;
     }
 
     public String getAddressLine1() {
@@ -676,6 +752,26 @@ public class Address {
          */
         private String regionId;
         /**
+         * 城市（该字段待作废，请勿使用）
+         * <p> 示例值：6863333254578046471
+         */
+        private String cityId;
+        /**
+         * 区/县（该字段待作废，请勿使用）
+         * <p> 示例值：6863333516579440141
+         */
+        private String distinctId;
+        /**
+         * 城市
+         * <p> 示例值：6863333254578046471
+         */
+        private String cityIdV2;
+        /**
+         * 区/县
+         * <p> 示例值：6863333516579440141
+         */
+        private String districtIdV2;
+        /**
          * 地址行 1
          * <p> 示例值：丹佛测试地址-纽埃时区
          */
@@ -872,6 +968,58 @@ public class Address {
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
+            return this;
+        }
+
+
+        /**
+         * 城市（该字段待作废，请勿使用）
+         * <p> 示例值：6863333254578046471
+         *
+         * @param cityId
+         * @return
+         */
+        public Builder cityId(String cityId) {
+            this.cityId = cityId;
+            return this;
+        }
+
+
+        /**
+         * 区/县（该字段待作废，请勿使用）
+         * <p> 示例值：6863333516579440141
+         *
+         * @param distinctId
+         * @return
+         */
+        public Builder distinctId(String distinctId) {
+            this.distinctId = distinctId;
+            return this;
+        }
+
+
+        /**
+         * 城市
+         * <p> 示例值：6863333254578046471
+         *
+         * @param cityIdV2
+         * @return
+         */
+        public Builder cityIdV2(String cityIdV2) {
+            this.cityIdV2 = cityIdV2;
+            return this;
+        }
+
+
+        /**
+         * 区/县
+         * <p> 示例值：6863333516579440141
+         *
+         * @param districtIdV2
+         * @return
+         */
+        public Builder districtIdV2(String districtIdV2) {
+            this.districtIdV2 = districtIdV2;
             return this;
         }
 

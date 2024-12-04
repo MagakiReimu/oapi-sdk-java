@@ -168,7 +168,6 @@ public class ListAccessRecordReq {
         private String deviceId; // 门禁设备 ID
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 分页大小
          * <p> 示例值：100
@@ -257,6 +256,7 @@ public class ListAccessRecordReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public ListAccessRecordReq build() {
             return new ListAccessRecordReq(this);

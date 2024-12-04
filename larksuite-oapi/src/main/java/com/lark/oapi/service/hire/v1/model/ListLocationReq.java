@@ -104,7 +104,6 @@ public class ListLocationReq {
         private Integer pageSize; // 每页获取记录数量，最大100
         private String usage; // 地址类型
 
-
         /**
          * 下一页页码
          * <p> 示例值：eyJvZmZzZXQiOjEwLCJ0aW1lc3RhbXAiOjE2Mjc1NTUyMjM2NzIsImlkIjpudWxsfQ==
@@ -142,6 +141,7 @@ public class ListLocationReq {
             this.usage = usage;
             return this;
         }
+
 
         public ListLocationReq build() {
             return new ListLocationReq(this);

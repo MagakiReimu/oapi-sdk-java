@@ -30,11 +30,11 @@ import com.lark.oapi.core.response.BaseResponse;
 
 public class StartProcessParam {
     /**
-     * 流程定义标识
-     * <p> 示例值：custom
+     * 流程定义ID
+     * <p> 示例值：people_7023711013443944467_7437160904904494892
      */
-    @SerializedName("flow_api_name")
-    private String flowApiName;
+    @SerializedName("flow_definition_id")
+    private String flowDefinitionId;
     /**
      * 发起人用户ID，按user_id_type类型传递。如果system_initiator为false，则必填；为true时非必填。
      * <p> 示例值：ou_91791271921729102012
@@ -60,10 +60,10 @@ public class StartProcessParam {
 
     public StartProcessParam(Builder builder) {
         /**
-         * 流程定义标识
-         * <p> 示例值：custom
+         * 流程定义ID
+         * <p> 示例值：people_7023711013443944467_7437160904904494892
          */
-        this.flowApiName = builder.flowApiName;
+        this.flowDefinitionId = builder.flowDefinitionId;
         /**
          * 发起人用户ID，按user_id_type类型传递。如果system_initiator为false，则必填；为true时非必填。
          * <p> 示例值：ou_91791271921729102012
@@ -85,12 +85,12 @@ public class StartProcessParam {
         return new Builder();
     }
 
-    public String getFlowApiName() {
-        return this.flowApiName;
+    public String getFlowDefinitionId() {
+        return this.flowDefinitionId;
     }
 
-    public void setFlowApiName(String flowApiName) {
-        this.flowApiName = flowApiName;
+    public void setFlowDefinitionId(String flowDefinitionId) {
+        this.flowDefinitionId = flowDefinitionId;
     }
 
     public String getInitiatorId() {
@@ -119,10 +119,10 @@ public class StartProcessParam {
 
     public static class Builder {
         /**
-         * 流程定义标识
-         * <p> 示例值：custom
+         * 流程定义ID
+         * <p> 示例值：people_7023711013443944467_7437160904904494892
          */
-        private String flowApiName;
+        private String flowDefinitionId;
         /**
          * 发起人用户ID，按user_id_type类型传递。如果system_initiator为false，则必填；为true时非必填。
          * <p> 示例值：ou_91791271921729102012
@@ -140,14 +140,14 @@ public class StartProcessParam {
         private ProcessFormVariableV2[] flowData;
 
         /**
-         * 流程定义标识
-         * <p> 示例值：custom
+         * 流程定义ID
+         * <p> 示例值：people_7023711013443944467_7437160904904494892
          *
-         * @param flowApiName
+         * @param flowDefinitionId
          * @return
          */
-        public Builder flowApiName(String flowApiName) {
-            this.flowApiName = flowApiName;
+        public Builder flowDefinitionId(String flowDefinitionId) {
+            this.flowDefinitionId = flowDefinitionId;
             return this;
         }
 

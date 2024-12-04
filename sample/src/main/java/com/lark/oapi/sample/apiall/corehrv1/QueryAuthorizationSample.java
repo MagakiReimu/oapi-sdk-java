@@ -22,6 +22,8 @@ public class QueryAuthorizationSample {
                 .pageToken("6969864184272078374")
                 .pageSize("20")
                 .userIdType("people_corehr_id")
+                .updatedAtGte("1729773628")
+                .updatedAtLte("1729773628")
                 .build();
 
         // 发起请求

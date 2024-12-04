@@ -84,7 +84,6 @@ public class ListPeriodReq {
         private String pageToken; // 分页标志page_token
         private Integer pageSize; // 分页大小，默认10
 
-
         /**
          * 分页标志page_token
          * <p> 示例值：xaasdasdax
@@ -109,6 +108,7 @@ public class ListPeriodReq {
             this.pageSize = pageSize;
             return this;
         }
+
 
         public ListPeriodReq build() {
             return new ListPeriodReq(this);

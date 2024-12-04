@@ -105,7 +105,6 @@ public class QueryRuleReq {
         private Integer includeDeleted; // 是否包括已删除，默认未删除
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 规则名称
          * <p> 示例值：工作月报
@@ -167,6 +166,7 @@ public class QueryRuleReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public QueryRuleReq build() {
             return new QueryRuleReq(this);

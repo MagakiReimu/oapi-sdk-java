@@ -76,6 +76,7 @@ public class GetJobLevelReq {
             return this;
         }
 
+
         public GetJobLevelReq build() {
             return new GetJobLevelReq(this);
         }

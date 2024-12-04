@@ -73,6 +73,7 @@ public class DeleteTripartiteAgreementReq {
             return this;
         }
 
+
         public DeleteTripartiteAgreementReq build() {
             return new DeleteTripartiteAgreementReq(this);
         }

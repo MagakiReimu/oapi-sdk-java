@@ -48,6 +48,8 @@ public class UpdateJobRequirementSample {
                         .jobTypeId("6930815272790114324")
                         .jobIdList(new String[]{})
                         .employmentJobId("123")
+                        .positionId("123")
+                        .updateOption(JobRequirementUpdateOption.newBuilder().build())
                         .build())
                 .build();
 

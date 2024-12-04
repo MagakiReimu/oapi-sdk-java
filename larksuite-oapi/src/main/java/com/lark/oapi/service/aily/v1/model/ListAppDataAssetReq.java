@@ -78,6 +78,13 @@ public class ListAppDataAssetReq {
     @SerializedName("with_connect_status")
     private Boolean withConnectStatus;
     /**
+     * 结果是否包含导入数据源信息
+     * <p> 示例值：
+     */
+    @Query
+    @SerializedName("with_import_setting")
+    private Boolean withImportSetting;
+    /**
      * AppID
      * <p> 示例值：spring_5862e4fea8__c
      */
@@ -125,6 +132,11 @@ public class ListAppDataAssetReq {
          * <p> 示例值：
          */
         this.withConnectStatus = builder.withConnectStatus;
+        /**
+         * 结果是否包含导入数据源信息
+         * <p> 示例值：
+         */
+        this.withImportSetting = builder.withImportSetting;
         /**
          * AppID
          * <p> 示例值：spring_5862e4fea8__c
@@ -192,6 +204,14 @@ public class ListAppDataAssetReq {
         this.withConnectStatus = withConnectStatus;
     }
 
+    public Boolean getWithImportSetting() {
+        return this.withImportSetting;
+    }
+
+    public void setWithImportSetting(Boolean withImportSetting) {
+        this.withImportSetting = withImportSetting;
+    }
+
     public String getAppId() {
         return this.appId;
     }
@@ -208,6 +228,7 @@ public class ListAppDataAssetReq {
         private String[] dataAssetTagIds; // 根据数据知识分类 ID 进行过滤
         private Boolean withDataAssetItem; // 结果是否包含数据与知识项目
         private Boolean withConnectStatus; // 结果是否包含数据连接状态
+        private Boolean withImportSetting; // 结果是否包含导入数据源信息
         private String appId; // AppID
 
         /**
@@ -295,6 +316,18 @@ public class ListAppDataAssetReq {
         }
 
         /**
+         * 结果是否包含导入数据源信息
+         * <p> 示例值：
+         *
+         * @param withImportSetting
+         * @return
+         */
+        public Builder withImportSetting(Boolean withImportSetting) {
+            this.withImportSetting = withImportSetting;
+            return this;
+        }
+
+        /**
          * AppID
          * <p> 示例值：spring_5862e4fea8__c
          *
@@ -305,6 +338,7 @@ public class ListAppDataAssetReq {
             this.appId = appId;
             return this;
         }
+
 
         public ListAppDataAssetReq build() {
             return new ListAppDataAssetReq(this);

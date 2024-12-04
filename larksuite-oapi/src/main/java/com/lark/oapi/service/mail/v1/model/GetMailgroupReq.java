@@ -76,6 +76,7 @@ public class GetMailgroupReq {
             return this;
         }
 
+
         public GetMailgroupReq build() {
             return new GetMailgroupReq(this);
         }

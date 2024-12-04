@@ -35,6 +35,12 @@ public class PatchTagReqBody {
      */
     @SerializedName("patch_tag")
     private PatchTag patchTag;
+    /**
+     * 机器人id
+     * <p> 示例值：716168xxxxx
+     */
+    @SerializedName("bot_id")
+    private String botId;
 
     // builder 开始
     public PatchTagReqBody() {
@@ -46,6 +52,11 @@ public class PatchTagReqBody {
          * <p> 示例值：
          */
         this.patchTag = builder.patchTag;
+        /**
+         * 机器人id
+         * <p> 示例值：716168xxxxx
+         */
+        this.botId = builder.botId;
     }
 
     public static Builder newBuilder() {
@@ -60,12 +71,25 @@ public class PatchTagReqBody {
         this.patchTag = patchTag;
     }
 
+    public String getBotId() {
+        return this.botId;
+    }
+
+    public void setBotId(String botId) {
+        this.botId = botId;
+    }
+
     public static class Builder {
         /**
          * 编辑标签
          * <p> 示例值：
          */
         private PatchTag patchTag;
+        /**
+         * 机器人id
+         * <p> 示例值：716168xxxxx
+         */
+        private String botId;
 
         /**
          * 编辑标签
@@ -76,6 +100,19 @@ public class PatchTagReqBody {
          */
         public Builder patchTag(PatchTag patchTag) {
             this.patchTag = patchTag;
+            return this;
+        }
+
+
+        /**
+         * 机器人id
+         * <p> 示例值：716168xxxxx
+         *
+         * @param botId
+         * @return
+         */
+        public Builder botId(String botId) {
+            this.botId = botId;
             return this;
         }
 

@@ -76,6 +76,7 @@ public class DeleteJobGradeReq {
             return this;
         }
 
+
         public DeleteJobGradeReq build() {
             return new DeleteJobGradeReq(this);
         }

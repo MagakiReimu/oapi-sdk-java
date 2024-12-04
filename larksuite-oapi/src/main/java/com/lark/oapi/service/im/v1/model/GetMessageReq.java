@@ -120,6 +120,7 @@ public class GetMessageReq {
             return this;
         }
 
+
         public GetMessageReq build() {
             return new GetMessageReq(this);
         }

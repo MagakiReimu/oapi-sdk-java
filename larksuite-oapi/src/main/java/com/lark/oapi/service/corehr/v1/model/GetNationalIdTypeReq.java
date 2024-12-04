@@ -76,6 +76,7 @@ public class GetNationalIdTypeReq {
             return this;
         }
 
+
         public GetNationalIdTypeReq build() {
             return new GetNationalIdTypeReq(this);
         }

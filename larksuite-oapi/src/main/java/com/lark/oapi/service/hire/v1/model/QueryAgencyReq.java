@@ -83,7 +83,6 @@ public class QueryAgencyReq {
         private String name; // 猎头供应商名称
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 猎头供应商名称
          * <p> 示例值：超越猎头公司
@@ -108,6 +107,7 @@ public class QueryAgencyReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public QueryAgencyReq build() {
             return new QueryAgencyReq(this);

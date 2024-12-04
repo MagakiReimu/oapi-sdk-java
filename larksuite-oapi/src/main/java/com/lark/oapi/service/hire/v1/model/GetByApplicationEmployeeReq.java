@@ -167,7 +167,6 @@ public class GetByApplicationEmployeeReq {
         private String jobFamilyIdType; // 此次调用中使用的「序列 ID」的类型
         private String employeeTypeIdType; // 此次调用中使用的「人员类型 ID」的类型
 
-
         /**
          * 投递ID
          * <p> 示例值：123
@@ -244,6 +243,7 @@ public class GetByApplicationEmployeeReq {
             this.employeeTypeIdType = employeeTypeIdType;
             return this;
         }
+
 
         public GetByApplicationEmployeeReq build() {
             return new GetByApplicationEmployeeReq(this);

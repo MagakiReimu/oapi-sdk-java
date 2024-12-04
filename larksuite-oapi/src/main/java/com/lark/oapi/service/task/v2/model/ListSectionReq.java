@@ -147,7 +147,6 @@ public class ListSectionReq {
         private String resourceId; // 如`resource_type`为"tasklist"，这里需要填写要列取自定义分组的清单的GUID。
         private String userIdType; // 表示user的ID的类型，支持open_id, user_id, union_id
 
-
         /**
          * 分页大小
          * <p> 示例值：50
@@ -211,6 +210,7 @@ public class ListSectionReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListSectionReq build() {
             return new ListSectionReq(this);

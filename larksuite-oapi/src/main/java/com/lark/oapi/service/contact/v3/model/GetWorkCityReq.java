@@ -76,6 +76,7 @@ public class GetWorkCityReq {
             return this;
         }
 
+
         public GetWorkCityReq build() {
             return new GetWorkCityReq(this);
         }

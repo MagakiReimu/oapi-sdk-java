@@ -144,6 +144,7 @@ public class DeleteSpreadsheetSheetFloatImageReq {
             return this;
         }
 
+
         public DeleteSpreadsheetSheetFloatImageReq build() {
             return new DeleteSpreadsheetSheetFloatImageReq(this);
         }

@@ -36,6 +36,12 @@ public class QueryArchiveReqBody {
     @SerializedName("user_id_list")
     private String[] userIdList;
     /**
+     * 档案Tid列表
+     * <p> 示例值：
+     */
+    @SerializedName("tid_list")
+    private String[] tidList;
+    /**
      * 生效开始时间
      * <p> 示例值：2022-05-10
      */
@@ -59,6 +65,11 @@ public class QueryArchiveReqBody {
          */
         this.userIdList = builder.userIdList;
         /**
+         * 档案Tid列表
+         * <p> 示例值：
+         */
+        this.tidList = builder.tidList;
+        /**
          * 生效开始时间
          * <p> 示例值：2022-05-10
          */
@@ -80,6 +91,14 @@ public class QueryArchiveReqBody {
 
     public void setUserIdList(String[] userIdList) {
         this.userIdList = userIdList;
+    }
+
+    public String[] getTidList() {
+        return this.tidList;
+    }
+
+    public void setTidList(String[] tidList) {
+        this.tidList = tidList;
     }
 
     public String getEffectiveStartDate() {
@@ -105,6 +124,11 @@ public class QueryArchiveReqBody {
          */
         private String[] userIdList;
         /**
+         * 档案Tid列表
+         * <p> 示例值：
+         */
+        private String[] tidList;
+        /**
          * 生效开始时间
          * <p> 示例值：2022-05-10
          */
@@ -124,6 +148,19 @@ public class QueryArchiveReqBody {
          */
         public Builder userIdList(String[] userIdList) {
             this.userIdList = userIdList;
+            return this;
+        }
+
+
+        /**
+         * 档案Tid列表
+         * <p> 示例值：
+         *
+         * @param tidList
+         * @return
+         */
+        public Builder tidList(String[] tidList) {
+            this.tidList = tidList;
             return this;
         }
 

@@ -76,6 +76,7 @@ public class DeleteJobLevelReq {
             return this;
         }
 
+
         public DeleteJobLevelReq build() {
             return new DeleteJobLevelReq(this);
         }

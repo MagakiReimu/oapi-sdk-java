@@ -144,6 +144,7 @@ public class DeleteAppTableViewReq {
             return this;
         }
 
+
         public DeleteAppTableViewReq build() {
             return new DeleteAppTableViewReq(this);
         }

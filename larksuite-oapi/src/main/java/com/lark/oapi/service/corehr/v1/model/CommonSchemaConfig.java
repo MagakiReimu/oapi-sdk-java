@@ -71,6 +71,12 @@ public class CommonSchemaConfig {
      */
     @SerializedName("image_field_setting")
     private ImageFieldSetting imageFieldSetting;
+    /**
+     * 计算字段配置信息
+     * <p> 示例值：
+     */
+    @SerializedName("calculated_field_setting")
+    private CalculatedFieldSetting calculatedFieldSetting;
 
     // builder 开始
     public CommonSchemaConfig() {
@@ -112,6 +118,11 @@ public class CommonSchemaConfig {
          * <p> 示例值：
          */
         this.imageFieldSetting = builder.imageFieldSetting;
+        /**
+         * 计算字段配置信息
+         * <p> 示例值：
+         */
+        this.calculatedFieldSetting = builder.calculatedFieldSetting;
     }
 
     public static Builder newBuilder() {
@@ -174,6 +185,14 @@ public class CommonSchemaConfig {
         this.imageFieldSetting = imageFieldSetting;
     }
 
+    public CalculatedFieldSetting getCalculatedFieldSetting() {
+        return this.calculatedFieldSetting;
+    }
+
+    public void setCalculatedFieldSetting(CalculatedFieldSetting calculatedFieldSetting) {
+        this.calculatedFieldSetting = calculatedFieldSetting;
+    }
+
     public static class Builder {
         /**
          * 文本配置信息
@@ -210,6 +229,11 @@ public class CommonSchemaConfig {
          * <p> 示例值：
          */
         private ImageFieldSetting imageFieldSetting;
+        /**
+         * 计算字段配置信息
+         * <p> 示例值：
+         */
+        private CalculatedFieldSetting calculatedFieldSetting;
 
         /**
          * 文本配置信息
@@ -298,6 +322,19 @@ public class CommonSchemaConfig {
          */
         public Builder imageFieldSetting(ImageFieldSetting imageFieldSetting) {
             this.imageFieldSetting = imageFieldSetting;
+            return this;
+        }
+
+
+        /**
+         * 计算字段配置信息
+         * <p> 示例值：
+         *
+         * @param calculatedFieldSetting
+         * @return
+         */
+        public Builder calculatedFieldSetting(CalculatedFieldSetting calculatedFieldSetting) {
+            this.calculatedFieldSetting = calculatedFieldSetting;
             return this;
         }
 

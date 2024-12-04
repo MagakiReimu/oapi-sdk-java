@@ -147,7 +147,6 @@ public class ListInstanceReq {
         private String startTime; // 审批实例创建时间区间（毫秒）
         private String endTime; // 审批实例创建时间区间（毫秒）
 
-
         /**
          * 分页大小
          * <p> 示例值：100
@@ -211,6 +210,7 @@ public class ListInstanceReq {
             this.endTime = endTime;
             return this;
         }
+
 
         public ListInstanceReq build() {
             return new ListInstanceReq(this);

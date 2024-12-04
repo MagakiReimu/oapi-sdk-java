@@ -173,6 +173,18 @@ public class GetChatRespBody {
     @SerializedName("bot_count")
     private String botCount;
     /**
+     * 群标签
+     * <p> 示例值：
+     */
+    @SerializedName("labels")
+    private String[] labels;
+    /**
+     * 群快捷组件列表
+     * <p> 示例值：
+     */
+    @SerializedName("toolkit_ids")
+    private String[] toolkitIds;
+    /**
      * 防泄密模式设置
      * <p> 示例值：
      */
@@ -190,6 +202,12 @@ public class GetChatRespBody {
      */
     @SerializedName("video_conference_setting")
     private String videoConferenceSetting;
+    /**
+     * 谁可以管理置顶
+     * <p> 示例值：all_members
+     */
+    @SerializedName("pin_manage_setting")
+    private String pinManageSetting;
     /**
      * 隐藏群成员人数设置
      * <p> 示例值：all_members
@@ -395,6 +413,21 @@ public class GetChatRespBody {
         this.botCount = botCount;
     }
 
+    public String[] getLabels() {
+        return this.labels;
+    }
+
+    public void setLabels(String[] labels) {
+        this.labels = labels;
+    }
+
+    public String[] getToolkitIds() {
+        return this.toolkitIds;
+    }
+
+    public void setToolkitIds(String[] toolkitIds) {
+        this.toolkitIds = toolkitIds;
+    }
 
     public RestrictedModeSetting getRestrictedModeSetting() {
         return this.restrictedModeSetting;
@@ -420,6 +453,13 @@ public class GetChatRespBody {
         this.videoConferenceSetting = videoConferenceSetting;
     }
 
+    public String getPinManageSetting() {
+        return this.pinManageSetting;
+    }
+
+    public void setPinManageSetting(String pinManageSetting) {
+        this.pinManageSetting = pinManageSetting;
+    }
 
     public String getHideMemberCountSetting() {
         return this.hideMemberCountSetting;

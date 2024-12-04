@@ -186,6 +186,7 @@ public class DeleteAppRoleMemberReq {
             return this;
         }
 
+
         public DeleteAppRoleMemberReq build() {
             return new DeleteAppRoleMemberReq(this);
         }

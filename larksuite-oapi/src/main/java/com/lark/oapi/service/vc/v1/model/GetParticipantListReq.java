@@ -231,7 +231,6 @@ public class GetParticipantListReq {
         private String pageToken; // 分页标记,第一次请求不填,表示从头开始遍历.下次遍历可采用该 page_token获取查询结果
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 会议开始时间（需要精确到一分钟，unix时间，单位sec）
          * <p> 示例值：1655276858
@@ -371,6 +370,7 @@ public class GetParticipantListReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public GetParticipantListReq build() {
             return new GetParticipantListReq(this);

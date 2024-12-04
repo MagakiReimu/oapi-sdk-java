@@ -76,6 +76,7 @@ public class DeleteLeaveGrantingRecordReq {
             return this;
         }
 
+
         public DeleteLeaveGrantingRecordReq build() {
             return new DeleteLeaveGrantingRecordReq(this);
         }

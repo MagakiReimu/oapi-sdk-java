@@ -47,6 +47,12 @@ public class UpdateResultEcoBackgroundCheckReqBody {
     @SerializedName("result_time")
     private String resultTime;
     /**
+     * 操作人角色，默认值为 1
+     * <p> 示例值：1
+     */
+    @SerializedName("operator_role")
+    private Integer operatorRole;
+    /**
      * 报告列表
      * <p> 示例值：
      */
@@ -73,6 +79,11 @@ public class UpdateResultEcoBackgroundCheckReqBody {
          * <p> 示例值：1660123456789
          */
         this.resultTime = builder.resultTime;
+        /**
+         * 操作人角色，默认值为 1
+         * <p> 示例值：1
+         */
+        this.operatorRole = builder.operatorRole;
         /**
          * 报告列表
          * <p> 示例值：
@@ -108,6 +119,14 @@ public class UpdateResultEcoBackgroundCheckReqBody {
         this.resultTime = resultTime;
     }
 
+    public Integer getOperatorRole() {
+        return this.operatorRole;
+    }
+
+    public void setOperatorRole(Integer operatorRole) {
+        this.operatorRole = operatorRole;
+    }
+
     public EcoBackgroundCheckReportFile[] getReportFileList() {
         return this.reportFileList;
     }
@@ -132,6 +151,11 @@ public class UpdateResultEcoBackgroundCheckReqBody {
          * <p> 示例值：1660123456789
          */
         private String resultTime;
+        /**
+         * 操作人角色，默认值为 1
+         * <p> 示例值：1
+         */
+        private Integer operatorRole;
         /**
          * 报告列表
          * <p> 示例值：
@@ -173,6 +197,19 @@ public class UpdateResultEcoBackgroundCheckReqBody {
          */
         public Builder resultTime(String resultTime) {
             this.resultTime = resultTime;
+            return this;
+        }
+
+
+        /**
+         * 操作人角色，默认值为 1
+         * <p> 示例值：1
+         *
+         * @param operatorRole
+         * @return
+         */
+        public Builder operatorRole(Integer operatorRole) {
+            this.operatorRole = operatorRole;
             return this;
         }
 

@@ -34,6 +34,12 @@ public class Assets {
      */
     @SerializedName("confirmed_bonus")
     private BonusAmount confirmedBonus;
+    /**
+     * 已发放的奖励
+     * <p> 示例值：
+     */
+    @SerializedName("paid_bonus")
+    private BonusAmount paidBonus;
 
     // builder 开始
     public Assets() {
@@ -45,6 +51,11 @@ public class Assets {
          * <p> 示例值：
          */
         this.confirmedBonus = builder.confirmedBonus;
+        /**
+         * 已发放的奖励
+         * <p> 示例值：
+         */
+        this.paidBonus = builder.paidBonus;
     }
 
     public static Builder newBuilder() {
@@ -59,12 +70,25 @@ public class Assets {
         this.confirmedBonus = confirmedBonus;
     }
 
+    public BonusAmount getPaidBonus() {
+        return this.paidBonus;
+    }
+
+    public void setPaidBonus(BonusAmount paidBonus) {
+        this.paidBonus = paidBonus;
+    }
+
     public static class Builder {
         /**
          * 已确认的奖励
          * <p> 示例值：
          */
         private BonusAmount confirmedBonus;
+        /**
+         * 已发放的奖励
+         * <p> 示例值：
+         */
+        private BonusAmount paidBonus;
 
         /**
          * 已确认的奖励
@@ -75,6 +99,19 @@ public class Assets {
          */
         public Builder confirmedBonus(BonusAmount confirmedBonus) {
             this.confirmedBonus = confirmedBonus;
+            return this;
+        }
+
+
+        /**
+         * 已发放的奖励
+         * <p> 示例值：
+         *
+         * @param paidBonus
+         * @return
+         */
+        public Builder paidBonus(BonusAmount paidBonus) {
+            this.paidBonus = paidBonus;
             return this;
         }
 

@@ -84,7 +84,6 @@ public class GetNodeSpaceReq {
         private String token; // 文档的节点token
         private String objType; // 文档类型
 
-
         /**
          * 文档的节点token
          * <p> 示例值：wikcnKQ1k3p******8Vabcef
@@ -121,6 +120,7 @@ public class GetNodeSpaceReq {
             this.objType = objType.getValue();
             return this;
         }
+
 
         public GetNodeSpaceReq build() {
             return new GetNodeSpaceReq(this);

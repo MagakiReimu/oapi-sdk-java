@@ -378,7 +378,6 @@ public class MatchCompensationStandardReq {
         private String cpstSalaryLevelId; // 薪级薪等ID
         private String effectiveTime; // 生效时间
 
-
         /**
          * 此次调用中使用的用户ID的类型
          * <p> 示例值：open_id
@@ -633,6 +632,7 @@ public class MatchCompensationStandardReq {
             this.effectiveTime = effectiveTime;
             return this;
         }
+
 
         public MatchCompensationStandardReq build() {
             return new MatchCompensationStandardReq(this);

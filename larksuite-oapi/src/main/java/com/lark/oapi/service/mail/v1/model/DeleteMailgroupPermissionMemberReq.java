@@ -110,6 +110,7 @@ public class DeleteMailgroupPermissionMemberReq {
             return this;
         }
 
+
         public DeleteMailgroupPermissionMemberReq build() {
             return new DeleteMailgroupPermissionMemberReq(this);
         }

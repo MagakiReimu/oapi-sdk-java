@@ -63,7 +63,6 @@ public class SearchRoomLevelReq {
     public static class Builder {
         private String customLevelIds; // 用于查询指定会议室层级的自定义会议室层级ID
 
-
         /**
          * 用于查询指定会议室层级的自定义会议室层级ID
          * <p> 示例值：1000,1001
@@ -75,6 +74,7 @@ public class SearchRoomLevelReq {
             this.customLevelIds = customLevelIds;
             return this;
         }
+
 
         public SearchRoomLevelReq build() {
             return new SearchRoomLevelReq(this);

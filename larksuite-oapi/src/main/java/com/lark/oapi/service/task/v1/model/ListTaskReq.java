@@ -168,7 +168,6 @@ public class ListTaskReq {
         private Boolean taskCompleted; // 可用于查询时过滤任务完成状态。true表示只返回已完成的任务，false表示只返回未完成的任务。不填时表示同时返回两种完成状态的任务。
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 分页大小
          * <p> 示例值：10
@@ -257,6 +256,7 @@ public class ListTaskReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public ListTaskReq build() {
             return new ListTaskReq(this);

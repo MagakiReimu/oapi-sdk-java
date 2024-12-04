@@ -71,6 +71,12 @@ public class Passage {
      */
     @SerializedName("extra")
     private String extra;
+    /**
+     * 和query相关的文本段落经过small2big之后的片段
+     * <p> 示例值：流程如下：xxxxxxx。可以在飞书官方官网上找到更详细内容。
+     */
+    @SerializedName("content_for_llm")
+    private String contentForLlm;
 
     // builder 开始
     public Passage() {
@@ -112,6 +118,11 @@ public class Passage {
          * <p> 示例值：{\"obj_id\":7263345601809530881}
          */
         this.extra = builder.extra;
+        /**
+         * 和query相关的文本段落经过small2big之后的片段
+         * <p> 示例值：流程如下：xxxxxxx。可以在飞书官方官网上找到更详细内容。
+         */
+        this.contentForLlm = builder.contentForLlm;
     }
 
     public static Builder newBuilder() {
@@ -174,6 +185,14 @@ public class Passage {
         this.extra = extra;
     }
 
+    public String getContentForLlm() {
+        return this.contentForLlm;
+    }
+
+    public void setContentForLlm(String contentForLlm) {
+        this.contentForLlm = contentForLlm;
+    }
+
     public static class Builder {
         /**
          * passage的唯一标识
@@ -210,6 +229,11 @@ public class Passage {
          * <p> 示例值：{\"obj_id\":7263345601809530881}
          */
         private String extra;
+        /**
+         * 和query相关的文本段落经过small2big之后的片段
+         * <p> 示例值：流程如下：xxxxxxx。可以在飞书官方官网上找到更详细内容。
+         */
+        private String contentForLlm;
 
         /**
          * passage的唯一标识
@@ -310,6 +334,19 @@ public class Passage {
          */
         public Builder extra(String extra) {
             this.extra = extra;
+            return this;
+        }
+
+
+        /**
+         * 和query相关的文本段落经过small2big之后的片段
+         * <p> 示例值：流程如下：xxxxxxx。可以在飞书官方官网上找到更详细内容。
+         *
+         * @param contentForLlm
+         * @return
+         */
+        public Builder contentForLlm(String contentForLlm) {
+            this.contentForLlm = contentForLlm;
             return this;
         }
 

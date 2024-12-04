@@ -105,7 +105,6 @@ public class ListSubregionReq {
         private String pageSize; // 每页获取记录数量，最大100
         private String subdivisionId; // 省份/行政区id，填写后只查询该省份/行政区下的城市/区域
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：1231231987
@@ -143,6 +142,7 @@ public class ListSubregionReq {
             this.subdivisionId = subdivisionId;
             return this;
         }
+
 
         public ListSubregionReq build() {
             return new ListSubregionReq(this);

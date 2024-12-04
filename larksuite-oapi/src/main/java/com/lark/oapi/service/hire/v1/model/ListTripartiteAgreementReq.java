@@ -125,7 +125,6 @@ public class ListTripartiteAgreementReq {
         private String applicationId; // 投递 ID，必填投递 id 与三方协议 ID 其中之一
         private String tripartiteAgreementId; // 三方协议 ID，必填投递 id 与三方协议 ID 其中之一
 
-
         /**
          * 分页大小
          * <p> 示例值：
@@ -176,6 +175,7 @@ public class ListTripartiteAgreementReq {
             this.tripartiteAgreementId = tripartiteAgreementId;
             return this;
         }
+
 
         public ListTripartiteAgreementReq build() {
             return new ListTripartiteAgreementReq(this);

@@ -110,6 +110,7 @@ public class GetAppSkillReq {
             return this;
         }
 
+
         public GetAppSkillReq build() {
             return new GetAppSkillReq(this);
         }

@@ -120,6 +120,7 @@ public class CreatePermissionPublicPasswordReq {
             return this;
         }
 
+
         public CreatePermissionPublicPasswordReq build() {
             return new CreatePermissionPublicPasswordReq(this);
         }

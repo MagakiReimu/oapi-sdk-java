@@ -153,6 +153,7 @@ public class GetTasklistActivitySubscriptionReq {
             return this;
         }
 
+
         public GetTasklistActivitySubscriptionReq build() {
             return new GetTasklistActivitySubscriptionReq(this);
         }

@@ -104,7 +104,6 @@ public class ListTalentFolderReq {
         private Integer pageSize; // 每页获取记录数量，最大100
         private String userIdType; // 用户ID类型
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：eyJvZmZzZXQiOjEsInRpbWVzdGFtcCI6MTY0MDc2NTYzMjA4OCwiaWQiOm51bGx9
@@ -142,6 +141,7 @@ public class ListTalentFolderReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListTalentFolderReq build() {
             return new ListTalentFolderReq(this);

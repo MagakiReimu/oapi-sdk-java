@@ -186,6 +186,7 @@ public class ListMailgroupManagerReq {
             return this;
         }
 
+
         public ListMailgroupManagerReq build() {
             return new ListMailgroupManagerReq(this);
         }

@@ -30,6 +30,7 @@ public class SubmitV2OffboardingSample {
                         .blockReasonExplanation("xx 年 xx 月 xx 日因 xx 原因红线")
                         .customFields(new ObjectFieldData[]{})
                         .retainAccount(false)
+                        .isTransferWithWorkforce(false)
                         .build())
                 .build();
 

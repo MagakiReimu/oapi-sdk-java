@@ -76,6 +76,7 @@ public class DeleteProgressRecordReq {
             return this;
         }
 
+
         public DeleteProgressRecordReq build() {
             return new DeleteProgressRecordReq(this);
         }

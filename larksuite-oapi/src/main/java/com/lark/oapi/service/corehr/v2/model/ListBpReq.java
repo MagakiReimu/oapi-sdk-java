@@ -126,7 +126,6 @@ public class ListBpReq {
         private String userIdType; // 用户 ID 类型
         private String departmentIdType; // 此次调用中使用的部门 ID 类型
 
-
         /**
          * 分页大小，最大 500
          * <p> 示例值：500
@@ -201,6 +200,7 @@ public class ListBpReq {
             this.departmentIdType = departmentIdType.getValue();
             return this;
         }
+
 
         public ListBpReq build() {
             return new ListBpReq(this);

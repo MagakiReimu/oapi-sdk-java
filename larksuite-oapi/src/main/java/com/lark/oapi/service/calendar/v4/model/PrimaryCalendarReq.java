@@ -63,7 +63,6 @@ public class PrimaryCalendarReq {
     public static class Builder {
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 此次调用中使用的用户ID的类型
          * <p> 示例值：
@@ -87,6 +86,7 @@ public class PrimaryCalendarReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public PrimaryCalendarReq build() {
             return new PrimaryCalendarReq(this);

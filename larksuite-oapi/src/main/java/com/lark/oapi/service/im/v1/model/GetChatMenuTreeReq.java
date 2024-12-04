@@ -76,6 +76,7 @@ public class GetChatMenuTreeReq {
             return this;
         }
 
+
         public GetChatMenuTreeReq build() {
             return new GetChatMenuTreeReq(this);
         }

@@ -142,6 +142,18 @@ public class OfferBasicInfo {
      */
     @SerializedName("operator_user_id")
     private String operatorUserId;
+    /**
+     * 岗位 ID
+     * <p> 示例值：6897079709306259719
+     */
+    @SerializedName("position_id")
+    private String positionId;
+    /**
+     * 入职职位
+     * <p> 示例值：测试职位
+     */
+    @SerializedName("job_offered")
+    private String jobOffered;
 
     // builder 开始
     public OfferBasicInfo() {
@@ -243,6 +255,16 @@ public class OfferBasicInfo {
          * <p> 示例值：ou_ce613028fe74745421f5dc320bb9c709
          */
         this.operatorUserId = builder.operatorUserId;
+        /**
+         * 岗位 ID
+         * <p> 示例值：6897079709306259719
+         */
+        this.positionId = builder.positionId;
+        /**
+         * 入职职位
+         * <p> 示例值：测试职位
+         */
+        this.jobOffered = builder.jobOffered;
     }
 
     public static Builder newBuilder() {
@@ -401,6 +423,22 @@ public class OfferBasicInfo {
         this.operatorUserId = operatorUserId;
     }
 
+    public String getPositionId() {
+        return this.positionId;
+    }
+
+    public void setPositionId(String positionId) {
+        this.positionId = positionId;
+    }
+
+    public String getJobOffered() {
+        return this.jobOffered;
+    }
+
+    public void setJobOffered(String jobOffered) {
+        this.jobOffered = jobOffered;
+    }
+
     public static class Builder {
         /**
          * 部门 ID
@@ -497,6 +535,16 @@ public class OfferBasicInfo {
          * <p> 示例值：ou_ce613028fe74745421f5dc320bb9c709
          */
         private String operatorUserId;
+        /**
+         * 岗位 ID
+         * <p> 示例值：6897079709306259719
+         */
+        private String positionId;
+        /**
+         * 入职职位
+         * <p> 示例值：测试职位
+         */
+        private String jobOffered;
 
         /**
          * 部门 ID
@@ -741,6 +789,32 @@ public class OfferBasicInfo {
          */
         public Builder operatorUserId(String operatorUserId) {
             this.operatorUserId = operatorUserId;
+            return this;
+        }
+
+
+        /**
+         * 岗位 ID
+         * <p> 示例值：6897079709306259719
+         *
+         * @param positionId
+         * @return
+         */
+        public Builder positionId(String positionId) {
+            this.positionId = positionId;
+            return this;
+        }
+
+
+        /**
+         * 入职职位
+         * <p> 示例值：测试职位
+         *
+         * @param jobOffered
+         * @return
+         */
+        public Builder jobOffered(String jobOffered) {
+            this.jobOffered = jobOffered;
             return this;
         }
 

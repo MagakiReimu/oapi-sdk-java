@@ -105,7 +105,6 @@ public class BatchUserReq {
         private String userIdType; // 指定请求中用户ID类型
         private String departmentIdType; // 指定查询结果中用户关联的部门ID类型
 
-
         /**
          * 要查询的用户ID列表
          * <p> 示例值：
@@ -167,6 +166,7 @@ public class BatchUserReq {
             this.departmentIdType = departmentIdType.getValue();
             return this;
         }
+
 
         public BatchUserReq build() {
             return new BatchUserReq(this);

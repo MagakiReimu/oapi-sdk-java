@@ -147,7 +147,6 @@ public class ListApproverReq {
         private String userId; // 按user_id_type类型传递。如果system_approval为false，则必填。否则非必填。
         private Integer approverStatus; // 任务状态
 
-
         /**
          * 分页大小
          * <p> 示例值：20
@@ -235,6 +234,7 @@ public class ListApproverReq {
             this.approverStatus = approverStatus.getValue();
             return this;
         }
+
 
         public ListApproverReq build() {
             return new ListApproverReq(this);

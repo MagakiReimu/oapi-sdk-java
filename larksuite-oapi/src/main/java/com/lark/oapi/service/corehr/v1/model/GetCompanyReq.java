@@ -76,6 +76,7 @@ public class GetCompanyReq {
             return this;
         }
 
+
         public GetCompanyReq build() {
             return new GetCompanyReq(this);
         }

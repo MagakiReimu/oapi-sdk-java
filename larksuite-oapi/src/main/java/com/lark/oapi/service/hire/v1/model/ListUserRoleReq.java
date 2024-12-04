@@ -188,7 +188,6 @@ public class ListUserRoleReq {
         private String updateEndTime; // 最晚更新时间，毫秒级时间戳
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 下一页页码
          * <p> 示例值：eyJvZmZzZXQiOjEwLCJ0aW1lc3RhbXAiOjE2Mjc1NTUyMjM2NzIsImlkIjpudWxsfQ==
@@ -278,6 +277,7 @@ public class ListUserRoleReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListUserRoleReq build() {
             return new ListUserRoleReq(this);

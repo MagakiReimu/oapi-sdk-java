@@ -84,7 +84,6 @@ public class GetByParamCustomFieldReq {
         private String objectApiName; // 所属对象 apiname
         private String customApiName; // 自定义字段 apiname
 
-
         /**
          * 所属对象 apiname
          * <p> 示例值：offboarding_info
@@ -109,6 +108,7 @@ public class GetByParamCustomFieldReq {
             this.customApiName = customApiName;
             return this;
         }
+
 
         public GetByParamCustomFieldReq build() {
             return new GetByParamCustomFieldReq(this);

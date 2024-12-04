@@ -239,6 +239,7 @@ public class GetOfferReq {
             return this;
         }
 
+
         public GetOfferReq build() {
             return new GetOfferReq(this);
         }

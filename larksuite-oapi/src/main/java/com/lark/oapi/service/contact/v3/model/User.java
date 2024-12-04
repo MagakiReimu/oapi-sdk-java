@@ -162,6 +162,12 @@ public class User {
     @SerializedName("employee_type")
     private Integer employeeType;
     /**
+     * 职位信息
+     * <p> 示例值：
+     */
+    @SerializedName("positions")
+    private UserPosition[] positions;
+    /**
      * 用户排序信息。;;用于标记通讯录下组织架构的人员顺序，人员可能存在多个部门中，且有不同的排序。
      * <p> 示例值：
      */
@@ -180,11 +186,40 @@ public class User {
     @SerializedName("enterprise_email")
     private String enterpriseEmail;
     /**
+     * 租户类型
+     * <p> 示例值：6645182361178734852
+     */
+    @SerializedName("idp_type")
+    private String idpType;
+    /**
+     * 用户时区
+     * <p> 示例值：
+     */
+    @SerializedName("time_zone")
+    private String timeZone;
+    /**
+     * 用户签名
+     * <p> 示例值：xxx
+     */
+    @SerializedName("description")
+    private String description;
+    /**
      * 职务
      * <p> 示例值：xxxxx
      */
     @SerializedName("job_title")
     private String jobTitle;
+    /**
+     * 是否发送提示消息
+     * <p> 示例值：true
+     */
+    @SerializedName("need_send_notification")
+    private Boolean needSendNotification;
+    /**
+     * <p> 示例值：
+     */
+    @SerializedName("notification_option")
+    private NotificationOption notificationOption;
     /**
      * 是否暂停用户
      * <p> 示例值：false
@@ -350,6 +385,11 @@ public class User {
          */
         this.employeeType = builder.employeeType;
         /**
+         * 职位信息
+         * <p> 示例值：
+         */
+        this.positions = builder.positions;
+        /**
          * 用户排序信息。;;用于标记通讯录下组织架构的人员顺序，人员可能存在多个部门中，且有不同的排序。
          * <p> 示例值：
          */
@@ -365,10 +405,35 @@ public class User {
          */
         this.enterpriseEmail = builder.enterpriseEmail;
         /**
+         * 租户类型
+         * <p> 示例值：6645182361178734852
+         */
+        this.idpType = builder.idpType;
+        /**
+         * 用户时区
+         * <p> 示例值：
+         */
+        this.timeZone = builder.timeZone;
+        /**
+         * 用户签名
+         * <p> 示例值：xxx
+         */
+        this.description = builder.description;
+        /**
          * 职务
          * <p> 示例值：xxxxx
          */
         this.jobTitle = builder.jobTitle;
+        /**
+         * 是否发送提示消息
+         * <p> 示例值：true
+         */
+        this.needSendNotification = builder.needSendNotification;
+        /**
+         *
+         * <p> 示例值：
+         */
+        this.notificationOption = builder.notificationOption;
         /**
          * 是否暂停用户
          * <p> 示例值：false
@@ -591,6 +656,14 @@ public class User {
         this.employeeType = employeeType;
     }
 
+    public UserPosition[] getPositions() {
+        return this.positions;
+    }
+
+    public void setPositions(UserPosition[] positions) {
+        this.positions = positions;
+    }
+
     public UserOrder[] getOrders() {
         return this.orders;
     }
@@ -615,12 +688,52 @@ public class User {
         this.enterpriseEmail = enterpriseEmail;
     }
 
+    public String getIdpType() {
+        return this.idpType;
+    }
+
+    public void setIdpType(String idpType) {
+        this.idpType = idpType;
+    }
+
+    public String getTimeZone() {
+        return this.timeZone;
+    }
+
+    public void setTimeZone(String timeZone) {
+        this.timeZone = timeZone;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public String getJobTitle() {
         return this.jobTitle;
     }
 
     public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
+    }
+
+    public Boolean getNeedSendNotification() {
+        return this.needSendNotification;
+    }
+
+    public void setNeedSendNotification(Boolean needSendNotification) {
+        this.needSendNotification = needSendNotification;
+    }
+
+    public NotificationOption getNotificationOption() {
+        return this.notificationOption;
+    }
+
+    public void setNotificationOption(NotificationOption notificationOption) {
+        this.notificationOption = notificationOption;
     }
 
     public Boolean getIsFrozen() {
@@ -799,6 +912,11 @@ public class User {
          */
         private Integer employeeType;
         /**
+         * 职位信息
+         * <p> 示例值：
+         */
+        private UserPosition[] positions;
+        /**
          * 用户排序信息。;;用于标记通讯录下组织架构的人员顺序，人员可能存在多个部门中，且有不同的排序。
          * <p> 示例值：
          */
@@ -814,10 +932,34 @@ public class User {
          */
         private String enterpriseEmail;
         /**
+         * 租户类型
+         * <p> 示例值：6645182361178734852
+         */
+        private String idpType;
+        /**
+         * 用户时区
+         * <p> 示例值：
+         */
+        private String timeZone;
+        /**
+         * 用户签名
+         * <p> 示例值：xxx
+         */
+        private String description;
+        /**
          * 职务
          * <p> 示例值：xxxxx
          */
         private String jobTitle;
+        /**
+         * 是否发送提示消息
+         * <p> 示例值：true
+         */
+        private Boolean needSendNotification;
+        /**
+         * <p> 示例值：
+         */
+        private NotificationOption notificationOption;
         /**
          * 是否暂停用户
          * <p> 示例值：false
@@ -1158,6 +1300,19 @@ public class User {
 
 
         /**
+         * 职位信息
+         * <p> 示例值：
+         *
+         * @param positions
+         * @return
+         */
+        public Builder positions(UserPosition[] positions) {
+            this.positions = positions;
+            return this;
+        }
+
+
+        /**
          * 用户排序信息。;;用于标记通讯录下组织架构的人员顺序，人员可能存在多个部门中，且有不同的排序。
          * <p> 示例值：
          *
@@ -1197,6 +1352,45 @@ public class User {
 
 
         /**
+         * 租户类型
+         * <p> 示例值：6645182361178734852
+         *
+         * @param idpType
+         * @return
+         */
+        public Builder idpType(String idpType) {
+            this.idpType = idpType;
+            return this;
+        }
+
+
+        /**
+         * 用户时区
+         * <p> 示例值：
+         *
+         * @param timeZone
+         * @return
+         */
+        public Builder timeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+
+
+        /**
+         * 用户签名
+         * <p> 示例值：xxx
+         *
+         * @param description
+         * @return
+         */
+        public Builder description(String description) {
+            this.description = description;
+            return this;
+        }
+
+
+        /**
          * 职务
          * <p> 示例值：xxxxx
          *
@@ -1205,6 +1399,31 @@ public class User {
          */
         public Builder jobTitle(String jobTitle) {
             this.jobTitle = jobTitle;
+            return this;
+        }
+
+
+        /**
+         * 是否发送提示消息
+         * <p> 示例值：true
+         *
+         * @param needSendNotification
+         * @return
+         */
+        public Builder needSendNotification(Boolean needSendNotification) {
+            this.needSendNotification = needSendNotification;
+            return this;
+        }
+
+
+        /**
+         * <p> 示例值：
+         *
+         * @param notificationOption
+         * @return
+         */
+        public Builder notificationOption(NotificationOption notificationOption) {
+            this.notificationOption = notificationOption;
             return this;
         }
 

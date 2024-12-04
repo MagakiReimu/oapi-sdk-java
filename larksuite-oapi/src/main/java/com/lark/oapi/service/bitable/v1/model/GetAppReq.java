@@ -76,6 +76,7 @@ public class GetAppReq {
             return this;
         }
 
+
         public GetAppReq build() {
             return new GetAppReq(this);
         }

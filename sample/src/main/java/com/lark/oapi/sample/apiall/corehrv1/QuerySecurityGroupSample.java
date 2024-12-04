@@ -20,6 +20,8 @@ public class QuerySecurityGroupSample {
                 .departmentIdType("people_corehr_department_id")
                 .querySecurityGroupReqBody(QuerySecurityGroupReqBody.newBuilder()
                         .itemList(new BpRoleOrganization[]{})
+                        .updatedAtGte("1729773628")
+                        .updatedAtLte("1729773628")
                         .build())
                 .build();
 

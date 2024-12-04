@@ -104,7 +104,6 @@ public class GetInterviewRecordAttachmentReq {
         private String interviewRecordId; // 面试记录 ID
         private Integer language; // 面试记录语言
 
-
         /**
          * 投递 ID
          * <p> 示例值：6949805467799537964
@@ -142,6 +141,7 @@ public class GetInterviewRecordAttachmentReq {
             this.language = language;
             return this;
         }
+
 
         public GetInterviewRecordAttachmentReq build() {
             return new GetInterviewRecordAttachmentReq(this);

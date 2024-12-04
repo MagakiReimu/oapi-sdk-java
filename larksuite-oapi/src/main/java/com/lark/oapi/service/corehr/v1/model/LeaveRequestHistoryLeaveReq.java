@@ -546,7 +546,6 @@ public class LeaveRequestHistoryLeaveReq {
         private Boolean wdNeedDeniedAndCanceledRecord; // WorkDay专用 是否拒绝和取消的请假记录，若为true，将返回拒绝和取消的请假记录
         private Integer wdPaidType; // WorkDay专用 扣薪类型, 1不参与算薪 2影响算薪 3不影响算薪
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
@@ -869,6 +868,7 @@ public class LeaveRequestHistoryLeaveReq {
             this.wdPaidType = wdPaidType;
             return this;
         }
+
 
         public LeaveRequestHistoryLeaveReq build() {
             return new LeaveRequestHistoryLeaveReq(this);

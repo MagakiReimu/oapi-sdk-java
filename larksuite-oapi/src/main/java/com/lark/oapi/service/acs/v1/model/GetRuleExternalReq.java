@@ -84,7 +84,6 @@ public class GetRuleExternalReq {
         private String deviceId; // 设备id
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 设备id
          * <p> 示例值：7296700518380863767
@@ -121,6 +120,7 @@ public class GetRuleExternalReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public GetRuleExternalReq build() {
             return new GetRuleExternalReq(this);

@@ -167,7 +167,6 @@ public class ListQuestionnaireReq {
         private String updateStartTime; // 最早更新时间
         private String updateEndTime; // 最晚更新时间
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：1231231987
@@ -244,6 +243,7 @@ public class ListQuestionnaireReq {
             this.updateEndTime = updateEndTime;
             return this;
         }
+
 
         public ListQuestionnaireReq build() {
             return new ListQuestionnaireReq(this);

@@ -206,6 +206,7 @@ public class ListApplicationInterviewReq {
             return this;
         }
 
+
         public ListApplicationInterviewReq build() {
             return new ListApplicationInterviewReq(this);
         }

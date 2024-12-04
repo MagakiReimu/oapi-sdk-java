@@ -209,7 +209,6 @@ public class ListInterviewReq {
         private String jobLevelIdType; // 此次调用中使用的「职级 ID」的类型
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 分页大小，不能超过 100
          * <p> 示例值：10
@@ -312,6 +311,7 @@ public class ListInterviewReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListInterviewReq build() {
             return new ListInterviewReq(this);

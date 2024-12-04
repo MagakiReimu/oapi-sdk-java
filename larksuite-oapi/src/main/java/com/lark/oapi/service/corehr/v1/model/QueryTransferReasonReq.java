@@ -84,7 +84,6 @@ public class QueryTransferReasonReq {
         private Boolean active; // 异动原因状态
         private String[] transferReasonUniqueIdentifier; // 异动原因唯一标识，多条时最多数量为10
 
-
         /**
          * 异动原因状态
          * <p> 示例值：true
@@ -109,6 +108,7 @@ public class QueryTransferReasonReq {
             this.transferReasonUniqueIdentifier = transferReasonUniqueIdentifier;
             return this;
         }
+
 
         public QueryTransferReasonReq build() {
             return new QueryTransferReasonReq(this);

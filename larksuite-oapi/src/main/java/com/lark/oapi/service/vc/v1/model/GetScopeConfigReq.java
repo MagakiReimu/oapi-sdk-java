@@ -105,7 +105,6 @@ public class GetScopeConfigReq {
         private String scopeId; // 查询节点ID：如果scope_type为1，则为层级ID，如果scope_type为2，则为会议室ID
         private String userIdType; // 此次调用中使用的用户ID的类型，默认使用open_id可不填
 
-
         /**
          * 查询节点范围
          * <p> 示例值：1
@@ -167,6 +166,7 @@ public class GetScopeConfigReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public GetScopeConfigReq build() {
             return new GetScopeConfigReq(this);

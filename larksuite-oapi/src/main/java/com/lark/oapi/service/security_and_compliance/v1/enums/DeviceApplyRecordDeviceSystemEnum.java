@@ -23,6 +23,7 @@ public enum DeviceApplyRecordDeviceSystemEnum {
     WINDOWS("Windows"), // Windows
     LINUX("Linux"), // Linux
     MACOS("MacOS"), // MacOS
+    OPENHARMONY("OpenHarmony"), // OpenHarmony
     ;
     private String value;
 

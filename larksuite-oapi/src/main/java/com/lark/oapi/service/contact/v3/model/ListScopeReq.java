@@ -126,7 +126,6 @@ public class ListScopeReq {
         private String pageToken; // 分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果
         private Integer pageSize; // 分页大小，返回值所有列表长度之和不超过这个值
 
-
         /**
          * 返回值的用户ID的类型
          * <p> 示例值：user_id
@@ -201,6 +200,7 @@ public class ListScopeReq {
             this.pageSize = pageSize;
             return this;
         }
+
 
         public ListScopeReq build() {
             return new ListScopeReq(this);

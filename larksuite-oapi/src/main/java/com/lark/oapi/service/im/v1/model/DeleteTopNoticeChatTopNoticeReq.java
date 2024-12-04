@@ -76,6 +76,7 @@ public class DeleteTopNoticeChatTopNoticeReq {
             return this;
         }
 
+
         public DeleteTopNoticeChatTopNoticeReq build() {
             return new DeleteTopNoticeChatTopNoticeReq(this);
         }

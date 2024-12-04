@@ -165,6 +165,7 @@ public class GetDepartmentReq {
             return this;
         }
 
+
         public GetDepartmentReq build() {
             return new GetDepartmentReq(this);
         }

@@ -144,6 +144,7 @@ public class DeleteAppTableFieldReq {
             return this;
         }
 
+
         public DeleteAppTableFieldReq build() {
             return new DeleteAppTableFieldReq(this);
         }

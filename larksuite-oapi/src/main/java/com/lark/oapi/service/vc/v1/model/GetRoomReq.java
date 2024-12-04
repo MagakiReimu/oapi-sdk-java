@@ -120,6 +120,7 @@ public class GetRoomReq {
             return this;
         }
 
+
         public GetRoomReq build() {
             return new GetRoomReq(this);
         }

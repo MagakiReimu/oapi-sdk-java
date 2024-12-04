@@ -76,6 +76,7 @@ public class ClearPublicMailboxMemberReq {
             return this;
         }
 
+
         public ClearPublicMailboxMemberReq build() {
             return new ClearPublicMailboxMemberReq(this);
         }

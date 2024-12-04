@@ -105,7 +105,6 @@ public class ListCategoryReq {
         private Integer orderBy; // 排序键。1: 根据知识库分类更新时间排序
         private Boolean asc; // 顺序。true: 正序；false：反序
 
-
         /**
          * 知识库分类语言
          * <p> 示例值：zh_cn
@@ -143,6 +142,7 @@ public class ListCategoryReq {
             this.asc = asc;
             return this;
         }
+
 
         public ListCategoryReq build() {
             return new ListCategoryReq(this);

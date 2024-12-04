@@ -41,6 +41,12 @@ public class ProcessRevokeAndWithdraw {
      */
     @SerializedName("reason")
     private String reason;
+    /**
+     * true-系统身份操作
+     * <p> 示例值：true
+     */
+    @SerializedName("system_user")
+    private Boolean systemUser;
 
     // builder 开始
     public ProcessRevokeAndWithdraw() {
@@ -57,6 +63,11 @@ public class ProcessRevokeAndWithdraw {
          * <p> 示例值：原因自定义字符串
          */
         this.reason = builder.reason;
+        /**
+         * true-系统身份操作
+         * <p> 示例值：true
+         */
+        this.systemUser = builder.systemUser;
     }
 
     public static Builder newBuilder() {
@@ -79,6 +90,14 @@ public class ProcessRevokeAndWithdraw {
         this.reason = reason;
     }
 
+    public Boolean getSystemUser() {
+        return this.systemUser;
+    }
+
+    public void setSystemUser(Boolean systemUser) {
+        this.systemUser = systemUser;
+    }
+
     public static class Builder {
         /**
          * 按照指定的用户ID类型传递对应的用户ID。
@@ -90,6 +109,11 @@ public class ProcessRevokeAndWithdraw {
          * <p> 示例值：原因自定义字符串
          */
         private String reason;
+        /**
+         * true-系统身份操作
+         * <p> 示例值：true
+         */
+        private Boolean systemUser;
 
         /**
          * 按照指定的用户ID类型传递对应的用户ID。
@@ -113,6 +137,19 @@ public class ProcessRevokeAndWithdraw {
          */
         public Builder reason(String reason) {
             this.reason = reason;
+            return this;
+        }
+
+
+        /**
+         * true-系统身份操作
+         * <p> 示例值：true
+         *
+         * @param systemUser
+         * @return
+         */
+        public Builder systemUser(Boolean systemUser) {
+            this.systemUser = systemUser;
             return this;
         }
 

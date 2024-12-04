@@ -120,6 +120,7 @@ public class GetNotificationReq {
             return this;
         }
 
+
         public GetNotificationReq build() {
             return new GetNotificationReq(this);
         }

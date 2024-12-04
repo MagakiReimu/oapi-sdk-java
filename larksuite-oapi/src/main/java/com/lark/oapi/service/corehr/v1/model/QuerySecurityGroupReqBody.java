@@ -35,6 +35,18 @@ public class QuerySecurityGroupReqBody {
      */
     @SerializedName("item_list")
     private BpRoleOrganization[] itemList;
+    /**
+     * 授权时间大于
+     * <p> 示例值：1729773628
+     */
+    @SerializedName("updated_at_gte")
+    private String updatedAtGte;
+    /**
+     * 授权时间小于
+     * <p> 示例值：1729773628
+     */
+    @SerializedName("updated_at_lte")
+    private String updatedAtLte;
 
     // builder 开始
     public QuerySecurityGroupReqBody() {
@@ -46,6 +58,16 @@ public class QuerySecurityGroupReqBody {
          * <p> 示例值：
          */
         this.itemList = builder.itemList;
+        /**
+         * 授权时间大于
+         * <p> 示例值：1729773628
+         */
+        this.updatedAtGte = builder.updatedAtGte;
+        /**
+         * 授权时间小于
+         * <p> 示例值：1729773628
+         */
+        this.updatedAtLte = builder.updatedAtLte;
     }
 
     public static Builder newBuilder() {
@@ -60,12 +82,38 @@ public class QuerySecurityGroupReqBody {
         this.itemList = itemList;
     }
 
+    public String getUpdatedAtGte() {
+        return this.updatedAtGte;
+    }
+
+    public void setUpdatedAtGte(String updatedAtGte) {
+        this.updatedAtGte = updatedAtGte;
+    }
+
+    public String getUpdatedAtLte() {
+        return this.updatedAtLte;
+    }
+
+    public void setUpdatedAtLte(String updatedAtLte) {
+        this.updatedAtLte = updatedAtLte;
+    }
+
     public static class Builder {
         /**
          * 角色列表，一次最多支持查询 50 个
          * <p> 示例值：
          */
         private BpRoleOrganization[] itemList;
+        /**
+         * 授权时间大于
+         * <p> 示例值：1729773628
+         */
+        private String updatedAtGte;
+        /**
+         * 授权时间小于
+         * <p> 示例值：1729773628
+         */
+        private String updatedAtLte;
 
         /**
          * 角色列表，一次最多支持查询 50 个
@@ -76,6 +124,32 @@ public class QuerySecurityGroupReqBody {
          */
         public Builder itemList(BpRoleOrganization[] itemList) {
             this.itemList = itemList;
+            return this;
+        }
+
+
+        /**
+         * 授权时间大于
+         * <p> 示例值：1729773628
+         *
+         * @param updatedAtGte
+         * @return
+         */
+        public Builder updatedAtGte(String updatedAtGte) {
+            this.updatedAtGte = updatedAtGte;
+            return this;
+        }
+
+
+        /**
+         * 授权时间小于
+         * <p> 示例值：1729773628
+         *
+         * @param updatedAtLte
+         * @return
+         */
+        public Builder updatedAtLte(String updatedAtLte) {
+            this.updatedAtLte = updatedAtLte;
             return this;
         }
 

@@ -42,6 +42,12 @@ public class Entity {
     @SerializedName("main_keys")
     private Term[] mainKeys;
     /**
+     * 全称
+     * <p> 示例值：
+     */
+    @SerializedName("full_names")
+    private Term[] fullNames;
+    /**
      * 别名
      * <p> 示例值：
      */
@@ -124,6 +130,11 @@ public class Entity {
          */
         this.mainKeys = builder.mainKeys;
         /**
+         * 全称
+         * <p> 示例值：
+         */
+        this.fullNames = builder.fullNames;
+        /**
          * 别名
          * <p> 示例值：
          */
@@ -198,6 +209,14 @@ public class Entity {
 
     public void setMainKeys(Term[] mainKeys) {
         this.mainKeys = mainKeys;
+    }
+
+    public Term[] getFullNames() {
+        return this.fullNames;
+    }
+
+    public void setFullNames(Term[] fullNames) {
+        this.fullNames = fullNames;
     }
 
     public Term[] getAliases() {
@@ -300,6 +319,11 @@ public class Entity {
          */
         private Term[] mainKeys;
         /**
+         * 全称
+         * <p> 示例值：
+         */
+        private Term[] fullNames;
+        /**
          * 别名
          * <p> 示例值：
          */
@@ -377,6 +401,19 @@ public class Entity {
          */
         public Builder mainKeys(Term[] mainKeys) {
             this.mainKeys = mainKeys;
+            return this;
+        }
+
+
+        /**
+         * 全称
+         * <p> 示例值：
+         *
+         * @param fullNames
+         * @return
+         */
+        public Builder fullNames(Term[] fullNames) {
+            this.fullNames = fullNames;
             return this;
         }
 

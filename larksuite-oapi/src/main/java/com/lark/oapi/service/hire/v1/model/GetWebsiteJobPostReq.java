@@ -207,6 +207,7 @@ public class GetWebsiteJobPostReq {
             return this;
         }
 
+
         public GetWebsiteJobPostReq build() {
             return new GetWebsiteJobPostReq(this);
         }

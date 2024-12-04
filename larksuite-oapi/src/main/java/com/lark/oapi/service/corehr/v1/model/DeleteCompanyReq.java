@@ -76,6 +76,7 @@ public class DeleteCompanyReq {
             return this;
         }
 
+
         public DeleteCompanyReq build() {
             return new DeleteCompanyReq(this);
         }

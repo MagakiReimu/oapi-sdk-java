@@ -147,7 +147,6 @@ public class ListEntityReq {
         private String repoId; // 词库 id
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 分页大小
          * <p> 示例值：20
@@ -223,6 +222,7 @@ public class ListEntityReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public ListEntityReq build() {
             return new ListEntityReq(this);

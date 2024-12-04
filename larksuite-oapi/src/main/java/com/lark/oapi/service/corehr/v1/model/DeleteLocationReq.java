@@ -76,6 +76,7 @@ public class DeleteLocationReq {
             return this;
         }
 
+
         public DeleteLocationReq build() {
             return new DeleteLocationReq(this);
         }

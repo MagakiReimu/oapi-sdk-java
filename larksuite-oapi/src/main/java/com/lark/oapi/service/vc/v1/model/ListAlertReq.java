@@ -168,7 +168,6 @@ public class ListAlertReq {
         private Integer pageSize; // 请求期望返回的告警记录数量，不足则返回全部，该值默认为 100，最大为 1000
         private String pageToken; // 分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果
 
-
         /**
          * 开始时间（unix时间，单位sec）
          * <p> 示例值：1608888867
@@ -257,6 +256,7 @@ public class ListAlertReq {
             this.pageToken = pageToken;
             return this;
         }
+
 
         public ListAlertReq build() {
             return new ListAlertReq(this);

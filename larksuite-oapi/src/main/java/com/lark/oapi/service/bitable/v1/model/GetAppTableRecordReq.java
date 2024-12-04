@@ -320,6 +320,7 @@ public class GetAppTableRecordReq {
             return this;
         }
 
+
         public GetAppTableRecordReq build() {
             return new GetAppTableRecordReq(this);
         }

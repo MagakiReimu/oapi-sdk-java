@@ -107,6 +107,7 @@ public class GetInterviewRecordReq {
             return this;
         }
 
+
         public GetInterviewRecordReq build() {
             return new GetInterviewRecordReq(this);
         }

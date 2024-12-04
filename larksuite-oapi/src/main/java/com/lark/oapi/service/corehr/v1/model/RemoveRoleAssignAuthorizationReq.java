@@ -105,7 +105,6 @@ public class RemoveRoleAssignAuthorizationReq {
         private String userIdType; // 用户 ID 类型
         private String roleId; // 角色 ID
 
-
         /**
          * 雇员 ID
          * <p> 示例值：67489937334909845
@@ -155,6 +154,7 @@ public class RemoveRoleAssignAuthorizationReq {
             this.roleId = roleId;
             return this;
         }
+
 
         public RemoveRoleAssignAuthorizationReq build() {
             return new RemoveRoleAssignAuthorizationReq(this);

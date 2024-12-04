@@ -76,6 +76,7 @@ public class DownloadFileReq {
             return this;
         }
 
+
         public DownloadFileReq build() {
             return new DownloadFileReq(this);
         }

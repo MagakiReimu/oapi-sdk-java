@@ -105,7 +105,6 @@ public class ListSpaceReq {
         private String pageToken; // 分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果
         private String lang; // 当查询个人文档库时，指定返回的文档库名称展示语言。可选值有：zh, id, de, en, es, fr, it, pt, vi, ru, hi, th, ko, ja, zh-HK, zh-TW。
 
-
         /**
          * 分页大小
          * <p> 示例值：10
@@ -155,6 +154,7 @@ public class ListSpaceReq {
             this.lang = lang.getValue();
             return this;
         }
+
 
         public ListSpaceReq build() {
             return new ListSpaceReq(this);

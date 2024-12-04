@@ -54,6 +54,18 @@ public class Vchat {
     @SerializedName("meeting_url")
     private String meetingUrl;
     /**
+     * VC视频会议转直播URL，当vc_type=vc时有值。
+     * <p> 示例值：https://meetings.feishu.cn/s/1iof4hpw6i51w
+     */
+    @SerializedName("live_link")
+    private String liveLink;
+    /**
+     * VC视频会议原生信息。
+     * <p> 示例值：
+     */
+    @SerializedName("vc_info")
+    private VcInfo vcInfo;
+    /**
      * VC视频会议的会前设置
      * <p> 示例值：
      */
@@ -85,6 +97,16 @@ public class Vchat {
          * <p> 示例值：https://example.com
          */
         this.meetingUrl = builder.meetingUrl;
+        /**
+         * VC视频会议转直播URL，当vc_type=vc时有值。
+         * <p> 示例值：https://meetings.feishu.cn/s/1iof4hpw6i51w
+         */
+        this.liveLink = builder.liveLink;
+        /**
+         * VC视频会议原生信息。
+         * <p> 示例值：
+         */
+        this.vcInfo = builder.vcInfo;
         /**
          * VC视频会议的会前设置
          * <p> 示例值：
@@ -128,6 +150,22 @@ public class Vchat {
         this.meetingUrl = meetingUrl;
     }
 
+    public String getLiveLink() {
+        return this.liveLink;
+    }
+
+    public void setLiveLink(String liveLink) {
+        this.liveLink = liveLink;
+    }
+
+    public VcInfo getVcInfo() {
+        return this.vcInfo;
+    }
+
+    public void setVcInfo(VcInfo vcInfo) {
+        this.vcInfo = vcInfo;
+    }
+
     public MeetingSettings getMeetingSettings() {
         return this.meetingSettings;
     }
@@ -157,6 +195,16 @@ public class Vchat {
          * <p> 示例值：https://example.com
          */
         private String meetingUrl;
+        /**
+         * VC视频会议转直播URL，当vc_type=vc时有值。
+         * <p> 示例值：https://meetings.feishu.cn/s/1iof4hpw6i51w
+         */
+        private String liveLink;
+        /**
+         * VC视频会议原生信息。
+         * <p> 示例值：
+         */
+        private VcInfo vcInfo;
         /**
          * VC视频会议的会前设置
          * <p> 示例值：
@@ -235,6 +283,32 @@ public class Vchat {
          */
         public Builder meetingUrl(String meetingUrl) {
             this.meetingUrl = meetingUrl;
+            return this;
+        }
+
+
+        /**
+         * VC视频会议转直播URL，当vc_type=vc时有值。
+         * <p> 示例值：https://meetings.feishu.cn/s/1iof4hpw6i51w
+         *
+         * @param liveLink
+         * @return
+         */
+        public Builder liveLink(String liveLink) {
+            this.liveLink = liveLink;
+            return this;
+        }
+
+
+        /**
+         * VC视频会议原生信息。
+         * <p> 示例值：
+         *
+         * @param vcInfo
+         * @return
+         */
+        public Builder vcInfo(VcInfo vcInfo) {
+            this.vcInfo = vcInfo;
             return this;
         }
 

@@ -76,6 +76,7 @@ public class ListMailgroupAliasReq {
             return this;
         }
 
+
         public ListMailgroupAliasReq build() {
             return new ListMailgroupAliasReq(this);
         }

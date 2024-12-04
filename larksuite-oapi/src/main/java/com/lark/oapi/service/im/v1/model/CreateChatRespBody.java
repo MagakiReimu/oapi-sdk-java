@@ -83,6 +83,12 @@ public class CreateChatRespBody {
     @SerializedName("video_conference_setting")
     private String videoConferenceSetting;
     /**
+     * 谁可以管理置顶
+     * <p> 示例值：all_members
+     */
+    @SerializedName("pin_manage_setting")
+    private String pinManageSetting;
+    /**
      * 拉 用户或机器人 入群权限;;**可选值有**：;- `only_owner`：仅群主和管理员;- `all_members`：所有成员
      * <p> 示例值：all members
      */
@@ -166,6 +172,18 @@ public class CreateChatRespBody {
      */
     @SerializedName("moderation_permission")
     private String moderationPermission;
+    /**
+     * 群标签
+     * <p> 示例值：
+     */
+    @SerializedName("labels")
+    private String[] labels;
+    /**
+     * 群快捷组件列表
+     * <p> 示例值：
+     */
+    @SerializedName("toolkit_ids")
+    private String[] toolkitIds;
     /**
      * 防泄密模式设置
      * <p> 示例值：
@@ -251,6 +269,13 @@ public class CreateChatRespBody {
         this.videoConferenceSetting = videoConferenceSetting;
     }
 
+    public String getPinManageSetting() {
+        return this.pinManageSetting;
+    }
+
+    public void setPinManageSetting(String pinManageSetting) {
+        this.pinManageSetting = pinManageSetting;
+    }
 
     public String getAddMemberPermission() {
         return this.addMemberPermission;
@@ -364,6 +389,21 @@ public class CreateChatRespBody {
         this.moderationPermission = moderationPermission;
     }
 
+    public String[] getLabels() {
+        return this.labels;
+    }
+
+    public void setLabels(String[] labels) {
+        this.labels = labels;
+    }
+
+    public String[] getToolkitIds() {
+        return this.toolkitIds;
+    }
+
+    public void setToolkitIds(String[] toolkitIds) {
+        this.toolkitIds = toolkitIds;
+    }
 
     public RestrictedModeSetting getRestrictedModeSetting() {
         return this.restrictedModeSetting;

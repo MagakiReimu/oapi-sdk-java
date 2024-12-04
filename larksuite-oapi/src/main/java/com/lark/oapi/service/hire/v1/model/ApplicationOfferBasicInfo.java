@@ -148,6 +148,18 @@ public class ApplicationOfferBasicInfo {
      */
     @SerializedName("work_location_address_info")
     private MasterLocationAddressInfo workLocationAddressInfo;
+    /**
+     * 岗位 ID
+     * <p> 示例值：123
+     */
+    @SerializedName("position_id")
+    private String positionId;
+    /**
+     * 入职职位
+     * <p> 示例值：123
+     */
+    @SerializedName("job_offered")
+    private String jobOffered;
 
     // builder 开始
     public ApplicationOfferBasicInfo() {
@@ -254,6 +266,16 @@ public class ApplicationOfferBasicInfo {
          * <p> 示例值：
          */
         this.workLocationAddressInfo = builder.workLocationAddressInfo;
+        /**
+         * 岗位 ID
+         * <p> 示例值：123
+         */
+        this.positionId = builder.positionId;
+        /**
+         * 入职职位
+         * <p> 示例值：123
+         */
+        this.jobOffered = builder.jobOffered;
     }
 
     public static Builder newBuilder() {
@@ -420,6 +442,22 @@ public class ApplicationOfferBasicInfo {
         this.workLocationAddressInfo = workLocationAddressInfo;
     }
 
+    public String getPositionId() {
+        return this.positionId;
+    }
+
+    public void setPositionId(String positionId) {
+        this.positionId = positionId;
+    }
+
+    public String getJobOffered() {
+        return this.jobOffered;
+    }
+
+    public void setJobOffered(String jobOffered) {
+        this.jobOffered = jobOffered;
+    }
+
     public static class Builder {
         /**
          * Offer 类型
@@ -521,6 +559,16 @@ public class ApplicationOfferBasicInfo {
          * <p> 示例值：
          */
         private MasterLocationAddressInfo workLocationAddressInfo;
+        /**
+         * 岗位 ID
+         * <p> 示例值：123
+         */
+        private String positionId;
+        /**
+         * 入职职位
+         * <p> 示例值：123
+         */
+        private String jobOffered;
 
         /**
          * Offer 类型
@@ -778,6 +826,32 @@ public class ApplicationOfferBasicInfo {
          */
         public Builder workLocationAddressInfo(MasterLocationAddressInfo workLocationAddressInfo) {
             this.workLocationAddressInfo = workLocationAddressInfo;
+            return this;
+        }
+
+
+        /**
+         * 岗位 ID
+         * <p> 示例值：123
+         *
+         * @param positionId
+         * @return
+         */
+        public Builder positionId(String positionId) {
+            this.positionId = positionId;
+            return this;
+        }
+
+
+        /**
+         * 入职职位
+         * <p> 示例值：123
+         *
+         * @param jobOffered
+         * @return
+         */
+        public Builder jobOffered(String jobOffered) {
+            this.jobOffered = jobOffered;
             return this;
         }
 

@@ -59,6 +59,12 @@ public class ExternalOffer {
     @SerializedName("owner")
     private String owner;
     /**
+     * Offer 创建人
+     * <p> 示例值：张三
+     */
+    @SerializedName("creator")
+    private String creator;
+    /**
      * Offer 状态
      * <p> 示例值：已发送
      */
@@ -107,6 +113,11 @@ public class ExternalOffer {
          * <p> 示例值：张三
          */
         this.owner = builder.owner;
+        /**
+         * Offer 创建人
+         * <p> 示例值：张三
+         */
+        this.creator = builder.creator;
         /**
          * Offer 状态
          * <p> 示例值：已发送
@@ -168,6 +179,14 @@ public class ExternalOffer {
         this.owner = owner;
     }
 
+    public String getCreator() {
+        return this.creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+
     public String getOfferStatus() {
         return this.offerStatus;
     }
@@ -218,6 +237,11 @@ public class ExternalOffer {
          * <p> 示例值：张三
          */
         private String owner;
+        /**
+         * Offer 创建人
+         * <p> 示例值：张三
+         */
+        private String creator;
         /**
          * Offer 状态
          * <p> 示例值：已发送
@@ -295,6 +319,19 @@ public class ExternalOffer {
          */
         public Builder owner(String owner) {
             this.owner = owner;
+            return this;
+        }
+
+
+        /**
+         * Offer 创建人
+         * <p> 示例值：张三
+         *
+         * @param creator
+         * @return
+         */
+        public Builder creator(String creator) {
+            this.creator = creator;
             return this;
         }
 

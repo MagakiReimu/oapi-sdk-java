@@ -359,6 +359,19 @@ public class NodeSearch {
         }
 
         /**
+         * wiki类型
+         * <p> 示例值：1
+         *
+         * @param objType {@link com.lark.oapi.service.wiki.v2.enums.NodeSearchSearchObjTypeEnum}
+         * @return
+         */
+        public Builder objType(com.lark.oapi.service.wiki.v2.enums.NodeSearchSearchObjTypeEnum objType) {
+            this.objType = objType.getValue();
+            return this;
+        }
+
+
+        /**
          * wiki标题
          * <p> 示例值：文档标题
          *

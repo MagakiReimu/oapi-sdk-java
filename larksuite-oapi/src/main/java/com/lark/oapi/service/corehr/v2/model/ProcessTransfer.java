@@ -30,7 +30,7 @@ import com.lark.oapi.core.response.BaseResponse;
 
 public class ProcessTransfer {
     /**
-     * 操作人，不传是默认为系统操作
+     * 操作人，当system_user为true，可不传值
      * <p> 示例值：7184703091806602796
      */
     @SerializedName("operator")
@@ -53,6 +53,12 @@ public class ProcessTransfer {
      */
     @SerializedName("remark")
     private String remark;
+    /**
+     * true-以系统身份操作
+     * <p> 示例值：true
+     */
+    @SerializedName("system_user")
+    private Boolean systemUser;
 
     // builder 开始
     public ProcessTransfer() {
@@ -60,7 +66,7 @@ public class ProcessTransfer {
 
     public ProcessTransfer(Builder builder) {
         /**
-         * 操作人，不传是默认为系统操作
+         * 操作人，当system_user为true，可不传值
          * <p> 示例值：7184703091806602796
          */
         this.operator = builder.operator;
@@ -79,6 +85,11 @@ public class ProcessTransfer {
          * <p> 示例值：备注
          */
         this.remark = builder.remark;
+        /**
+         * true-以系统身份操作
+         * <p> 示例值：true
+         */
+        this.systemUser = builder.systemUser;
     }
 
     public static Builder newBuilder() {
@@ -117,9 +128,17 @@ public class ProcessTransfer {
         this.remark = remark;
     }
 
+    public Boolean getSystemUser() {
+        return this.systemUser;
+    }
+
+    public void setSystemUser(Boolean systemUser) {
+        this.systemUser = systemUser;
+    }
+
     public static class Builder {
         /**
-         * 操作人，不传是默认为系统操作
+         * 操作人，当system_user为true，可不传值
          * <p> 示例值：7184703091806602796
          */
         private String operator;
@@ -138,9 +157,14 @@ public class ProcessTransfer {
          * <p> 示例值：备注
          */
         private String remark;
+        /**
+         * true-以系统身份操作
+         * <p> 示例值：true
+         */
+        private Boolean systemUser;
 
         /**
-         * 操作人，不传是默认为系统操作
+         * 操作人，当system_user为true，可不传值
          * <p> 示例值：7184703091806602796
          *
          * @param operator
@@ -187,6 +211,19 @@ public class ProcessTransfer {
          */
         public Builder remark(String remark) {
             this.remark = remark;
+            return this;
+        }
+
+
+        /**
+         * true-以系统身份操作
+         * <p> 示例值：true
+         *
+         * @param systemUser
+         * @return
+         */
+        public Builder systemUser(Boolean systemUser) {
+            this.systemUser = systemUser;
             return this;
         }
 

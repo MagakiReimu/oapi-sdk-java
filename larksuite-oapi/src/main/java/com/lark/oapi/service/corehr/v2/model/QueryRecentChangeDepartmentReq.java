@@ -147,7 +147,6 @@ public class QueryRecentChangeDepartmentReq {
         private String endDate; // 查询的结束时间，格式 "yyyy-MM-dd"，不带时分秒， 查询日期小于 end_data + 1 天的 00:00:00。
         private String departmentIdType; // 此次调用中使用的部门 ID 类型
 
-
         /**
          * 分页大小，最大 2000
          * <p> 示例值：100
@@ -223,6 +222,7 @@ public class QueryRecentChangeDepartmentReq {
             this.departmentIdType = departmentIdType.getValue();
             return this;
         }
+
 
         public QueryRecentChangeDepartmentReq build() {
             return new QueryRecentChangeDepartmentReq(this);

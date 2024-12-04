@@ -199,6 +199,7 @@ public class GetMailgroupPermissionMemberReq {
             return this;
         }
 
+
         public GetMailgroupPermissionMemberReq build() {
             return new GetMailgroupPermissionMemberReq(this);
         }

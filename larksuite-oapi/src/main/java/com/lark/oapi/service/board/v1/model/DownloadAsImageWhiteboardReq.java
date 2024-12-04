@@ -76,6 +76,7 @@ public class DownloadAsImageWhiteboardReq {
             return this;
         }
 
+
         public DownloadAsImageWhiteboardReq build() {
             return new DownloadAsImageWhiteboardReq(this);
         }

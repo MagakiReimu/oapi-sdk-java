@@ -110,6 +110,7 @@ public class CreateCalendarEventMeetingMinuteReq {
             return this;
         }
 
+
         public CreateCalendarEventMeetingMinuteReq build() {
             return new CreateCalendarEventMeetingMinuteReq(this);
         }

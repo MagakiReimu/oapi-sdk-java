@@ -63,7 +63,6 @@ public class TaskCheckFileReq {
     public static class Builder {
         private String taskId; // 文件相关异步任务id
 
-
         /**
          * 文件相关异步任务id
          * <p> 示例值：12345
@@ -75,6 +74,7 @@ public class TaskCheckFileReq {
             this.taskId = taskId;
             return this;
         }
+
 
         public TaskCheckFileReq build() {
             return new TaskCheckFileReq(this);

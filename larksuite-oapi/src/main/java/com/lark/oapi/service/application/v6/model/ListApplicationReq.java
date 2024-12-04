@@ -189,7 +189,6 @@ public class ListApplicationReq {
         private Integer paymentType; // 不传入代表全部返回。传入则按照这种应用状态返回。 付费类型 可选值： 0：免费 1：付费
         private Integer ownerType; // 不传入代表全部返回。传入则按照这种应用状态返回。所有者类型，可选值： 0：飞书科技 1：飞书合作伙伴 2：企业内成员
 
-
         /**
          * 分页大小
          * <p> 示例值：50
@@ -315,6 +314,7 @@ public class ListApplicationReq {
             this.ownerType = ownerType.getValue();
             return this;
         }
+
 
         public ListApplicationReq build() {
             return new ListApplicationReq(this);

@@ -108,6 +108,12 @@ public class ChatChange {
     @SerializedName("owner_id")
     private UserId ownerId;
     /**
+     * 群标签
+     * <p> 示例值：
+     */
+    @SerializedName("labels")
+    private String[] labels;
+    /**
      * 防泄密模式设置
      * <p> 示例值：
      */
@@ -190,6 +196,11 @@ public class ChatChange {
          * <p> 示例值：
          */
         this.ownerId = builder.ownerId;
+        /**
+         * 群标签
+         * <p> 示例值：
+         */
+        this.labels = builder.labels;
         /**
          * 防泄密模式设置
          * <p> 示例值：
@@ -310,6 +321,14 @@ public class ChatChange {
         this.ownerId = ownerId;
     }
 
+    public String[] getLabels() {
+        return this.labels;
+    }
+
+    public void setLabels(String[] labels) {
+        this.labels = labels;
+    }
+
     public RestrictedModeSetting getRestrictedModeSetting() {
         return this.restrictedModeSetting;
     }
@@ -392,6 +411,11 @@ public class ChatChange {
          * <p> 示例值：
          */
         private UserId ownerId;
+        /**
+         * 群标签
+         * <p> 示例值：
+         */
+        private String[] labels;
         /**
          * 防泄密模式设置
          * <p> 示例值：
@@ -568,6 +592,19 @@ public class ChatChange {
          */
         public Builder ownerId(UserId ownerId) {
             this.ownerId = ownerId;
+            return this;
+        }
+
+
+        /**
+         * 群标签
+         * <p> 示例值：
+         *
+         * @param labels
+         * @return
+         */
+        public Builder labels(String[] labels) {
+            this.labels = labels;
             return this;
         }
 

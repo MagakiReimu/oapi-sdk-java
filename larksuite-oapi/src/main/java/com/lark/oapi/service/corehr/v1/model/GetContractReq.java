@@ -76,6 +76,7 @@ public class GetContractReq {
             return this;
         }
 
+
         public GetContractReq build() {
             return new GetContractReq(this);
         }

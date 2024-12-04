@@ -65,6 +65,12 @@ public class PreHire {
      */
     @SerializedName("pre_hire_id")
     private String preHireId;
+    /**
+     * 部分老people体系字段兼容序列化的值，用于做切换器兼容
+     * <p> 示例值：{"process":1}
+     */
+    @SerializedName("people_fields_json")
+    private String peopleFieldsJson;
 
     // builder 开始
     public PreHire() {
@@ -101,6 +107,11 @@ public class PreHire {
          * <p> 示例值：7032210902531327521
          */
         this.preHireId = builder.preHireId;
+        /**
+         * 部分老people体系字段兼容序列化的值，用于做切换器兼容
+         * <p> 示例值：{"process":1}
+         */
+        this.peopleFieldsJson = builder.peopleFieldsJson;
     }
 
     public static Builder newBuilder() {
@@ -155,6 +166,14 @@ public class PreHire {
         this.preHireId = preHireId;
     }
 
+    public String getPeopleFieldsJson() {
+        return this.peopleFieldsJson;
+    }
+
+    public void setPeopleFieldsJson(String peopleFieldsJson) {
+        this.peopleFieldsJson = peopleFieldsJson;
+    }
+
     public static class Builder {
         /**
          * 个人信息
@@ -186,6 +205,11 @@ public class PreHire {
          * <p> 示例值：7032210902531327521
          */
         private String preHireId;
+        /**
+         * 部分老people体系字段兼容序列化的值，用于做切换器兼容
+         * <p> 示例值：{"process":1}
+         */
+        private String peopleFieldsJson;
 
         /**
          * 个人信息
@@ -261,6 +285,19 @@ public class PreHire {
          */
         public Builder preHireId(String preHireId) {
             this.preHireId = preHireId;
+            return this;
+        }
+
+
+        /**
+         * 部分老people体系字段兼容序列化的值，用于做切换器兼容
+         * <p> 示例值：{"process":1}
+         *
+         * @param peopleFieldsJson
+         * @return
+         */
+        public Builder peopleFieldsJson(String peopleFieldsJson) {
+            this.peopleFieldsJson = peopleFieldsJson;
             return this;
         }
 

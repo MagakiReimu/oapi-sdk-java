@@ -66,6 +66,18 @@ public class UserFlow {
     @SerializedName("record_id")
     private String recordId;
     /**
+     * 打卡经度
+     * <p> 示例值：30.28991
+     */
+    @SerializedName("longitude")
+    private Double longitude;
+    /**
+     * 打卡纬度
+     * <p> 示例值：120.04513
+     */
+    @SerializedName("latitude")
+    private Double latitude;
+    /**
      * 打卡 Wi-Fi 的 SSID
      * <p> 示例值：b0:b8:67:5c:1d:72
      */
@@ -161,6 +173,16 @@ public class UserFlow {
          * <p> 示例值：6709359313699356941
          */
         this.recordId = builder.recordId;
+        /**
+         * 打卡经度
+         * <p> 示例值：30.28991
+         */
+        this.longitude = builder.longitude;
+        /**
+         * 打卡纬度
+         * <p> 示例值：120.04513
+         */
+        this.latitude = builder.latitude;
         /**
          * 打卡 Wi-Fi 的 SSID
          * <p> 示例值：b0:b8:67:5c:1d:72
@@ -263,6 +285,22 @@ public class UserFlow {
 
     public void setRecordId(String recordId) {
         this.recordId = recordId;
+    }
+
+    public Double getLongitude() {
+        return this.longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
+
+    public Double getLatitude() {
+        return this.latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
     }
 
     public String getSsid() {
@@ -376,6 +414,16 @@ public class UserFlow {
          * <p> 示例值：6709359313699356941
          */
         private String recordId;
+        /**
+         * 打卡经度
+         * <p> 示例值：30.28991
+         */
+        private Double longitude;
+        /**
+         * 打卡纬度
+         * <p> 示例值：120.04513
+         */
+        private Double latitude;
         /**
          * 打卡 Wi-Fi 的 SSID
          * <p> 示例值：b0:b8:67:5c:1d:72
@@ -501,6 +549,32 @@ public class UserFlow {
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;
+            return this;
+        }
+
+
+        /**
+         * 打卡经度
+         * <p> 示例值：30.28991
+         *
+         * @param longitude
+         * @return
+         */
+        public Builder longitude(Double longitude) {
+            this.longitude = longitude;
+            return this;
+        }
+
+
+        /**
+         * 打卡纬度
+         * <p> 示例值：120.04513
+         *
+         * @param latitude
+         * @return
+         */
+        public Builder latitude(Double latitude) {
+            this.latitude = latitude;
             return this;
         }
 

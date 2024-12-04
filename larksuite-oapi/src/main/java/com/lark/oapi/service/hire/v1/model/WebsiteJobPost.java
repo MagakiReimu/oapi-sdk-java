@@ -197,6 +197,18 @@ public class WebsiteJobPost {
     @SerializedName("address_list")
     private CommonAddress[] addressList;
     /**
+     * 职级序列
+     * <p> 示例值：
+     */
+    @SerializedName("job_sequence_info")
+    private IdNameObject jobSequenceInfo;
+    /**
+     * 币种，可参考招聘「枚举常量介绍」
+     * <p> 示例值：1
+     */
+    @SerializedName("currency")
+    private Integer currency;
+    /**
      * 目标专业
      * <p> 示例值：
      */
@@ -348,6 +360,16 @@ public class WebsiteJobPost {
          * <p> 示例值：
          */
         this.addressList = builder.addressList;
+        /**
+         * 职级序列
+         * <p> 示例值：
+         */
+        this.jobSequenceInfo = builder.jobSequenceInfo;
+        /**
+         * 币种，可参考招聘「枚举常量介绍」
+         * <p> 示例值：1
+         */
+        this.currency = builder.currency;
         /**
          * 目标专业
          * <p> 示例值：
@@ -583,6 +605,22 @@ public class WebsiteJobPost {
         this.addressList = addressList;
     }
 
+    public IdNameObject getJobSequenceInfo() {
+        return this.jobSequenceInfo;
+    }
+
+    public void setJobSequenceInfo(IdNameObject jobSequenceInfo) {
+        this.jobSequenceInfo = jobSequenceInfo;
+    }
+
+    public Integer getCurrency() {
+        return this.currency;
+    }
+
+    public void setCurrency(Integer currency) {
+        this.currency = currency;
+    }
+
     public IdNameObject[] getTargetMajorList() {
         return this.targetMajorList;
     }
@@ -732,6 +770,16 @@ public class WebsiteJobPost {
          * <p> 示例值：
          */
         private CommonAddress[] addressList;
+        /**
+         * 职级序列
+         * <p> 示例值：
+         */
+        private IdNameObject jobSequenceInfo;
+        /**
+         * 币种，可参考招聘「枚举常量介绍」
+         * <p> 示例值：1
+         */
+        private Integer currency;
         /**
          * 目标专业
          * <p> 示例值：
@@ -1098,6 +1146,32 @@ public class WebsiteJobPost {
          */
         public Builder addressList(CommonAddress[] addressList) {
             this.addressList = addressList;
+            return this;
+        }
+
+
+        /**
+         * 职级序列
+         * <p> 示例值：
+         *
+         * @param jobSequenceInfo
+         * @return
+         */
+        public Builder jobSequenceInfo(IdNameObject jobSequenceInfo) {
+            this.jobSequenceInfo = jobSequenceInfo;
+            return this;
+        }
+
+
+        /**
+         * 币种，可参考招聘「枚举常量介绍」
+         * <p> 示例值：1
+         *
+         * @param currency
+         * @return
+         */
+        public Builder currency(Integer currency) {
+            this.currency = currency;
             return this;
         }
 

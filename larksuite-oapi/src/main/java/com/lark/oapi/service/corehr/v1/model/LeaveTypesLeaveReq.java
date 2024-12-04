@@ -126,7 +126,6 @@ public class LeaveTypesLeaveReq {
         private String status; // 假期类型状态（不传则为全部）;;可选值有：;;- 1：已启用;;- 2：已停用
         private String userIdType; // 用户 ID 类型
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
@@ -189,6 +188,7 @@ public class LeaveTypesLeaveReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public LeaveTypesLeaveReq build() {
             return new LeaveTypesLeaveReq(this);

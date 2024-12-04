@@ -110,6 +110,7 @@ public class QuerySpreadsheetSheetFilterViewReq {
             return this;
         }
 
+
         public QuerySpreadsheetSheetFilterViewReq build() {
             return new QuerySpreadsheetSheetFilterViewReq(this);
         }

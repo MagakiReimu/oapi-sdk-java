@@ -76,6 +76,7 @@ public class GetImageReq {
             return this;
         }
 
+
         public GetImageReq build() {
             return new GetImageReq(this);
         }

@@ -75,6 +75,7 @@ public class RecoverApplicationReq {
             return this;
         }
 
+
         public RecoverApplicationReq build() {
             return new RecoverApplicationReq(this);
         }

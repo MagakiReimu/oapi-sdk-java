@@ -147,7 +147,6 @@ public class QueryTaskReq {
         private String topic; // 需要查询的任务分组主题，如「待办」、「已办」等
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 分页大小
          * <p> 示例值：100
@@ -235,6 +234,7 @@ public class QueryTaskReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public QueryTaskReq build() {
             return new QueryTaskReq(this);

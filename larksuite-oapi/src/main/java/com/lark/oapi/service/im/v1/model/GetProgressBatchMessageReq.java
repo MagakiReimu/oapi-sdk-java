@@ -76,6 +76,7 @@ public class GetProgressBatchMessageReq {
             return this;
         }
 
+
         public GetProgressBatchMessageReq build() {
             return new GetProgressBatchMessageReq(this);
         }

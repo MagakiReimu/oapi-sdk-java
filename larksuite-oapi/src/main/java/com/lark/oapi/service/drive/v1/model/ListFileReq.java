@@ -168,7 +168,6 @@ public class ListFileReq {
         private String direction; // 升序降序
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 分页大小
          * <p> 示例值：10
@@ -281,6 +280,7 @@ public class ListFileReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public ListFileReq build() {
             return new ListFileReq(this);

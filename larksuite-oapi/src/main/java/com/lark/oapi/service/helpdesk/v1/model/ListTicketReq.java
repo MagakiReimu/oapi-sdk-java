@@ -399,7 +399,6 @@ public class ListTicketReq {
         private Integer updateTimeStart; // 搜索条件: 工单修改起始时间 ms (也需要填上update_time_end)
         private Integer updateTimeEnd; // 搜索条件: 工单修改结束时间 ms(也需要填上update_time_start)
 
-
         /**
          * 搜索条件：工单ID
          * <p> 示例值：123456
@@ -619,6 +618,7 @@ public class ListTicketReq {
             this.updateTimeEnd = updateTimeEnd;
             return this;
         }
+
 
         public ListTicketReq build() {
             return new ListTicketReq(this);

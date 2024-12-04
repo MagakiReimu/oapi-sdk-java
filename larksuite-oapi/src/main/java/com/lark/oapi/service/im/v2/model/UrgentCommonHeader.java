@@ -29,20 +29,55 @@ import com.lark.oapi.core.utils.Strings;
 import com.lark.oapi.core.response.BaseResponse;
 
 public class UrgentCommonHeader {
-
+    /**
+     * botid，不对外展示
+     * <p> 示例值：0
+     */
+    @SerializedName("bot_id")
+    private String botId;
 
     // builder 开始
     public UrgentCommonHeader() {
     }
 
     public UrgentCommonHeader(Builder builder) {
+        /**
+         * botid，不对外展示
+         * <p> 示例值：0
+         */
+        this.botId = builder.botId;
     }
 
     public static Builder newBuilder() {
         return new Builder();
     }
 
+    public String getBotId() {
+        return this.botId;
+    }
+
+    public void setBotId(String botId) {
+        this.botId = botId;
+    }
+
     public static class Builder {
+        /**
+         * botid，不对外展示
+         * <p> 示例值：0
+         */
+        private String botId;
+
+        /**
+         * botid，不对外展示
+         * <p> 示例值：0
+         *
+         * @param botId
+         * @return
+         */
+        public Builder botId(String botId) {
+            this.botId = botId;
+            return this;
+        }
 
 
         public UrgentCommonHeader build() {

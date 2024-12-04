@@ -126,7 +126,6 @@ public class SearchFaqReq {
         private String pageToken; // 分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该page_token 获取查询结果
         private Integer pageSize; // 分页大小
 
-
         /**
          * 搜索query;，query内容如果不是英文，包含中文空格等有两种编码策略：1. url编码 2. base64编码，同时加上base64=true参数
          * <p> 示例值：wifi
@@ -177,6 +176,7 @@ public class SearchFaqReq {
             this.pageSize = pageSize;
             return this;
         }
+
 
         public SearchFaqReq build() {
             return new SearchFaqReq(this);

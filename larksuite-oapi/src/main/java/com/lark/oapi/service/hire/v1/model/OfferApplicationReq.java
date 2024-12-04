@@ -239,6 +239,7 @@ public class OfferApplicationReq {
             return this;
         }
 
+
         public OfferApplicationReq build() {
             return new OfferApplicationReq(this);
         }

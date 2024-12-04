@@ -105,7 +105,6 @@ public class BatchDepartmentReq {
         private String departmentIdType; // 说明请求中department_id_list参数所使用的部门ID类型
         private String userIdType; // 指定调用结果中包含用户（如部门leader）关联的用户ID类型
 
-
         /**
          * 查询的部门ID列表，类型需要与department_id_type对应
          * <p> 示例值：
@@ -167,6 +166,7 @@ public class BatchDepartmentReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public BatchDepartmentReq build() {
             return new BatchDepartmentReq(this);

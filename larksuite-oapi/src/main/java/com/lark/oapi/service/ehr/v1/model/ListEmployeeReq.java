@@ -231,7 +231,6 @@ public class ListEmployeeReq {
         private String pageToken; // 分页标记，第一次请求可以不填，表示从头开始遍历；分页查询返回结果has_more 为 true 时会同时返回新的 page_token, 下次遍历可使用该返回的 page_token 获取更多信息。
         private Integer pageSize; // 分页大小，取值范围 1~100，默认 10
 
-
         /**
          * 返回数据类型
          * <p> 示例值：basic
@@ -371,6 +370,7 @@ public class ListEmployeeReq {
             this.pageSize = pageSize;
             return this;
         }
+
 
         public ListEmployeeReq build() {
             return new ListEmployeeReq(this);

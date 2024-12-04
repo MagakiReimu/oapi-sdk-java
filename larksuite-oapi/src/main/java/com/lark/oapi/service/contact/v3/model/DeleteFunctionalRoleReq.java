@@ -76,6 +76,7 @@ public class DeleteFunctionalRoleReq {
             return this;
         }
 
+
         public DeleteFunctionalRoleReq build() {
             return new DeleteFunctionalRoleReq(this);
         }

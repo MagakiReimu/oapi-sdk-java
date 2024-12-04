@@ -120,6 +120,7 @@ public class GetExchangeBindingReq {
             return this;
         }
 
+
         public GetExchangeBindingReq build() {
             return new GetExchangeBindingReq(this);
         }

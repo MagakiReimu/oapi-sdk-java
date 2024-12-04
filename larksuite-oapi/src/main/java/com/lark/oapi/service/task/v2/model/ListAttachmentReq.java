@@ -147,7 +147,6 @@ public class ListAttachmentReq {
         private String resourceId; // 附件归属资源的id，配合resource_type使用。例如希望获取任务的附件，需要设置 resource_type为task， resource_id为任务的全局唯一ID
         private String userIdType; // 表示user的ID的类型，支持open_id, user_id, union_id
 
-
         /**
          * 分页大小
          * <p> 示例值：50
@@ -211,6 +210,7 @@ public class ListAttachmentReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListAttachmentReq build() {
             return new ListAttachmentReq(this);

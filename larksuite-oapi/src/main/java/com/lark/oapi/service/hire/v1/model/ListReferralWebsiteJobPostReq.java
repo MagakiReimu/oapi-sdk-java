@@ -167,7 +167,6 @@ public class ListReferralWebsiteJobPostReq {
         private String departmentIdType; // 此次调用中使用的部门 ID 的类型
         private String jobLevelIdType; // 此次调用中使用的「职级 ID」的类型
 
-
         /**
          * 招聘流程类型
          * <p> 示例值：1
@@ -244,6 +243,7 @@ public class ListReferralWebsiteJobPostReq {
             this.jobLevelIdType = jobLevelIdType;
             return this;
         }
+
 
         public ListReferralWebsiteJobPostReq build() {
             return new ListReferralWebsiteJobPostReq(this);

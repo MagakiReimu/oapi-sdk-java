@@ -107,6 +107,7 @@ public class GetTalentReq {
             return this;
         }
 
+
         public GetTalentReq build() {
             return new GetTalentReq(this);
         }

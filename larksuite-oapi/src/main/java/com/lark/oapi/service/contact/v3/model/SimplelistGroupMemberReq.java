@@ -231,6 +231,7 @@ public class SimplelistGroupMemberReq {
             return this;
         }
 
+
         public SimplelistGroupMemberReq build() {
             return new SimplelistGroupMemberReq(this);
         }

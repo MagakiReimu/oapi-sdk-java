@@ -47,6 +47,12 @@ public class CreateBizEntityTagRelationReqBody {
      */
     @SerializedName("tag_ids")
     private String[] tagIds;
+    /**
+     * 机器人id
+     * <p> 示例值：71616xxxx
+     */
+    @SerializedName("bot_id")
+    private String botId;
 
     // builder 开始
     public CreateBizEntityTagRelationReqBody() {
@@ -68,6 +74,11 @@ public class CreateBizEntityTagRelationReqBody {
          * <p> 示例值：
          */
         this.tagIds = builder.tagIds;
+        /**
+         * 机器人id
+         * <p> 示例值：71616xxxx
+         */
+        this.botId = builder.botId;
     }
 
     public static Builder newBuilder() {
@@ -98,6 +109,14 @@ public class CreateBizEntityTagRelationReqBody {
         this.tagIds = tagIds;
     }
 
+    public String getBotId() {
+        return this.botId;
+    }
+
+    public void setBotId(String botId) {
+        this.botId = botId;
+    }
+
     public static class Builder {
         /**
          * 业务类型
@@ -114,6 +133,11 @@ public class CreateBizEntityTagRelationReqBody {
          * <p> 示例值：
          */
         private String[] tagIds;
+        /**
+         * 机器人id
+         * <p> 示例值：71616xxxx
+         */
+        private String botId;
 
         /**
          * 业务类型
@@ -162,6 +186,19 @@ public class CreateBizEntityTagRelationReqBody {
          */
         public Builder tagIds(String[] tagIds) {
             this.tagIds = tagIds;
+            return this;
+        }
+
+
+        /**
+         * 机器人id
+         * <p> 示例值：71616xxxx
+         *
+         * @param botId
+         * @return
+         */
+        public Builder botId(String botId) {
+            this.botId = botId;
             return this;
         }
 

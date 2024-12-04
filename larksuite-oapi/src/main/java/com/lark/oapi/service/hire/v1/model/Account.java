@@ -46,6 +46,12 @@ public class Account {
      */
     @SerializedName("status")
     private Integer status;
+    /**
+     * 账号绑定的内推人信息
+     * <p> 示例值：
+     */
+    @SerializedName("referrer")
+    private AccountReferrer referrer;
 
     // builder 开始
     public Account() {
@@ -67,6 +73,11 @@ public class Account {
          * <p> 示例值：1
          */
         this.status = builder.status;
+        /**
+         * 账号绑定的内推人信息
+         * <p> 示例值：
+         */
+        this.referrer = builder.referrer;
     }
 
     public static Builder newBuilder() {
@@ -97,6 +108,14 @@ public class Account {
         this.status = status;
     }
 
+    public AccountReferrer getReferrer() {
+        return this.referrer;
+    }
+
+    public void setReferrer(AccountReferrer referrer) {
+        this.referrer = referrer;
+    }
+
     public static class Builder {
         /**
          * 账户ID
@@ -113,6 +132,11 @@ public class Account {
          * <p> 示例值：1
          */
         private Integer status;
+        /**
+         * 账号绑定的内推人信息
+         * <p> 示例值：
+         */
+        private AccountReferrer referrer;
 
         /**
          * 账户ID
@@ -149,6 +173,19 @@ public class Account {
          */
         public Builder status(Integer status) {
             this.status = status;
+            return this;
+        }
+
+
+        /**
+         * 账号绑定的内推人信息
+         * <p> 示例值：
+         *
+         * @param referrer
+         * @return
+         */
+        public Builder referrer(AccountReferrer referrer) {
+            this.referrer = referrer;
             return this;
         }
 

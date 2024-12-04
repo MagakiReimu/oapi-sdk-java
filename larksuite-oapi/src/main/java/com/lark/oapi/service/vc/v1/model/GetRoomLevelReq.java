@@ -76,6 +76,7 @@ public class GetRoomLevelReq {
             return this;
         }
 
+
         public GetRoomLevelReq build() {
             return new GetRoomLevelReq(this);
         }

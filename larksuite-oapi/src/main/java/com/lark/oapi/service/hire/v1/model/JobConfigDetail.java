@@ -53,6 +53,12 @@ public class JobConfigDetail {
     @SerializedName("assessment_template")
     private IdNameObject assessmentTemplate;
     /**
+     * 职位 ID
+     * <p> 示例值：6960663240925956574
+     */
+    @SerializedName("id")
+    private String id;
+    /**
      * 建议面试官列表，可多位
      * <p> 示例值：
      */
@@ -126,6 +132,11 @@ public class JobConfigDetail {
          * <p> 示例值：
          */
         this.assessmentTemplate = builder.assessmentTemplate;
+        /**
+         * 职位 ID
+         * <p> 示例值：6960663240925956574
+         */
+        this.id = builder.id;
         /**
          * 建议面试官列表，可多位
          * <p> 示例值：
@@ -202,6 +213,14 @@ public class JobConfigDetail {
 
     public void setAssessmentTemplate(IdNameObject assessmentTemplate) {
         this.assessmentTemplate = assessmentTemplate;
+    }
+
+    public String getId() {
+        return this.id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public JobConfigInterviewRound[] getInterviewRoundList() {
@@ -289,6 +308,11 @@ public class JobConfigDetail {
          * <p> 示例值：
          */
         private IdNameObject assessmentTemplate;
+        /**
+         * 职位 ID
+         * <p> 示例值：6960663240925956574
+         */
+        private String id;
         /**
          * 建议面试官列表，可多位
          * <p> 示例值：
@@ -378,6 +402,19 @@ public class JobConfigDetail {
          */
         public Builder assessmentTemplate(IdNameObject assessmentTemplate) {
             this.assessmentTemplate = assessmentTemplate;
+            return this;
+        }
+
+
+        /**
+         * 职位 ID
+         * <p> 示例值：6960663240925956574
+         *
+         * @param id
+         * @return
+         */
+        public Builder id(String id) {
+            this.id = id;
             return this;
         }
 

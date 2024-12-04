@@ -156,6 +156,12 @@ public class SearchEmployeeReqBody {
     @SerializedName("email_address_list")
     private String[] emailAddressList;
     /**
+     * 老People user_name查询，仅支持字节租户
+     * <p> 示例值：zhangsan
+     */
+    @SerializedName("user_name")
+    private String userName;
+    /**
      * 部门 ID 列表，查询属于该部门及下级部门的员工
      * <p> 示例值：
      */
@@ -290,6 +296,11 @@ public class SearchEmployeeReqBody {
          * <p> 示例值：
          */
         this.emailAddressList = builder.emailAddressList;
+        /**
+         * 老People user_name查询，仅支持字节租户
+         * <p> 示例值：zhangsan
+         */
+        this.userName = builder.userName;
         /**
          * 部门 ID 列表，查询属于该部门及下级部门的员工
          * <p> 示例值：
@@ -484,6 +495,14 @@ public class SearchEmployeeReqBody {
         this.emailAddressList = emailAddressList;
     }
 
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public String[] getDepartmentIdListIncludeSub() {
         return this.departmentIdListIncludeSub;
     }
@@ -622,6 +641,11 @@ public class SearchEmployeeReqBody {
          * <p> 示例值：
          */
         private String[] emailAddressList;
+        /**
+         * 老People user_name查询，仅支持字节租户
+         * <p> 示例值：zhangsan
+         */
+        private String userName;
         /**
          * 部门 ID 列表，查询属于该部门及下级部门的员工
          * <p> 示例值：
@@ -924,6 +948,19 @@ public class SearchEmployeeReqBody {
          */
         public Builder emailAddressList(String[] emailAddressList) {
             this.emailAddressList = emailAddressList;
+            return this;
+        }
+
+
+        /**
+         * 老People user_name查询，仅支持字节租户
+         * <p> 示例值：zhangsan
+         *
+         * @param userName
+         * @return
+         */
+        public Builder userName(String userName) {
+            this.userName = userName;
             return this;
         }
 

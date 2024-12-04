@@ -41,6 +41,12 @@ public class FilterInfo {
      */
     @SerializedName("conditions")
     private Condition[] conditions;
+    /**
+     * 下一级筛选条件
+     * <p> 示例值：
+     */
+    @SerializedName("children")
+    private ChildrenFilter[] children;
 
     // builder 开始
     public FilterInfo() {
@@ -57,6 +63,11 @@ public class FilterInfo {
          * <p> 示例值：
          */
         this.conditions = builder.conditions;
+        /**
+         * 下一级筛选条件
+         * <p> 示例值：
+         */
+        this.children = builder.children;
     }
 
     public static Builder newBuilder() {
@@ -79,6 +90,14 @@ public class FilterInfo {
         this.conditions = conditions;
     }
 
+    public ChildrenFilter[] getChildren() {
+        return this.children;
+    }
+
+    public void setChildren(ChildrenFilter[] children) {
+        this.children = children;
+    }
+
     public static class Builder {
         /**
          * 条件逻辑连接词
@@ -90,6 +109,11 @@ public class FilterInfo {
          * <p> 示例值：
          */
         private Condition[] conditions;
+        /**
+         * 下一级筛选条件
+         * <p> 示例值：
+         */
+        private ChildrenFilter[] children;
 
         /**
          * 条件逻辑连接词
@@ -125,6 +149,19 @@ public class FilterInfo {
          */
         public Builder conditions(Condition[] conditions) {
             this.conditions = conditions;
+            return this;
+        }
+
+
+        /**
+         * 下一级筛选条件
+         * <p> 示例值：
+         *
+         * @param children
+         * @return
+         */
+        public Builder children(ChildrenFilter[] children) {
+            this.children = children;
             return this;
         }
 

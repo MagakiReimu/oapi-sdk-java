@@ -141,6 +141,7 @@ public class GetMessageResourceReq {
             return this;
         }
 
+
         public GetMessageResourceReq build() {
             return new GetMessageResourceReq(this);
         }

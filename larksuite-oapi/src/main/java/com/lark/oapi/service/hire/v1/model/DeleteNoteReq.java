@@ -73,6 +73,7 @@ public class DeleteNoteReq {
             return this;
         }
 
+
         public DeleteNoteReq build() {
             return new DeleteNoteReq(this);
         }

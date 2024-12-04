@@ -76,6 +76,7 @@ public class DeleteEmployeeTypeEnumReq {
             return this;
         }
 
+
         public DeleteEmployeeTypeEnumReq build() {
             return new DeleteEmployeeTypeEnumReq(this);
         }

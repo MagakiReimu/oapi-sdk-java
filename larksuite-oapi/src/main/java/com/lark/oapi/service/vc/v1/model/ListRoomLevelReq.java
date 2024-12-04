@@ -105,7 +105,6 @@ public class ListRoomLevelReq {
         private Integer pageSize; // 分页尺寸大小
         private String pageToken; // 分页标记,第一次请求不填,表示从头开始遍历.下次遍历可采用该 page_token获取查询结果
 
-
         /**
          * 层级ID，当需要获取租户下层级列表时，room_level_id可传空
          * <p> 示例值：omb_4ad1a2c7a2fbc5fc9570f38456931293
@@ -143,6 +142,7 @@ public class ListRoomLevelReq {
             this.pageToken = pageToken;
             return this;
         }
+
 
         public ListRoomLevelReq build() {
             return new ListRoomLevelReq(this);

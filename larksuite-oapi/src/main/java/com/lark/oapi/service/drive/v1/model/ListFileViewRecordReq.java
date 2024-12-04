@@ -231,6 +231,7 @@ public class ListFileViewRecordReq {
             return this;
         }
 
+
         public ListFileViewRecordReq build() {
             return new ListFileViewRecordReq(this);
         }

@@ -76,6 +76,7 @@ public class GetPreHireReq {
             return this;
         }
 
+
         public GetPreHireReq build() {
             return new GetPreHireReq(this);
         }

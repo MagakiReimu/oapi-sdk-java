@@ -141,6 +141,7 @@ public class ListAppSkillReq {
             return this;
         }
 
+
         public ListAppSkillReq build() {
             return new ListAppSkillReq(this);
         }

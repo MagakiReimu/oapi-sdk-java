@@ -84,7 +84,6 @@ public class BatchGetTmpDownloadUrlMediaReq {
         private String[] fileTokens; // 文件标识符列表
         private String extra; // 拓展信息(可选)
 
-
         /**
          * 文件标识符列表
          * <p> 示例值：boxcnrHpsg1QDqXAAAyachabcef
@@ -109,6 +108,7 @@ public class BatchGetTmpDownloadUrlMediaReq {
             this.extra = extra;
             return this;
         }
+
 
         public BatchGetTmpDownloadUrlMediaReq build() {
             return new BatchGetTmpDownloadUrlMediaReq(this);

@@ -168,7 +168,6 @@ public class ListCommentReq {
         private String direction; // 返回数据的排序方式
         private String userIdType; // 表示user的ID的类型，支持open_id, user_id, union_id
 
-
         /**
          * 分页大小
          * <p> 示例值：50
@@ -257,6 +256,7 @@ public class ListCommentReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListCommentReq build() {
             return new ListCommentReq(this);

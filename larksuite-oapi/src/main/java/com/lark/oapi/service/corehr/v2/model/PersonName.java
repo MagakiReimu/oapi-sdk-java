@@ -42,13 +42,13 @@ public class PersonName {
     @SerializedName("local_first_name")
     private String localFirstName;
     /**
-     * 国家 / 地区
+     * 国家 / 地区;- 详细信息可通过[查询国家/地区信息](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/corehr-v2/basic_info-country_region/search)接口查询获得
      * <p> 示例值：6862995757234914824
      */
     @SerializedName("country_region_id")
     private String countryRegionId;
     /**
-     * 姓名类型
+     * 姓名类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：name_type
      * <p> 示例值：
      */
     @SerializedName("name_type")
@@ -66,7 +66,7 @@ public class PersonName {
     @SerializedName("local_primary_2")
     private String localPrimary2;
     /**
-     * 补充姓名类型
+     * 补充姓名类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：additional_name_type
      * <p> 示例值：
      */
     @SerializedName("additional_name_type")
@@ -120,19 +120,19 @@ public class PersonName {
     @SerializedName("secondary")
     private String secondary;
     /**
-     * 尊称
-     * <p> 示例值：王大帅
-     */
-    @SerializedName("social")
-    private Enum social;
-    /**
      * 婚后姓氏
      * <p> 示例值：王
      */
     @SerializedName("tertiary")
     private String tertiary;
     /**
-     * 头衔
+     * 尊称;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：social
+     * <p> 示例值：王大帅
+     */
+    @SerializedName("social")
+    private Enum social;
+    /**
+     * 头衔;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：title
      * <p> 示例值：王
      */
     @SerializedName("title")
@@ -184,12 +184,12 @@ public class PersonName {
          */
         this.localFirstName = builder.localFirstName;
         /**
-         * 国家 / 地区
+         * 国家 / 地区;- 详细信息可通过[查询国家/地区信息](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/corehr-v2/basic_info-country_region/search)接口查询获得
          * <p> 示例值：6862995757234914824
          */
         this.countryRegionId = builder.countryRegionId;
         /**
-         * 姓名类型
+         * 姓名类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：name_type
          * <p> 示例值：
          */
         this.nameType = builder.nameType;
@@ -204,7 +204,7 @@ public class PersonName {
          */
         this.localPrimary2 = builder.localPrimary2;
         /**
-         * 补充姓名类型
+         * 补充姓名类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：additional_name_type
          * <p> 示例值：
          */
         this.additionalNameType = builder.additionalNameType;
@@ -249,17 +249,17 @@ public class PersonName {
          */
         this.secondary = builder.secondary;
         /**
-         * 尊称
-         * <p> 示例值：王大帅
-         */
-        this.social = builder.social;
-        /**
          * 婚后姓氏
          * <p> 示例值：王
          */
         this.tertiary = builder.tertiary;
         /**
-         * 头衔
+         * 尊称;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：social
+         * <p> 示例值：王大帅
+         */
+        this.social = builder.social;
+        /**
+         * 头衔;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：title
          * <p> 示例值：王
          */
         this.title = builder.title;
@@ -414,20 +414,20 @@ public class PersonName {
         this.secondary = secondary;
     }
 
-    public Enum getSocial() {
-        return this.social;
-    }
-
-    public void setSocial(Enum social) {
-        this.social = social;
-    }
-
     public String getTertiary() {
         return this.tertiary;
     }
 
     public void setTertiary(String tertiary) {
         this.tertiary = tertiary;
+    }
+
+    public Enum getSocial() {
+        return this.social;
+    }
+
+    public void setSocial(Enum social) {
+        this.social = social;
     }
 
     public Enum getTitle() {
@@ -490,12 +490,12 @@ public class PersonName {
          */
         private String localFirstName;
         /**
-         * 国家 / 地区
+         * 国家 / 地区;- 详细信息可通过[查询国家/地区信息](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/corehr-v2/basic_info-country_region/search)接口查询获得
          * <p> 示例值：6862995757234914824
          */
         private String countryRegionId;
         /**
-         * 姓名类型
+         * 姓名类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：name_type
          * <p> 示例值：
          */
         private Enum nameType;
@@ -510,7 +510,7 @@ public class PersonName {
          */
         private String localPrimary2;
         /**
-         * 补充姓名类型
+         * 补充姓名类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：additional_name_type
          * <p> 示例值：
          */
         private Enum additionalNameType;
@@ -555,17 +555,17 @@ public class PersonName {
          */
         private String secondary;
         /**
-         * 尊称
-         * <p> 示例值：王大帅
-         */
-        private Enum social;
-        /**
          * 婚后姓氏
          * <p> 示例值：王
          */
         private String tertiary;
         /**
-         * 头衔
+         * 尊称;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：social
+         * <p> 示例值：王大帅
+         */
+        private Enum social;
+        /**
+         * 头衔;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：title
          * <p> 示例值：王
          */
         private Enum title;
@@ -622,7 +622,7 @@ public class PersonName {
 
 
         /**
-         * 国家 / 地区
+         * 国家 / 地区;- 详细信息可通过[查询国家/地区信息](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/corehr-v2/basic_info-country_region/search)接口查询获得
          * <p> 示例值：6862995757234914824
          *
          * @param countryRegionId
@@ -635,7 +635,7 @@ public class PersonName {
 
 
         /**
-         * 姓名类型
+         * 姓名类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：name_type
          * <p> 示例值：
          *
          * @param nameType
@@ -674,7 +674,7 @@ public class PersonName {
 
 
         /**
-         * 补充姓名类型
+         * 补充姓名类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：additional_name_type
          * <p> 示例值：
          *
          * @param additionalNameType
@@ -791,19 +791,6 @@ public class PersonName {
 
 
         /**
-         * 尊称
-         * <p> 示例值：王大帅
-         *
-         * @param social
-         * @return
-         */
-        public Builder social(Enum social) {
-            this.social = social;
-            return this;
-        }
-
-
-        /**
          * 婚后姓氏
          * <p> 示例值：王
          *
@@ -817,7 +804,20 @@ public class PersonName {
 
 
         /**
-         * 头衔
+         * 尊称;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：social
+         * <p> 示例值：王大帅
+         *
+         * @param social
+         * @return
+         */
+        public Builder social(Enum social) {
+            this.social = social;
+            return this;
+        }
+
+
+        /**
+         * 头衔;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：person_name;  - custom_api_name：title
          * <p> 示例值：王
          *
          * @param title

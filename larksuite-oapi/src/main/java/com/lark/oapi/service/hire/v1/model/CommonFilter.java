@@ -52,6 +52,12 @@ public class CommonFilter {
      */
     @SerializedName("range_filter")
     private RangeFilter rangeFilter;
+    /**
+     * 筛选项值列表
+     * <p> 示例值：
+     */
+    @SerializedName("user_id_list")
+    private String[] userIdList;
 
     // builder 开始
     public CommonFilter() {
@@ -78,6 +84,11 @@ public class CommonFilter {
          * <p> 示例值：
          */
         this.rangeFilter = builder.rangeFilter;
+        /**
+         * 筛选项值列表
+         * <p> 示例值：
+         */
+        this.userIdList = builder.userIdList;
     }
 
     public static Builder newBuilder() {
@@ -116,6 +127,14 @@ public class CommonFilter {
         this.rangeFilter = rangeFilter;
     }
 
+    public String[] getUserIdList() {
+        return this.userIdList;
+    }
+
+    public void setUserIdList(String[] userIdList) {
+        this.userIdList = userIdList;
+    }
+
     public static class Builder {
         /**
          * 筛选项 key
@@ -137,6 +156,11 @@ public class CommonFilter {
          * <p> 示例值：
          */
         private RangeFilter rangeFilter;
+        /**
+         * 筛选项值列表
+         * <p> 示例值：
+         */
+        private String[] userIdList;
 
         /**
          * 筛选项 key
@@ -186,6 +210,19 @@ public class CommonFilter {
          */
         public Builder rangeFilter(RangeFilter rangeFilter) {
             this.rangeFilter = rangeFilter;
+            return this;
+        }
+
+
+        /**
+         * 筛选项值列表
+         * <p> 示例值：
+         *
+         * @param userIdList
+         * @return
+         */
+        public Builder userIdList(String[] userIdList) {
+            this.userIdList = userIdList;
             return this;
         }
 

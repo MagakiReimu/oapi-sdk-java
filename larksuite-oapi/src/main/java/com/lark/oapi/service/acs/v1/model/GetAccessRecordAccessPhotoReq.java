@@ -76,6 +76,7 @@ public class GetAccessRecordAccessPhotoReq {
             return this;
         }
 
+
         public GetAccessRecordAccessPhotoReq build() {
             return new GetAccessRecordAccessPhotoReq(this);
         }

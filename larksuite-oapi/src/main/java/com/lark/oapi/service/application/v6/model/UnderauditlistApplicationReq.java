@@ -126,7 +126,6 @@ public class UnderauditlistApplicationReq {
         private Integer pageSize; // 分页大小
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 指定返回的语言
          * <p> 示例值：zh_cn
@@ -201,6 +200,7 @@ public class UnderauditlistApplicationReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public UnderauditlistApplicationReq build() {
             return new UnderauditlistApplicationReq(this);

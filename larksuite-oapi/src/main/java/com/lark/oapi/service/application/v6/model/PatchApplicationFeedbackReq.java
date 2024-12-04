@@ -229,6 +229,7 @@ public class PatchApplicationFeedbackReq {
             return this;
         }
 
+
         public PatchApplicationFeedbackReq build() {
             return new PatchApplicationFeedbackReq(this);
         }

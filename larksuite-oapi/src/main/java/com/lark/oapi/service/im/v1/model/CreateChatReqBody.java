@@ -90,6 +90,12 @@ public class CreateChatReqBody {
     @SerializedName("chat_type")
     private String chatType;
     /**
+     * 是否是外部群
+     * <p> 示例值：false
+     */
+    @SerializedName("external")
+    private Boolean external;
+    /**
      * 入群消息可见性;;**可选值有**：;- `only_owner`：仅群主和管理员可见;- `all_members`：所有成员可见;- `not_anyone`：任何人均不可见
      * <p> 示例值：all_members
      */
@@ -107,6 +113,18 @@ public class CreateChatReqBody {
      */
     @SerializedName("membership_approval")
     private String membershipApproval;
+    /**
+     * 群标签
+     * <p> 示例值：
+     */
+    @SerializedName("labels")
+    private String[] labels;
+    /**
+     * 群快捷组件列表
+     * <p> 示例值：
+     */
+    @SerializedName("toolkit_ids")
+    private String[] toolkitIds;
     /**
      * 防泄密模式设置
      * <p> 示例值：
@@ -131,6 +149,18 @@ public class CreateChatReqBody {
      */
     @SerializedName("edit_permission")
     private String editPermission;
+    /**
+     * 群标签
+     * <p> 示例值：
+     */
+    @SerializedName("chat_tags")
+    private String[] chatTags;
+    /**
+     * 谁可以管理置顶
+     * <p> 示例值：all_members
+     */
+    @SerializedName("pin_manage_setting")
+    private String pinManageSetting;
     /**
      * 隐藏群成员人数设置
      * <p> 示例值：all_members
@@ -194,6 +224,11 @@ public class CreateChatReqBody {
          */
         this.chatType = builder.chatType;
         /**
+         * 是否是外部群
+         * <p> 示例值：false
+         */
+        this.external = builder.external;
+        /**
          * 入群消息可见性;;**可选值有**：;- `only_owner`：仅群主和管理员可见;- `all_members`：所有成员可见;- `not_anyone`：任何人均不可见
          * <p> 示例值：all_members
          */
@@ -208,6 +243,16 @@ public class CreateChatReqBody {
          * <p> 示例值：no_approval_required
          */
         this.membershipApproval = builder.membershipApproval;
+        /**
+         * 群标签
+         * <p> 示例值：
+         */
+        this.labels = builder.labels;
+        /**
+         * 群快捷组件列表
+         * <p> 示例值：
+         */
+        this.toolkitIds = builder.toolkitIds;
         /**
          * 防泄密模式设置
          * <p> 示例值：
@@ -228,6 +273,16 @@ public class CreateChatReqBody {
          * <p> 示例值：all_members
          */
         this.editPermission = builder.editPermission;
+        /**
+         * 群标签
+         * <p> 示例值：
+         */
+        this.chatTags = builder.chatTags;
+        /**
+         * 谁可以管理置顶
+         * <p> 示例值：all_members
+         */
+        this.pinManageSetting = builder.pinManageSetting;
         /**
          * 隐藏群成员人数设置
          * <p> 示例值：all_members
@@ -319,6 +374,14 @@ public class CreateChatReqBody {
         this.chatType = chatType;
     }
 
+    public Boolean getExternal() {
+        return this.external;
+    }
+
+    public void setExternal(Boolean external) {
+        this.external = external;
+    }
+
     public String getJoinMessageVisibility() {
         return this.joinMessageVisibility;
     }
@@ -341,6 +404,22 @@ public class CreateChatReqBody {
 
     public void setMembershipApproval(String membershipApproval) {
         this.membershipApproval = membershipApproval;
+    }
+
+    public String[] getLabels() {
+        return this.labels;
+    }
+
+    public void setLabels(String[] labels) {
+        this.labels = labels;
+    }
+
+    public String[] getToolkitIds() {
+        return this.toolkitIds;
+    }
+
+    public void setToolkitIds(String[] toolkitIds) {
+        this.toolkitIds = toolkitIds;
     }
 
     public RestrictedModeSetting getRestrictedModeSetting() {
@@ -373,6 +452,22 @@ public class CreateChatReqBody {
 
     public void setEditPermission(String editPermission) {
         this.editPermission = editPermission;
+    }
+
+    public String[] getChatTags() {
+        return this.chatTags;
+    }
+
+    public void setChatTags(String[] chatTags) {
+        this.chatTags = chatTags;
+    }
+
+    public String getPinManageSetting() {
+        return this.pinManageSetting;
+    }
+
+    public void setPinManageSetting(String pinManageSetting) {
+        this.pinManageSetting = pinManageSetting;
     }
 
     public String getHideMemberCountSetting() {
@@ -435,6 +530,11 @@ public class CreateChatReqBody {
          */
         private String chatType;
         /**
+         * 是否是外部群
+         * <p> 示例值：false
+         */
+        private Boolean external;
+        /**
          * 入群消息可见性;;**可选值有**：;- `only_owner`：仅群主和管理员可见;- `all_members`：所有成员可见;- `not_anyone`：任何人均不可见
          * <p> 示例值：all_members
          */
@@ -449,6 +549,16 @@ public class CreateChatReqBody {
          * <p> 示例值：no_approval_required
          */
         private String membershipApproval;
+        /**
+         * 群标签
+         * <p> 示例值：
+         */
+        private String[] labels;
+        /**
+         * 群快捷组件列表
+         * <p> 示例值：
+         */
+        private String[] toolkitIds;
         /**
          * 防泄密模式设置
          * <p> 示例值：
@@ -469,6 +579,16 @@ public class CreateChatReqBody {
          * <p> 示例值：all_members
          */
         private String editPermission;
+        /**
+         * 群标签
+         * <p> 示例值：
+         */
+        private String[] chatTags;
+        /**
+         * 谁可以管理置顶
+         * <p> 示例值：all_members
+         */
+        private String pinManageSetting;
         /**
          * 隐藏群成员人数设置
          * <p> 示例值：all_members
@@ -618,6 +738,19 @@ public class CreateChatReqBody {
 
 
         /**
+         * 是否是外部群
+         * <p> 示例值：false
+         *
+         * @param external
+         * @return
+         */
+        public Builder external(Boolean external) {
+            this.external = external;
+            return this;
+        }
+
+
+        /**
          * 入群消息可见性;;**可选值有**：;- `only_owner`：仅群主和管理员可见;- `all_members`：所有成员可见;- `not_anyone`：任何人均不可见
          * <p> 示例值：all_members
          *
@@ -652,6 +785,32 @@ public class CreateChatReqBody {
          */
         public Builder membershipApproval(String membershipApproval) {
             this.membershipApproval = membershipApproval;
+            return this;
+        }
+
+
+        /**
+         * 群标签
+         * <p> 示例值：
+         *
+         * @param labels
+         * @return
+         */
+        public Builder labels(String[] labels) {
+            this.labels = labels;
+            return this;
+        }
+
+
+        /**
+         * 群快捷组件列表
+         * <p> 示例值：
+         *
+         * @param toolkitIds
+         * @return
+         */
+        public Builder toolkitIds(String[] toolkitIds) {
+            this.toolkitIds = toolkitIds;
             return this;
         }
 
@@ -740,6 +899,44 @@ public class CreateChatReqBody {
          */
         public Builder editPermission(com.lark.oapi.service.im.v1.enums.CreateChatEditPermissiontypeEnum editPermission) {
             this.editPermission = editPermission.getValue();
+            return this;
+        }
+
+
+        /**
+         * 群标签
+         * <p> 示例值：
+         *
+         * @param chatTags
+         * @return
+         */
+        public Builder chatTags(String[] chatTags) {
+            this.chatTags = chatTags;
+            return this;
+        }
+
+
+        /**
+         * 谁可以管理置顶
+         * <p> 示例值：all_members
+         *
+         * @param pinManageSetting
+         * @return
+         */
+        public Builder pinManageSetting(String pinManageSetting) {
+            this.pinManageSetting = pinManageSetting;
+            return this;
+        }
+
+        /**
+         * 谁可以管理置顶
+         * <p> 示例值：all_members
+         *
+         * @param pinManageSetting {@link com.lark.oapi.service.im.v1.enums.CreateChatPinManageSettingTypeEnum}
+         * @return
+         */
+        public Builder pinManageSetting(com.lark.oapi.service.im.v1.enums.CreateChatPinManageSettingTypeEnum pinManageSetting) {
+            this.pinManageSetting = pinManageSetting.getValue();
             return this;
         }
 

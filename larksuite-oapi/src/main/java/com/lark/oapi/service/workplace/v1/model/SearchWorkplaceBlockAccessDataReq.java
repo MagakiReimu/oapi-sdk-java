@@ -146,7 +146,6 @@ public class SearchWorkplaceBlockAccessDataReq {
         private String pageToken; // 用于标记当前请求的分页标记，将返回以当前分页标记开始，往后 page_size 个元素。第一次访问接口的时候不需要传。
         private String blockId; // 小组件id
 
-
         /**
          * 数据检索开始时间，精确到日。格式yyyy-MM-dd。
          * <p> 示例值：2023-02-01
@@ -210,6 +209,7 @@ public class SearchWorkplaceBlockAccessDataReq {
             this.blockId = blockId;
             return this;
         }
+
 
         public SearchWorkplaceBlockAccessDataReq build() {
             return new SearchWorkplaceBlockAccessDataReq(this);

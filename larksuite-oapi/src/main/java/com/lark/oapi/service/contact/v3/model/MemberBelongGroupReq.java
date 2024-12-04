@@ -147,7 +147,6 @@ public class MemberBelongGroupReq {
         private Integer pageSize; // 分页查询大小
         private String pageToken; // 分页查询Token
 
-
         /**
          * 成员ID
          * <p> 示例值：u287xj12
@@ -235,6 +234,7 @@ public class MemberBelongGroupReq {
             this.pageToken = pageToken;
             return this;
         }
+
 
         public MemberBelongGroupReq build() {
             return new MemberBelongGroupReq(this);

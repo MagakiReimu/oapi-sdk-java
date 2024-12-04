@@ -76,6 +76,7 @@ public class DeleteBatchMessageReq {
             return this;
         }
 
+
         public DeleteBatchMessageReq build() {
             return new DeleteBatchMessageReq(this);
         }

@@ -95,6 +95,12 @@ public class SubmitV2OffboardingReqBody {
      */
     @SerializedName("retain_account")
     private Boolean retainAccount;
+    /**
+     * 编制随人员一起调整
+     * <p> 示例值：false
+     */
+    @SerializedName("is_transfer_with_workforce")
+    private Boolean isTransferWithWorkforce;
 
     // builder 开始
     public SubmitV2OffboardingReqBody() {
@@ -156,6 +162,11 @@ public class SubmitV2OffboardingReqBody {
          * <p> 示例值：false
          */
         this.retainAccount = builder.retainAccount;
+        /**
+         * 编制随人员一起调整
+         * <p> 示例值：false
+         */
+        this.isTransferWithWorkforce = builder.isTransferWithWorkforce;
     }
 
     public static Builder newBuilder() {
@@ -250,6 +261,14 @@ public class SubmitV2OffboardingReqBody {
         this.retainAccount = retainAccount;
     }
 
+    public Boolean getIsTransferWithWorkforce() {
+        return this.isTransferWithWorkforce;
+    }
+
+    public void setIsTransferWithWorkforce(Boolean isTransferWithWorkforce) {
+        this.isTransferWithWorkforce = isTransferWithWorkforce;
+    }
+
     public static class Builder {
         /**
          * 离职方式
@@ -306,6 +325,11 @@ public class SubmitV2OffboardingReqBody {
          * <p> 示例值：false
          */
         private Boolean retainAccount;
+        /**
+         * 编制随人员一起调整
+         * <p> 示例值：false
+         */
+        private Boolean isTransferWithWorkforce;
 
         /**
          * 离职方式
@@ -458,6 +482,19 @@ public class SubmitV2OffboardingReqBody {
          */
         public Builder retainAccount(Boolean retainAccount) {
             this.retainAccount = retainAccount;
+            return this;
+        }
+
+
+        /**
+         * 编制随人员一起调整
+         * <p> 示例值：false
+         *
+         * @param isTransferWithWorkforce
+         * @return
+         */
+        public Builder isTransferWithWorkforce(Boolean isTransferWithWorkforce) {
+            this.isTransferWithWorkforce = isTransferWithWorkforce;
             return this;
         }
 

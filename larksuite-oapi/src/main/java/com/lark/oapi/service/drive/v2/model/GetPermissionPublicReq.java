@@ -120,6 +120,7 @@ public class GetPermissionPublicReq {
             return this;
         }
 
+
         public GetPermissionPublicReq build() {
             return new GetPermissionPublicReq(this);
         }

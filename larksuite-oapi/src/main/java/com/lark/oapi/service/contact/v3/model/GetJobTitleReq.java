@@ -76,6 +76,7 @@ public class GetJobTitleReq {
             return this;
         }
 
+
         public GetJobTitleReq build() {
             return new GetJobTitleReq(this);
         }

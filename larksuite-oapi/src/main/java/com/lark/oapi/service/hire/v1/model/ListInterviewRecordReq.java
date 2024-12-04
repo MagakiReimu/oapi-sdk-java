@@ -125,7 +125,6 @@ public class ListInterviewRecordReq {
         private String[] ids; // 面试评价ID列表，使用该筛选项时不会分页
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 分页大小
          * <p> 示例值：10
@@ -176,6 +175,7 @@ public class ListInterviewRecordReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListInterviewRecordReq build() {
             return new ListInterviewRecordReq(this);

@@ -192,6 +192,12 @@ public class JobData {
     @SerializedName("service_company")
     private String serviceCompany;
     /**
+     * 自定义字段
+     * <p> 示例值：
+     */
+    @SerializedName("custom_fields")
+    private CustomFieldData[] customFields;
+    /**
      * 创建时间
      * <p> 示例值：2020-05-02 00:00:00
      */
@@ -350,6 +356,11 @@ public class JobData {
          * <p> 示例值：6890452208593372680
          */
         this.serviceCompany = builder.serviceCompany;
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         */
+        this.customFields = builder.customFields;
         /**
          * 创建时间
          * <p> 示例值：2020-05-02 00:00:00
@@ -587,6 +598,14 @@ public class JobData {
         this.serviceCompany = serviceCompany;
     }
 
+    public CustomFieldData[] getCustomFields() {
+        return this.customFields;
+    }
+
+    public void setCustomFields(CustomFieldData[] customFields) {
+        this.customFields = customFields;
+    }
+
     public String getCreatedAt() {
         return this.createdAt;
     }
@@ -747,6 +766,11 @@ public class JobData {
          * <p> 示例值：6890452208593372680
          */
         private String serviceCompany;
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         */
+        private CustomFieldData[] customFields;
         /**
          * 创建时间
          * <p> 示例值：2020-05-02 00:00:00
@@ -1110,6 +1134,19 @@ public class JobData {
          */
         public Builder serviceCompany(String serviceCompany) {
             this.serviceCompany = serviceCompany;
+            return this;
+        }
+
+
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         *
+         * @param customFields
+         * @return
+         */
+        public Builder customFields(CustomFieldData[] customFields) {
+            this.customFields = customFields;
             return this;
         }
 

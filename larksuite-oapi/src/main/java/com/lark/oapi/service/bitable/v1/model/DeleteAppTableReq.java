@@ -110,6 +110,7 @@ public class DeleteAppTableReq {
             return this;
         }
 
+
         public DeleteAppTableReq build() {
             return new DeleteAppTableReq(this);
         }

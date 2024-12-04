@@ -189,7 +189,6 @@ public class ListMessageReq {
         private Integer pageSize; // 分页大小
         private String pageToken; // 分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该page_token 获取查询结果
 
-
         /**
          * 容器类型 ，目前可选值仅有"chat"，包含单聊（p2p）和群聊（group）
          * <p> 示例值：chat
@@ -291,6 +290,7 @@ public class ListMessageReq {
             this.pageToken = pageToken;
             return this;
         }
+
 
         public ListMessageReq build() {
             return new ListMessageReq(this);

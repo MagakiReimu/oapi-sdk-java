@@ -125,7 +125,6 @@ public class ListNoteReq {
         private String talentId; // 人才ID
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 每页限制, 每页最大不超过100
          * <p> 示例值：10
@@ -176,6 +175,7 @@ public class ListNoteReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListNoteReq build() {
             return new ListNoteReq(this);

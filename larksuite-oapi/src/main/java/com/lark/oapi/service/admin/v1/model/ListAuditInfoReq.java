@@ -315,7 +315,6 @@ public class ListAuditInfoReq {
         private String objectValue; // 过滤操作对象: 操作对象ID. 与object_type配合使用
         private String extFilterObjectByCcmToken; // 增强过滤操作对象: 操作对象ID，支持云文档侧泛token过滤。会覆盖object_type和object_value查询条件
 
-
         /**
          * 此次调用中使用的用户ID的类型
          * <p> 示例值：user_id
@@ -519,6 +518,7 @@ public class ListAuditInfoReq {
             this.extFilterObjectByCcmToken = extFilterObjectByCcmToken;
             return this;
         }
+
 
         public ListAuditInfoReq build() {
             return new ListAuditInfoReq(this);

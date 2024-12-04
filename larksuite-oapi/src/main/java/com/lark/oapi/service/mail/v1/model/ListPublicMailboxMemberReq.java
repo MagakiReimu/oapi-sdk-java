@@ -186,6 +186,7 @@ public class ListPublicMailboxMemberReq {
             return this;
         }
 
+
         public ListPublicMailboxMemberReq build() {
             return new ListPublicMailboxMemberReq(this);
         }

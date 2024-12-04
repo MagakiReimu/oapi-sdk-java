@@ -60,6 +60,12 @@ public class CostCenter {
     @SerializedName("co_area_code")
     private String coAreaCode;
     /**
+     * 公司编码
+     * <p> 示例值：1001
+     */
+    @SerializedName("company_code")
+    private String companyCode;
+    /**
      * 利润中心编码
      * <p> 示例值：100101
      */
@@ -126,6 +132,11 @@ public class CostCenter {
          * <p> 示例值：HL01
          */
         this.coAreaCode = builder.coAreaCode;
+        /**
+         * 公司编码
+         * <p> 示例值：1001
+         */
+        this.companyCode = builder.companyCode;
         /**
          * 利润中心编码
          * <p> 示例值：100101
@@ -202,6 +213,14 @@ public class CostCenter {
         this.coAreaCode = coAreaCode;
     }
 
+    public String getCompanyCode() {
+        return this.companyCode;
+    }
+
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
+    }
+
     public String getProfitCenterCode() {
         return this.profitCenterCode;
     }
@@ -276,6 +295,11 @@ public class CostCenter {
          * <p> 示例值：HL01
          */
         private String coAreaCode;
+        /**
+         * 公司编码
+         * <p> 示例值：1001
+         */
+        private String companyCode;
         /**
          * 利润中心编码
          * <p> 示例值：100101
@@ -368,6 +392,19 @@ public class CostCenter {
          */
         public Builder coAreaCode(String coAreaCode) {
             this.coAreaCode = coAreaCode;
+            return this;
+        }
+
+
+        /**
+         * 公司编码
+         * <p> 示例值：1001
+         *
+         * @param companyCode
+         * @return
+         */
+        public Builder companyCode(String companyCode) {
+            this.companyCode = companyCode;
             return this;
         }
 

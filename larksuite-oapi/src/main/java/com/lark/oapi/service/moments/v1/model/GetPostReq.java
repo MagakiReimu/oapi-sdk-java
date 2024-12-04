@@ -120,6 +120,7 @@ public class GetPostReq {
             return this;
         }
 
+
         public GetPostReq build() {
             return new GetPostReq(this);
         }

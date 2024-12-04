@@ -147,7 +147,6 @@ public class ListNationalIdTypeReq {
         private String code; // 证件类型编码
         private String countryRegionId; // 国家地区ID
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：1231231987
@@ -211,6 +210,7 @@ public class ListNationalIdTypeReq {
             this.countryRegionId = countryRegionId;
             return this;
         }
+
 
         public ListNationalIdTypeReq build() {
             return new ListNationalIdTypeReq(this);

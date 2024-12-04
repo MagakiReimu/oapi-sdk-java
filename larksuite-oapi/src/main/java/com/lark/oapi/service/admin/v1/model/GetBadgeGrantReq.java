@@ -199,6 +199,7 @@ public class GetBadgeGrantReq {
             return this;
         }
 
+
         public GetBadgeGrantReq build() {
             return new GetBadgeGrantReq(this);
         }

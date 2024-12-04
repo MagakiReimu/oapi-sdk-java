@@ -90,6 +90,12 @@ public class UserEvent {
     @SerializedName("mobile")
     private String mobile;
     /**
+     * 手机号码可见性，true 为可见，false 为不可见，目前默认为 true。不可见时，组织员工将无法查看该员工的手机号码
+     * <p> 示例值：false
+     */
+    @SerializedName("mobile_visible")
+    private Boolean mobileVisible;
+    /**
      * 性别
      * <p> 示例值：1
      */
@@ -144,6 +150,12 @@ public class UserEvent {
     @SerializedName("join_time")
     private Integer joinTime;
     /**
+     * 是否是租户管理员
+     * <p> 示例值：false
+     */
+    @SerializedName("is_tenant_manager")
+    private Boolean isTenantManager;
+    /**
      * 工号
      * <p> 示例值：e33ggbyz
      */
@@ -156,11 +168,23 @@ public class UserEvent {
     @SerializedName("employee_type")
     private Integer employeeType;
     /**
+     * 职位信息
+     * <p> 示例值：
+     */
+    @SerializedName("positions")
+    private UserPosition[] positions;
+    /**
      * 用户排序信息
      * <p> 示例值：
      */
     @SerializedName("orders")
     private UserOrder[] orders;
+    /**
+     * 时区
+     * <p> 示例值：
+     */
+    @SerializedName("time_zone")
+    private String timeZone;
     /**
      * 自定义属性
      * <p> 示例值：
@@ -242,6 +266,11 @@ public class UserEvent {
          */
         this.mobile = builder.mobile;
         /**
+         * 手机号码可见性，true 为可见，false 为不可见，目前默认为 true。不可见时，组织员工将无法查看该员工的手机号码
+         * <p> 示例值：false
+         */
+        this.mobileVisible = builder.mobileVisible;
+        /**
          * 性别
          * <p> 示例值：1
          */
@@ -287,6 +316,11 @@ public class UserEvent {
          */
         this.joinTime = builder.joinTime;
         /**
+         * 是否是租户管理员
+         * <p> 示例值：false
+         */
+        this.isTenantManager = builder.isTenantManager;
+        /**
          * 工号
          * <p> 示例值：e33ggbyz
          */
@@ -297,10 +331,20 @@ public class UserEvent {
          */
         this.employeeType = builder.employeeType;
         /**
+         * 职位信息
+         * <p> 示例值：
+         */
+        this.positions = builder.positions;
+        /**
          * 用户排序信息
          * <p> 示例值：
          */
         this.orders = builder.orders;
+        /**
+         * 时区
+         * <p> 示例值：
+         */
+        this.timeZone = builder.timeZone;
         /**
          * 自定义属性
          * <p> 示例值：
@@ -407,6 +451,14 @@ public class UserEvent {
         this.mobile = mobile;
     }
 
+    public Boolean getMobileVisible() {
+        return this.mobileVisible;
+    }
+
+    public void setMobileVisible(Boolean mobileVisible) {
+        this.mobileVisible = mobileVisible;
+    }
+
     public Integer getGender() {
         return this.gender;
     }
@@ -479,6 +531,14 @@ public class UserEvent {
         this.joinTime = joinTime;
     }
 
+    public Boolean getIsTenantManager() {
+        return this.isTenantManager;
+    }
+
+    public void setIsTenantManager(Boolean isTenantManager) {
+        this.isTenantManager = isTenantManager;
+    }
+
     public String getEmployeeNo() {
         return this.employeeNo;
     }
@@ -495,12 +555,28 @@ public class UserEvent {
         this.employeeType = employeeType;
     }
 
+    public UserPosition[] getPositions() {
+        return this.positions;
+    }
+
+    public void setPositions(UserPosition[] positions) {
+        this.positions = positions;
+    }
+
     public UserOrder[] getOrders() {
         return this.orders;
     }
 
     public void setOrders(UserOrder[] orders) {
         this.orders = orders;
+    }
+
+    public String getTimeZone() {
+        return this.timeZone;
+    }
+
+    public void setTimeZone(String timeZone) {
+        this.timeZone = timeZone;
     }
 
     public UserCustomAttr[] getCustomAttrs() {
@@ -587,6 +663,11 @@ public class UserEvent {
          */
         private String mobile;
         /**
+         * 手机号码可见性，true 为可见，false 为不可见，目前默认为 true。不可见时，组织员工将无法查看该员工的手机号码
+         * <p> 示例值：false
+         */
+        private Boolean mobileVisible;
+        /**
          * 性别
          * <p> 示例值：1
          */
@@ -632,6 +713,11 @@ public class UserEvent {
          */
         private Integer joinTime;
         /**
+         * 是否是租户管理员
+         * <p> 示例值：false
+         */
+        private Boolean isTenantManager;
+        /**
          * 工号
          * <p> 示例值：e33ggbyz
          */
@@ -642,10 +728,20 @@ public class UserEvent {
          */
         private Integer employeeType;
         /**
+         * 职位信息
+         * <p> 示例值：
+         */
+        private UserPosition[] positions;
+        /**
          * 用户排序信息
          * <p> 示例值：
          */
         private UserOrder[] orders;
+        /**
+         * 时区
+         * <p> 示例值：
+         */
+        private String timeZone;
         /**
          * 自定义属性
          * <p> 示例值：
@@ -798,6 +894,19 @@ public class UserEvent {
 
 
         /**
+         * 手机号码可见性，true 为可见，false 为不可见，目前默认为 true。不可见时，组织员工将无法查看该员工的手机号码
+         * <p> 示例值：false
+         *
+         * @param mobileVisible
+         * @return
+         */
+        public Builder mobileVisible(Boolean mobileVisible) {
+            this.mobileVisible = mobileVisible;
+            return this;
+        }
+
+
+        /**
          * 性别
          * <p> 示例值：1
          *
@@ -927,6 +1036,19 @@ public class UserEvent {
 
 
         /**
+         * 是否是租户管理员
+         * <p> 示例值：false
+         *
+         * @param isTenantManager
+         * @return
+         */
+        public Builder isTenantManager(Boolean isTenantManager) {
+            this.isTenantManager = isTenantManager;
+            return this;
+        }
+
+
+        /**
          * 工号
          * <p> 示例值：e33ggbyz
          *
@@ -965,6 +1087,19 @@ public class UserEvent {
 
 
         /**
+         * 职位信息
+         * <p> 示例值：
+         *
+         * @param positions
+         * @return
+         */
+        public Builder positions(UserPosition[] positions) {
+            this.positions = positions;
+            return this;
+        }
+
+
+        /**
          * 用户排序信息
          * <p> 示例值：
          *
@@ -973,6 +1108,19 @@ public class UserEvent {
          */
         public Builder orders(UserOrder[] orders) {
             this.orders = orders;
+            return this;
+        }
+
+
+        /**
+         * 时区
+         * <p> 示例值：
+         *
+         * @param timeZone
+         * @return
+         */
+        public Builder timeZone(String timeZone) {
+            this.timeZone = timeZone;
             return this;
         }
 

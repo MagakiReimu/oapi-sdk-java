@@ -147,7 +147,6 @@ public class ListCustomFieldReq {
         private String resourceType; // 资源类型，如提供表示仅查询特定资源下的自定义字段。目前只支持tasklist。
         private String resourceId; // 要查询自定义字段的归属resource_id
 
-
         /**
          * 分页大小
          * <p> 示例值：50
@@ -223,6 +222,7 @@ public class ListCustomFieldReq {
             this.resourceId = resourceId;
             return this;
         }
+
 
         public ListCustomFieldReq build() {
             return new ListCustomFieldReq(this);

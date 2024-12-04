@@ -84,6 +84,12 @@ public class ArchiveDetail {
     @SerializedName("effective_date")
     private String effectiveDate;
     /**
+     * 失效时间
+     * <p> 示例值：2022-10-24
+     */
+    @SerializedName("expiration_date")
+    private String expirationDate;
+    /**
      * 薪级薪等ID
      * <p> 示例值：12342313
      */
@@ -152,6 +158,11 @@ public class ArchiveDetail {
          * <p> 示例值：2022-10-23
          */
         this.effectiveDate = builder.effectiveDate;
+        /**
+         * 失效时间
+         * <p> 示例值：2022-10-24
+         */
+        this.expirationDate = builder.expirationDate;
         /**
          * 薪级薪等ID
          * <p> 示例值：12342313
@@ -245,6 +256,14 @@ public class ArchiveDetail {
         this.effectiveDate = effectiveDate;
     }
 
+    public String getExpirationDate() {
+        return this.expirationDate;
+    }
+
+    public void setExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+    }
+
     public String getSalaryLevelId() {
         return this.salaryLevelId;
     }
@@ -315,6 +334,11 @@ public class ArchiveDetail {
          * <p> 示例值：2022-10-23
          */
         private String effectiveDate;
+        /**
+         * 失效时间
+         * <p> 示例值：2022-10-24
+         */
+        private String expirationDate;
         /**
          * 薪级薪等ID
          * <p> 示例值：12342313
@@ -444,6 +468,19 @@ public class ArchiveDetail {
          */
         public Builder effectiveDate(String effectiveDate) {
             this.effectiveDate = effectiveDate;
+            return this;
+        }
+
+
+        /**
+         * 失效时间
+         * <p> 示例值：2022-10-24
+         *
+         * @param expirationDate
+         * @return
+         */
+        public Builder expirationDate(String expirationDate) {
+            this.expirationDate = expirationDate;
             return this;
         }
 

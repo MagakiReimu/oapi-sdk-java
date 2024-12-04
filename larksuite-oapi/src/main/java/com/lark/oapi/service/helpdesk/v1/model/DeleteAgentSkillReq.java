@@ -76,6 +76,7 @@ public class DeleteAgentSkillReq {
             return this;
         }
 
+
         public DeleteAgentSkillReq build() {
             return new DeleteAgentSkillReq(this);
         }

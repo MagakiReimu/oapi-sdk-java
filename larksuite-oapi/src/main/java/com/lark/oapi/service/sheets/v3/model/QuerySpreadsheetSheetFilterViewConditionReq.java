@@ -144,6 +144,7 @@ public class QuerySpreadsheetSheetFilterViewConditionReq {
             return this;
         }
 
+
         public QuerySpreadsheetSheetFilterViewConditionReq build() {
             return new QuerySpreadsheetSheetFilterViewConditionReq(this);
         }

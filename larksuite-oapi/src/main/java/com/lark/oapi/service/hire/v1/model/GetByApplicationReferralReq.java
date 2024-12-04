@@ -83,7 +83,6 @@ public class GetByApplicationReferralReq {
         private String applicationId; // 投递的 ID
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 投递的 ID
          * <p> 示例值：6134134355464633
@@ -108,6 +107,7 @@ public class GetByApplicationReferralReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public GetByApplicationReferralReq build() {
             return new GetByApplicationReferralReq(this);

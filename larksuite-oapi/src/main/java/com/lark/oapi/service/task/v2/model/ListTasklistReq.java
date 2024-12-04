@@ -105,7 +105,6 @@ public class ListTasklistReq {
         private String pageToken; // 分页标记。第一次请求不填该参数，表示从头开始查询；查询结果若还有更多数据时会同时返回新的 page_token。使用page_token重新调用本接口可以获取下一页数据。
         private String userIdType; // 表示user的ID的类型，支持open_id, user_id, union_id
 
-
         /**
          * 每页返回的清单数量
          * <p> 示例值：50
@@ -143,6 +142,7 @@ public class ListTasklistReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListTasklistReq build() {
             return new ListTasklistReq(this);

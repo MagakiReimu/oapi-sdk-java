@@ -84,6 +84,13 @@ public class PersonInfoBt {
     @SerializedName("date_of_birth")
     private String dateOfBirth;
     /**
+     * 国籍 ID
+     * - 可通过[查询国籍信息](/ssl:ttdoc/uAjLw4CM/ukTMukTMukTM/corehr-v2/basic_info-nationality/search)查询
+     * <p> 示例值：6862995757234914811
+     */
+    @SerializedName("nationality_id")
+    private String nationalityId;
+    /**
      * 国籍 ID;- 可通过[查询国籍信息](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/corehr-v2/basic_info-nationality/search)查询
      * <p> 示例值：6862995757234914821
      */
@@ -381,6 +388,12 @@ public class PersonInfoBt {
          */
         this.dateOfBirth = builder.dateOfBirth;
         /**
+         * 国籍 ID
+         - 可通过[查询国籍信息](/ssl:ttdoc/uAjLw4CM/ukTMukTMukTM/corehr-v2/basic_info-nationality/search)查询
+         * <p> 示例值：6862995757234914811
+         */
+        this.nationalityId = builder.nationalityId;
+        /**
          * 国籍 ID;- 可通过[查询国籍信息](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/corehr-v2/basic_info-nationality/search)查询
          * <p> 示例值：6862995757234914821
          */
@@ -661,6 +674,14 @@ public class PersonInfoBt {
 
     public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getNationalityId() {
+        return this.nationalityId;
+    }
+
+    public void setNationalityId(String nationalityId) {
+        this.nationalityId = nationalityId;
     }
 
     public String getNationalityIdV2() {
@@ -1038,6 +1059,12 @@ public class PersonInfoBt {
          */
         private String dateOfBirth;
         /**
+         * 国籍 ID
+         * - 可通过[查询国籍信息](/ssl:ttdoc/uAjLw4CM/ukTMukTMukTM/corehr-v2/basic_info-nationality/search)查询
+         * <p> 示例值：6862995757234914811
+         */
+        private String nationalityId;
+        /**
          * 国籍 ID;- 可通过[查询国籍信息](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/corehr-v2/basic_info-nationality/search)查询
          * <p> 示例值：6862995757234914821
          */
@@ -1356,6 +1383,20 @@ public class PersonInfoBt {
          */
         public Builder dateOfBirth(String dateOfBirth) {
             this.dateOfBirth = dateOfBirth;
+            return this;
+        }
+
+
+        /**
+         * 国籍 ID
+         * - 可通过[查询国籍信息](/ssl:ttdoc/uAjLw4CM/ukTMukTMukTM/corehr-v2/basic_info-nationality/search)查询
+         * <p> 示例值：6862995757234914811
+         *
+         * @param nationalityId
+         * @return
+         */
+        public Builder nationalityId(String nationalityId) {
+            this.nationalityId = nationalityId;
             return this;
         }
 

@@ -76,6 +76,7 @@ public class CancelApproveNotificationReq {
             return this;
         }
 
+
         public CancelApproveNotificationReq build() {
             return new CancelApproveNotificationReq(this);
         }

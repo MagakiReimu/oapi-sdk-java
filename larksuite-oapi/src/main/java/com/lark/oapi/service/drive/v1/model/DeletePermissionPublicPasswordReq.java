@@ -120,6 +120,7 @@ public class DeletePermissionPublicPasswordReq {
             return this;
         }
 
+
         public DeletePermissionPublicPasswordReq build() {
             return new DeletePermissionPublicPasswordReq(this);
         }

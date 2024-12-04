@@ -189,7 +189,6 @@ public class CalendarByScopeLeaveReq {
         private String wkJobFamilyId; // 职务序列
         private String wkCompanyId; // 公司 ID
 
-
         /**
          * 用户所属部门的ID列表
          * <p> 示例值："6722331851580982798"
@@ -279,6 +278,7 @@ public class CalendarByScopeLeaveReq {
             this.wkCompanyId = wkCompanyId;
             return this;
         }
+
 
         public CalendarByScopeLeaveReq build() {
             return new CalendarByScopeLeaveReq(this);

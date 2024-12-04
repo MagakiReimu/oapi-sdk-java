@@ -110,6 +110,7 @@ public class QuerySpreadsheetSheetFloatImageReq {
             return this;
         }
 
+
         public QuerySpreadsheetSheetFloatImageReq build() {
             return new QuerySpreadsheetSheetFloatImageReq(this);
         }

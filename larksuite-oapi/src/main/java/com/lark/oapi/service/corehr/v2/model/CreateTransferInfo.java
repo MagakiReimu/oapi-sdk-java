@@ -205,7 +205,7 @@ public class CreateTransferInfo {
     private String targetCompensationType;
     /**
      * 新任职公司
-     * <p> 示例值：7289005963599693367
+     * <p> 示例值：7289005963599693368
      */
     @SerializedName("target_service_company")
     private String targetServiceCompany;
@@ -221,6 +221,12 @@ public class CreateTransferInfo {
      */
     @SerializedName("target_social_security_city")
     private String targetSocialSecurityCity;
+    /**
+     * 编制随人员一起调整
+     * <p> 示例值：false
+     */
+    @SerializedName("is_transfer_with_workforce")
+    private Boolean isTransferWithWorkforce;
 
     // builder 开始
     public CreateTransferInfo() {
@@ -374,7 +380,7 @@ public class CreateTransferInfo {
         this.targetCompensationType = builder.targetCompensationType;
         /**
          * 新任职公司
-         * <p> 示例值：7289005963599693367
+         * <p> 示例值：7289005963599693368
          */
         this.targetServiceCompany = builder.targetServiceCompany;
         /**
@@ -387,6 +393,11 @@ public class CreateTransferInfo {
          * <p> 示例值：7289005963599693367
          */
         this.targetSocialSecurityCity = builder.targetSocialSecurityCity;
+        /**
+         * 编制随人员一起调整
+         * <p> 示例值：false
+         */
+        this.isTransferWithWorkforce = builder.isTransferWithWorkforce;
     }
 
     public static Builder newBuilder() {
@@ -649,6 +660,14 @@ public class CreateTransferInfo {
         this.targetSocialSecurityCity = targetSocialSecurityCity;
     }
 
+    public Boolean getIsTransferWithWorkforce() {
+        return this.isTransferWithWorkforce;
+    }
+
+    public void setIsTransferWithWorkforce(Boolean isTransferWithWorkforce) {
+        this.isTransferWithWorkforce = isTransferWithWorkforce;
+    }
+
     public static class Builder {
         /**
          * 备注
@@ -797,7 +816,7 @@ public class CreateTransferInfo {
         private String targetCompensationType;
         /**
          * 新任职公司
-         * <p> 示例值：7289005963599693367
+         * <p> 示例值：7289005963599693368
          */
         private String targetServiceCompany;
         /**
@@ -810,6 +829,11 @@ public class CreateTransferInfo {
          * <p> 示例值：7289005963599693367
          */
         private String targetSocialSecurityCity;
+        /**
+         * 编制随人员一起调整
+         * <p> 示例值：false
+         */
+        private Boolean isTransferWithWorkforce;
 
         /**
          * 备注
@@ -1190,7 +1214,7 @@ public class CreateTransferInfo {
 
         /**
          * 新任职公司
-         * <p> 示例值：7289005963599693367
+         * <p> 示例值：7289005963599693368
          *
          * @param targetServiceCompany
          * @return
@@ -1223,6 +1247,19 @@ public class CreateTransferInfo {
          */
         public Builder targetSocialSecurityCity(String targetSocialSecurityCity) {
             this.targetSocialSecurityCity = targetSocialSecurityCity;
+            return this;
+        }
+
+
+        /**
+         * 编制随人员一起调整
+         * <p> 示例值：false
+         *
+         * @param isTransferWithWorkforce
+         * @return
+         */
+        public Builder isTransferWithWorkforce(Boolean isTransferWithWorkforce) {
+            this.isTransferWithWorkforce = isTransferWithWorkforce;
             return this;
         }
 

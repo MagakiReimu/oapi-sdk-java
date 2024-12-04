@@ -126,7 +126,6 @@ public class ListRoomReq {
         private String roomLevelId; // 层级ID，当需要获取租户下会议室列表时，room_level_id可传空
         private String userIdType; // 此次调用中使用的用户ID的类型，默认使用open_id可不填
 
-
         /**
          * 分页大小
          * <p> 示例值：10
@@ -189,6 +188,7 @@ public class ListRoomReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public ListRoomReq build() {
             return new ListRoomReq(this);

@@ -104,7 +104,6 @@ public class GetMinutesReq {
         private String pageToken; // 分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该page_token获取查询结果
         private Integer pageSize; // 分页大小，表示本次请求获取的速记中的语句的最大数量
 
-
         /**
          * 面试ID
          * <p> 示例值：
@@ -142,6 +141,7 @@ public class GetMinutesReq {
             this.pageSize = pageSize;
             return this;
         }
+
 
         public GetMinutesReq build() {
             return new GetMinutesReq(this);

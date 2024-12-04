@@ -341,6 +341,12 @@ public class PreHireEmploymentInfo {
      */
     @SerializedName("background_check_order_status")
     private Enum backgroundCheckOrderStatus;
+    /**
+     * 司龄调整信息
+     * <p> 示例值：
+     */
+    @SerializedName("seniority_adjust_information_list")
+    private PrehireSeniorityAdjustInformationQuery[] seniorityAdjustInformationList;
 
     // builder 开始
     public PreHireEmploymentInfo() {
@@ -607,6 +613,11 @@ public class PreHireEmploymentInfo {
          * <p> 示例值：
          */
         this.backgroundCheckOrderStatus = builder.backgroundCheckOrderStatus;
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         */
+        this.seniorityAdjustInformationList = builder.seniorityAdjustInformationList;
     }
 
     public static Builder newBuilder() {
@@ -1029,6 +1040,14 @@ public class PreHireEmploymentInfo {
         this.backgroundCheckOrderStatus = backgroundCheckOrderStatus;
     }
 
+    public PrehireSeniorityAdjustInformationQuery[] getSeniorityAdjustInformationList() {
+        return this.seniorityAdjustInformationList;
+    }
+
+    public void setSeniorityAdjustInformationList(PrehireSeniorityAdjustInformationQuery[] seniorityAdjustInformationList) {
+        this.seniorityAdjustInformationList = seniorityAdjustInformationList;
+    }
+
     public static class Builder {
         /**
          * 部门 ID ，可以通过【搜索部门信息】接口获取
@@ -1290,6 +1309,11 @@ public class PreHireEmploymentInfo {
          * <p> 示例值：
          */
         private Enum backgroundCheckOrderStatus;
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         */
+        private PrehireSeniorityAdjustInformationQuery[] seniorityAdjustInformationList;
 
         /**
          * 部门 ID ，可以通过【搜索部门信息】接口获取
@@ -1975,6 +1999,19 @@ public class PreHireEmploymentInfo {
          */
         public Builder backgroundCheckOrderStatus(Enum backgroundCheckOrderStatus) {
             this.backgroundCheckOrderStatus = backgroundCheckOrderStatus;
+            return this;
+        }
+
+
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         *
+         * @param seniorityAdjustInformationList
+         * @return
+         */
+        public Builder seniorityAdjustInformationList(PrehireSeniorityAdjustInformationQuery[] seniorityAdjustInformationList) {
+            this.seniorityAdjustInformationList = seniorityAdjustInformationList;
             return this;
         }
 

@@ -147,7 +147,6 @@ public class ListFaqReq {
         private String pageToken; // 分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该page_token 获取查询结果
         private Integer pageSize; // 分页大小
 
-
         /**
          * 知识库分类ID
          * <p> 示例值：6856395522433908739
@@ -211,6 +210,7 @@ public class ListFaqReq {
             this.pageSize = pageSize;
             return this;
         }
+
 
         public ListFaqReq build() {
             return new ListFaqReq(this);

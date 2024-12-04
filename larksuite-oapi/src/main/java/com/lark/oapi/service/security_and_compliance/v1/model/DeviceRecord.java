@@ -143,6 +143,12 @@ public class DeviceRecord {
      */
     @SerializedName("disk_serial_number")
     private String diskSerialNumber;
+    /**
+     * 鸿蒙系统应用匿名标识符
+     * <p> 示例值：84a5a123-04c5-6789-9d71-3706e50f9250
+     */
+    @SerializedName("aaid")
+    private String aaid;
 
     // builder 开始
     public DeviceRecord() {
@@ -244,6 +250,11 @@ public class DeviceRecord {
          * <p> 示例值：CC344362-5990-5A68-8DDD-64A23C99FA0C
          */
         this.diskSerialNumber = builder.diskSerialNumber;
+        /**
+         * 鸿蒙系统应用匿名标识符
+         * <p> 示例值：84a5a123-04c5-6789-9d71-3706e50f9250
+         */
+        this.aaid = builder.aaid;
     }
 
     public static Builder newBuilder() {
@@ -402,6 +413,14 @@ public class DeviceRecord {
         this.diskSerialNumber = diskSerialNumber;
     }
 
+    public String getAaid() {
+        return this.aaid;
+    }
+
+    public void setAaid(String aaid) {
+        this.aaid = aaid;
+    }
+
     public static class Builder {
         /**
          * 设备主键id
@@ -498,6 +517,11 @@ public class DeviceRecord {
          * <p> 示例值：CC344362-5990-5A68-8DDD-64A23C99FA0C
          */
         private String diskSerialNumber;
+        /**
+         * 鸿蒙系统应用匿名标识符
+         * <p> 示例值：84a5a123-04c5-6789-9d71-3706e50f9250
+         */
+        private String aaid;
 
         /**
          * 设备主键id
@@ -790,6 +814,19 @@ public class DeviceRecord {
          */
         public Builder diskSerialNumber(String diskSerialNumber) {
             this.diskSerialNumber = diskSerialNumber;
+            return this;
+        }
+
+
+        /**
+         * 鸿蒙系统应用匿名标识符
+         * <p> 示例值：84a5a123-04c5-6789-9d71-3706e50f9250
+         *
+         * @param aaid
+         * @return
+         */
+        public Builder aaid(String aaid) {
+            this.aaid = aaid;
             return this;
         }
 

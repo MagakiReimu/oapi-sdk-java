@@ -287,6 +287,12 @@ public class OfferInfoUpdate {
      */
     @SerializedName("seniority_date")
     private String seniorityDate;
+    /**
+     * 司龄调整信息
+     * <p> 示例值：
+     */
+    @SerializedName("seniority_adjust_information_list")
+    private PrehireSeniorityAdjustInformationUpdate[] seniorityAdjustInformationList;
 
     // builder 开始
     public OfferInfoUpdate() {
@@ -508,6 +514,11 @@ public class OfferInfoUpdate {
          * <p> 示例值：2022-10-08
          */
         this.seniorityDate = builder.seniorityDate;
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         */
+        this.seniorityAdjustInformationList = builder.seniorityAdjustInformationList;
     }
 
     public static Builder newBuilder() {
@@ -858,6 +869,14 @@ public class OfferInfoUpdate {
         this.seniorityDate = seniorityDate;
     }
 
+    public PrehireSeniorityAdjustInformationUpdate[] getSeniorityAdjustInformationList() {
+        return this.seniorityAdjustInformationList;
+    }
+
+    public void setSeniorityAdjustInformationList(PrehireSeniorityAdjustInformationUpdate[] seniorityAdjustInformationList) {
+        this.seniorityAdjustInformationList = seniorityAdjustInformationList;
+    }
+
     public static class Builder {
         /**
          * 入职日期
@@ -1074,6 +1093,11 @@ public class OfferInfoUpdate {
          * <p> 示例值：2022-10-08
          */
         private String seniorityDate;
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         */
+        private PrehireSeniorityAdjustInformationUpdate[] seniorityAdjustInformationList;
 
         /**
          * 入职日期
@@ -1630,6 +1654,19 @@ public class OfferInfoUpdate {
          */
         public Builder seniorityDate(String seniorityDate) {
             this.seniorityDate = seniorityDate;
+            return this;
+        }
+
+
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         *
+         * @param seniorityAdjustInformationList
+         * @return
+         */
+        public Builder seniorityAdjustInformationList(PrehireSeniorityAdjustInformationUpdate[] seniorityAdjustInformationList) {
+            this.seniorityAdjustInformationList = seniorityAdjustInformationList;
             return this;
         }
 

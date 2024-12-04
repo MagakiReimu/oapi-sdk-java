@@ -60,6 +60,12 @@ public class Dependent {
     @SerializedName("date_of_birth")
     private String dateOfBirth;
     /**
+     * 国籍 ID（该字段待作废，请勿使用）
+     * <p> 示例值：6862995745046267400
+     */
+    @SerializedName("nationality_id")
+    private String nationalityId;
+    /**
      * 国籍 ID，可通过【查询国籍信息】接口查询
      * <p> 示例值：6862995745046267401
      */
@@ -162,6 +168,11 @@ public class Dependent {
          * <p> 示例值：2020-01-01
          */
         this.dateOfBirth = builder.dateOfBirth;
+        /**
+         * 国籍 ID（该字段待作废，请勿使用）
+         * <p> 示例值：6862995745046267400
+         */
+        this.nationalityId = builder.nationalityId;
         /**
          * 国籍 ID，可通过【查询国籍信息】接口查询
          * <p> 示例值：6862995745046267401
@@ -266,6 +277,14 @@ public class Dependent {
 
     public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getNationalityId() {
+        return this.nationalityId;
+    }
+
+    public void setNationalityId(String nationalityId) {
+        this.nationalityId = nationalityId;
     }
 
     public String getNationalityIdV2() {
@@ -391,6 +410,11 @@ public class Dependent {
          */
         private String dateOfBirth;
         /**
+         * 国籍 ID（该字段待作废，请勿使用）
+         * <p> 示例值：6862995745046267400
+         */
+        private String nationalityId;
+        /**
          * 国籍 ID，可通过【查询国籍信息】接口查询
          * <p> 示例值：6862995745046267401
          */
@@ -512,6 +536,19 @@ public class Dependent {
          */
         public Builder dateOfBirth(String dateOfBirth) {
             this.dateOfBirth = dateOfBirth;
+            return this;
+        }
+
+
+        /**
+         * 国籍 ID（该字段待作废，请勿使用）
+         * <p> 示例值：6862995745046267400
+         *
+         * @param nationalityId
+         * @return
+         */
+        public Builder nationalityId(String nationalityId) {
+            this.nationalityId = nationalityId;
             return this;
         }
 

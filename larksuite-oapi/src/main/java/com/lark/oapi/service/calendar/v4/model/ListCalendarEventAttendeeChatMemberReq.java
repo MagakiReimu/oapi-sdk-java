@@ -254,6 +254,7 @@ public class ListCalendarEventAttendeeChatMemberReq {
             return this;
         }
 
+
         public ListCalendarEventAttendeeChatMemberReq build() {
             return new ListCalendarEventAttendeeChatMemberReq(this);
         }

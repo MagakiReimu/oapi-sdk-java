@@ -76,6 +76,7 @@ public class GetLocationReq {
             return this;
         }
 
+
         public GetLocationReq build() {
             return new GetLocationReq(this);
         }

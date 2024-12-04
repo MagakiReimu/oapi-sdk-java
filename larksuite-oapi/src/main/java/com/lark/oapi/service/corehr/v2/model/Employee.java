@@ -252,6 +252,12 @@ public class Employee {
     @SerializedName("email_address")
     private String emailAddress;
     /**
+     * 对应老People user_name字段，仅支持字节租户
+     * <p> 示例值：test
+     */
+    @SerializedName("user_name")
+    private String userName;
+    /**
      * 工作邮箱列表，只有当邮箱满足下面所有条件时，才在个人信息页面可见
      * <p> 示例值：
      */
@@ -402,6 +408,12 @@ public class Employee {
     @SerializedName("time_zone")
     private String timeZone;
     /**
+     * 当前生效的外派记录
+     * <p> 示例值：
+     */
+    @SerializedName("primary_international_assignment")
+    private InternationalAssignment primaryInternationalAssignment;
+    /**
      * 任职公司
      * <p> 示例值：7174374910734141112
      */
@@ -420,11 +432,23 @@ public class Employee {
     @SerializedName("work_shift")
     private Enum workShift;
     /**
+     * 所属人才池
+     * <p> 示例值：
+     */
+    @SerializedName("talent_pool_id_list")
+    private String[] talentPoolIdList;
+    /**
      * 自定义组织
      * <p> 示例值：{"custom_org_02":[{"id":"1","rate":"99"}]}
      */
     @SerializedName("custom_org")
     private String customOrg;
+    /**
+     * 司龄调整信息
+     * <p> 示例值：
+     */
+    @SerializedName("seniority_adjust_information_list")
+    private SeniorityAdjustInformation[] seniorityAdjustInformationList;
 
     // builder 开始
     public Employee() {
@@ -617,6 +641,11 @@ public class Employee {
          */
         this.emailAddress = builder.emailAddress;
         /**
+         * 对应老People user_name字段，仅支持字节租户
+         * <p> 示例值：test
+         */
+        this.userName = builder.userName;
+        /**
          * 工作邮箱列表，只有当邮箱满足下面所有条件时，才在个人信息页面可见
          * <p> 示例值：
          */
@@ -742,6 +771,11 @@ public class Employee {
          */
         this.timeZone = builder.timeZone;
         /**
+         * 当前生效的外派记录
+         * <p> 示例值：
+         */
+        this.primaryInternationalAssignment = builder.primaryInternationalAssignment;
+        /**
          * 任职公司
          * <p> 示例值：7174374910734141112
          */
@@ -757,10 +791,20 @@ public class Employee {
          */
         this.workShift = builder.workShift;
         /**
+         * 所属人才池
+         * <p> 示例值：
+         */
+        this.talentPoolIdList = builder.talentPoolIdList;
+        /**
          * 自定义组织
          * <p> 示例值：{"custom_org_02":[{"id":"1","rate":"99"}]}
          */
         this.customOrg = builder.customOrg;
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         */
+        this.seniorityAdjustInformationList = builder.seniorityAdjustInformationList;
     }
 
     public static Builder newBuilder() {
@@ -1063,6 +1107,14 @@ public class Employee {
         this.emailAddress = emailAddress;
     }
 
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public WorkEmail[] getWorkEmailList() {
         return this.workEmailList;
     }
@@ -1263,6 +1315,14 @@ public class Employee {
         this.timeZone = timeZone;
     }
 
+    public InternationalAssignment getPrimaryInternationalAssignment() {
+        return this.primaryInternationalAssignment;
+    }
+
+    public void setPrimaryInternationalAssignment(InternationalAssignment primaryInternationalAssignment) {
+        this.primaryInternationalAssignment = primaryInternationalAssignment;
+    }
+
     public String getServiceCompany() {
         return this.serviceCompany;
     }
@@ -1287,12 +1347,28 @@ public class Employee {
         this.workShift = workShift;
     }
 
+    public String[] getTalentPoolIdList() {
+        return this.talentPoolIdList;
+    }
+
+    public void setTalentPoolIdList(String[] talentPoolIdList) {
+        this.talentPoolIdList = talentPoolIdList;
+    }
+
     public String getCustomOrg() {
         return this.customOrg;
     }
 
     public void setCustomOrg(String customOrg) {
         this.customOrg = customOrg;
+    }
+
+    public SeniorityAdjustInformation[] getSeniorityAdjustInformationList() {
+        return this.seniorityAdjustInformationList;
+    }
+
+    public void setSeniorityAdjustInformationList(SeniorityAdjustInformation[] seniorityAdjustInformationList) {
+        this.seniorityAdjustInformationList = seniorityAdjustInformationList;
     }
 
     public static class Builder {
@@ -1482,6 +1558,11 @@ public class Employee {
          */
         private String emailAddress;
         /**
+         * 对应老People user_name字段，仅支持字节租户
+         * <p> 示例值：test
+         */
+        private String userName;
+        /**
          * 工作邮箱列表，只有当邮箱满足下面所有条件时，才在个人信息页面可见
          * <p> 示例值：
          */
@@ -1607,6 +1688,11 @@ public class Employee {
          */
         private String timeZone;
         /**
+         * 当前生效的外派记录
+         * <p> 示例值：
+         */
+        private InternationalAssignment primaryInternationalAssignment;
+        /**
          * 任职公司
          * <p> 示例值：7174374910734141112
          */
@@ -1622,10 +1708,20 @@ public class Employee {
          */
         private Enum workShift;
         /**
+         * 所属人才池
+         * <p> 示例值：
+         */
+        private String[] talentPoolIdList;
+        /**
          * 自定义组织
          * <p> 示例值：{"custom_org_02":[{"id":"1","rate":"99"}]}
          */
         private String customOrg;
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         */
+        private SeniorityAdjustInformation[] seniorityAdjustInformationList;
 
         /**
          * 雇佣 ID;- 类型与 user_id_type 一致;- 请使用 employment_id_v2
@@ -2109,6 +2205,19 @@ public class Employee {
 
 
         /**
+         * 对应老People user_name字段，仅支持字节租户
+         * <p> 示例值：test
+         *
+         * @param userName
+         * @return
+         */
+        public Builder userName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+
+
+        /**
          * 工作邮箱列表，只有当邮箱满足下面所有条件时，才在个人信息页面可见
          * <p> 示例值：
          *
@@ -2434,6 +2543,19 @@ public class Employee {
 
 
         /**
+         * 当前生效的外派记录
+         * <p> 示例值：
+         *
+         * @param primaryInternationalAssignment
+         * @return
+         */
+        public Builder primaryInternationalAssignment(InternationalAssignment primaryInternationalAssignment) {
+            this.primaryInternationalAssignment = primaryInternationalAssignment;
+            return this;
+        }
+
+
+        /**
          * 任职公司
          * <p> 示例值：7174374910734141112
          *
@@ -2473,6 +2595,19 @@ public class Employee {
 
 
         /**
+         * 所属人才池
+         * <p> 示例值：
+         *
+         * @param talentPoolIdList
+         * @return
+         */
+        public Builder talentPoolIdList(String[] talentPoolIdList) {
+            this.talentPoolIdList = talentPoolIdList;
+            return this;
+        }
+
+
+        /**
          * 自定义组织
          * <p> 示例值：{"custom_org_02":[{"id":"1","rate":"99"}]}
          *
@@ -2481,6 +2616,19 @@ public class Employee {
          */
         public Builder customOrg(String customOrg) {
             this.customOrg = customOrg;
+            return this;
+        }
+
+
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         *
+         * @param seniorityAdjustInformationList
+         * @return
+         */
+        public Builder seniorityAdjustInformationList(SeniorityAdjustInformation[] seniorityAdjustInformationList) {
+            this.seniorityAdjustInformationList = seniorityAdjustInformationList;
             return this;
         }
 

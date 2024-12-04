@@ -108,6 +108,7 @@ public class DeleteJobDataReq {
             return this;
         }
 
+
         public DeleteJobDataReq build() {
             return new DeleteJobDataReq(this);
         }

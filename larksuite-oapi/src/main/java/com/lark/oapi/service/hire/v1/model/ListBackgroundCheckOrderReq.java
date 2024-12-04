@@ -167,7 +167,6 @@ public class ListBackgroundCheckOrderReq {
         private String updateStartTime; // 最早更新时间，毫秒级时间戳
         private String updateEndTime; // 最晚更新时间，毫秒级时间戳
 
-
         /**
          * 用户 ID 类型
          * <p> 示例值：open_id
@@ -244,6 +243,7 @@ public class ListBackgroundCheckOrderReq {
             this.updateEndTime = updateEndTime;
             return this;
         }
+
 
         public ListBackgroundCheckOrderReq build() {
             return new ListBackgroundCheckOrderReq(this);

@@ -76,6 +76,7 @@ public class DeleteMailgroupReq {
             return this;
         }
 
+
         public DeleteMailgroupReq build() {
             return new DeleteMailgroupReq(this);
         }

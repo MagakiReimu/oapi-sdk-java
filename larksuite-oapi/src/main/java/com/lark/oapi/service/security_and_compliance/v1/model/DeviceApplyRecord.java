@@ -143,6 +143,12 @@ public class DeviceApplyRecord {
      */
     @SerializedName("device_record_id")
     private String deviceRecordId;
+    /**
+     * 鸿蒙系统应用匿名标识符
+     * <p> 示例值：84a5a123-04c5-6789-9d71-3706e50f9250
+     */
+    @SerializedName("aaid")
+    private String aaid;
 
     // builder 开始
     public DeviceApplyRecord() {
@@ -244,6 +250,11 @@ public class DeviceApplyRecord {
          * <p> 示例值：321321311112
          */
         this.deviceRecordId = builder.deviceRecordId;
+        /**
+         * 鸿蒙系统应用匿名标识符
+         * <p> 示例值：84a5a123-04c5-6789-9d71-3706e50f9250
+         */
+        this.aaid = builder.aaid;
     }
 
     public static Builder newBuilder() {
@@ -402,6 +413,14 @@ public class DeviceApplyRecord {
         this.deviceRecordId = deviceRecordId;
     }
 
+    public String getAaid() {
+        return this.aaid;
+    }
+
+    public void setAaid(String aaid) {
+        this.aaid = aaid;
+    }
+
     public static class Builder {
         /**
          * 设备申请单id
@@ -498,6 +517,11 @@ public class DeviceApplyRecord {
          * <p> 示例值：321321311112
          */
         private String deviceRecordId;
+        /**
+         * 鸿蒙系统应用匿名标识符
+         * <p> 示例值：84a5a123-04c5-6789-9d71-3706e50f9250
+         */
+        private String aaid;
 
         /**
          * 设备申请单id
@@ -790,6 +814,19 @@ public class DeviceApplyRecord {
          */
         public Builder deviceRecordId(String deviceRecordId) {
             this.deviceRecordId = deviceRecordId;
+            return this;
+        }
+
+
+        /**
+         * 鸿蒙系统应用匿名标识符
+         * <p> 示例值：84a5a123-04c5-6789-9d71-3706e50f9250
+         *
+         * @param aaid
+         * @return
+         */
+        public Builder aaid(String aaid) {
+            this.aaid = aaid;
             return this;
         }
 

@@ -81,6 +81,12 @@ public class DataAsset {
     @SerializedName("connect_failed_reason")
     private String connectFailedReason;
     /**
+     * 知识导入配置
+     * <p> 示例值：
+     */
+    @SerializedName("import_knowledge_setting")
+    private DataAssetImportKnowledgeSetting importKnowledgeSetting;
+    /**
      * 数据连接类型
      * <p> 示例值：direct
      */
@@ -144,6 +150,11 @@ public class DataAsset {
          * <p> 示例值：连接超时
          */
         this.connectFailedReason = builder.connectFailedReason;
+        /**
+         * 知识导入配置
+         * <p> 示例值：
+         */
+        this.importKnowledgeSetting = builder.importKnowledgeSetting;
         /**
          * 数据连接类型
          * <p> 示例值：direct
@@ -229,6 +240,14 @@ public class DataAsset {
         this.connectFailedReason = connectFailedReason;
     }
 
+    public DataAssetImportKnowledgeSetting getImportKnowledgeSetting() {
+        return this.importKnowledgeSetting;
+    }
+
+    public void setImportKnowledgeSetting(DataAssetImportKnowledgeSetting importKnowledgeSetting) {
+        this.importKnowledgeSetting = importKnowledgeSetting;
+    }
+
     public String getConnectType() {
         return this.connectType;
     }
@@ -294,6 +313,11 @@ public class DataAsset {
          * <p> 示例值：连接超时
          */
         private String connectFailedReason;
+        /**
+         * 知识导入配置
+         * <p> 示例值：
+         */
+        private DataAssetImportKnowledgeSetting importKnowledgeSetting;
         /**
          * 数据连接类型
          * <p> 示例值：direct
@@ -434,6 +458,19 @@ public class DataAsset {
          */
         public Builder connectFailedReason(String connectFailedReason) {
             this.connectFailedReason = connectFailedReason;
+            return this;
+        }
+
+
+        /**
+         * 知识导入配置
+         * <p> 示例值：
+         *
+         * @param importKnowledgeSetting
+         * @return
+         */
+        public Builder importKnowledgeSetting(DataAssetImportKnowledgeSetting importKnowledgeSetting) {
+            this.importKnowledgeSetting = importKnowledgeSetting;
             return this;
         }
 

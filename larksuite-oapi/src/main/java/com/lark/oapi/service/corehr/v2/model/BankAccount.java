@@ -48,11 +48,35 @@ public class BankAccount {
     @SerializedName("account_holder")
     private String accountHolder;
     /**
+     * 银行枚举（该字段待作废，请勿使用）
+     * <p> 示例值：
+     */
+    @SerializedName("bank")
+    private Enum bank;
+    /**
+     * 银行识别码（该字段待作废，请勿使用）
+     * <p> 示例值：1234
+     */
+    @SerializedName("bank_identification_code")
+    private String bankIdentificationCode;
+    /**
      * 支行名称
      * <p> 示例值：中国农业银行支行
      */
     @SerializedName("branch_name")
     private String branchName;
+    /**
+     * 银行 ID（该字段待作废，请勿使用）
+     * <p> 示例值：8
+     */
+    @SerializedName("bank_id")
+    private String bankId;
+    /**
+     * 支行 ID（该字段待作废，请勿使用）
+     * <p> 示例值：12
+     */
+    @SerializedName("branch_id")
+    private String branchId;
     /**
      * 银行 ID，详细信息可通过【查询银行信息】接口查询获得
      * <p> 示例值：MDBH00000001
@@ -147,10 +171,30 @@ public class BankAccount {
          */
         this.accountHolder = builder.accountHolder;
         /**
+         * 银行枚举（该字段待作废，请勿使用）
+         * <p> 示例值：
+         */
+        this.bank = builder.bank;
+        /**
+         * 银行识别码（该字段待作废，请勿使用）
+         * <p> 示例值：1234
+         */
+        this.bankIdentificationCode = builder.bankIdentificationCode;
+        /**
          * 支行名称
          * <p> 示例值：中国农业银行支行
          */
         this.branchName = builder.branchName;
+        /**
+         * 银行 ID（该字段待作废，请勿使用）
+         * <p> 示例值：8
+         */
+        this.bankId = builder.bankId;
+        /**
+         * 支行 ID（该字段待作废，请勿使用）
+         * <p> 示例值：12
+         */
+        this.branchId = builder.branchId;
         /**
          * 银行 ID，详细信息可通过【查询银行信息】接口查询获得
          * <p> 示例值：MDBH00000001
@@ -241,12 +285,44 @@ public class BankAccount {
         this.accountHolder = accountHolder;
     }
 
+    public Enum getBank() {
+        return this.bank;
+    }
+
+    public void setBank(Enum bank) {
+        this.bank = bank;
+    }
+
+    public String getBankIdentificationCode() {
+        return this.bankIdentificationCode;
+    }
+
+    public void setBankIdentificationCode(String bankIdentificationCode) {
+        this.bankIdentificationCode = bankIdentificationCode;
+    }
+
     public String getBranchName() {
         return this.branchName;
     }
 
     public void setBranchName(String branchName) {
         this.branchName = branchName;
+    }
+
+    public String getBankId() {
+        return this.bankId;
+    }
+
+    public void setBankId(String bankId) {
+        this.bankId = bankId;
+    }
+
+    public String getBranchId() {
+        return this.branchId;
+    }
+
+    public void setBranchId(String branchId) {
+        this.branchId = branchId;
     }
 
     public String getBankIdV2() {
@@ -362,10 +438,30 @@ public class BankAccount {
          */
         private String accountHolder;
         /**
+         * 银行枚举（该字段待作废，请勿使用）
+         * <p> 示例值：
+         */
+        private Enum bank;
+        /**
+         * 银行识别码（该字段待作废，请勿使用）
+         * <p> 示例值：1234
+         */
+        private String bankIdentificationCode;
+        /**
          * 支行名称
          * <p> 示例值：中国农业银行支行
          */
         private String branchName;
+        /**
+         * 银行 ID（该字段待作废，请勿使用）
+         * <p> 示例值：8
+         */
+        private String bankId;
+        /**
+         * 支行 ID（该字段待作废，请勿使用）
+         * <p> 示例值：12
+         */
+        private String branchId;
         /**
          * 银行 ID，详细信息可通过【查询银行信息】接口查询获得
          * <p> 示例值：MDBH00000001
@@ -467,6 +563,32 @@ public class BankAccount {
 
 
         /**
+         * 银行枚举（该字段待作废，请勿使用）
+         * <p> 示例值：
+         *
+         * @param bank
+         * @return
+         */
+        public Builder bank(Enum bank) {
+            this.bank = bank;
+            return this;
+        }
+
+
+        /**
+         * 银行识别码（该字段待作废，请勿使用）
+         * <p> 示例值：1234
+         *
+         * @param bankIdentificationCode
+         * @return
+         */
+        public Builder bankIdentificationCode(String bankIdentificationCode) {
+            this.bankIdentificationCode = bankIdentificationCode;
+            return this;
+        }
+
+
+        /**
          * 支行名称
          * <p> 示例值：中国农业银行支行
          *
@@ -475,6 +597,32 @@ public class BankAccount {
          */
         public Builder branchName(String branchName) {
             this.branchName = branchName;
+            return this;
+        }
+
+
+        /**
+         * 银行 ID（该字段待作废，请勿使用）
+         * <p> 示例值：8
+         *
+         * @param bankId
+         * @return
+         */
+        public Builder bankId(String bankId) {
+            this.bankId = bankId;
+            return this;
+        }
+
+
+        /**
+         * 支行 ID（该字段待作废，请勿使用）
+         * <p> 示例值：12
+         *
+         * @param branchId
+         * @return
+         */
+        public Builder branchId(String branchId) {
+            this.branchId = branchId;
             return this;
         }
 

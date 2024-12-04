@@ -84,7 +84,6 @@ public class GetByParamAuthorizationReq {
         private String employmentId; // 雇员 ID
         private String userIdType; // 用户 ID 类型
 
-
         /**
          * 雇员 ID
          * <p> 示例值：67489937334909845
@@ -121,6 +120,7 @@ public class GetByParamAuthorizationReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public GetByParamAuthorizationReq build() {
             return new GetByParamAuthorizationReq(this);

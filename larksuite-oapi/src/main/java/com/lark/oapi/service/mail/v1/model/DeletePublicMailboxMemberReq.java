@@ -110,6 +110,7 @@ public class DeletePublicMailboxMemberReq {
             return this;
         }
 
+
         public DeletePublicMailboxMemberReq build() {
             return new DeletePublicMailboxMemberReq(this);
         }

@@ -46,6 +46,12 @@ public class PatchPublicMailboxRespBody {
      */
     @SerializedName("name")
     private String name;
+    /**
+     * 数据驻留地
+     * <p> 示例值：cn
+     */
+    @SerializedName("geo")
+    private String geo;
 
     public String getPublicMailboxId() {
         return this.publicMailboxId;
@@ -71,5 +77,12 @@ public class PatchPublicMailboxRespBody {
         this.name = name;
     }
 
+    public String getGeo() {
+        return this.geo;
+    }
+
+    public void setGeo(String geo) {
+        this.geo = geo;
+    }
 
 }

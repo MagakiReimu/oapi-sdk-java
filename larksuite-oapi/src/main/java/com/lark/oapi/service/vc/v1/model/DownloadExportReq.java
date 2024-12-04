@@ -63,7 +63,6 @@ public class DownloadExportReq {
     public static class Builder {
         private String fileToken; // 文档token
 
-
         /**
          * 文档token
          * <p> 示例值：6yHu7Igp7Igy62Ez6fLr6IJz7j9i5WMe6fHq5yZeY2Jz6yLqYAMAY46fZfEz64Lr5fYyYQ==
@@ -75,6 +74,7 @@ public class DownloadExportReq {
             this.fileToken = fileToken;
             return this;
         }
+
 
         public DownloadExportReq build() {
             return new DownloadExportReq(this);

@@ -76,6 +76,7 @@ public class StopMeetingRecordingReq {
             return this;
         }
 
+
         public StopMeetingRecordingReq build() {
             return new StopMeetingRecordingReq(this);
         }

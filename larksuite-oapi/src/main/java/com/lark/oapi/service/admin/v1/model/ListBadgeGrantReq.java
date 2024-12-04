@@ -264,6 +264,7 @@ public class ListBadgeGrantReq {
             return this;
         }
 
+
         public ListBadgeGrantReq build() {
             return new ListBadgeGrantReq(this);
         }

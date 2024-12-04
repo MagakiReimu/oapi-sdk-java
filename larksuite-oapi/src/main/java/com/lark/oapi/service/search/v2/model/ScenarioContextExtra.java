@@ -53,6 +53,18 @@ public class ScenarioContextExtra {
      */
     @SerializedName("suggest_query_id")
     private String suggestQueryId;
+    /**
+     * 点击按钮发送消息时所携带的参数信息
+     * <p> 示例值：1
+     */
+    @SerializedName("button_send_message_info")
+    private String buttonSendMessageInfo;
+    /**
+     * 点击重新生成按钮时携带的参数信息
+     * <p> 示例值：1
+     */
+    @SerializedName("button_regenerate_message")
+    private String buttonRegenerateMessage;
 
     // builder 开始
     public ScenarioContextExtra() {
@@ -79,6 +91,16 @@ public class ScenarioContextExtra {
          * <p> 示例值：789
          */
         this.suggestQueryId = builder.suggestQueryId;
+        /**
+         * 点击按钮发送消息时所携带的参数信息
+         * <p> 示例值：1
+         */
+        this.buttonSendMessageInfo = builder.buttonSendMessageInfo;
+        /**
+         * 点击重新生成按钮时携带的参数信息
+         * <p> 示例值：1
+         */
+        this.buttonRegenerateMessage = builder.buttonRegenerateMessage;
     }
 
     public static Builder newBuilder() {
@@ -117,6 +139,22 @@ public class ScenarioContextExtra {
         this.suggestQueryId = suggestQueryId;
     }
 
+    public String getButtonSendMessageInfo() {
+        return this.buttonSendMessageInfo;
+    }
+
+    public void setButtonSendMessageInfo(String buttonSendMessageInfo) {
+        this.buttonSendMessageInfo = buttonSendMessageInfo;
+    }
+
+    public String getButtonRegenerateMessage() {
+        return this.buttonRegenerateMessage;
+    }
+
+    public void setButtonRegenerateMessage(String buttonRegenerateMessage) {
+        this.buttonRegenerateMessage = buttonRegenerateMessage;
+    }
+
     public static class Builder {
         /**
          * Grounding ID
@@ -138,6 +176,16 @@ public class ScenarioContextExtra {
          * <p> 示例值：789
          */
         private String suggestQueryId;
+        /**
+         * 点击按钮发送消息时所携带的参数信息
+         * <p> 示例值：1
+         */
+        private String buttonSendMessageInfo;
+        /**
+         * 点击重新生成按钮时携带的参数信息
+         * <p> 示例值：1
+         */
+        private String buttonRegenerateMessage;
 
         /**
          * Grounding ID
@@ -187,6 +235,32 @@ public class ScenarioContextExtra {
          */
         public Builder suggestQueryId(String suggestQueryId) {
             this.suggestQueryId = suggestQueryId;
+            return this;
+        }
+
+
+        /**
+         * 点击按钮发送消息时所携带的参数信息
+         * <p> 示例值：1
+         *
+         * @param buttonSendMessageInfo
+         * @return
+         */
+        public Builder buttonSendMessageInfo(String buttonSendMessageInfo) {
+            this.buttonSendMessageInfo = buttonSendMessageInfo;
+            return this;
+        }
+
+
+        /**
+         * 点击重新生成按钮时携带的参数信息
+         * <p> 示例值：1
+         *
+         * @param buttonRegenerateMessage
+         * @return
+         */
+        public Builder buttonRegenerateMessage(String buttonRegenerateMessage) {
+            this.buttonRegenerateMessage = buttonRegenerateMessage;
             return this;
         }
 

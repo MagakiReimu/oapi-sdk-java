@@ -28,8 +28,34 @@ import com.lark.oapi.core.utils.Strings;
 import com.lark.oapi.core.response.BaseResponse;
 
 public class CreateAppReq {
-
-
+    /**
+     * 是否使用自定义配置创建方式，默认不使用
+     * <p> 示例值：false
+     */
+    @Query
+    @SerializedName("customized_config")
+    private Boolean customizedConfig;
+    /**
+     * 源app，当使用自定义配置创建方式时有效
+     * <p> 示例值：Xm5EbPVCInfoqRs0HKBbyIBjc1g
+     */
+    @Query
+    @SerializedName("source_app_token")
+    private String sourceAppToken;
+    /**
+     * 定制化权限配置类型列表，1为协作者列表，2为高级权限，类型是string
+     * <p> 示例值：
+     */
+    @Query
+    @SerializedName("copy_types")
+    private String[] copyTypes;
+    /**
+     * 只有旧逻辑场景才会用到，为new时会在旧逻辑场景切换到新场景，方便旧逻辑的业务方进行切换
+     * <p> 示例值：new
+     */
+    @Query
+    @SerializedName("api_type")
+    private String apiType;
     @Body
     private ReqApp body;
 
@@ -38,11 +64,63 @@ public class CreateAppReq {
     }
 
     public CreateAppReq(Builder builder) {
+        /**
+         * 是否使用自定义配置创建方式，默认不使用
+         * <p> 示例值：false
+         */
+        this.customizedConfig = builder.customizedConfig;
+        /**
+         * 源app，当使用自定义配置创建方式时有效
+         * <p> 示例值：Xm5EbPVCInfoqRs0HKBbyIBjc1g
+         */
+        this.sourceAppToken = builder.sourceAppToken;
+        /**
+         * 定制化权限配置类型列表，1为协作者列表，2为高级权限，类型是string
+         * <p> 示例值：
+         */
+        this.copyTypes = builder.copyTypes;
+        /**
+         * 只有旧逻辑场景才会用到，为new时会在旧逻辑场景切换到新场景，方便旧逻辑的业务方进行切换
+         * <p> 示例值：new
+         */
+        this.apiType = builder.apiType;
         this.body = builder.body;
     }
 
     public static Builder newBuilder() {
         return new Builder();
+    }
+
+    public Boolean getCustomizedConfig() {
+        return this.customizedConfig;
+    }
+
+    public void setCustomizedConfig(Boolean customizedConfig) {
+        this.customizedConfig = customizedConfig;
+    }
+
+    public String getSourceAppToken() {
+        return this.sourceAppToken;
+    }
+
+    public void setSourceAppToken(String sourceAppToken) {
+        this.sourceAppToken = sourceAppToken;
+    }
+
+    public String[] getCopyTypes() {
+        return this.copyTypes;
+    }
+
+    public void setCopyTypes(String[] copyTypes) {
+        this.copyTypes = copyTypes;
+    }
+
+    public String getApiType() {
+        return this.apiType;
+    }
+
+    public void setApiType(String apiType) {
+        this.apiType = apiType;
     }
 
     public ReqApp getReqApp() {
@@ -54,9 +132,59 @@ public class CreateAppReq {
     }
 
     public static class Builder {
-
-
+        private Boolean customizedConfig; // 是否使用自定义配置创建方式，默认不使用
+        private String sourceAppToken; // 源app，当使用自定义配置创建方式时有效
+        private String[] copyTypes; // 定制化权限配置类型列表，1为协作者列表，2为高级权限，类型是string
+        private String apiType; // 只有旧逻辑场景才会用到，为new时会在旧逻辑场景切换到新场景，方便旧逻辑的业务方进行切换
         private ReqApp body;
+
+        /**
+         * 是否使用自定义配置创建方式，默认不使用
+         * <p> 示例值：false
+         *
+         * @param customizedConfig
+         * @return
+         */
+        public Builder customizedConfig(Boolean customizedConfig) {
+            this.customizedConfig = customizedConfig;
+            return this;
+        }
+
+        /**
+         * 源app，当使用自定义配置创建方式时有效
+         * <p> 示例值：Xm5EbPVCInfoqRs0HKBbyIBjc1g
+         *
+         * @param sourceAppToken
+         * @return
+         */
+        public Builder sourceAppToken(String sourceAppToken) {
+            this.sourceAppToken = sourceAppToken;
+            return this;
+        }
+
+        /**
+         * 定制化权限配置类型列表，1为协作者列表，2为高级权限，类型是string
+         * <p> 示例值：
+         *
+         * @param copyTypes
+         * @return
+         */
+        public Builder copyTypes(String[] copyTypes) {
+            this.copyTypes = copyTypes;
+            return this;
+        }
+
+        /**
+         * 只有旧逻辑场景才会用到，为new时会在旧逻辑场景切换到新场景，方便旧逻辑的业务方进行切换
+         * <p> 示例值：new
+         *
+         * @param apiType
+         * @return
+         */
+        public Builder apiType(String apiType) {
+            this.apiType = apiType;
+            return this;
+        }
 
         public ReqApp getReqApp() {
             return this.body;

@@ -146,7 +146,6 @@ public class SearchCustomWorkplaceAccessDataReq {
         private String pageToken; // 用于标记当前请求的分页标记，将返回以当前分页标记开始，往后 page_size 个元素。第一次访问接口的时候不需要传。
         private String customWorkplaceId; // 定制化工作台id.非必填,不填的时候,返回所有定制化工作台数据。
 
-
         /**
          * 数据检索开始时间，精确到日。格式yyyy-MM-dd
          * <p> 示例值：2023-03-01
@@ -210,6 +209,7 @@ public class SearchCustomWorkplaceAccessDataReq {
             this.customWorkplaceId = customWorkplaceId;
             return this;
         }
+
 
         public SearchCustomWorkplaceAccessDataReq build() {
             return new SearchCustomWorkplaceAccessDataReq(this);

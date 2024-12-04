@@ -146,7 +146,6 @@ public class ListInterviewTaskReq {
         private Integer activityStatus; // 任务状态
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 分页大小, 默认10，不能超过 20
          * <p> 示例值：10
@@ -210,6 +209,7 @@ public class ListInterviewTaskReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListInterviewTaskReq build() {
             return new ListInterviewTaskReq(this);

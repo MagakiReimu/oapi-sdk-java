@@ -63,7 +63,6 @@ public class QueryShiftReq {
     public static class Builder {
         private String shiftName; // 班次名称
 
-
         /**
          * 班次名称
          * <p> 示例值：早班
@@ -75,6 +74,7 @@ public class QueryShiftReq {
             this.shiftName = shiftName;
             return this;
         }
+
 
         public QueryShiftReq build() {
             return new QueryShiftReq(this);

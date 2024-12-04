@@ -76,6 +76,7 @@ public class DeleteTicketCustomizedFieldReq {
             return this;
         }
 
+
         public DeleteTicketCustomizedFieldReq build() {
             return new DeleteTicketCustomizedFieldReq(this);
         }

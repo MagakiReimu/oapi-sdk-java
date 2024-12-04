@@ -107,6 +107,7 @@ public class DeactivateReferralAccountReq {
             return this;
         }
 
+
         public DeactivateReferralAccountReq build() {
             return new DeactivateReferralAccountReq(this);
         }

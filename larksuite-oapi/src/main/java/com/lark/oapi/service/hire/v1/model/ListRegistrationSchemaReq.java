@@ -104,7 +104,6 @@ public class ListRegistrationSchemaReq {
         private String pageToken; // 分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果
         private Integer scenario; // 登记表适用场景；不填表示获取全部类型信息登记表
 
-
         /**
          * 分页大小
          * <p> 示例值：20
@@ -142,6 +141,7 @@ public class ListRegistrationSchemaReq {
             this.scenario = scenario;
             return this;
         }
+
 
         public ListRegistrationSchemaReq build() {
             return new ListRegistrationSchemaReq(this);

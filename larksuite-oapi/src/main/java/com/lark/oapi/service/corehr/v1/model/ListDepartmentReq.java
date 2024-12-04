@@ -168,7 +168,6 @@ public class ListDepartmentReq {
         private String userIdType; // 用户 ID 类型
         private String departmentIdType; // 此次调用中使用的部门 ID 类型
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值："6966234786251671053"
@@ -269,6 +268,7 @@ public class ListDepartmentReq {
             this.departmentIdType = departmentIdType.getValue();
             return this;
         }
+
 
         public ListDepartmentReq build() {
             return new ListDepartmentReq(this);

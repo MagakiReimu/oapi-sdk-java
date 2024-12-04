@@ -126,7 +126,6 @@ public class QueryRecentChangeCompanyReq {
         private String startDate; // 查询的开始时间，支持"yyyy-MM-dd HH:MM:SS"
         private String endDate; // 查询的结束时间，格式 "yyyy-MM-dd HH:MM:SS"
 
-
         /**
          * 分页大小，最大 2000
          * <p> 示例值：100
@@ -177,6 +176,7 @@ public class QueryRecentChangeCompanyReq {
             this.endDate = endDate;
             return this;
         }
+
 
         public QueryRecentChangeCompanyReq build() {
             return new QueryRecentChangeCompanyReq(this);

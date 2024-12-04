@@ -63,6 +63,20 @@ public class QueryAuthorizationReq {
     @Query
     @SerializedName("user_id_type")
     private String userIdType;
+    /**
+     * 授权时间大于
+     * <p> 示例值：1729773628
+     */
+    @Query
+    @SerializedName("updated_at_gte")
+    private String updatedAtGte;
+    /**
+     * 授权时间小于
+     * <p> 示例值：1729773628
+     */
+    @Query
+    @SerializedName("updated_at_lte")
+    private String updatedAtLte;
 
     // builder 开始
     public QueryAuthorizationReq() {
@@ -94,6 +108,16 @@ public class QueryAuthorizationReq {
          * <p> 示例值：people_corehr_id
          */
         this.userIdType = builder.userIdType;
+        /**
+         * 授权时间大于
+         * <p> 示例值：1729773628
+         */
+        this.updatedAtGte = builder.updatedAtGte;
+        /**
+         * 授权时间小于
+         * <p> 示例值：1729773628
+         */
+        this.updatedAtLte = builder.updatedAtLte;
     }
 
     public static Builder newBuilder() {
@@ -140,13 +164,30 @@ public class QueryAuthorizationReq {
         this.userIdType = userIdType;
     }
 
+    public String getUpdatedAtGte() {
+        return this.updatedAtGte;
+    }
+
+    public void setUpdatedAtGte(String updatedAtGte) {
+        this.updatedAtGte = updatedAtGte;
+    }
+
+    public String getUpdatedAtLte() {
+        return this.updatedAtLte;
+    }
+
+    public void setUpdatedAtLte(String updatedAtLte) {
+        this.updatedAtLte = updatedAtLte;
+    }
+
     public static class Builder {
         private String[] employmentIdList; // 员工ID列表，最大100个（不传则默认查询全部员工）
         private String[] roleIdList; // 角色 ID 列表，最大 100 个
         private String pageToken; // 页码标识，获取第一页传空，每次查询会返回下一页的page_token
         private String pageSize; // 每页获取记录数量，最大20
         private String userIdType; // 用户 ID 类型
-
+        private String updatedAtGte; // 授权时间大于
+        private String updatedAtLte; // 授权时间小于
 
         /**
          * 员工ID列表，最大100个（不传则默认查询全部员工）
@@ -223,6 +264,33 @@ public class QueryAuthorizationReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
+
+        /**
+         * 授权时间大于
+         * <p> 示例值：1729773628
+         *
+         * @param updatedAtGte
+         * @return
+         */
+        public Builder updatedAtGte(String updatedAtGte) {
+            this.updatedAtGte = updatedAtGte;
+            return this;
+        }
+
+
+        /**
+         * 授权时间小于
+         * <p> 示例值：1729773628
+         *
+         * @param updatedAtLte
+         * @return
+         */
+        public Builder updatedAtLte(String updatedAtLte) {
+            this.updatedAtLte = updatedAtLte;
+            return this;
+        }
+
 
         public QueryAuthorizationReq build() {
             return new QueryAuthorizationReq(this);

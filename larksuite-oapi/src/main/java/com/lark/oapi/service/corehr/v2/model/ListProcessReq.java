@@ -168,7 +168,6 @@ public class ListProcessReq {
         private String modifyTimeTo; // 1. 任务查询结束时间，闭区间 2. 单位：ms。从1970年1月1日(UTC/GMT的午夜) 开始经过的毫秒数 3. 注意：开始时间和结束时间跨度不能超过31天 4. 示例值：1719549169735
         private String flowDefinitionId; // 流程定义ID
 
-
         /**
          * 查询流程状态列表。
          * <p> 示例值：
@@ -245,6 +244,7 @@ public class ListProcessReq {
             this.flowDefinitionId = flowDefinitionId;
             return this;
         }
+
 
         public ListProcessReq build() {
             return new ListProcessReq(this);

@@ -153,6 +153,7 @@ public class GetPublicMailboxMemberReq {
             return this;
         }
 
+
         public GetPublicMailboxMemberReq build() {
             return new GetPublicMailboxMemberReq(this);
         }

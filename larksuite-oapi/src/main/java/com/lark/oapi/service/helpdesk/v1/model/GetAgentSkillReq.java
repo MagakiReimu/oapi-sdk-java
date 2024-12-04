@@ -76,6 +76,7 @@ public class GetAgentSkillReq {
             return this;
         }
 
+
         public GetAgentSkillReq build() {
             return new GetAgentSkillReq(this);
         }

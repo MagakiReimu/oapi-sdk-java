@@ -125,7 +125,6 @@ public class SearchWorkplaceAccessDataReq {
         private Integer pageSize; // 分页大小，最小为 1，最大为 200，默认为 20。
         private String pageToken; // 用于标记当前请求的分页标记，将返回以当前分页标记开始，往后 page_size 个元素。第一次访问接口的时候不需要传。
 
-
         /**
          * 数据检索开始时间，精确到日。格式yyyy-MM-dd
          * <p> 示例值：2023-03-01
@@ -176,6 +175,7 @@ public class SearchWorkplaceAccessDataReq {
             this.pageToken = pageToken;
             return this;
         }
+
 
         public SearchWorkplaceAccessDataReq build() {
             return new SearchWorkplaceAccessDataReq(this);

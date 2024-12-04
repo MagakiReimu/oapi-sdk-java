@@ -107,6 +107,7 @@ public class GetNoteReq {
             return this;
         }
 
+
         public GetNoteReq build() {
             return new GetNoteReq(this);
         }

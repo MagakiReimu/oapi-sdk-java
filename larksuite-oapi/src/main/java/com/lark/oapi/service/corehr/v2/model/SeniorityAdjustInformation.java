@@ -30,12 +30,6 @@ import com.lark.oapi.core.response.BaseResponse;
 
 public class SeniorityAdjustInformation {
     /**
-     * 分组 ID
-     * <p> 示例值：123
-     */
-    @SerializedName("id")
-    private String id;
-    /**
      * 调整类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：seniority_adjust_information;  - custom_api_name：seniority_adjustment_type
      * <p> 示例值：
      */
@@ -49,22 +43,22 @@ public class SeniorityAdjustInformation {
     private String startDate;
     /**
      * 结束日期;- 格式： yyyy-mm-dd
-     * <p> 示例值：2024-01-02
+     * <p> 示例值：2024-10-01
      */
     @SerializedName("end_date")
     private String endDate;
-    /**
-     * 调整原因
-     * <p> 示例值：example
-     */
-    @SerializedName("reasons_for_seniority_adjustment")
-    private String reasonsForSeniorityAdjustment;
     /**
      * 调整值;- 精确度：两位小数;- 单位：年
      * <p> 示例值：1.01
      */
     @SerializedName("seniority_adjustment")
     private Double seniorityAdjustment;
+    /**
+     * 调整原因
+     * <p> 示例值：工厂停产需要减去半年工龄
+     */
+    @SerializedName("reasons_for_seniority_adjustment")
+    private String reasonsForSeniorityAdjustment;
     /**
      * 自定义字段;- 具体支持的对象请参考[【自定义字段说明】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom-fields-guide)
      * <p> 示例值：
@@ -78,11 +72,6 @@ public class SeniorityAdjustInformation {
 
     public SeniorityAdjustInformation(Builder builder) {
         /**
-         * 分组 ID
-         * <p> 示例值：123
-         */
-        this.id = builder.id;
-        /**
          * 调整类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：seniority_adjust_information;  - custom_api_name：seniority_adjustment_type
          * <p> 示例值：
          */
@@ -94,19 +83,19 @@ public class SeniorityAdjustInformation {
         this.startDate = builder.startDate;
         /**
          * 结束日期;- 格式： yyyy-mm-dd
-         * <p> 示例值：2024-01-02
+         * <p> 示例值：2024-10-01
          */
         this.endDate = builder.endDate;
-        /**
-         * 调整原因
-         * <p> 示例值：example
-         */
-        this.reasonsForSeniorityAdjustment = builder.reasonsForSeniorityAdjustment;
         /**
          * 调整值;- 精确度：两位小数;- 单位：年
          * <p> 示例值：1.01
          */
         this.seniorityAdjustment = builder.seniorityAdjustment;
+        /**
+         * 调整原因
+         * <p> 示例值：工厂停产需要减去半年工龄
+         */
+        this.reasonsForSeniorityAdjustment = builder.reasonsForSeniorityAdjustment;
         /**
          * 自定义字段;- 具体支持的对象请参考[【自定义字段说明】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom-fields-guide)
          * <p> 示例值：
@@ -116,14 +105,6 @@ public class SeniorityAdjustInformation {
 
     public static Builder newBuilder() {
         return new Builder();
-    }
-
-    public String getId() {
-        return this.id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public Enum getSeniorityAdjustmentType() {
@@ -150,20 +131,20 @@ public class SeniorityAdjustInformation {
         this.endDate = endDate;
     }
 
-    public String getReasonsForSeniorityAdjustment() {
-        return this.reasonsForSeniorityAdjustment;
-    }
-
-    public void setReasonsForSeniorityAdjustment(String reasonsForSeniorityAdjustment) {
-        this.reasonsForSeniorityAdjustment = reasonsForSeniorityAdjustment;
-    }
-
     public Double getSeniorityAdjustment() {
         return this.seniorityAdjustment;
     }
 
     public void setSeniorityAdjustment(Double seniorityAdjustment) {
         this.seniorityAdjustment = seniorityAdjustment;
+    }
+
+    public String getReasonsForSeniorityAdjustment() {
+        return this.reasonsForSeniorityAdjustment;
+    }
+
+    public void setReasonsForSeniorityAdjustment(String reasonsForSeniorityAdjustment) {
+        this.reasonsForSeniorityAdjustment = reasonsForSeniorityAdjustment;
     }
 
     public CustomFieldData[] getCustomFields() {
@@ -176,11 +157,6 @@ public class SeniorityAdjustInformation {
 
     public static class Builder {
         /**
-         * 分组 ID
-         * <p> 示例值：123
-         */
-        private String id;
-        /**
          * 调整类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：seniority_adjust_information;  - custom_api_name：seniority_adjustment_type
          * <p> 示例值：
          */
@@ -192,37 +168,24 @@ public class SeniorityAdjustInformation {
         private String startDate;
         /**
          * 结束日期;- 格式： yyyy-mm-dd
-         * <p> 示例值：2024-01-02
+         * <p> 示例值：2024-10-01
          */
         private String endDate;
-        /**
-         * 调整原因
-         * <p> 示例值：example
-         */
-        private String reasonsForSeniorityAdjustment;
         /**
          * 调整值;- 精确度：两位小数;- 单位：年
          * <p> 示例值：1.01
          */
         private Double seniorityAdjustment;
         /**
+         * 调整原因
+         * <p> 示例值：工厂停产需要减去半年工龄
+         */
+        private String reasonsForSeniorityAdjustment;
+        /**
          * 自定义字段;- 具体支持的对象请参考[【自定义字段说明】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom-fields-guide)
          * <p> 示例值：
          */
         private CustomFieldData[] customFields;
-
-        /**
-         * 分组 ID
-         * <p> 示例值：123
-         *
-         * @param id
-         * @return
-         */
-        public Builder id(String id) {
-            this.id = id;
-            return this;
-        }
-
 
         /**
          * 调整类型;- 可通过[【获取字段详情】](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)接口查询，查询参数如下：;  - object_api_name：seniority_adjust_information;  - custom_api_name：seniority_adjustment_type
@@ -252,26 +215,13 @@ public class SeniorityAdjustInformation {
 
         /**
          * 结束日期;- 格式： yyyy-mm-dd
-         * <p> 示例值：2024-01-02
+         * <p> 示例值：2024-10-01
          *
          * @param endDate
          * @return
          */
         public Builder endDate(String endDate) {
             this.endDate = endDate;
-            return this;
-        }
-
-
-        /**
-         * 调整原因
-         * <p> 示例值：example
-         *
-         * @param reasonsForSeniorityAdjustment
-         * @return
-         */
-        public Builder reasonsForSeniorityAdjustment(String reasonsForSeniorityAdjustment) {
-            this.reasonsForSeniorityAdjustment = reasonsForSeniorityAdjustment;
             return this;
         }
 
@@ -285,6 +235,19 @@ public class SeniorityAdjustInformation {
          */
         public Builder seniorityAdjustment(Double seniorityAdjustment) {
             this.seniorityAdjustment = seniorityAdjustment;
+            return this;
+        }
+
+
+        /**
+         * 调整原因
+         * <p> 示例值：工厂停产需要减去半年工龄
+         *
+         * @param reasonsForSeniorityAdjustment
+         * @return
+         */
+        public Builder reasonsForSeniorityAdjustment(String reasonsForSeniorityAdjustment) {
+            this.reasonsForSeniorityAdjustment = reasonsForSeniorityAdjustment;
             return this;
         }
 

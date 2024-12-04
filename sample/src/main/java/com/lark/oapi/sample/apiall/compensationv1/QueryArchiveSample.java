@@ -20,6 +20,7 @@ public class QueryArchiveSample {
                 .userIdType("open_id")
                 .queryArchiveReqBody(QueryArchiveReqBody.newBuilder()
                         .userIdList(new String[]{})
+                        .tidList(new String[]{})
                         .effectiveStartDate("2022-05-10")
                         .effectiveEndDate("2023-05-15")
                         .build())

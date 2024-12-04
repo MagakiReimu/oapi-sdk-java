@@ -41,6 +41,7 @@ import com.lark.oapi.service.hire.v1.resource.ExternalApplication;
 import com.lark.oapi.service.hire.v1.resource.ExternalBackgroundCheck;
 import com.lark.oapi.service.hire.v1.resource.ExternalInterview;
 import com.lark.oapi.service.hire.v1.resource.ExternalInterviewAssessment;
+import com.lark.oapi.service.hire.v1.resource.ExternalOffer;
 import com.lark.oapi.service.hire.v1.resource.ExternalReferralReward;
 import com.lark.oapi.service.hire.v1.resource.Interview;
 import com.lark.oapi.service.hire.v1.resource.InterviewFeedbackForm;
@@ -76,6 +77,7 @@ import com.lark.oapi.service.hire.v1.resource.Role;
 import com.lark.oapi.service.hire.v1.resource.Subject;
 import com.lark.oapi.service.hire.v1.resource.Talent;
 import com.lark.oapi.service.hire.v1.resource.TalentExternalInfo;
+import com.lark.oapi.service.hire.v1.resource.TalentBlocklist;
 import com.lark.oapi.service.hire.v1.resource.TalentFolder;
 import com.lark.oapi.service.hire.v1.resource.TalentObject;
 import com.lark.oapi.service.hire.v1.resource.TalentOperationLog;
@@ -97,7 +99,7 @@ public class HireService {
     private final V1 v1;
     private final Advertisement advertisement; // advertisement
     private final Agency agency; // 猎头（灰度租户可见）
-    private final Application application; // 入职
+    private final Application application; // 投递
     private final ApplicationInterview applicationInterview; // application.interview
     private final Attachment attachment; // 附件
     private final BackgroundCheckOrder backgroundCheckOrder; // 背调 （灰度租户可见）
@@ -120,6 +122,7 @@ public class HireService {
     private final ExternalBackgroundCheck externalBackgroundCheck; // 导入外部系统信息（灰度租户可见）
     private final ExternalInterview externalInterview; // 导入外部系统信息（灰度租户可见）
     private final ExternalInterviewAssessment externalInterviewAssessment; // 导入外部系统信息（灰度租户可见）
+    private final ExternalOffer externalOffer; // external_offer
     private final ExternalReferralReward externalReferralReward; // external_referral_reward
     private final Interview interview; // 面试
     private final InterviewFeedbackForm interviewFeedbackForm; // interview_feedback_form
@@ -155,6 +158,7 @@ public class HireService {
     private final Subject subject; // 项目（灰度租户可见）
     private final Talent talent; // 人才
     private final TalentExternalInfo talentExternalInfo; // 导入外部系统信息（灰度租户可见）
+    private final TalentBlocklist talentBlocklist; // talent_blocklist
     private final TalentFolder talentFolder; // talent_folder
     private final TalentObject talentObject; // talent_object
     private final TalentOperationLog talentOperationLog; // talent_operation_log
@@ -199,6 +203,7 @@ public class HireService {
         this.externalBackgroundCheck = new ExternalBackgroundCheck(config);
         this.externalInterview = new ExternalInterview(config);
         this.externalInterviewAssessment = new ExternalInterviewAssessment(config);
+        this.externalOffer = new ExternalOffer(config);
         this.externalReferralReward = new ExternalReferralReward(config);
         this.interview = new Interview(config);
         this.interviewFeedbackForm = new InterviewFeedbackForm(config);
@@ -234,6 +239,7 @@ public class HireService {
         this.subject = new Subject(config);
         this.talent = new Talent(config);
         this.talentExternalInfo = new TalentExternalInfo(config);
+        this.talentBlocklist = new TalentBlocklist(config);
         this.talentFolder = new TalentFolder(config);
         this.talentObject = new TalentObject(config);
         this.talentOperationLog = new TalentOperationLog(config);
@@ -354,6 +360,10 @@ public class HireService {
 
     public ExternalInterviewAssessment externalInterviewAssessment() {
         return externalInterviewAssessment;
+    }
+
+    public ExternalOffer externalOffer() {
+        return externalOffer;
     }
 
     public ExternalReferralReward externalReferralReward() {
@@ -494,6 +504,10 @@ public class HireService {
 
     public TalentExternalInfo talentExternalInfo() {
         return talentExternalInfo;
+    }
+
+    public TalentBlocklist talentBlocklist() {
+        return talentBlocklist;
     }
 
     public TalentFolder talentFolder() {

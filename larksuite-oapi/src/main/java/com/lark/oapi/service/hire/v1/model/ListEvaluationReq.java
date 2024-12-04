@@ -167,7 +167,6 @@ public class ListEvaluationReq {
         private String updateEndTime; // 最晚更新时间，毫秒级时间戳
         private String userIdType; // 用户ID类型
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：eyJvZmZzZXQiOjEsInRpbWVzdGFtcCI6MTY0MDc2NTYzMjA4OCwiaWQiOm51bGx9
@@ -244,6 +243,7 @@ public class ListEvaluationReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListEvaluationReq build() {
             return new ListEvaluationReq(this);

@@ -231,6 +231,7 @@ public class ListMailgroupMemberReq {
             return this;
         }
 
+
         public ListMailgroupMemberReq build() {
             return new ListMailgroupMemberReq(this);
         }

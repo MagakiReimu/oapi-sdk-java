@@ -84,7 +84,6 @@ public class ListCountryRegionReq {
         private String pageToken; // 页码标识，获取第一页传空，每次查询会返回下一页的page_token
         private String pageSize; // 每页获取记录数量，最大100
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：1231231987
@@ -109,6 +108,7 @@ public class ListCountryRegionReq {
             this.pageSize = pageSize;
             return this;
         }
+
 
         public ListCountryRegionReq build() {
             return new ListCountryRegionReq(this);

@@ -65,6 +65,18 @@ public class GetUserFlowRespBody {
     @SerializedName("record_id")
     private String recordId;
     /**
+     * 打卡经度
+     * <p> 示例值：30.28991
+     */
+    @SerializedName("longitude")
+    private Double longitude;
+    /**
+     * 打卡纬度
+     * <p> 示例值：120.04513
+     */
+    @SerializedName("latitude")
+    private Double latitude;
+    /**
      * 打卡wifi ssid
      * <p> 示例值：b0:b8:67:5c:1d:72
      */
@@ -173,6 +185,21 @@ public class GetUserFlowRespBody {
         this.recordId = recordId;
     }
 
+    public Double getLongitude() {
+        return this.longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
+
+    public Double getLatitude() {
+        return this.latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
 
     public String getSsid() {
         return this.ssid;

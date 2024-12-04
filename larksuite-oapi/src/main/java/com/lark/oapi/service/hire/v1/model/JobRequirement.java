@@ -190,6 +190,18 @@ public class JobRequirement {
      */
     @SerializedName("employment_job_id")
     private String employmentJobId;
+    /**
+     * 岗位 ID
+     * <p> 示例值：123
+     */
+    @SerializedName("position_id")
+    private String positionId;
+    /**
+     * 招聘需求修改确认控制
+     * <p> 示例值：
+     */
+    @SerializedName("update_option")
+    private JobRequirementUpdateOption updateOption;
 
     // builder 开始
     public JobRequirement() {
@@ -331,6 +343,16 @@ public class JobRequirement {
          * <p> 示例值：123
          */
         this.employmentJobId = builder.employmentJobId;
+        /**
+         * 岗位 ID
+         * <p> 示例值：123
+         */
+        this.positionId = builder.positionId;
+        /**
+         * 招聘需求修改确认控制
+         * <p> 示例值：
+         */
+        this.updateOption = builder.updateOption;
     }
 
     public static Builder newBuilder() {
@@ -553,6 +575,22 @@ public class JobRequirement {
         this.employmentJobId = employmentJobId;
     }
 
+    public String getPositionId() {
+        return this.positionId;
+    }
+
+    public void setPositionId(String positionId) {
+        this.positionId = positionId;
+    }
+
+    public JobRequirementUpdateOption getUpdateOption() {
+        return this.updateOption;
+    }
+
+    public void setUpdateOption(JobRequirementUpdateOption updateOption) {
+        this.updateOption = updateOption;
+    }
+
     public static class Builder {
         /**
          * 招聘需求编号
@@ -689,6 +727,16 @@ public class JobRequirement {
          * <p> 示例值：123
          */
         private String employmentJobId;
+        /**
+         * 岗位 ID
+         * <p> 示例值：123
+         */
+        private String positionId;
+        /**
+         * 招聘需求修改确认控制
+         * <p> 示例值：
+         */
+        private JobRequirementUpdateOption updateOption;
 
         /**
          * 招聘需求编号
@@ -1037,6 +1085,32 @@ public class JobRequirement {
          */
         public Builder employmentJobId(String employmentJobId) {
             this.employmentJobId = employmentJobId;
+            return this;
+        }
+
+
+        /**
+         * 岗位 ID
+         * <p> 示例值：123
+         *
+         * @param positionId
+         * @return
+         */
+        public Builder positionId(String positionId) {
+            this.positionId = positionId;
+            return this;
+        }
+
+
+        /**
+         * 招聘需求修改确认控制
+         * <p> 示例值：
+         *
+         * @param updateOption
+         * @return
+         */
+        public Builder updateOption(JobRequirementUpdateOption updateOption) {
+            this.updateOption = updateOption;
             return this;
         }
 

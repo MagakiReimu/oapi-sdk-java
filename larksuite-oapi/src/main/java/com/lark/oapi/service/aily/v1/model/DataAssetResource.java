@@ -39,6 +39,12 @@ public class DataAssetResource {
      * 数据知识资源类型
      * <p> 示例值：dataset
      */
+    @SerializedName("resouce_type")
+    private String resouceType;
+    /**
+     * 数据知识资源类型
+     * <p> 示例值：dataset
+     */
     @SerializedName("resource_type")
     private String resourceType;
 
@@ -56,6 +62,11 @@ public class DataAssetResource {
          * 数据知识资源类型
          * <p> 示例值：dataset
          */
+        this.resouceType = builder.resouceType;
+        /**
+         * 数据知识资源类型
+         * <p> 示例值：dataset
+         */
         this.resourceType = builder.resourceType;
     }
 
@@ -69,6 +80,14 @@ public class DataAssetResource {
 
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
+    }
+
+    public String getResouceType() {
+        return this.resouceType;
+    }
+
+    public void setResouceType(String resouceType) {
+        this.resouceType = resouceType;
     }
 
     public String getResourceType() {
@@ -89,6 +108,11 @@ public class DataAssetResource {
          * 数据知识资源类型
          * <p> 示例值：dataset
          */
+        private String resouceType;
+        /**
+         * 数据知识资源类型
+         * <p> 示例值：dataset
+         */
         private String resourceType;
 
         /**
@@ -100,6 +124,31 @@ public class DataAssetResource {
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
+            return this;
+        }
+
+
+        /**
+         * 数据知识资源类型
+         * <p> 示例值：dataset
+         *
+         * @param resouceType
+         * @return
+         */
+        public Builder resouceType(String resouceType) {
+            this.resouceType = resouceType;
+            return this;
+        }
+
+        /**
+         * 数据知识资源类型
+         * <p> 示例值：dataset
+         *
+         * @param resouceType {@link com.lark.oapi.service.aily.v1.enums.DataAssetResourceResouceTypeEnum}
+         * @return
+         */
+        public Builder resouceType(com.lark.oapi.service.aily.v1.enums.DataAssetResourceResouceTypeEnum resouceType) {
+            this.resouceType = resouceType.getValue();
             return this;
         }
 

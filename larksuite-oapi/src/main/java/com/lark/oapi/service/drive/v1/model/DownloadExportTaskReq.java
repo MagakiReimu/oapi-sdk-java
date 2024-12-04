@@ -76,6 +76,7 @@ public class DownloadExportTaskReq {
             return this;
         }
 
+
         public DownloadExportTaskReq build() {
             return new DownloadExportTaskReq(this);
         }

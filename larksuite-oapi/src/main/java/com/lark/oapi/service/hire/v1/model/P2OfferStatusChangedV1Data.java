@@ -34,6 +34,12 @@ public class P2OfferStatusChangedV1Data {
      */
     @SerializedName("offer_id")
     private String offerId;
+    /**
+     * Offer 状态
+     * <p> 示例值：
+     */
+    @SerializedName("offer_status")
+    private Integer offerStatus;
 
     public String getOfferId() {
         return this.offerId;
@@ -43,5 +49,12 @@ public class P2OfferStatusChangedV1Data {
         this.offerId = offerId;
     }
 
+    public Integer getOfferStatus() {
+        return this.offerStatus;
+    }
+
+    public void setOfferStatus(Integer offerStatus) {
+        this.offerStatus = offerStatus;
+    }
 
 }

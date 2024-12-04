@@ -63,7 +63,6 @@ public class DeleteRuleExternalReq {
     public static class Builder {
         private String ruleId; // 权限组id
 
-
         /**
          * 权限组id
          * <p> 示例值：7298933941867135276
@@ -75,6 +74,7 @@ public class DeleteRuleExternalReq {
             this.ruleId = ruleId;
             return this;
         }
+
 
         public DeleteRuleExternalReq build() {
             return new DeleteRuleExternalReq(this);

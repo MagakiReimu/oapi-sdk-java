@@ -84,11 +84,29 @@ public class PersonInfo {
     @SerializedName("date_of_birth")
     private String dateOfBirth;
     /**
+     * 国籍 ID ，国籍数据可通过【查询国家/地区信息】接口获取
+     * <p> 示例值：6862995757234914811
+     */
+    @SerializedName("nationality_id")
+    private String nationalityId;
+    /**
      * 国籍 ID，可通过【查询国籍信息】接口查询
      * <p> 示例值：6862995757234914821
      */
     @SerializedName("nationality_id_v2")
     private String nationalityIdV2;
+    /**
+     * 其他国籍
+     * <p> 示例值：
+     */
+    @SerializedName("additional_nationalities")
+    private Nationality[] additionalNationalities;
+    /**
+     * 公民身份
+     * <p> 示例值：
+     */
+    @SerializedName("citizenship_status")
+    private CitizenshipStatus[] citizenshipStatus;
     /**
      * -| 民族 / 种族，枚举值可查询【获取字段详情】接口获取，按如下参数查询即可： - custom_api_name：ethnicity_race - object_api_name：person
      * <p> 示例值：
@@ -417,10 +435,25 @@ public class PersonInfo {
          */
         this.dateOfBirth = builder.dateOfBirth;
         /**
+         * 国籍 ID ，国籍数据可通过【查询国家/地区信息】接口获取
+         * <p> 示例值：6862995757234914811
+         */
+        this.nationalityId = builder.nationalityId;
+        /**
          * 国籍 ID，可通过【查询国籍信息】接口查询
          * <p> 示例值：6862995757234914821
          */
         this.nationalityIdV2 = builder.nationalityIdV2;
+        /**
+         * 其他国籍
+         * <p> 示例值：
+         */
+        this.additionalNationalities = builder.additionalNationalities;
+        /**
+         * 公民身份
+         * <p> 示例值：
+         */
+        this.citizenshipStatus = builder.citizenshipStatus;
         /**
          * -| 民族 / 种族，枚举值可查询【获取字段详情】接口获取，按如下参数查询即可： - custom_api_name：ethnicity_race - object_api_name：person
          * <p> 示例值：
@@ -729,12 +762,36 @@ public class PersonInfo {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public String getNationalityId() {
+        return this.nationalityId;
+    }
+
+    public void setNationalityId(String nationalityId) {
+        this.nationalityId = nationalityId;
+    }
+
     public String getNationalityIdV2() {
         return this.nationalityIdV2;
     }
 
     public void setNationalityIdV2(String nationalityIdV2) {
         this.nationalityIdV2 = nationalityIdV2;
+    }
+
+    public Nationality[] getAdditionalNationalities() {
+        return this.additionalNationalities;
+    }
+
+    public void setAdditionalNationalities(Nationality[] additionalNationalities) {
+        this.additionalNationalities = additionalNationalities;
+    }
+
+    public CitizenshipStatus[] getCitizenshipStatus() {
+        return this.citizenshipStatus;
+    }
+
+    public void setCitizenshipStatus(CitizenshipStatus[] citizenshipStatus) {
+        this.citizenshipStatus = citizenshipStatus;
     }
 
     public Enum getRace() {
@@ -1152,10 +1209,25 @@ public class PersonInfo {
          */
         private String dateOfBirth;
         /**
+         * 国籍 ID ，国籍数据可通过【查询国家/地区信息】接口获取
+         * <p> 示例值：6862995757234914811
+         */
+        private String nationalityId;
+        /**
          * 国籍 ID，可通过【查询国籍信息】接口查询
          * <p> 示例值：6862995757234914821
          */
         private String nationalityIdV2;
+        /**
+         * 其他国籍
+         * <p> 示例值：
+         */
+        private Nationality[] additionalNationalities;
+        /**
+         * 公民身份
+         * <p> 示例值：
+         */
+        private CitizenshipStatus[] citizenshipStatus;
         /**
          * -| 民族 / 种族，枚举值可查询【获取字段详情】接口获取，按如下参数查询即可： - custom_api_name：ethnicity_race - object_api_name：person
          * <p> 示例值：
@@ -1505,6 +1577,19 @@ public class PersonInfo {
 
 
         /**
+         * 国籍 ID ，国籍数据可通过【查询国家/地区信息】接口获取
+         * <p> 示例值：6862995757234914811
+         *
+         * @param nationalityId
+         * @return
+         */
+        public Builder nationalityId(String nationalityId) {
+            this.nationalityId = nationalityId;
+            return this;
+        }
+
+
+        /**
          * 国籍 ID，可通过【查询国籍信息】接口查询
          * <p> 示例值：6862995757234914821
          *
@@ -1513,6 +1598,32 @@ public class PersonInfo {
          */
         public Builder nationalityIdV2(String nationalityIdV2) {
             this.nationalityIdV2 = nationalityIdV2;
+            return this;
+        }
+
+
+        /**
+         * 其他国籍
+         * <p> 示例值：
+         *
+         * @param additionalNationalities
+         * @return
+         */
+        public Builder additionalNationalities(Nationality[] additionalNationalities) {
+            this.additionalNationalities = additionalNationalities;
+            return this;
+        }
+
+
+        /**
+         * 公民身份
+         * <p> 示例值：
+         *
+         * @param citizenshipStatus
+         * @return
+         */
+        public Builder citizenshipStatus(CitizenshipStatus[] citizenshipStatus) {
+            this.citizenshipStatus = citizenshipStatus;
             return this;
         }
 

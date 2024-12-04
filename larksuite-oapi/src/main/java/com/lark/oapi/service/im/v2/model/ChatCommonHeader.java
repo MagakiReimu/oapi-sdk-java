@@ -35,6 +35,12 @@ public class ChatCommonHeader {
      */
     @SerializedName("chat_id")
     private String chatId;
+    /**
+     * botid，不对外展示
+     * <p> 示例值：0
+     */
+    @SerializedName("bot_id")
+    private String botId;
 
     // builder 开始
     public ChatCommonHeader() {
@@ -46,6 +52,11 @@ public class ChatCommonHeader {
          * <p> 示例值：oc_a0553eda9014c201e6969b478895c230
          */
         this.chatId = builder.chatId;
+        /**
+         * botid，不对外展示
+         * <p> 示例值：0
+         */
+        this.botId = builder.botId;
     }
 
     public static Builder newBuilder() {
@@ -60,12 +71,25 @@ public class ChatCommonHeader {
         this.chatId = chatId;
     }
 
+    public String getBotId() {
+        return this.botId;
+    }
+
+    public void setBotId(String botId) {
+        this.botId = botId;
+    }
+
     public static class Builder {
         /**
          * 群ID
          * <p> 示例值：oc_a0553eda9014c201e6969b478895c230
          */
         private String chatId;
+        /**
+         * botid，不对外展示
+         * <p> 示例值：0
+         */
+        private String botId;
 
         /**
          * 群ID
@@ -76,6 +100,19 @@ public class ChatCommonHeader {
          */
         public Builder chatId(String chatId) {
             this.chatId = chatId;
+            return this;
+        }
+
+
+        /**
+         * botid，不对外展示
+         * <p> 示例值：0
+         *
+         * @param botId
+         * @return
+         */
+        public Builder botId(String botId) {
+            this.botId = botId;
             return this;
         }
 

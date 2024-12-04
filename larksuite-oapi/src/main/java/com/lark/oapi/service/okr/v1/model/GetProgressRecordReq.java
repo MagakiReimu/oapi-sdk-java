@@ -120,6 +120,7 @@ public class GetProgressRecordReq {
             return this;
         }
 
+
         public GetProgressRecordReq build() {
             return new GetProgressRecordReq(this);
         }

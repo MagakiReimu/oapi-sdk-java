@@ -168,7 +168,6 @@ public class GetTopUserReportReq {
         private Integer unit; // 数据驻留地
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 开始时间（unix时间，单位sec）
          * <p> 示例值：1608888867
@@ -281,6 +280,7 @@ public class GetTopUserReportReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public GetTopUserReportReq build() {
             return new GetTopUserReportReq(this);

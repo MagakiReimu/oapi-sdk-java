@@ -88,6 +88,12 @@ public class SubmitV2OffboardingRespBody {
      */
     @SerializedName("retain_account")
     private Boolean retainAccount;
+    /**
+     * 编制随人员一起调整
+     * <p> 示例值：false
+     */
+    @SerializedName("is_transfer_with_workforce")
+    private Boolean isTransferWithWorkforce;
 
     public String getOffboardingId() {
         return this.offboardingId;
@@ -167,6 +173,14 @@ public class SubmitV2OffboardingRespBody {
 
     public void setRetainAccount(Boolean retainAccount) {
         this.retainAccount = retainAccount;
+    }
+
+    public Boolean getIsTransferWithWorkforce() {
+        return this.isTransferWithWorkforce;
+    }
+
+    public void setIsTransferWithWorkforce(Boolean isTransferWithWorkforce) {
+        this.isTransferWithWorkforce = isTransferWithWorkforce;
     }
 
 }

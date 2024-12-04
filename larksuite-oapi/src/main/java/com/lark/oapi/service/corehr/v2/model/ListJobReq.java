@@ -126,7 +126,6 @@ public class ListJobReq {
         private String name; // 名称
         private String queryLanguage; // 语言
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：1231231987
@@ -177,6 +176,7 @@ public class ListJobReq {
             this.queryLanguage = queryLanguage;
             return this;
         }
+
 
         public ListJobReq build() {
             return new ListJobReq(this);

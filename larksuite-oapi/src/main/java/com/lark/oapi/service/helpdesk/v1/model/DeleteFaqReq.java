@@ -76,6 +76,7 @@ public class DeleteFaqReq {
             return this;
         }
 
+
         public DeleteFaqReq build() {
             return new DeleteFaqReq(this);
         }

@@ -110,6 +110,7 @@ public class DeleteAppRoleReq {
             return this;
         }
 
+
         public DeleteAppRoleReq build() {
             return new DeleteAppRoleReq(this);
         }

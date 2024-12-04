@@ -76,6 +76,7 @@ public class DeletePublicMailboxReq {
             return this;
         }
 
+
         public DeletePublicMailboxReq build() {
             return new DeletePublicMailboxReq(this);
         }

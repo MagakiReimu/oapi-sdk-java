@@ -251,7 +251,6 @@ public class ListApplicationReq {
         private String updateStartTime; // 最早更新时间，毫秒级时间戳
         private String updateEndTime; // 最晚更新时间，毫秒级时间戳
 
-
         /**
          * 按流程过滤，招聘流程 ID，枚举值通过接口「获取招聘流程信息」接口获取
          * <p> 示例值：6960663240925956554
@@ -380,6 +379,7 @@ public class ListApplicationReq {
             this.updateEndTime = updateEndTime;
             return this;
         }
+
 
         public ListApplicationReq build() {
             return new ListApplicationReq(this);

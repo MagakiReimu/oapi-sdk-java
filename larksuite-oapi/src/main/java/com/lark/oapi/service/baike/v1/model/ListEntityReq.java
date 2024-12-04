@@ -126,7 +126,6 @@ public class ListEntityReq {
         private String provider; // 相关外部系统【可用来过滤词条数据】
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 分页大小
          * <p> 示例值：20
@@ -189,6 +188,7 @@ public class ListEntityReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public ListEntityReq build() {
             return new ListEntityReq(this);

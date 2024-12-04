@@ -110,6 +110,7 @@ public class DeleteMailgroupAliasReq {
             return this;
         }
 
+
         public DeleteMailgroupAliasReq build() {
             return new DeleteMailgroupAliasReq(this);
         }

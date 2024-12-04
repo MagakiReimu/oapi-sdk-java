@@ -210,7 +210,6 @@ public class ListAdminDeptStatReq {
         private String pageToken; // 分页标记，第一次请求不填，表示从头开始遍历；当返回的has_more为true时，会返回新的page_token，再次调用接口，传入这个page_token，将获得下一页数据
         private String targetGeo; // 跨域访问的geo
 
-
         /**
          * 部门ID类型
          * <p> 示例值：open_department_id
@@ -325,6 +324,7 @@ public class ListAdminDeptStatReq {
             this.targetGeo = targetGeo;
             return this;
         }
+
 
         public ListAdminDeptStatReq build() {
             return new ListAdminDeptStatReq(this);

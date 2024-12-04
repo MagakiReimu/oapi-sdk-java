@@ -199,6 +199,7 @@ public class GetApplicationAppVersionReq {
             return this;
         }
 
+
         public GetApplicationAppVersionReq build() {
             return new GetApplicationAppVersionReq(this);
         }

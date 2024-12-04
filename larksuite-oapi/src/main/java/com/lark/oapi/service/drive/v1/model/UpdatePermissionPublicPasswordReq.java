@@ -120,6 +120,7 @@ public class UpdatePermissionPublicPasswordReq {
             return this;
         }
 
+
         public UpdatePermissionPublicPasswordReq build() {
             return new UpdatePermissionPublicPasswordReq(this);
         }

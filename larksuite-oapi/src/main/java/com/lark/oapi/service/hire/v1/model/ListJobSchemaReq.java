@@ -104,7 +104,6 @@ public class ListJobSchemaReq {
         private Integer pageSize; // 每页获取记录数量，最大100
         private Integer scenario; // 职位模板类型
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：1231231987
@@ -142,6 +141,7 @@ public class ListJobSchemaReq {
             this.scenario = scenario;
             return this;
         }
+
 
         public ListJobSchemaReq build() {
             return new ListJobSchemaReq(this);

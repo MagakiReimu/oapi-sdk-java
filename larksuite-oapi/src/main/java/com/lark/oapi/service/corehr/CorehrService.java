@@ -463,6 +463,13 @@ public class CorehrService {
         }
     }
 
+    public abstract static class P2ApprovalGroupsUpdatedV2Handler implements IEventHandler<P2ApprovalGroupsUpdatedV2> {
+        @Override
+        public P2ApprovalGroupsUpdatedV2 getEvent() {
+            return new P2ApprovalGroupsUpdatedV2();
+        }
+    }
+
     public abstract static class P2CompanyCreatedV2Handler implements IEventHandler<P2CompanyCreatedV2> {
         @Override
         public P2CompanyCreatedV2 getEvent() {

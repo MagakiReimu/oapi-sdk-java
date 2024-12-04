@@ -76,6 +76,7 @@ public class ReadUserBatchMessageReq {
             return this;
         }
 
+
         public ReadUserBatchMessageReq build() {
             return new ReadUserBatchMessageReq(this);
         }

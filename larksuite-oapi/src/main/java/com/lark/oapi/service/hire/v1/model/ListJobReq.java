@@ -209,7 +209,6 @@ public class ListJobReq {
         private String jobLevelIdType; // 此次调用中使用的「职级 ID」的类型
         private String jobFamilyIdType; // 此次调用中使用的「序列 ID」的类型
 
-
         /**
          * 最早更新时间，毫秒级时间戳
          * <p> 示例值：1618500278663
@@ -312,6 +311,7 @@ public class ListJobReq {
             this.jobFamilyIdType = jobFamilyIdType;
             return this;
         }
+
 
         public ListJobReq build() {
             return new ListJobReq(this);

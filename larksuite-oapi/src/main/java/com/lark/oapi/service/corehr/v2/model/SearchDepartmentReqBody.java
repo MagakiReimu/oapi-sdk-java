@@ -72,6 +72,13 @@ public class SearchDepartmentReqBody {
     @SerializedName("code_list")
     private String[] codeList;
     /**
+     * 是否获取所有部门记录，true 为获取部门所有版本记录，false 为仅获取当前生效的部门记录，默认为 false
+     * *字段权限要求：查询历史版本 (corehr:department.version.search:read) **
+     * <p> 示例值：false
+     */
+    @SerializedName("get_all_version")
+    private Boolean getAllVersion;
+    /**
      * 返回数据的字段列表
      * <p> 示例值：
      */
@@ -118,6 +125,12 @@ public class SearchDepartmentReqBody {
          * <p> 示例值：
          */
         this.codeList = builder.codeList;
+        /**
+         * 是否获取所有部门记录，true 为获取部门所有版本记录，false 为仅获取当前生效的部门记录，默认为 false
+         **字段权限要求：查询历史版本 (corehr:department.version.search:read) **
+         * <p> 示例值：false
+         */
+        this.getAllVersion = builder.getAllVersion;
         /**
          * 返回数据的字段列表
          * <p> 示例值：
@@ -185,6 +198,14 @@ public class SearchDepartmentReqBody {
         this.codeList = codeList;
     }
 
+    public Boolean getGetAllVersion() {
+        return this.getAllVersion;
+    }
+
+    public void setGetAllVersion(Boolean getAllVersion) {
+        this.getAllVersion = getAllVersion;
+    }
+
     public String[] getFields() {
         return this.fields;
     }
@@ -229,6 +250,12 @@ public class SearchDepartmentReqBody {
          * <p> 示例值：
          */
         private String[] codeList;
+        /**
+         * 是否获取所有部门记录，true 为获取部门所有版本记录，false 为仅获取当前生效的部门记录，默认为 false
+         * *字段权限要求：查询历史版本 (corehr:department.version.search:read) **
+         * <p> 示例值：false
+         */
+        private Boolean getAllVersion;
         /**
          * 返回数据的字段列表
          * <p> 示例值：
@@ -322,6 +349,20 @@ public class SearchDepartmentReqBody {
          */
         public Builder codeList(String[] codeList) {
             this.codeList = codeList;
+            return this;
+        }
+
+
+        /**
+         * 是否获取所有部门记录，true 为获取部门所有版本记录，false 为仅获取当前生效的部门记录，默认为 false
+         * *字段权限要求：查询历史版本 (corehr:department.version.search:read) **
+         * <p> 示例值：false
+         *
+         * @param getAllVersion
+         * @return
+         */
+        public Builder getAllVersion(Boolean getAllVersion) {
+            this.getAllVersion = getAllVersion;
             return this;
         }
 

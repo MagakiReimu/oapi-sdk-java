@@ -72,6 +72,12 @@ public class DepartmentEvent {
     @SerializedName("order")
     private Integer order;
     /**
+     * 部门单位自定义ID列表，当前只支持一个
+     * <p> 示例值：
+     */
+    @SerializedName("unit_ids")
+    private String[] unitIds;
+    /**
      * 部门状态
      * <p> 示例值：
      */
@@ -130,6 +136,11 @@ public class DepartmentEvent {
          * <p> 示例值：100
          */
         this.order = builder.order;
+        /**
+         * 部门单位自定义ID列表，当前只支持一个
+         * <p> 示例值：
+         */
+        this.unitIds = builder.unitIds;
         /**
          * 部门状态
          * <p> 示例值：
@@ -207,6 +218,14 @@ public class DepartmentEvent {
         this.order = order;
     }
 
+    public String[] getUnitIds() {
+        return this.unitIds;
+    }
+
+    public void setUnitIds(String[] unitIds) {
+        this.unitIds = unitIds;
+    }
+
     public DepartmentStatus getStatus() {
         return this.status;
     }
@@ -267,6 +286,11 @@ public class DepartmentEvent {
          * <p> 示例值：100
          */
         private Integer order;
+        /**
+         * 部门单位自定义ID列表，当前只支持一个
+         * <p> 示例值：
+         */
+        private String[] unitIds;
         /**
          * 部门状态
          * <p> 示例值：
@@ -370,6 +394,19 @@ public class DepartmentEvent {
          */
         public Builder order(Integer order) {
             this.order = order;
+            return this;
+        }
+
+
+        /**
+         * 部门单位自定义ID列表，当前只支持一个
+         * <p> 示例值：
+         *
+         * @param unitIds
+         * @return
+         */
+        public Builder unitIds(String[] unitIds) {
+            this.unitIds = unitIds;
             return this;
         }
 

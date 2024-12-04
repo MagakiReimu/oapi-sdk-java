@@ -209,7 +209,6 @@ public class ListTalentReq {
         private String userIdType; // 用户 ID 类型
         private String queryOption; // 请求控制参数
 
-
         /**
          * 搜索关键词，支持布尔语言（使用 and、or、not 连接关键词）
          * <p> 示例值：张三 and 产品经理
@@ -312,6 +311,7 @@ public class ListTalentReq {
             this.queryOption = queryOption;
             return this;
         }
+
 
         public ListTalentReq build() {
             return new ListTalentReq(this);

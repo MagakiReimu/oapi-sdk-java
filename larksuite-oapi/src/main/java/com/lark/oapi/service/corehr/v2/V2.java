@@ -18,6 +18,7 @@ import com.lark.oapi.service.corehr.v2.resource.*;
 import com.lark.oapi.service.corehr.v2.resource.Process;
 
 public class V2 {
+    private final ApprovalGroups approvalGroups; // approval_groups
     private final Approver approver; // approver
     private final BasicInfoBank basicInfoBank; // basic_info.bank
     private final BasicInfoBankBranch basicInfoBankBranch; // basic_info.bank_branch
@@ -61,6 +62,7 @@ public class V2 {
     private final WorkforcePlanDetail workforcePlanDetail; // workforce_plan_detail
 
     public V2(Config config) {
+        this.approvalGroups = new ApprovalGroups(config);
         this.approver = new Approver(config);
         this.basicInfoBank = new BasicInfoBank(config);
         this.basicInfoBankBranch = new BasicInfoBankBranch(config);
@@ -102,6 +104,10 @@ public class V2 {
         this.processStatus = new ProcessStatus(config);
         this.workforcePlan = new WorkforcePlan(config);
         this.workforcePlanDetail = new WorkforcePlanDetail(config);
+    }
+
+    public ApprovalGroups approvalGroups() {
+        return approvalGroups;
     }
 
     public Approver approver() {

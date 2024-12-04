@@ -76,6 +76,7 @@ public class SubscribeApprovalReq {
             return this;
         }
 
+
         public SubscribeApprovalReq build() {
             return new SubscribeApprovalReq(this);
         }

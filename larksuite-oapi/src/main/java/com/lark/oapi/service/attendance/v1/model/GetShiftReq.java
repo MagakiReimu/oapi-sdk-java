@@ -76,6 +76,7 @@ public class GetShiftReq {
             return this;
         }
 
+
         public GetShiftReq build() {
             return new GetShiftReq(this);
         }

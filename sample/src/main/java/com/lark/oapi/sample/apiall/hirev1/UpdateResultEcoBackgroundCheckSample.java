@@ -19,6 +19,7 @@ public class UpdateResultEcoBackgroundCheckSample {
                         .backgroundCheckId("6931286400470354183")
                         .result("无差异")
                         .resultTime("1660123456789")
+                        .operatorRole(1)
                         .reportFileList(new EcoBackgroundCheckReportFile[]{})
                         .build())
                 .build();

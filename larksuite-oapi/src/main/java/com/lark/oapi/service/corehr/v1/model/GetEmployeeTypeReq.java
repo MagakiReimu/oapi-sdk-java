@@ -76,6 +76,7 @@ public class GetEmployeeTypeReq {
             return this;
         }
 
+
         public GetEmployeeTypeReq build() {
             return new GetEmployeeTypeReq(this);
         }

@@ -186,6 +186,7 @@ public class GetEntityReq {
             return this;
         }
 
+
         public GetEntityReq build() {
             return new GetEntityReq(this);
         }

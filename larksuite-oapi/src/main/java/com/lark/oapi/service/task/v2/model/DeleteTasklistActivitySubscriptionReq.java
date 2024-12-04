@@ -110,6 +110,7 @@ public class DeleteTasklistActivitySubscriptionReq {
             return this;
         }
 
+
         public DeleteTasklistActivitySubscriptionReq build() {
             return new DeleteTasklistActivitySubscriptionReq(this);
         }

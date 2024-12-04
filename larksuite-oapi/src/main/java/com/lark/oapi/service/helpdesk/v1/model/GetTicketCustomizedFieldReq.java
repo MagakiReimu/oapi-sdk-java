@@ -76,6 +76,7 @@ public class GetTicketCustomizedFieldReq {
             return this;
         }
 
+
         public GetTicketCustomizedFieldReq build() {
             return new GetTicketCustomizedFieldReq(this);
         }

@@ -107,6 +107,7 @@ public class RecruiterJobReq {
             return this;
         }
 
+
         public RecruiterJobReq build() {
             return new RecruiterJobReq(this);
         }

@@ -105,7 +105,6 @@ public class ListPreHireReq {
         private String pageSize; // 每页获取记录数量，最大100
         private String[] preHireIds; // 待入职ID列表
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：1231231987
@@ -143,6 +142,7 @@ public class ListPreHireReq {
             this.preHireIds = preHireIds;
             return this;
         }
+
 
         public ListPreHireReq build() {
             return new ListPreHireReq(this);

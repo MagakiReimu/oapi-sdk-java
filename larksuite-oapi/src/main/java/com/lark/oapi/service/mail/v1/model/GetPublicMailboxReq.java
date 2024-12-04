@@ -76,6 +76,7 @@ public class GetPublicMailboxReq {
             return this;
         }
 
+
         public GetPublicMailboxReq build() {
             return new GetPublicMailboxReq(this);
         }

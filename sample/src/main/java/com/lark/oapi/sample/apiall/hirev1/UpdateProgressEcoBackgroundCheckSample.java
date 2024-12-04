@@ -22,6 +22,7 @@ public class UpdateProgressEcoBackgroundCheckSample {
                         .stageName("阶段报告")
                         .stageTime("1660123456789")
                         .result("通过")
+                        .operatorRole(1)
                         .reportFileList(new EcoBackgroundCheckReportFile[]{})
                         .build())
                 .build();

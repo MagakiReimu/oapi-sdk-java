@@ -76,6 +76,7 @@ public class GetCurrencyReq {
             return this;
         }
 
+
         public GetCurrencyReq build() {
             return new GetCurrencyReq(this);
         }

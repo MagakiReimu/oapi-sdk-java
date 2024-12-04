@@ -189,7 +189,6 @@ public class LeaveBalancesLeaveReq {
         private String timeZone; // 查询时区
         private Boolean includeOffboard; // 是否获取离职折算字段
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
@@ -291,6 +290,7 @@ public class LeaveBalancesLeaveReq {
             this.includeOffboard = includeOffboard;
             return this;
         }
+
 
         public LeaveBalancesLeaveReq build() {
             return new LeaveBalancesLeaveReq(this);

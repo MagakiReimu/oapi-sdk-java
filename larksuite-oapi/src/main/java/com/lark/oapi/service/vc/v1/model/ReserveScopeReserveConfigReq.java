@@ -105,7 +105,6 @@ public class ReserveScopeReserveConfigReq {
         private String scopeType; // 1 代表层级，2 代表会议室
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 会议室或层级id
          * <p> 示例值：omm_3c5dd7e09bac0c1758fcf9511bd1a771
@@ -155,6 +154,7 @@ public class ReserveScopeReserveConfigReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public ReserveScopeReserveConfigReq build() {
             return new ReserveScopeReserveConfigReq(this);

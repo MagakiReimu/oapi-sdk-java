@@ -188,7 +188,6 @@ public class ListInterviewerReq {
         private String latestUpdateTime; // 最晚更新时间，毫秒时间戳
         private String userIdType; // 此次调用中使用的用户ID的类型
 
-
         /**
          * 分页大小
          * <p> 示例值：
@@ -278,6 +277,7 @@ public class ListInterviewerReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListInterviewerReq build() {
             return new ListInterviewerReq(this);

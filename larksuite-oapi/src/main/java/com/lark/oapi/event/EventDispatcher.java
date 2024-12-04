@@ -30,6 +30,7 @@ import com.lark.oapi.service.compensation.CompensationService;
 import com.lark.oapi.service.contact.ContactService;
 import com.lark.oapi.service.corehr.CorehrService;
 import com.lark.oapi.service.corehr.CorehrService;
+import com.lark.oapi.service.docs.DocsService;
 import com.lark.oapi.service.document_ai.DocumentAiService;
 import com.lark.oapi.service.docx.DocxService;
 import com.lark.oapi.service.drive.DriveService;
@@ -1221,6 +1222,21 @@ public class EventDispatcher implements IHandler {
          * @param handler
          * @return
          */
+        public Builder onP2ApprovalGroupsUpdatedV2(CorehrService.P2ApprovalGroupsUpdatedV2Handler handler) {
+            if (eventType2EventHandler.containsKey("corehr.approval_groups.updated_v2")) {
+                throw new EventTypeAlreadyHasHandlerException("corehr.approval_groups.updated_v2");
+            }
+            eventType2EventHandler.put("corehr.approval_groups.updated_v2", handler);
+            return this;
+        }
+
+        /**
+         * <p> ,
+         * <p> 事件描述文档链接:<a href=""></a>
+         *
+         * @param handler
+         * @return
+         */
         public Builder onP2CompanyCreatedV2(CorehrService.P2CompanyCreatedV2Handler handler) {
             if (eventType2EventHandler.containsKey("corehr.company.created_v2")) {
                 throw new EventTypeAlreadyHasHandlerException("corehr.company.created_v2");
@@ -1712,6 +1728,21 @@ public class EventDispatcher implements IHandler {
 
         /**
          * <p> ,
+         * <p> 事件描述文档链接:<a href=""></a>
+         *
+         * @param handler
+         * @return
+         */
+        public Builder onP2FileCreatedInFolderV1(DriveService.P2FileCreatedInFolderV1Handler handler) {
+            if (eventType2EventHandler.containsKey("drive.file.created_in_folder_v1")) {
+                throw new EventTypeAlreadyHasHandlerException("drive.file.created_in_folder_v1");
+            }
+            eventType2EventHandler.put("drive.file.created_in_folder_v1", handler);
+            return this;
+        }
+
+        /**
+         * <p> ,
          * <p> 事件描述文档链接:<a href="https://open.feishu.cn/document/ukTMukTMukTM/uUDN04SN0QjL1QDN/event/file-deleted-completely">https://open.feishu.cn/document/ukTMukTMukTM/uUDN04SN0QjL1QDN/event/file-deleted-completely</a>
          *
          * @param handler
@@ -1752,6 +1783,21 @@ public class EventDispatcher implements IHandler {
                 throw new EventTypeAlreadyHasHandlerException("drive.file.permission_member_added_v1");
             }
             eventType2EventHandler.put("drive.file.permission_member_added_v1", handler);
+            return this;
+        }
+
+        /**
+         * <p> ,
+         * <p> 事件描述文档链接:<a href=""></a>
+         *
+         * @param handler
+         * @return
+         */
+        public Builder onP2FilePermissionMemberAppliedV1(DriveService.P2FilePermissionMemberAppliedV1Handler handler) {
+            if (eventType2EventHandler.containsKey("drive.file.permission_member_applied_v1")) {
+                throw new EventTypeAlreadyHasHandlerException("drive.file.permission_member_applied_v1");
+            }
+            eventType2EventHandler.put("drive.file.permission_member_applied_v1", handler);
             return this;
         }
 

@@ -63,7 +63,6 @@ public class QueryCustomFieldReq {
     public static class Builder {
         private String[] objectApiNameList; // 所属对象 apiname，支持一个或多个;;当前数量限制为 20 个
 
-
         /**
          * 所属对象 apiname，支持一个或多个;;当前数量限制为 20 个
          * <p> 示例值：["offboarding_info"]
@@ -75,6 +74,7 @@ public class QueryCustomFieldReq {
             this.objectApiNameList = objectApiNameList;
             return this;
         }
+
 
         public QueryCustomFieldReq build() {
             return new QueryCustomFieldReq(this);

@@ -105,7 +105,6 @@ public class TicketImageTicketReq {
         private String msgId; // 消息ID;;[查询消息ID](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/helpdesk-v1/ticket-message/list)
         private Integer index; // index，当消息类型为post时，需指定图片index，index从0开始。当消息类型为img时，无需index
 
-
         /**
          * 工单ID
          * <p> 示例值：12345
@@ -143,6 +142,7 @@ public class TicketImageTicketReq {
             this.index = index;
             return this;
         }
+
 
         public TicketImageTicketReq build() {
             return new TicketImageTicketReq(this);

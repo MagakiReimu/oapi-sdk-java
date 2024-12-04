@@ -76,6 +76,7 @@ public class GetWorkingHoursTypeReq {
             return this;
         }
 
+
         public GetWorkingHoursTypeReq build() {
             return new GetWorkingHoursTypeReq(this);
         }

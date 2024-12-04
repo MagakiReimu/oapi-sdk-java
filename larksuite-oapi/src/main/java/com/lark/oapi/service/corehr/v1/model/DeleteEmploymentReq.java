@@ -120,6 +120,7 @@ public class DeleteEmploymentReq {
             return this;
         }
 
+
         public DeleteEmploymentReq build() {
             return new DeleteEmploymentReq(this);
         }

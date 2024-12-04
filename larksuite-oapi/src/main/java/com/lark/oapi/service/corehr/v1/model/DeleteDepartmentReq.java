@@ -76,6 +76,7 @@ public class DeleteDepartmentReq {
             return this;
         }
 
+
         public DeleteDepartmentReq build() {
             return new DeleteDepartmentReq(this);
         }

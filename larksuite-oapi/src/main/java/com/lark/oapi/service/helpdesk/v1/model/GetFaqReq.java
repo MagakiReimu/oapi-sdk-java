@@ -76,6 +76,7 @@ public class GetFaqReq {
             return this;
         }
 
+
         public GetFaqReq build() {
             return new GetFaqReq(this);
         }

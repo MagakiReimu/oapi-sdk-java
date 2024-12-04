@@ -105,7 +105,6 @@ public class ListCalendarReq {
         private String pageToken; // 上次请求Response返回的分页标记，首次请求时为空
         private String syncToken; // 上次请求Response返回的增量同步标记，分页请求未结束时为空
 
-
         /**
          * 一次请求要求返回最大数量，默认500，取值范围为[50. 1000]
          * <p> 示例值：50
@@ -143,6 +142,7 @@ public class ListCalendarReq {
             this.syncToken = syncToken;
             return this;
         }
+
 
         public ListCalendarReq build() {
             return new ListCalendarReq(this);

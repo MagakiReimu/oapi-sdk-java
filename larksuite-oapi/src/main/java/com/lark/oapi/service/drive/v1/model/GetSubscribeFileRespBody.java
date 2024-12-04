@@ -32,15 +32,15 @@ public class GetSubscribeFileRespBody {
      * 是否有订阅，取值 true 表示已订阅；false 表示未订阅
      * <p> 示例值：
      */
-    @SerializedName("is_subseribe")
-    private Boolean isSubseribe;
+    @SerializedName("is_subscribe")
+    private Boolean isSubscribe;
 
-    public Boolean getIsSubseribe() {
-        return this.isSubseribe;
+    public Boolean getIsSubscribe() {
+        return this.isSubscribe;
     }
 
-    public void setIsSubseribe(Boolean isSubseribe) {
-        this.isSubseribe = isSubseribe;
+    public void setIsSubscribe(Boolean isSubscribe) {
+        this.isSubscribe = isSubscribe;
     }
 
 }

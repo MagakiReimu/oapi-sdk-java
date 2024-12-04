@@ -76,6 +76,7 @@ public class UnsubscribeApprovalReq {
             return this;
         }
 
+
         public UnsubscribeApprovalReq build() {
             return new UnsubscribeApprovalReq(this);
         }

@@ -76,6 +76,7 @@ public class DeleteSystemStatusReq {
             return this;
         }
 
+
         public DeleteSystemStatusReq build() {
             return new DeleteSystemStatusReq(this);
         }

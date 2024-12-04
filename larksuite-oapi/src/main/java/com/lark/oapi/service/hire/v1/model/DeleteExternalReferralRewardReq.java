@@ -73,6 +73,7 @@ public class DeleteExternalReferralRewardReq {
             return this;
         }
 
+
         public DeleteExternalReferralRewardReq build() {
             return new DeleteExternalReferralRewardReq(this);
         }

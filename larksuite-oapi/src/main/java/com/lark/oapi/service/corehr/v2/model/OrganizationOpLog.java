@@ -45,14 +45,14 @@ public class OrganizationOpLog {
      * 操作人
      * <p> 示例值：工号001
      */
-    @SerializedName("opretor")
-    private String opretor;
+    @SerializedName("operator")
+    private String operator;
     /**
      * 操作类型
-     * <p> 示例值：编辑
+     * <p> 示例值：10
      */
     @SerializedName("operation_type")
-    private String operationType;
+    private Integer operationType;
     /**
      * 操作时间
      * <p> 示例值：2020-05-02 12:00:00
@@ -61,7 +61,7 @@ public class OrganizationOpLog {
     private String operationTime;
     /**
      * 操作生效时间
-     * <p> 示例值：2020-06-02 00:00:00
+     * <p> 示例值：2020-06-02
      */
     @SerializedName("effective_time")
     private String effectiveTime;
@@ -97,10 +97,10 @@ public class OrganizationOpLog {
          * 操作人
          * <p> 示例值：工号001
          */
-        this.opretor = builder.opretor;
+        this.operator = builder.operator;
         /**
          * 操作类型
-         * <p> 示例值：编辑
+         * <p> 示例值：10
          */
         this.operationType = builder.operationType;
         /**
@@ -110,7 +110,7 @@ public class OrganizationOpLog {
         this.operationTime = builder.operationTime;
         /**
          * 操作生效时间
-         * <p> 示例值：2020-06-02 00:00:00
+         * <p> 示例值：2020-06-02
          */
         this.effectiveTime = builder.effectiveTime;
         /**
@@ -145,19 +145,19 @@ public class OrganizationOpLog {
         this.changes = changes;
     }
 
-    public String getOpretor() {
-        return this.opretor;
+    public String getOperator() {
+        return this.operator;
     }
 
-    public void setOpretor(String opretor) {
-        this.opretor = opretor;
+    public void setOperator(String operator) {
+        this.operator = operator;
     }
 
-    public String getOperationType() {
+    public Integer getOperationType() {
         return this.operationType;
     }
 
-    public void setOperationType(String operationType) {
+    public void setOperationType(Integer operationType) {
         this.operationType = operationType;
     }
 
@@ -208,12 +208,12 @@ public class OrganizationOpLog {
          * 操作人
          * <p> 示例值：工号001
          */
-        private String opretor;
+        private String operator;
         /**
          * 操作类型
-         * <p> 示例值：编辑
+         * <p> 示例值：10
          */
-        private String operationType;
+        private Integer operationType;
         /**
          * 操作时间
          * <p> 示例值：2020-05-02 12:00:00
@@ -221,7 +221,7 @@ public class OrganizationOpLog {
         private String operationTime;
         /**
          * 操作生效时间
-         * <p> 示例值：2020-06-02 00:00:00
+         * <p> 示例值：2020-06-02
          */
         private String effectiveTime;
         /**
@@ -265,23 +265,23 @@ public class OrganizationOpLog {
          * 操作人
          * <p> 示例值：工号001
          *
-         * @param opretor
+         * @param operator
          * @return
          */
-        public Builder opretor(String opretor) {
-            this.opretor = opretor;
+        public Builder operator(String operator) {
+            this.operator = operator;
             return this;
         }
 
 
         /**
          * 操作类型
-         * <p> 示例值：编辑
+         * <p> 示例值：10
          *
          * @param operationType
          * @return
          */
-        public Builder operationType(String operationType) {
+        public Builder operationType(Integer operationType) {
             this.operationType = operationType;
             return this;
         }
@@ -302,7 +302,7 @@ public class OrganizationOpLog {
 
         /**
          * 操作生效时间
-         * <p> 示例值：2020-06-02 00:00:00
+         * <p> 示例值：2020-06-02
          *
          * @param effectiveTime
          * @return

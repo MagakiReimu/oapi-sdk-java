@@ -164,6 +164,7 @@ public class LumpSumPaymentOperateResult {
             return this;
         }
 
+
         /**
          * 操作结果状态码
          * <p> 示例值：21270202

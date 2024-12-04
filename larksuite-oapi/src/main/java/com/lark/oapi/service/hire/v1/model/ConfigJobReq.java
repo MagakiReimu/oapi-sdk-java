@@ -107,6 +107,7 @@ public class ConfigJobReq {
             return this;
         }
 
+
         public ConfigJobReq build() {
             return new ConfigJobReq(this);
         }

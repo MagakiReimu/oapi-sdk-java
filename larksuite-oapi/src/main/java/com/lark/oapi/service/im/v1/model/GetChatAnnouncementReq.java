@@ -120,6 +120,7 @@ public class GetChatAnnouncementReq {
             return this;
         }
 
+
         public GetChatAnnouncementReq build() {
             return new GetChatAnnouncementReq(this);
         }

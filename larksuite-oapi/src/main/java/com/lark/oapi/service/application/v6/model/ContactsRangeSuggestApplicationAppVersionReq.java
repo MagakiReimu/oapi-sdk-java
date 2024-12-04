@@ -199,6 +199,7 @@ public class ContactsRangeSuggestApplicationAppVersionReq {
             return this;
         }
 
+
         public ContactsRangeSuggestApplicationAppVersionReq build() {
             return new ContactsRangeSuggestApplicationAppVersionReq(this);
         }

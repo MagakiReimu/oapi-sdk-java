@@ -76,6 +76,7 @@ public class DeleteContractReq {
             return this;
         }
 
+
         public DeleteContractReq build() {
             return new DeleteContractReq(this);
         }

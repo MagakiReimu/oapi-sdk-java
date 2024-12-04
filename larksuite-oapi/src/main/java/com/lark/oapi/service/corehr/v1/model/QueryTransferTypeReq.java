@@ -84,7 +84,6 @@ public class QueryTransferTypeReq {
         private Boolean active; // 异动类型状态
         private String[] transferTypeUniqueIdentifier; // 异动类型唯一标识，多条时最多数量为10
 
-
         /**
          * 异动类型状态
          * <p> 示例值：true
@@ -109,6 +108,7 @@ public class QueryTransferTypeReq {
             this.transferTypeUniqueIdentifier = transferTypeUniqueIdentifier;
             return this;
         }
+
 
         public QueryTransferTypeReq build() {
             return new QueryTransferTypeReq(this);

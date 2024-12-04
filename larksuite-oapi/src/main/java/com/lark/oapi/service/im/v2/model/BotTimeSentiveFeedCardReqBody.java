@@ -30,6 +30,12 @@ import com.lark.oapi.core.response.BaseResponse;
 
 public class BotTimeSentiveFeedCardReqBody {
     /**
+     * 机器人id
+     * <p> 示例值：71616xxxx
+     */
+    @SerializedName("bot_id")
+    private String botId;
+    /**
      * 临时置顶状态，true-打开，false-关闭
      * <p> 示例值：true
      */
@@ -48,6 +54,11 @@ public class BotTimeSentiveFeedCardReqBody {
 
     public BotTimeSentiveFeedCardReqBody(Builder builder) {
         /**
+         * 机器人id
+         * <p> 示例值：71616xxxx
+         */
+        this.botId = builder.botId;
+        /**
          * 临时置顶状态，true-打开，false-关闭
          * <p> 示例值：true
          */
@@ -61,6 +72,14 @@ public class BotTimeSentiveFeedCardReqBody {
 
     public static Builder newBuilder() {
         return new Builder();
+    }
+
+    public String getBotId() {
+        return this.botId;
+    }
+
+    public void setBotId(String botId) {
+        this.botId = botId;
     }
 
     public Boolean getTimeSensitive() {
@@ -81,6 +100,11 @@ public class BotTimeSentiveFeedCardReqBody {
 
     public static class Builder {
         /**
+         * 机器人id
+         * <p> 示例值：71616xxxx
+         */
+        private String botId;
+        /**
          * 临时置顶状态，true-打开，false-关闭
          * <p> 示例值：true
          */
@@ -90,6 +114,18 @@ public class BotTimeSentiveFeedCardReqBody {
          * <p> 示例值：
          */
         private String[] userIds;
+
+        /**
+         * 机器人id
+         * <p> 示例值：71616xxxx
+         *
+         * @param botId
+         * @return
+         */
+        public Builder botId(String botId) {
+            this.botId = botId;
+            return this;
+        }
 
 
         /**

@@ -36,6 +36,18 @@ public class ProfileSettingEmploymentBasicInfo {
     @SerializedName("employee_number")
     private String employeeNumber;
     /**
+     * 是否离职重聘
+     * <p> 示例值：true
+     */
+    @SerializedName("rehire")
+    private Boolean rehire;
+    /**
+     * 重聘前雇佣ID
+     * <p> 示例值：7140964208476371111
+     */
+    @SerializedName("employment_info_before_rehire")
+    private String employmentInfoBeforeRehire;
+    /**
      * 入职日期
      * <p> 示例值：2021-01-01
      */
@@ -89,6 +101,16 @@ public class ProfileSettingEmploymentBasicInfo {
          */
         this.employeeNumber = builder.employeeNumber;
         /**
+         * 是否离职重聘
+         * <p> 示例值：true
+         */
+        this.rehire = builder.rehire;
+        /**
+         * 重聘前雇佣ID
+         * <p> 示例值：7140964208476371111
+         */
+        this.employmentInfoBeforeRehire = builder.employmentInfoBeforeRehire;
+        /**
          * 入职日期
          * <p> 示例值：2021-01-01
          */
@@ -135,6 +157,22 @@ public class ProfileSettingEmploymentBasicInfo {
 
     public void setEmployeeNumber(String employeeNumber) {
         this.employeeNumber = employeeNumber;
+    }
+
+    public Boolean getRehire() {
+        return this.rehire;
+    }
+
+    public void setRehire(Boolean rehire) {
+        this.rehire = rehire;
+    }
+
+    public String getEmploymentInfoBeforeRehire() {
+        return this.employmentInfoBeforeRehire;
+    }
+
+    public void setEmploymentInfoBeforeRehire(String employmentInfoBeforeRehire) {
+        this.employmentInfoBeforeRehire = employmentInfoBeforeRehire;
     }
 
     public String getEffectiveTime() {
@@ -200,6 +238,16 @@ public class ProfileSettingEmploymentBasicInfo {
          */
         private String employeeNumber;
         /**
+         * 是否离职重聘
+         * <p> 示例值：true
+         */
+        private Boolean rehire;
+        /**
+         * 重聘前雇佣ID
+         * <p> 示例值：7140964208476371111
+         */
+        private String employmentInfoBeforeRehire;
+        /**
          * 入职日期
          * <p> 示例值：2021-01-01
          */
@@ -244,6 +292,32 @@ public class ProfileSettingEmploymentBasicInfo {
          */
         public Builder employeeNumber(String employeeNumber) {
             this.employeeNumber = employeeNumber;
+            return this;
+        }
+
+
+        /**
+         * 是否离职重聘
+         * <p> 示例值：true
+         *
+         * @param rehire
+         * @return
+         */
+        public Builder rehire(Boolean rehire) {
+            this.rehire = rehire;
+            return this;
+        }
+
+
+        /**
+         * 重聘前雇佣ID
+         * <p> 示例值：7140964208476371111
+         *
+         * @param employmentInfoBeforeRehire
+         * @return
+         */
+        public Builder employmentInfoBeforeRehire(String employmentInfoBeforeRehire) {
+            this.employmentInfoBeforeRehire = employmentInfoBeforeRehire;
             return this;
         }
 

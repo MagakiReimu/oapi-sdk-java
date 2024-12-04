@@ -63,7 +63,6 @@ public class CustomizedFieldsTicketReq {
     public static class Builder {
         private Boolean visibleOnly; // visible only
 
-
         /**
          * visible only
          * <p> 示例值：true
@@ -75,6 +74,7 @@ public class CustomizedFieldsTicketReq {
             this.visibleOnly = visibleOnly;
             return this;
         }
+
 
         public CustomizedFieldsTicketReq build() {
             return new CustomizedFieldsTicketReq(this);

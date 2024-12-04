@@ -75,6 +75,7 @@ public class GetOfferApplicationFormReq {
             return this;
         }
 
+
         public GetOfferApplicationFormReq build() {
             return new GetOfferApplicationFormReq(this);
         }

@@ -147,7 +147,6 @@ public class ListPinReq {
         private Integer pageSize; // 此次调用中使用的分页的大小
         private String pageToken; // 下一页分页的token
 
-
         /**
          * 待获取Pin消息的Chat ID，详情参见[群ID 说明](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1/chat-id-description)
          * <p> 示例值：oc_234jsi43d3ssi993d43545f
@@ -211,6 +210,7 @@ public class ListPinReq {
             this.pageToken = pageToken;
             return this;
         }
+
 
         public ListPinReq build() {
             return new ListPinReq(this);

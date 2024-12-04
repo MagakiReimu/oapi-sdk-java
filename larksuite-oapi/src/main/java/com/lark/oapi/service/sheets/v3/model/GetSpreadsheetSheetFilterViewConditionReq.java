@@ -178,6 +178,7 @@ public class GetSpreadsheetSheetFilterViewConditionReq {
             return this;
         }
 
+
         public GetSpreadsheetSheetFilterViewConditionReq build() {
             return new GetSpreadsheetSheetFilterViewConditionReq(this);
         }

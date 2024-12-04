@@ -76,6 +76,7 @@ public class DeleteNationalIdTypeReq {
             return this;
         }
 
+
         public DeleteNationalIdTypeReq build() {
             return new DeleteNationalIdTypeReq(this);
         }

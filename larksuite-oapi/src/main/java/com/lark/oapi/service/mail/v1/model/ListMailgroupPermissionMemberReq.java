@@ -231,6 +231,7 @@ public class ListMailgroupPermissionMemberReq {
             return this;
         }
 
+
         public ListMailgroupPermissionMemberReq build() {
             return new ListMailgroupPermissionMemberReq(this);
         }

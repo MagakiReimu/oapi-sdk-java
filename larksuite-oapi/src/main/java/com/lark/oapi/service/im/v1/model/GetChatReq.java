@@ -120,6 +120,7 @@ public class GetChatReq {
             return this;
         }
 
+
         public GetChatReq build() {
             return new GetChatReq(this);
         }

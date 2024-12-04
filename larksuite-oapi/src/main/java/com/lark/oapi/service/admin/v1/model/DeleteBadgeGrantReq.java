@@ -110,6 +110,7 @@ public class DeleteBadgeGrantReq {
             return this;
         }
 
+
         public DeleteBadgeGrantReq build() {
             return new DeleteBadgeGrantReq(this);
         }

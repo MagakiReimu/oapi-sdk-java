@@ -147,7 +147,6 @@ public class ListTaskReq {
         private String type; // 查询任务的范围
         private String userIdType; // 表示user的ID的类型，支持open_id, user_id, union_id
 
-
         /**
          * 每页的任务数量
          * <p> 示例值：50
@@ -211,6 +210,7 @@ public class ListTaskReq {
             this.userIdType = userIdType;
             return this;
         }
+
 
         public ListTaskReq build() {
             return new ListTaskReq(this);

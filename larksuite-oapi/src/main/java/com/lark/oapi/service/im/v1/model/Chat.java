@@ -95,6 +95,12 @@ public class Chat {
      */
     @SerializedName("type")
     private String type;
+    /**
+     * 群标签
+     * <p> 示例值：
+     */
+    @SerializedName("labels")
+    private String[] labels;
 
     // builder 开始
     public Chat() {
@@ -156,6 +162,11 @@ public class Chat {
          * <p> 示例值：
          */
         this.type = builder.type;
+        /**
+         * 群标签
+         * <p> 示例值：
+         */
+        this.labels = builder.labels;
     }
 
     public static Builder newBuilder() {
@@ -250,6 +261,14 @@ public class Chat {
         this.type = type;
     }
 
+    public String[] getLabels() {
+        return this.labels;
+    }
+
+    public void setLabels(String[] labels) {
+        this.labels = labels;
+    }
+
     public static class Builder {
         /**
          * chat_id of the conversation
@@ -306,6 +325,11 @@ public class Chat {
          * <p> 示例值：
          */
         private String type;
+        /**
+         * 群标签
+         * <p> 示例值：
+         */
+        private String[] labels;
 
         /**
          * chat_id of the conversation
@@ -446,6 +470,19 @@ public class Chat {
          */
         public Builder type(String type) {
             this.type = type;
+            return this;
+        }
+
+
+        /**
+         * 群标签
+         * <p> 示例值：
+         *
+         * @param labels
+         * @return
+         */
+        public Builder labels(String[] labels) {
+            this.labels = labels;
             return this;
         }
 

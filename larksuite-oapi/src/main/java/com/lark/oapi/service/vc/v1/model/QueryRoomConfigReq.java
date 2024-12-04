@@ -189,7 +189,6 @@ public class QueryRoomConfigReq {
         private String roomId; // 会议室ID scope为6时需要此参数
         private String userIdType; // 此次调用中使用的用户ID的类型，默认使用open_id可不填
 
-
         /**
          * 查询节点范围
          * <p> 示例值：5
@@ -303,6 +302,7 @@ public class QueryRoomConfigReq {
             this.userIdType = userIdType.getValue();
             return this;
         }
+
 
         public QueryRoomConfigReq build() {
             return new QueryRoomConfigReq(this);

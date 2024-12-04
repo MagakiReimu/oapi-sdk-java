@@ -165,6 +165,7 @@ public class AuthPermissionMemberReq {
             return this;
         }
 
+
         public AuthPermissionMemberReq build() {
             return new AuthPermissionMemberReq(this);
         }

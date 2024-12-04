@@ -36,12 +36,6 @@ public class BankBranch {
     @SerializedName("bank_branch_id")
     private String bankBranchId;
     /**
-     * 金融分支机构名称（支行全称）
-     * <p> 示例值：
-     */
-    @SerializedName("name")
-    private I18n[] name;
-    /**
      * 支行名称
      * <p> 示例值：
      */
@@ -113,11 +107,6 @@ public class BankBranch {
          */
         this.bankBranchId = builder.bankBranchId;
         /**
-         * 金融分支机构名称（支行全称）
-         * <p> 示例值：
-         */
-        this.name = builder.name;
-        /**
          * 支行名称
          * <p> 示例值：
          */
@@ -179,14 +168,6 @@ public class BankBranch {
 
     public void setBankBranchId(String bankBranchId) {
         this.bankBranchId = bankBranchId;
-    }
-
-    public I18n[] getName() {
-        return this.name;
-    }
-
-    public void setName(I18n[] name) {
-        this.name = name;
     }
 
     public I18n[] getBankBranchName() {
@@ -276,11 +257,6 @@ public class BankBranch {
          */
         private String bankBranchId;
         /**
-         * 金融分支机构名称（支行全称）
-         * <p> 示例值：
-         */
-        private I18n[] name;
-        /**
          * 支行名称
          * <p> 示例值：
          */
@@ -340,19 +316,6 @@ public class BankBranch {
          */
         public Builder bankBranchId(String bankBranchId) {
             this.bankBranchId = bankBranchId;
-            return this;
-        }
-
-
-        /**
-         * 金融分支机构名称（支行全称）
-         * <p> 示例值：
-         *
-         * @param name
-         * @return
-         */
-        public Builder name(I18n[] name) {
-            this.name = name;
             return this;
         }
 

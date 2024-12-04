@@ -62,7 +62,6 @@ public class ListInterviewRoundTypeReq {
     public static class Builder {
         private Integer processType; // 职位流程类型
 
-
         /**
          * 职位流程类型
          * <p> 示例值：1
@@ -74,6 +73,7 @@ public class ListInterviewRoundTypeReq {
             this.processType = processType;
             return this;
         }
+
 
         public ListInterviewRoundTypeReq build() {
             return new ListInterviewRoundTypeReq(this);

@@ -65,6 +65,12 @@ public class ProfileSettingEmploymentInfo {
      */
     @SerializedName("custom_org_groups")
     private JobDataCustomOrg[] customOrgGroups;
+    /**
+     * 司龄调整信息
+     * <p> 示例值：
+     */
+    @SerializedName("seniority_adjust_informations")
+    private SeniorityAdjustInformationEdit[] seniorityAdjustInformations;
 
     // builder 开始
     public ProfileSettingEmploymentInfo() {
@@ -101,6 +107,11 @@ public class ProfileSettingEmploymentInfo {
          * <p> 示例值：
          */
         this.customOrgGroups = builder.customOrgGroups;
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         */
+        this.seniorityAdjustInformations = builder.seniorityAdjustInformations;
     }
 
     public static Builder newBuilder() {
@@ -155,6 +166,14 @@ public class ProfileSettingEmploymentInfo {
         this.customOrgGroups = customOrgGroups;
     }
 
+    public SeniorityAdjustInformationEdit[] getSeniorityAdjustInformations() {
+        return this.seniorityAdjustInformations;
+    }
+
+    public void setSeniorityAdjustInformations(SeniorityAdjustInformationEdit[] seniorityAdjustInformations) {
+        this.seniorityAdjustInformations = seniorityAdjustInformations;
+    }
+
     public static class Builder {
         /**
          * 基本信息
@@ -186,6 +205,11 @@ public class ProfileSettingEmploymentInfo {
          * <p> 示例值：
          */
         private JobDataCustomOrg[] customOrgGroups;
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         */
+        private SeniorityAdjustInformationEdit[] seniorityAdjustInformations;
 
         /**
          * 基本信息
@@ -261,6 +285,19 @@ public class ProfileSettingEmploymentInfo {
          */
         public Builder customOrgGroups(JobDataCustomOrg[] customOrgGroups) {
             this.customOrgGroups = customOrgGroups;
+            return this;
+        }
+
+
+        /**
+         * 司龄调整信息
+         * <p> 示例值：
+         *
+         * @param seniorityAdjustInformations
+         * @return
+         */
+        public Builder seniorityAdjustInformations(SeniorityAdjustInformationEdit[] seniorityAdjustInformations) {
+            this.seniorityAdjustInformations = seniorityAdjustInformations;
             return this;
         }
 

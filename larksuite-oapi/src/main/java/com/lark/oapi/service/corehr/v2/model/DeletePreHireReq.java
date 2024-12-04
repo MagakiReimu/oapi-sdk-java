@@ -76,6 +76,7 @@ public class DeletePreHireReq {
             return this;
         }
 
+
         public DeletePreHireReq build() {
             return new DeletePreHireReq(this);
         }

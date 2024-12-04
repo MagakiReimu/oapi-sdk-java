@@ -29,11 +29,23 @@ import com.lark.oapi.core.response.BaseResponse;
 
 public class BonusAmount {
     /**
+     * 奖励类型
+     * <p> 示例值：1
+     */
+    @SerializedName("bonus_type")
+    private Integer bonusType;
+    /**
      * 积分奖励
      * <p> 示例值：100
      */
     @SerializedName("point_bonus")
     private Integer pointBonus;
+    /**
+     * 现金奖励
+     * <p> 示例值：
+     */
+    @SerializedName("cash")
+    private Cash cash;
     /**
      * 现金奖励
      * <p> 示例值：
@@ -47,10 +59,20 @@ public class BonusAmount {
 
     public BonusAmount(Builder builder) {
         /**
+         * 奖励类型
+         * <p> 示例值：1
+         */
+        this.bonusType = builder.bonusType;
+        /**
          * 积分奖励
          * <p> 示例值：100
          */
         this.pointBonus = builder.pointBonus;
+        /**
+         * 现金奖励
+         * <p> 示例值：
+         */
+        this.cash = builder.cash;
         /**
          * 现金奖励
          * <p> 示例值：
@@ -62,12 +84,28 @@ public class BonusAmount {
         return new Builder();
     }
 
+    public Integer getBonusType() {
+        return this.bonusType;
+    }
+
+    public void setBonusType(Integer bonusType) {
+        this.bonusType = bonusType;
+    }
+
     public Integer getPointBonus() {
         return this.pointBonus;
     }
 
     public void setPointBonus(Integer pointBonus) {
         this.pointBonus = pointBonus;
+    }
+
+    public Cash getCash() {
+        return this.cash;
+    }
+
+    public void setCash(Cash cash) {
+        this.cash = cash;
     }
 
     public Cash[] getCashBonus() {
@@ -80,6 +118,11 @@ public class BonusAmount {
 
     public static class Builder {
         /**
+         * 奖励类型
+         * <p> 示例值：1
+         */
+        private Integer bonusType;
+        /**
          * 积分奖励
          * <p> 示例值：100
          */
@@ -88,7 +131,24 @@ public class BonusAmount {
          * 现金奖励
          * <p> 示例值：
          */
+        private Cash cash;
+        /**
+         * 现金奖励
+         * <p> 示例值：
+         */
         private Cash[] cashBonus;
+
+        /**
+         * 奖励类型
+         * <p> 示例值：1
+         *
+         * @param bonusType
+         * @return
+         */
+        public Builder bonusType(Integer bonusType) {
+            this.bonusType = bonusType;
+            return this;
+        }
 
 
         /**
@@ -100,6 +160,19 @@ public class BonusAmount {
          */
         public Builder pointBonus(Integer pointBonus) {
             this.pointBonus = pointBonus;
+            return this;
+        }
+
+
+        /**
+         * 现金奖励
+         * <p> 示例值：
+         *
+         * @param cash
+         * @return
+         */
+        public Builder cash(Cash cash) {
+            this.cash = cash;
             return this;
         }
 

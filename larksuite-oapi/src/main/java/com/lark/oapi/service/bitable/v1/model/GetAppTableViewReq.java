@@ -144,6 +144,7 @@ public class GetAppTableViewReq {
             return this;
         }
 
+
         public GetAppTableViewReq build() {
             return new GetAppTableViewReq(this);
         }

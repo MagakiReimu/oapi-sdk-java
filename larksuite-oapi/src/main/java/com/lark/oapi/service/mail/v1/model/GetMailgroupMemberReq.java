@@ -199,6 +199,7 @@ public class GetMailgroupMemberReq {
             return this;
         }
 
+
         public GetMailgroupMemberReq build() {
             return new GetMailgroupMemberReq(this);
         }

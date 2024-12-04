@@ -146,7 +146,6 @@ public class ListOfferReq {
         private String userIdType; // 此次调用中使用的用户ID的类型
         private String employeeTypeIdType; // 此次调用中使用的「人员类型 ID」的类型
 
-
         /**
          * 页码标识，获取第一页传空，每次查询会返回下一页的page_token
          * <p> 示例值：1231231987
@@ -210,6 +209,7 @@ public class ListOfferReq {
             this.employeeTypeIdType = employeeTypeIdType;
             return this;
         }
+
 
         public ListOfferReq build() {
             return new ListOfferReq(this);

@@ -105,7 +105,6 @@ public class ListDataSourceReq {
         private Integer pageSize; // 分页大小
         private String pageToken; // 分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果
 
-
         /**
          * 回包数据格式，0-全量数据；1-摘要数据。;;**注**：摘要数据仅包含"id"，"name"，"state"。
          * <p> 示例值：0
@@ -155,6 +154,7 @@ public class ListDataSourceReq {
             this.pageToken = pageToken;
             return this;
         }
+
 
         public ListDataSourceReq build() {
             return new ListDataSourceReq(this);

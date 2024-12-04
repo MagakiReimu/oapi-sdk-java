@@ -53,6 +53,12 @@ public class BatchGetEmployeeReqBody {
      */
     @SerializedName("work_emails")
     private String[] workEmails;
+    /**
+     * username列表
+     * <p> 示例值：
+     */
+    @SerializedName("user_names")
+    private String[] userNames;
 
     // builder 开始
     public BatchGetEmployeeReqBody() {
@@ -79,6 +85,11 @@ public class BatchGetEmployeeReqBody {
          * <p> 示例值：
          */
         this.workEmails = builder.workEmails;
+        /**
+         * username列表
+         * <p> 示例值：
+         */
+        this.userNames = builder.userNames;
     }
 
     public static Builder newBuilder() {
@@ -117,6 +128,14 @@ public class BatchGetEmployeeReqBody {
         this.workEmails = workEmails;
     }
 
+    public String[] getUserNames() {
+        return this.userNames;
+    }
+
+    public void setUserNames(String[] userNames) {
+        this.userNames = userNames;
+    }
+
     public static class Builder {
         /**
          * 返回数据的字段列表，填写方式：为空时默认仅返回 ID
@@ -138,6 +157,11 @@ public class BatchGetEmployeeReqBody {
          * <p> 示例值：
          */
         private String[] workEmails;
+        /**
+         * username列表
+         * <p> 示例值：
+         */
+        private String[] userNames;
 
         /**
          * 返回数据的字段列表，填写方式：为空时默认仅返回 ID
@@ -187,6 +211,19 @@ public class BatchGetEmployeeReqBody {
          */
         public Builder workEmails(String[] workEmails) {
             this.workEmails = workEmails;
+            return this;
+        }
+
+
+        /**
+         * username列表
+         * <p> 示例值：
+         *
+         * @param userNames
+         * @return
+         */
+        public Builder userNames(String[] userNames) {
+            this.userNames = userNames;
             return this;
         }
 

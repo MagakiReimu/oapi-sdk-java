@@ -65,6 +65,12 @@ public class UpdateProgressEcoBackgroundCheckReqBody {
     @SerializedName("result")
     private String result;
     /**
+     * 操作人角色，默认值为 1
+     * <p> 示例值：1
+     */
+    @SerializedName("operator_role")
+    private Integer operatorRole;
+    /**
      * 报告列表
      * <p> 示例值：
      */
@@ -106,6 +112,11 @@ public class UpdateProgressEcoBackgroundCheckReqBody {
          * <p> 示例值：通过
          */
         this.result = builder.result;
+        /**
+         * 操作人角色，默认值为 1
+         * <p> 示例值：1
+         */
+        this.operatorRole = builder.operatorRole;
         /**
          * 报告列表
          * <p> 示例值：
@@ -165,6 +176,14 @@ public class UpdateProgressEcoBackgroundCheckReqBody {
         this.result = result;
     }
 
+    public Integer getOperatorRole() {
+        return this.operatorRole;
+    }
+
+    public void setOperatorRole(Integer operatorRole) {
+        this.operatorRole = operatorRole;
+    }
+
     public EcoBackgroundCheckReportFile[] getReportFileList() {
         return this.reportFileList;
     }
@@ -204,6 +223,11 @@ public class UpdateProgressEcoBackgroundCheckReqBody {
          * <p> 示例值：通过
          */
         private String result;
+        /**
+         * 操作人角色，默认值为 1
+         * <p> 示例值：1
+         */
+        private Integer operatorRole;
         /**
          * 报告列表
          * <p> 示例值：
@@ -284,6 +308,19 @@ public class UpdateProgressEcoBackgroundCheckReqBody {
          */
         public Builder result(String result) {
             this.result = result;
+            return this;
+        }
+
+
+        /**
+         * 操作人角色，默认值为 1
+         * <p> 示例值：1
+         *
+         * @param operatorRole
+         * @return
+         */
+        public Builder operatorRole(Integer operatorRole) {
+            this.operatorRole = operatorRole;
             return this;
         }
 

@@ -35,6 +35,12 @@ public class CreateTagReqBody {
      */
     @SerializedName("create_tag")
     private CreateTag createTag;
+    /**
+     * 机器人id
+     * <p> 示例值：716168xxxxx
+     */
+    @SerializedName("bot_id")
+    private String botId;
 
     // builder 开始
     public CreateTagReqBody() {
@@ -46,6 +52,11 @@ public class CreateTagReqBody {
          * <p> 示例值：
          */
         this.createTag = builder.createTag;
+        /**
+         * 机器人id
+         * <p> 示例值：716168xxxxx
+         */
+        this.botId = builder.botId;
     }
 
     public static Builder newBuilder() {
@@ -60,12 +71,25 @@ public class CreateTagReqBody {
         this.createTag = createTag;
     }
 
+    public String getBotId() {
+        return this.botId;
+    }
+
+    public void setBotId(String botId) {
+        this.botId = botId;
+    }
+
     public static class Builder {
         /**
          * 创建标签
          * <p> 示例值：
          */
         private CreateTag createTag;
+        /**
+         * 机器人id
+         * <p> 示例值：716168xxxxx
+         */
+        private String botId;
 
         /**
          * 创建标签
@@ -76,6 +100,19 @@ public class CreateTagReqBody {
          */
         public Builder createTag(CreateTag createTag) {
             this.createTag = createTag;
+            return this;
+        }
+
+
+        /**
+         * 机器人id
+         * <p> 示例值：716168xxxxx
+         *
+         * @param botId
+         * @return
+         */
+        public Builder botId(String botId) {
+            this.botId = botId;
             return this;
         }
 

@@ -35,11 +35,13 @@ public class ListTaskRespBody {
     @SerializedName("items")
     private Task[] items;
     /**
+     * 分页标记，分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果
      * <p> 示例值：
      */
     @SerializedName("page_token")
     private String pageToken;
     /**
+     * true
      * <p> 示例值：
      */
     @SerializedName("has_more")

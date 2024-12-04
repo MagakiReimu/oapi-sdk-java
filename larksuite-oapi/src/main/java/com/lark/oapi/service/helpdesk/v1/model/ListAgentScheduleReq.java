@@ -63,7 +63,6 @@ public class ListAgentScheduleReq {
     public static class Builder {
         private Integer[] status; // 筛选条件, 1 - online客服, 2 - offline(手动)客服, 3 - off duty(下班)客服, 4 - 移除客服
 
-
         /**
          * 筛选条件, 1 - online客服, 2 - offline(手动)客服, 3 - off duty(下班)客服, 4 - 移除客服
          * <p> 示例值：status=1&status=2
@@ -75,6 +74,7 @@ public class ListAgentScheduleReq {
             this.status = status;
             return this;
         }
+
 
         public ListAgentScheduleReq build() {
             return new ListAgentScheduleReq(this);

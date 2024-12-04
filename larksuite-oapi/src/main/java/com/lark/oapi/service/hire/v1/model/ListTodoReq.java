@@ -146,7 +146,6 @@ public class ListTodoReq {
         private String userIdType; // 用户 ID 类型
         private String type; // 待办类型
 
-
         /**
          * 下一页页码
          * <p> 示例值：eyJvZmZzZXQiOjEwLCJ0aW1lc3RhbXAiOjE2Mjc1NTUyMjM2NzIsImlkIjpudWxsfQ==
@@ -210,6 +209,7 @@ public class ListTodoReq {
             this.type = type;
             return this;
         }
+
 
         public ListTodoReq build() {
             return new ListTodoReq(this);

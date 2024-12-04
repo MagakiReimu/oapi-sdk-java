@@ -144,6 +144,7 @@ public class GetAppTableFormReq {
             return this;
         }
 
+
         public GetAppTableFormReq build() {
             return new GetAppTableFormReq(this);
         }

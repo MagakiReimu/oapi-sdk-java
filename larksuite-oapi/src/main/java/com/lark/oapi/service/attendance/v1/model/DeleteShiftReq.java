@@ -76,6 +76,7 @@ public class DeleteShiftReq {
             return this;
         }
 
+
         public DeleteShiftReq build() {
             return new DeleteShiftReq(this);
         }

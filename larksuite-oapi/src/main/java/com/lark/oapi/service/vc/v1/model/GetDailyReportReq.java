@@ -105,7 +105,6 @@ public class GetDailyReportReq {
         private String endTime; // 结束时间（unix时间，单位sec）
         private Integer unit; // 数据驻留地
 
-
         /**
          * 开始时间（unix时间，单位sec）
          * <p> 示例值：1608888867
@@ -155,6 +154,7 @@ public class GetDailyReportReq {
             this.unit = unit.getValue();
             return this;
         }
+
 
         public GetDailyReportReq build() {
             return new GetDailyReportReq(this);
