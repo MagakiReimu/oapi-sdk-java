@@ -449,6 +449,36 @@ public class Employee {
      */
     @SerializedName("seniority_adjust_information_list")
     private SeniorityAdjustInformation[] seniorityAdjustInformationList;
+    /**
+     * 员工直属 BP 信息，当员工所在部门、属地无 BP 时，会上钻找到最近的 BP
+     * <p> 示例值：
+     */
+    @SerializedName("employment_direct_bps")
+    private EmploymentBp employmentDirectBps;
+    /**
+     * 员工全部 BP 信息
+     * <p> 示例值：
+     */
+    @SerializedName("employment_all_bps")
+    private EmploymentBp employmentAllBps;
+    /**
+     * 当前所属合同类型;- 可通过[获取字段详情](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)查询;  - object_api_name：contract;  - custom_api_name：contract_type
+     * <p> 示例值：
+     */
+    @SerializedName("contract_type")
+    private Enum contractType;
+    /**
+     * 当前所属薪资方案 ID;- 可结合[批量查询薪资方案](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/compensation-v1/plan/list)接口使用
+     * <p> 示例值：123456789
+     */
+    @SerializedName("archive_cpst_plan_id")
+    private String archiveCpstPlanId;
+    /**
+     * 当前所在考勤组 ID;- 可通过[按 ID 查询考勤组](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/attendance-v1/group/get)获取详情
+     * <p> 示例值：123456789
+     */
+    @SerializedName("attendance_group_id")
+    private String attendanceGroupId;
 
     // builder 开始
     public Employee() {
@@ -805,6 +835,31 @@ public class Employee {
          * <p> 示例值：
          */
         this.seniorityAdjustInformationList = builder.seniorityAdjustInformationList;
+        /**
+         * 员工直属 BP 信息，当员工所在部门、属地无 BP 时，会上钻找到最近的 BP
+         * <p> 示例值：
+         */
+        this.employmentDirectBps = builder.employmentDirectBps;
+        /**
+         * 员工全部 BP 信息
+         * <p> 示例值：
+         */
+        this.employmentAllBps = builder.employmentAllBps;
+        /**
+         * 当前所属合同类型;- 可通过[获取字段详情](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)查询;  - object_api_name：contract;  - custom_api_name：contract_type
+         * <p> 示例值：
+         */
+        this.contractType = builder.contractType;
+        /**
+         * 当前所属薪资方案 ID;- 可结合[批量查询薪资方案](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/compensation-v1/plan/list)接口使用
+         * <p> 示例值：123456789
+         */
+        this.archiveCpstPlanId = builder.archiveCpstPlanId;
+        /**
+         * 当前所在考勤组 ID;- 可通过[按 ID 查询考勤组](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/attendance-v1/group/get)获取详情
+         * <p> 示例值：123456789
+         */
+        this.attendanceGroupId = builder.attendanceGroupId;
     }
 
     public static Builder newBuilder() {
@@ -1371,6 +1426,46 @@ public class Employee {
         this.seniorityAdjustInformationList = seniorityAdjustInformationList;
     }
 
+    public EmploymentBp getEmploymentDirectBps() {
+        return this.employmentDirectBps;
+    }
+
+    public void setEmploymentDirectBps(EmploymentBp employmentDirectBps) {
+        this.employmentDirectBps = employmentDirectBps;
+    }
+
+    public EmploymentBp getEmploymentAllBps() {
+        return this.employmentAllBps;
+    }
+
+    public void setEmploymentAllBps(EmploymentBp employmentAllBps) {
+        this.employmentAllBps = employmentAllBps;
+    }
+
+    public Enum getContractType() {
+        return this.contractType;
+    }
+
+    public void setContractType(Enum contractType) {
+        this.contractType = contractType;
+    }
+
+    public String getArchiveCpstPlanId() {
+        return this.archiveCpstPlanId;
+    }
+
+    public void setArchiveCpstPlanId(String archiveCpstPlanId) {
+        this.archiveCpstPlanId = archiveCpstPlanId;
+    }
+
+    public String getAttendanceGroupId() {
+        return this.attendanceGroupId;
+    }
+
+    public void setAttendanceGroupId(String attendanceGroupId) {
+        this.attendanceGroupId = attendanceGroupId;
+    }
+
     public static class Builder {
         /**
          * 雇佣 ID;- 类型与 user_id_type 一致;- 请使用 employment_id_v2
@@ -1722,6 +1817,31 @@ public class Employee {
          * <p> 示例值：
          */
         private SeniorityAdjustInformation[] seniorityAdjustInformationList;
+        /**
+         * 员工直属 BP 信息，当员工所在部门、属地无 BP 时，会上钻找到最近的 BP
+         * <p> 示例值：
+         */
+        private EmploymentBp employmentDirectBps;
+        /**
+         * 员工全部 BP 信息
+         * <p> 示例值：
+         */
+        private EmploymentBp employmentAllBps;
+        /**
+         * 当前所属合同类型;- 可通过[获取字段详情](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)查询;  - object_api_name：contract;  - custom_api_name：contract_type
+         * <p> 示例值：
+         */
+        private Enum contractType;
+        /**
+         * 当前所属薪资方案 ID;- 可结合[批量查询薪资方案](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/compensation-v1/plan/list)接口使用
+         * <p> 示例值：123456789
+         */
+        private String archiveCpstPlanId;
+        /**
+         * 当前所在考勤组 ID;- 可通过[按 ID 查询考勤组](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/attendance-v1/group/get)获取详情
+         * <p> 示例值：123456789
+         */
+        private String attendanceGroupId;
 
         /**
          * 雇佣 ID;- 类型与 user_id_type 一致;- 请使用 employment_id_v2
@@ -2629,6 +2749,71 @@ public class Employee {
          */
         public Builder seniorityAdjustInformationList(SeniorityAdjustInformation[] seniorityAdjustInformationList) {
             this.seniorityAdjustInformationList = seniorityAdjustInformationList;
+            return this;
+        }
+
+
+        /**
+         * 员工直属 BP 信息，当员工所在部门、属地无 BP 时，会上钻找到最近的 BP
+         * <p> 示例值：
+         *
+         * @param employmentDirectBps
+         * @return
+         */
+        public Builder employmentDirectBps(EmploymentBp employmentDirectBps) {
+            this.employmentDirectBps = employmentDirectBps;
+            return this;
+        }
+
+
+        /**
+         * 员工全部 BP 信息
+         * <p> 示例值：
+         *
+         * @param employmentAllBps
+         * @return
+         */
+        public Builder employmentAllBps(EmploymentBp employmentAllBps) {
+            this.employmentAllBps = employmentAllBps;
+            return this;
+        }
+
+
+        /**
+         * 当前所属合同类型;- 可通过[获取字段详情](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/corehr-v1/custom_field/get_by_param)查询;  - object_api_name：contract;  - custom_api_name：contract_type
+         * <p> 示例值：
+         *
+         * @param contractType
+         * @return
+         */
+        public Builder contractType(Enum contractType) {
+            this.contractType = contractType;
+            return this;
+        }
+
+
+        /**
+         * 当前所属薪资方案 ID;- 可结合[批量查询薪资方案](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/compensation-v1/plan/list)接口使用
+         * <p> 示例值：123456789
+         *
+         * @param archiveCpstPlanId
+         * @return
+         */
+        public Builder archiveCpstPlanId(String archiveCpstPlanId) {
+            this.archiveCpstPlanId = archiveCpstPlanId;
+            return this;
+        }
+
+
+        /**
+         * 当前所在考勤组 ID;- 可通过[按 ID 查询考勤组](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/attendance-v1/group/get)获取详情
+         * <p> 示例值：123456789
+         *
+         * @param attendanceGroupId
+         * @return
+         */
+        public Builder attendanceGroupId(String attendanceGroupId) {
+            this.attendanceGroupId = attendanceGroupId;
             return this;
         }
 

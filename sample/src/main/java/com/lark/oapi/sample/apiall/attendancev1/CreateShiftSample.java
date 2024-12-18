@@ -35,6 +35,7 @@ public class CreateShiftSample {
                         .shiftAttendanceTimeConfig(ShiftAttendanceTimeConfig.newBuilder().build())
                         .lateOffLateOnSetting(LateOffLateOnSetting.newBuilder().build())
                         .id("6919358778597097404")
+                        .restTimeFlexibleConfigs(new RestTimeFlexibleConfig[]{})
                         .build())
                 .build();
 

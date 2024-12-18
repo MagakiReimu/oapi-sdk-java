@@ -59,6 +59,12 @@ public class WidgetInstance {
      */
     @SerializedName("form_content")
     private String formContent;
+    /**
+     * 审批编号
+     * <p> 示例值：2024082614387
+     */
+    @SerializedName("serial_id")
+    private String serialId;
 
     // builder 开始
     public WidgetInstance() {
@@ -90,6 +96,11 @@ public class WidgetInstance {
          * <p> 示例值：[{\"id\": \"widget1\",\"custom_id\": \"user_info\",\"name\": \"Item application\",\"type\": \"textarea\"}]
          */
         this.formContent = builder.formContent;
+        /**
+         * 审批编号
+         * <p> 示例值：2024082614387
+         */
+        this.serialId = builder.serialId;
     }
 
     public static Builder newBuilder() {
@@ -136,6 +147,14 @@ public class WidgetInstance {
         this.formContent = formContent;
     }
 
+    public String getSerialId() {
+        return this.serialId;
+    }
+
+    public void setSerialId(String serialId) {
+        this.serialId = serialId;
+    }
+
     public static class Builder {
         /**
          * 审批实例唯一标识
@@ -162,6 +181,11 @@ public class WidgetInstance {
          * <p> 示例值：[{\"id\": \"widget1\",\"custom_id\": \"user_info\",\"name\": \"Item application\",\"type\": \"textarea\"}]
          */
         private String formContent;
+        /**
+         * 审批编号
+         * <p> 示例值：2024082614387
+         */
+        private String serialId;
 
         /**
          * 审批实例唯一标识
@@ -236,6 +260,19 @@ public class WidgetInstance {
          */
         public Builder formContent(String formContent) {
             this.formContent = formContent;
+            return this;
+        }
+
+
+        /**
+         * 审批编号
+         * <p> 示例值：2024082614387
+         *
+         * @param serialId
+         * @return
+         */
+        public Builder serialId(String serialId) {
+            this.serialId = serialId;
             return this;
         }
 

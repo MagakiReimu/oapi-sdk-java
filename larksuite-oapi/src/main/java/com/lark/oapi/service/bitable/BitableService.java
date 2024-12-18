@@ -26,6 +26,7 @@ import com.lark.oapi.service.bitable.v1.resource.AppTableForm;
 import com.lark.oapi.service.bitable.v1.resource.AppTableFormField;
 import com.lark.oapi.service.bitable.v1.resource.AppTableRecord;
 import com.lark.oapi.service.bitable.v1.resource.AppTableView;
+import com.lark.oapi.service.bitable.v1.resource.AppWorkflow;
 
 public class BitableService {
     private final V1 v1;
@@ -39,6 +40,7 @@ public class BitableService {
     private final AppTableFormField appTableFormField; // 表单
     private final AppTableRecord appTableRecord; // 记录
     private final AppTableView appTableView; // 视图
+    private final AppWorkflow appWorkflow; // app.workflow
 
     public BitableService(Config config) {
         this.v1 = new V1(config);
@@ -52,6 +54,7 @@ public class BitableService {
         this.appTableFormField = new AppTableFormField(config);
         this.appTableRecord = new AppTableRecord(config);
         this.appTableView = new AppTableView(config);
+        this.appWorkflow = new AppWorkflow(config);
     }
 
     public V1 v1() {
@@ -96,5 +99,9 @@ public class BitableService {
 
     public AppTableView appTableView() {
         return appTableView;
+    }
+
+    public AppWorkflow appWorkflow() {
+        return appWorkflow;
     }
 }

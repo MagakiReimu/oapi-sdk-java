@@ -30,7 +30,7 @@ import com.lark.oapi.core.response.BaseResponse;
 
 public class PrehireSeniorityAdjustInformationUpdate {
     /**
-     * 调整值;- 精确度：两位小数;- 单位：年
+     * 调整值;- 精确度：两位小数;- 单位：年;- 自动计算逻辑：如果这个值为空，司龄调整的开始日期和结束日期均不为空，会自动计算出调整值
      * <p> 示例值：0.5
      */
     @SerializedName("seniority_adjustment")
@@ -66,7 +66,7 @@ public class PrehireSeniorityAdjustInformationUpdate {
 
     public PrehireSeniorityAdjustInformationUpdate(Builder builder) {
         /**
-         * 调整值;- 精确度：两位小数;- 单位：年
+         * 调整值;- 精确度：两位小数;- 单位：年;- 自动计算逻辑：如果这个值为空，司龄调整的开始日期和结束日期均不为空，会自动计算出调整值
          * <p> 示例值：0.5
          */
         this.seniorityAdjustment = builder.seniorityAdjustment;
@@ -138,7 +138,7 @@ public class PrehireSeniorityAdjustInformationUpdate {
 
     public static class Builder {
         /**
-         * 调整值;- 精确度：两位小数;- 单位：年
+         * 调整值;- 精确度：两位小数;- 单位：年;- 自动计算逻辑：如果这个值为空，司龄调整的开始日期和结束日期均不为空，会自动计算出调整值
          * <p> 示例值：0.5
          */
         private Double seniorityAdjustment;
@@ -164,7 +164,7 @@ public class PrehireSeniorityAdjustInformationUpdate {
         private String endDate;
 
         /**
-         * 调整值;- 精确度：两位小数;- 单位：年
+         * 调整值;- 精确度：两位小数;- 单位：年;- 自动计算逻辑：如果这个值为空，司龄调整的开始日期和结束日期均不为空，会自动计算出调整值
          * <p> 示例值：0.5
          *
          * @param seniorityAdjustment

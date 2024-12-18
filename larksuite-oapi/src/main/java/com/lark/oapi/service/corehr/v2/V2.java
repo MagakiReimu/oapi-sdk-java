@@ -55,11 +55,17 @@ public class V2 {
     private final Process process; // process
     private final ProcessApprover processApprover; // process.approver
     private final ProcessCc processCc; // process.cc
+    private final ProcessExtra processExtra; // process.extra
     private final ProcessFormVariableData processFormVariableData; // process.form_variable_data
     private final ProcessNode processNode; // process.node
     private final ProcessStatus processStatus; // process.status
+    private final ProcessTransfer processTransfer; // process.transfer
+    private final ProcessRevoke processRevoke; // process_revoke
+    private final ProcessWithdraw processWithdraw; // process_withdraw
+    private final ReportDetailRow reportDetailRow; // report_detail_row
     private final WorkforcePlan workforcePlan; // workforce_plan
     private final WorkforcePlanDetail workforcePlanDetail; // workforce_plan_detail
+    private final WorkforcePlanDetailRow workforcePlanDetailRow; // workforce_plan_detail_row
 
     public V2(Config config) {
         this.approvalGroups = new ApprovalGroups(config);
@@ -99,11 +105,17 @@ public class V2 {
         this.process = new Process(config);
         this.processApprover = new ProcessApprover(config);
         this.processCc = new ProcessCc(config);
+        this.processExtra = new ProcessExtra(config);
         this.processFormVariableData = new ProcessFormVariableData(config);
         this.processNode = new ProcessNode(config);
         this.processStatus = new ProcessStatus(config);
+        this.processTransfer = new ProcessTransfer(config);
+        this.processRevoke = new ProcessRevoke(config);
+        this.processWithdraw = new ProcessWithdraw(config);
+        this.reportDetailRow = new ReportDetailRow(config);
         this.workforcePlan = new WorkforcePlan(config);
         this.workforcePlanDetail = new WorkforcePlanDetail(config);
+        this.workforcePlanDetailRow = new WorkforcePlanDetailRow(config);
     }
 
     public ApprovalGroups approvalGroups() {
@@ -254,6 +266,10 @@ public class V2 {
         return processCc;
     }
 
+    public ProcessExtra processExtra() {
+        return processExtra;
+    }
+
     public ProcessFormVariableData processFormVariableData() {
         return processFormVariableData;
     }
@@ -266,11 +282,31 @@ public class V2 {
         return processStatus;
     }
 
+    public ProcessTransfer processTransfer() {
+        return processTransfer;
+    }
+
+    public ProcessRevoke processRevoke() {
+        return processRevoke;
+    }
+
+    public ProcessWithdraw processWithdraw() {
+        return processWithdraw;
+    }
+
+    public ReportDetailRow reportDetailRow() {
+        return reportDetailRow;
+    }
+
     public WorkforcePlan workforcePlan() {
         return workforcePlan;
     }
 
     public WorkforcePlanDetail workforcePlanDetail() {
         return workforcePlanDetail;
+    }
+
+    public WorkforcePlanDetailRow workforcePlanDetailRow() {
+        return workforcePlanDetailRow;
     }
 }

@@ -82,6 +82,12 @@ public class P2ApprovalGroupsUpdatedV2Data {
      */
     @SerializedName("draft_status")
     private Integer draftStatus;
+    /**
+     * 组织架构调整流程状态V2
+     * <p> 示例值：1
+     */
+    @SerializedName("approval_group_status_v2")
+    private Integer approvalGroupStatusV2;
 
     public String getApprovalGroupId() {
         return this.approvalGroupId;
@@ -153,6 +159,14 @@ public class P2ApprovalGroupsUpdatedV2Data {
 
     public void setDraftStatus(Integer draftStatus) {
         this.draftStatus = draftStatus;
+    }
+
+    public Integer getApprovalGroupStatusV2() {
+        return this.approvalGroupStatusV2;
+    }
+
+    public void setApprovalGroupStatusV2(Integer approvalGroupStatusV2) {
+        this.approvalGroupStatusV2 = approvalGroupStatusV2;
     }
 
 }

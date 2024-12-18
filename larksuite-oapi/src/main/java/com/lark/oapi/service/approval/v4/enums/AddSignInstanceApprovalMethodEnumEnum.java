@@ -19,6 +19,7 @@ package com.lark.oapi.service.approval.v4.enums;
 public enum AddSignInstanceApprovalMethodEnumEnum {
     OR_SIGN(1), // 或签
     ADD_SIGN(2), // 会签
+    SEQUENTIAL_SIGN(3), // 依次审批
     ;
     private Integer value;
 

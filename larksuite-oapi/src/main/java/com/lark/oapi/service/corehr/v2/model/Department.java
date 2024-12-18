@@ -137,6 +137,54 @@ public class Department {
      */
     @SerializedName("cost_center_id")
     private String costCenterId;
+    /**
+     * 创建时间
+     * <p> 示例值：2020-05-01 00:00:00
+     */
+    @SerializedName("created_time")
+    private String createdTime;
+    /**
+     * 更新时间
+     * <p> 示例值：2020-05-02 00:00:00
+     */
+    @SerializedName("updated_time")
+    private String updatedTime;
+    /**
+     * 创建人
+     * <p> 示例值：6893013238632416777
+     */
+    @SerializedName("created_by")
+    private String createdBy;
+    /**
+     * 更新人
+     * <p> 示例值：6893013238632416777
+     */
+    @SerializedName("updated_by")
+    private String updatedBy;
+    /**
+     * 记录创建时间
+     * <p> 示例值：2020-05-01 00:00:00
+     */
+    @SerializedName("record_created_time")
+    private String recordCreatedTime;
+    /**
+     * 记录更新时间
+     * <p> 示例值：2020-05-02 00:00:00
+     */
+    @SerializedName("record_updated_time")
+    private String recordUpdatedTime;
+    /**
+     * 记录创建人
+     * <p> 示例值：6893013238632416777
+     */
+    @SerializedName("record_created_by")
+    private String recordCreatedBy;
+    /**
+     * 记录更新人
+     * <p> 示例值：6893013238632416777
+     */
+    @SerializedName("record_updated_by")
+    private String recordUpdatedBy;
 
     // builder 开始
     public Department() {
@@ -233,6 +281,46 @@ public class Department {
          * <p> 示例值：7142384817131652652
          */
         this.costCenterId = builder.costCenterId;
+        /**
+         * 创建时间
+         * <p> 示例值：2020-05-01 00:00:00
+         */
+        this.createdTime = builder.createdTime;
+        /**
+         * 更新时间
+         * <p> 示例值：2020-05-02 00:00:00
+         */
+        this.updatedTime = builder.updatedTime;
+        /**
+         * 创建人
+         * <p> 示例值：6893013238632416777
+         */
+        this.createdBy = builder.createdBy;
+        /**
+         * 更新人
+         * <p> 示例值：6893013238632416777
+         */
+        this.updatedBy = builder.updatedBy;
+        /**
+         * 记录创建时间
+         * <p> 示例值：2020-05-01 00:00:00
+         */
+        this.recordCreatedTime = builder.recordCreatedTime;
+        /**
+         * 记录更新时间
+         * <p> 示例值：2020-05-02 00:00:00
+         */
+        this.recordUpdatedTime = builder.recordUpdatedTime;
+        /**
+         * 记录创建人
+         * <p> 示例值：6893013238632416777
+         */
+        this.recordCreatedBy = builder.recordCreatedBy;
+        /**
+         * 记录更新人
+         * <p> 示例值：6893013238632416777
+         */
+        this.recordUpdatedBy = builder.recordUpdatedBy;
     }
 
     public static Builder newBuilder() {
@@ -383,6 +471,70 @@ public class Department {
         this.costCenterId = costCenterId;
     }
 
+    public String getCreatedTime() {
+        return this.createdTime;
+    }
+
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
+    }
+
+    public String getUpdatedTime() {
+        return this.updatedTime;
+    }
+
+    public void setUpdatedTime(String updatedTime) {
+        this.updatedTime = updatedTime;
+    }
+
+    public String getCreatedBy() {
+        return this.createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public String getUpdatedBy() {
+        return this.updatedBy;
+    }
+
+    public void setUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
+    }
+
+    public String getRecordCreatedTime() {
+        return this.recordCreatedTime;
+    }
+
+    public void setRecordCreatedTime(String recordCreatedTime) {
+        this.recordCreatedTime = recordCreatedTime;
+    }
+
+    public String getRecordUpdatedTime() {
+        return this.recordUpdatedTime;
+    }
+
+    public void setRecordUpdatedTime(String recordUpdatedTime) {
+        this.recordUpdatedTime = recordUpdatedTime;
+    }
+
+    public String getRecordCreatedBy() {
+        return this.recordCreatedBy;
+    }
+
+    public void setRecordCreatedBy(String recordCreatedBy) {
+        this.recordCreatedBy = recordCreatedBy;
+    }
+
+    public String getRecordUpdatedBy() {
+        return this.recordUpdatedBy;
+    }
+
+    public void setRecordUpdatedBy(String recordUpdatedBy) {
+        this.recordUpdatedBy = recordUpdatedBy;
+    }
+
     public static class Builder {
         /**
          * 部门 ID
@@ -474,6 +626,46 @@ public class Department {
          * <p> 示例值：7142384817131652652
          */
         private String costCenterId;
+        /**
+         * 创建时间
+         * <p> 示例值：2020-05-01 00:00:00
+         */
+        private String createdTime;
+        /**
+         * 更新时间
+         * <p> 示例值：2020-05-02 00:00:00
+         */
+        private String updatedTime;
+        /**
+         * 创建人
+         * <p> 示例值：6893013238632416777
+         */
+        private String createdBy;
+        /**
+         * 更新人
+         * <p> 示例值：6893013238632416777
+         */
+        private String updatedBy;
+        /**
+         * 记录创建时间
+         * <p> 示例值：2020-05-01 00:00:00
+         */
+        private String recordCreatedTime;
+        /**
+         * 记录更新时间
+         * <p> 示例值：2020-05-02 00:00:00
+         */
+        private String recordUpdatedTime;
+        /**
+         * 记录创建人
+         * <p> 示例值：6893013238632416777
+         */
+        private String recordCreatedBy;
+        /**
+         * 记录更新人
+         * <p> 示例值：6893013238632416777
+         */
+        private String recordUpdatedBy;
 
         /**
          * 部门 ID
@@ -705,6 +897,110 @@ public class Department {
          */
         public Builder costCenterId(String costCenterId) {
             this.costCenterId = costCenterId;
+            return this;
+        }
+
+
+        /**
+         * 创建时间
+         * <p> 示例值：2020-05-01 00:00:00
+         *
+         * @param createdTime
+         * @return
+         */
+        public Builder createdTime(String createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+
+
+        /**
+         * 更新时间
+         * <p> 示例值：2020-05-02 00:00:00
+         *
+         * @param updatedTime
+         * @return
+         */
+        public Builder updatedTime(String updatedTime) {
+            this.updatedTime = updatedTime;
+            return this;
+        }
+
+
+        /**
+         * 创建人
+         * <p> 示例值：6893013238632416777
+         *
+         * @param createdBy
+         * @return
+         */
+        public Builder createdBy(String createdBy) {
+            this.createdBy = createdBy;
+            return this;
+        }
+
+
+        /**
+         * 更新人
+         * <p> 示例值：6893013238632416777
+         *
+         * @param updatedBy
+         * @return
+         */
+        public Builder updatedBy(String updatedBy) {
+            this.updatedBy = updatedBy;
+            return this;
+        }
+
+
+        /**
+         * 记录创建时间
+         * <p> 示例值：2020-05-01 00:00:00
+         *
+         * @param recordCreatedTime
+         * @return
+         */
+        public Builder recordCreatedTime(String recordCreatedTime) {
+            this.recordCreatedTime = recordCreatedTime;
+            return this;
+        }
+
+
+        /**
+         * 记录更新时间
+         * <p> 示例值：2020-05-02 00:00:00
+         *
+         * @param recordUpdatedTime
+         * @return
+         */
+        public Builder recordUpdatedTime(String recordUpdatedTime) {
+            this.recordUpdatedTime = recordUpdatedTime;
+            return this;
+        }
+
+
+        /**
+         * 记录创建人
+         * <p> 示例值：6893013238632416777
+         *
+         * @param recordCreatedBy
+         * @return
+         */
+        public Builder recordCreatedBy(String recordCreatedBy) {
+            this.recordCreatedBy = recordCreatedBy;
+            return this;
+        }
+
+
+        /**
+         * 记录更新人
+         * <p> 示例值：6893013238632416777
+         *
+         * @param recordUpdatedBy
+         * @return
+         */
+        public Builder recordUpdatedBy(String recordUpdatedBy) {
+            this.recordUpdatedBy = recordUpdatedBy;
             return this;
         }
 

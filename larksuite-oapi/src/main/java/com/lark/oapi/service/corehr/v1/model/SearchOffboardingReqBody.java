@@ -48,6 +48,18 @@ public class SearchOffboardingReqBody {
     @SerializedName("apply_initiating_time_end")
     private String applyInitiatingTimeEnd;
     /**
+     * 离职审批结束时间 - 搜索范围开始，需要与搜索范围结束一同使用
+     * <p> 示例值：1641007353
+     */
+    @SerializedName("apply_finished_time_start")
+    private String applyFinishedTimeStart;
+    /**
+     * 离职审批结束时间 - 搜索范围结束
+     * <p> 示例值：1641007353
+     */
+    @SerializedName("apply_finished_time_end")
+    private String applyFinishedTimeEnd;
+    /**
      * 期望离职日期-搜索范围开始，需要与搜索范围结束一同使用
      * <p> 示例值：2022-01-01
      */
@@ -111,6 +123,16 @@ public class SearchOffboardingReqBody {
          */
         this.applyInitiatingTimeEnd = builder.applyInitiatingTimeEnd;
         /**
+         * 离职审批结束时间 - 搜索范围开始，需要与搜索范围结束一同使用
+         * <p> 示例值：1641007353
+         */
+        this.applyFinishedTimeStart = builder.applyFinishedTimeStart;
+        /**
+         * 离职审批结束时间 - 搜索范围结束
+         * <p> 示例值：1641007353
+         */
+        this.applyFinishedTimeEnd = builder.applyFinishedTimeEnd;
+        /**
          * 期望离职日期-搜索范围开始，需要与搜索范围结束一同使用
          * <p> 示例值：2022-01-01
          */
@@ -173,6 +195,22 @@ public class SearchOffboardingReqBody {
 
     public void setApplyInitiatingTimeEnd(String applyInitiatingTimeEnd) {
         this.applyInitiatingTimeEnd = applyInitiatingTimeEnd;
+    }
+
+    public String getApplyFinishedTimeStart() {
+        return this.applyFinishedTimeStart;
+    }
+
+    public void setApplyFinishedTimeStart(String applyFinishedTimeStart) {
+        this.applyFinishedTimeStart = applyFinishedTimeStart;
+    }
+
+    public String getApplyFinishedTimeEnd() {
+        return this.applyFinishedTimeEnd;
+    }
+
+    public void setApplyFinishedTimeEnd(String applyFinishedTimeEnd) {
+        this.applyFinishedTimeEnd = applyFinishedTimeEnd;
     }
 
     public String getExpectedOffboardingDateStart() {
@@ -248,6 +286,16 @@ public class SearchOffboardingReqBody {
          */
         private String applyInitiatingTimeEnd;
         /**
+         * 离职审批结束时间 - 搜索范围开始，需要与搜索范围结束一同使用
+         * <p> 示例值：1641007353
+         */
+        private String applyFinishedTimeStart;
+        /**
+         * 离职审批结束时间 - 搜索范围结束
+         * <p> 示例值：1641007353
+         */
+        private String applyFinishedTimeEnd;
+        /**
          * 期望离职日期-搜索范围开始，需要与搜索范围结束一同使用
          * <p> 示例值：2022-01-01
          */
@@ -318,6 +366,32 @@ public class SearchOffboardingReqBody {
          */
         public Builder applyInitiatingTimeEnd(String applyInitiatingTimeEnd) {
             this.applyInitiatingTimeEnd = applyInitiatingTimeEnd;
+            return this;
+        }
+
+
+        /**
+         * 离职审批结束时间 - 搜索范围开始，需要与搜索范围结束一同使用
+         * <p> 示例值：1641007353
+         *
+         * @param applyFinishedTimeStart
+         * @return
+         */
+        public Builder applyFinishedTimeStart(String applyFinishedTimeStart) {
+            this.applyFinishedTimeStart = applyFinishedTimeStart;
+            return this;
+        }
+
+
+        /**
+         * 离职审批结束时间 - 搜索范围结束
+         * <p> 示例值：1641007353
+         *
+         * @param applyFinishedTimeEnd
+         * @return
+         */
+        public Builder applyFinishedTimeEnd(String applyFinishedTimeEnd) {
+            this.applyFinishedTimeEnd = applyFinishedTimeEnd;
             return this;
         }
 

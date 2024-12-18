@@ -142,6 +142,12 @@ public class QueryShiftRespBody {
      */
     @SerializedName("id")
     private String id;
+    /**
+     * 休息弹性设置
+     * <p> 示例值：
+     */
+    @SerializedName("rest_time_flexible_configs")
+    private RestTimeFlexibleConfig[] restTimeFlexibleConfigs;
 
     public String getShiftId() {
         return this.shiftId;
@@ -293,6 +299,14 @@ public class QueryShiftRespBody {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public RestTimeFlexibleConfig[] getRestTimeFlexibleConfigs() {
+        return this.restTimeFlexibleConfigs;
+    }
+
+    public void setRestTimeFlexibleConfigs(RestTimeFlexibleConfig[] restTimeFlexibleConfigs) {
+        this.restTimeFlexibleConfigs = restTimeFlexibleConfigs;
     }
 
 }

@@ -31,13 +31,13 @@ import com.lark.oapi.core.response.BaseResponse;
 public class AnnualReportMapInt {
     /**
      * 年份
-     * <p> 示例值："2022"
+     * <p> 示例值：2024
      */
     @SerializedName("year")
     private String year;
     /**
      * int64类型数据
-     * <p> 示例值：100
+     * <p> 示例值：88
      */
     @SerializedName("count")
     private String count;
@@ -49,12 +49,12 @@ public class AnnualReportMapInt {
     public AnnualReportMapInt(Builder builder) {
         /**
          * 年份
-         * <p> 示例值："2022"
+         * <p> 示例值：2024
          */
         this.year = builder.year;
         /**
          * int64类型数据
-         * <p> 示例值：100
+         * <p> 示例值：88
          */
         this.count = builder.count;
     }
@@ -82,18 +82,18 @@ public class AnnualReportMapInt {
     public static class Builder {
         /**
          * 年份
-         * <p> 示例值："2022"
+         * <p> 示例值：2024
          */
         private String year;
         /**
          * int64类型数据
-         * <p> 示例值：100
+         * <p> 示例值：88
          */
         private String count;
 
         /**
          * 年份
-         * <p> 示例值："2022"
+         * <p> 示例值：2024
          *
          * @param year
          * @return
@@ -106,7 +106,7 @@ public class AnnualReportMapInt {
 
         /**
          * int64类型数据
-         * <p> 示例值：100
+         * <p> 示例值：88
          *
          * @param count
          * @return

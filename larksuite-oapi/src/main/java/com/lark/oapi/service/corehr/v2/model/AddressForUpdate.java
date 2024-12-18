@@ -125,6 +125,18 @@ public class AddressForUpdate {
      */
     @SerializedName("is_public")
     private Boolean isPublic;
+    /**
+     * 城市
+     * <p> 示例值：6863333254578046471
+     */
+    @SerializedName("city_id_v2")
+    private String cityIdV2;
+    /**
+     * 区/县
+     * <p> 示例值：6863333516579440141
+     */
+    @SerializedName("district_id_v2")
+    private String districtIdV2;
 
     // builder 开始
     public AddressForUpdate() {
@@ -211,6 +223,16 @@ public class AddressForUpdate {
          * <p> 示例值：true
          */
         this.isPublic = builder.isPublic;
+        /**
+         * 城市
+         * <p> 示例值：6863333254578046471
+         */
+        this.cityIdV2 = builder.cityIdV2;
+        /**
+         * 区/县
+         * <p> 示例值：6863333516579440141
+         */
+        this.districtIdV2 = builder.districtIdV2;
     }
 
     public static Builder newBuilder() {
@@ -345,6 +367,22 @@ public class AddressForUpdate {
         this.isPublic = isPublic;
     }
 
+    public String getCityIdV2() {
+        return this.cityIdV2;
+    }
+
+    public void setCityIdV2(String cityIdV2) {
+        this.cityIdV2 = cityIdV2;
+    }
+
+    public String getDistrictIdV2() {
+        return this.districtIdV2;
+    }
+
+    public void setDistrictIdV2(String districtIdV2) {
+        this.districtIdV2 = districtIdV2;
+    }
+
     public static class Builder {
         /**
          * 地址 ID
@@ -426,6 +464,16 @@ public class AddressForUpdate {
          * <p> 示例值：true
          */
         private Boolean isPublic;
+        /**
+         * 城市
+         * <p> 示例值：6863333254578046471
+         */
+        private String cityIdV2;
+        /**
+         * 区/县
+         * <p> 示例值：6863333516579440141
+         */
+        private String districtIdV2;
 
         /**
          * 地址 ID
@@ -631,6 +679,32 @@ public class AddressForUpdate {
          */
         public Builder isPublic(Boolean isPublic) {
             this.isPublic = isPublic;
+            return this;
+        }
+
+
+        /**
+         * 城市
+         * <p> 示例值：6863333254578046471
+         *
+         * @param cityIdV2
+         * @return
+         */
+        public Builder cityIdV2(String cityIdV2) {
+            this.cityIdV2 = cityIdV2;
+            return this;
+        }
+
+
+        /**
+         * 区/县
+         * <p> 示例值：6863333516579440141
+         *
+         * @param districtIdV2
+         * @return
+         */
+        public Builder districtIdV2(String districtIdV2) {
+            this.districtIdV2 = districtIdV2;
             return this;
         }
 

@@ -29,6 +29,8 @@ public enum MediaUploadInfoParentTypeEnum {
     MOMENTS("moments"), // 同事圈
     CCM_IMPORT_OPEN("ccm_import_open"), // 云文档导入文件
     CALENDAR("calendar"), // 日历文件
+    BASE_GLOBAL("base_global"), // base文件
+    LARK_AI_MEDIA_ANALYSIS("lark_ai_media_analysis"), // ai素材
     ;
     private String value;
 

@@ -41,6 +41,12 @@ public class VatEntity {
      */
     @SerializedName("value")
     private String value;
+    /**
+     * 识别出的票据详细信息
+     * <p> 示例值：
+     */
+    @SerializedName("items")
+    private KvEntity[][] items;
 
     // builder 开始
     public VatEntity() {
@@ -57,6 +63,11 @@ public class VatEntity {
          * <p> 示例值：发呆公司
          */
         this.value = builder.value;
+        /**
+         * 识别出的票据详细信息
+         * <p> 示例值：
+         */
+        this.items = builder.items;
     }
 
     public static Builder newBuilder() {
@@ -79,6 +90,14 @@ public class VatEntity {
         this.value = value;
     }
 
+    public KvEntity[][] getItems() {
+        return this.items;
+    }
+
+    public void setItems(KvEntity[][] items) {
+        this.items = items;
+    }
+
     public static class Builder {
         /**
          * 识别的实体类型
@@ -90,6 +109,11 @@ public class VatEntity {
          * <p> 示例值：发呆公司
          */
         private String value;
+        /**
+         * 识别出的票据详细信息
+         * <p> 示例值：
+         */
+        private KvEntity[][] items;
 
         /**
          * 识别的实体类型
@@ -125,6 +149,19 @@ public class VatEntity {
          */
         public Builder value(String value) {
             this.value = value;
+            return this;
+        }
+
+
+        /**
+         * 识别出的票据详细信息
+         * <p> 示例值：
+         *
+         * @param items
+         * @return
+         */
+        public Builder items(KvEntity[][] items) {
+            this.items = items;
             return this;
         }
 

@@ -101,6 +101,78 @@ public class OffboardingInfo {
      */
     @SerializedName("custom_fields")
     private CustomFieldData[] customFields;
+    /**
+     * 离职是否保留飞书账号
+     * <p> 示例值：false
+     */
+    @SerializedName("retain_account")
+    private Boolean retainAccount;
+    /**
+     * 社保停保年月
+     * <p> 示例值：2022-02
+     */
+    @SerializedName("social_insurance_end_date")
+    private String socialInsuranceEndDate;
+    /**
+     * 公积金截止年月
+     * <p> 示例值：2022-02
+     */
+    @SerializedName("provident_fund_end_date")
+    private String providentFundEndDate;
+    /**
+     * 是否启动竞业
+     * <p> 示例值：false
+     */
+    @SerializedName("enforce_noncompete_agreement")
+    private Boolean enforceNoncompeteAgreement;
+    /**
+     * 竞业合同ID
+     * <p> 示例值：123
+     */
+    @SerializedName("noncompete_agreement_id")
+    private String noncompeteAgreementId;
+    /**
+     * 竞业公司ID
+     * <p> 示例值：123
+     */
+    @SerializedName("noncompete_agreement_company")
+    private String noncompeteAgreementCompany;
+    /**
+     * 竞业开始日期
+     * <p> 示例值：2022-02-08
+     */
+    @SerializedName("noncompete_agreement_start_date")
+    private String noncompeteAgreementStartDate;
+    /**
+     * 竞业结束日期
+     * <p> 示例值：2022-02-08
+     */
+    @SerializedName("noncompete_agreement_end_date")
+    private String noncompeteAgreementEndDate;
+    /**
+     * 签署方式
+     * <p> 示例值：2022-02-08
+     */
+    @SerializedName("sign_type")
+    private Enum signType;
+    /**
+     * 签署文件ID列表
+     * <p> 示例值：["123","456"]
+     */
+    @SerializedName("signature_file")
+    private String signatureFile;
+    /**
+     * 最后出勤日
+     * <p> 示例值：2022-02-08
+     */
+    @SerializedName("last_attendance_date")
+    private String lastAttendanceDate;
+    /**
+     * 是否带编转移
+     * <p> 示例值：false
+     */
+    @SerializedName("is_transfer_with_workforce")
+    private Boolean isTransferWithWorkforce;
 
     // builder 开始
     public OffboardingInfo() {
@@ -167,6 +239,66 @@ public class OffboardingInfo {
          * <p> 示例值：
          */
         this.customFields = builder.customFields;
+        /**
+         * 离职是否保留飞书账号
+         * <p> 示例值：false
+         */
+        this.retainAccount = builder.retainAccount;
+        /**
+         * 社保停保年月
+         * <p> 示例值：2022-02
+         */
+        this.socialInsuranceEndDate = builder.socialInsuranceEndDate;
+        /**
+         * 公积金截止年月
+         * <p> 示例值：2022-02
+         */
+        this.providentFundEndDate = builder.providentFundEndDate;
+        /**
+         * 是否启动竞业
+         * <p> 示例值：false
+         */
+        this.enforceNoncompeteAgreement = builder.enforceNoncompeteAgreement;
+        /**
+         * 竞业合同ID
+         * <p> 示例值：123
+         */
+        this.noncompeteAgreementId = builder.noncompeteAgreementId;
+        /**
+         * 竞业公司ID
+         * <p> 示例值：123
+         */
+        this.noncompeteAgreementCompany = builder.noncompeteAgreementCompany;
+        /**
+         * 竞业开始日期
+         * <p> 示例值：2022-02-08
+         */
+        this.noncompeteAgreementStartDate = builder.noncompeteAgreementStartDate;
+        /**
+         * 竞业结束日期
+         * <p> 示例值：2022-02-08
+         */
+        this.noncompeteAgreementEndDate = builder.noncompeteAgreementEndDate;
+        /**
+         * 签署方式
+         * <p> 示例值：2022-02-08
+         */
+        this.signType = builder.signType;
+        /**
+         * 签署文件ID列表
+         * <p> 示例值：["123","456"]
+         */
+        this.signatureFile = builder.signatureFile;
+        /**
+         * 最后出勤日
+         * <p> 示例值：2022-02-08
+         */
+        this.lastAttendanceDate = builder.lastAttendanceDate;
+        /**
+         * 是否带编转移
+         * <p> 示例值：false
+         */
+        this.isTransferWithWorkforce = builder.isTransferWithWorkforce;
     }
 
     public static Builder newBuilder() {
@@ -269,6 +401,102 @@ public class OffboardingInfo {
         this.customFields = customFields;
     }
 
+    public Boolean getRetainAccount() {
+        return this.retainAccount;
+    }
+
+    public void setRetainAccount(Boolean retainAccount) {
+        this.retainAccount = retainAccount;
+    }
+
+    public String getSocialInsuranceEndDate() {
+        return this.socialInsuranceEndDate;
+    }
+
+    public void setSocialInsuranceEndDate(String socialInsuranceEndDate) {
+        this.socialInsuranceEndDate = socialInsuranceEndDate;
+    }
+
+    public String getProvidentFundEndDate() {
+        return this.providentFundEndDate;
+    }
+
+    public void setProvidentFundEndDate(String providentFundEndDate) {
+        this.providentFundEndDate = providentFundEndDate;
+    }
+
+    public Boolean getEnforceNoncompeteAgreement() {
+        return this.enforceNoncompeteAgreement;
+    }
+
+    public void setEnforceNoncompeteAgreement(Boolean enforceNoncompeteAgreement) {
+        this.enforceNoncompeteAgreement = enforceNoncompeteAgreement;
+    }
+
+    public String getNoncompeteAgreementId() {
+        return this.noncompeteAgreementId;
+    }
+
+    public void setNoncompeteAgreementId(String noncompeteAgreementId) {
+        this.noncompeteAgreementId = noncompeteAgreementId;
+    }
+
+    public String getNoncompeteAgreementCompany() {
+        return this.noncompeteAgreementCompany;
+    }
+
+    public void setNoncompeteAgreementCompany(String noncompeteAgreementCompany) {
+        this.noncompeteAgreementCompany = noncompeteAgreementCompany;
+    }
+
+    public String getNoncompeteAgreementStartDate() {
+        return this.noncompeteAgreementStartDate;
+    }
+
+    public void setNoncompeteAgreementStartDate(String noncompeteAgreementStartDate) {
+        this.noncompeteAgreementStartDate = noncompeteAgreementStartDate;
+    }
+
+    public String getNoncompeteAgreementEndDate() {
+        return this.noncompeteAgreementEndDate;
+    }
+
+    public void setNoncompeteAgreementEndDate(String noncompeteAgreementEndDate) {
+        this.noncompeteAgreementEndDate = noncompeteAgreementEndDate;
+    }
+
+    public Enum getSignType() {
+        return this.signType;
+    }
+
+    public void setSignType(Enum signType) {
+        this.signType = signType;
+    }
+
+    public String getSignatureFile() {
+        return this.signatureFile;
+    }
+
+    public void setSignatureFile(String signatureFile) {
+        this.signatureFile = signatureFile;
+    }
+
+    public String getLastAttendanceDate() {
+        return this.lastAttendanceDate;
+    }
+
+    public void setLastAttendanceDate(String lastAttendanceDate) {
+        this.lastAttendanceDate = lastAttendanceDate;
+    }
+
+    public Boolean getIsTransferWithWorkforce() {
+        return this.isTransferWithWorkforce;
+    }
+
+    public void setIsTransferWithWorkforce(Boolean isTransferWithWorkforce) {
+        this.isTransferWithWorkforce = isTransferWithWorkforce;
+    }
+
     public static class Builder {
         /**
          * 离职员工的雇佣 ID
@@ -330,6 +558,66 @@ public class OffboardingInfo {
          * <p> 示例值：
          */
         private CustomFieldData[] customFields;
+        /**
+         * 离职是否保留飞书账号
+         * <p> 示例值：false
+         */
+        private Boolean retainAccount;
+        /**
+         * 社保停保年月
+         * <p> 示例值：2022-02
+         */
+        private String socialInsuranceEndDate;
+        /**
+         * 公积金截止年月
+         * <p> 示例值：2022-02
+         */
+        private String providentFundEndDate;
+        /**
+         * 是否启动竞业
+         * <p> 示例值：false
+         */
+        private Boolean enforceNoncompeteAgreement;
+        /**
+         * 竞业合同ID
+         * <p> 示例值：123
+         */
+        private String noncompeteAgreementId;
+        /**
+         * 竞业公司ID
+         * <p> 示例值：123
+         */
+        private String noncompeteAgreementCompany;
+        /**
+         * 竞业开始日期
+         * <p> 示例值：2022-02-08
+         */
+        private String noncompeteAgreementStartDate;
+        /**
+         * 竞业结束日期
+         * <p> 示例值：2022-02-08
+         */
+        private String noncompeteAgreementEndDate;
+        /**
+         * 签署方式
+         * <p> 示例值：2022-02-08
+         */
+        private Enum signType;
+        /**
+         * 签署文件ID列表
+         * <p> 示例值：["123","456"]
+         */
+        private String signatureFile;
+        /**
+         * 最后出勤日
+         * <p> 示例值：2022-02-08
+         */
+        private String lastAttendanceDate;
+        /**
+         * 是否带编转移
+         * <p> 示例值：false
+         */
+        private Boolean isTransferWithWorkforce;
 
         /**
          * 离职员工的雇佣 ID
@@ -483,6 +771,162 @@ public class OffboardingInfo {
          */
         public Builder customFields(CustomFieldData[] customFields) {
             this.customFields = customFields;
+            return this;
+        }
+
+
+        /**
+         * 离职是否保留飞书账号
+         * <p> 示例值：false
+         *
+         * @param retainAccount
+         * @return
+         */
+        public Builder retainAccount(Boolean retainAccount) {
+            this.retainAccount = retainAccount;
+            return this;
+        }
+
+
+        /**
+         * 社保停保年月
+         * <p> 示例值：2022-02
+         *
+         * @param socialInsuranceEndDate
+         * @return
+         */
+        public Builder socialInsuranceEndDate(String socialInsuranceEndDate) {
+            this.socialInsuranceEndDate = socialInsuranceEndDate;
+            return this;
+        }
+
+
+        /**
+         * 公积金截止年月
+         * <p> 示例值：2022-02
+         *
+         * @param providentFundEndDate
+         * @return
+         */
+        public Builder providentFundEndDate(String providentFundEndDate) {
+            this.providentFundEndDate = providentFundEndDate;
+            return this;
+        }
+
+
+        /**
+         * 是否启动竞业
+         * <p> 示例值：false
+         *
+         * @param enforceNoncompeteAgreement
+         * @return
+         */
+        public Builder enforceNoncompeteAgreement(Boolean enforceNoncompeteAgreement) {
+            this.enforceNoncompeteAgreement = enforceNoncompeteAgreement;
+            return this;
+        }
+
+
+        /**
+         * 竞业合同ID
+         * <p> 示例值：123
+         *
+         * @param noncompeteAgreementId
+         * @return
+         */
+        public Builder noncompeteAgreementId(String noncompeteAgreementId) {
+            this.noncompeteAgreementId = noncompeteAgreementId;
+            return this;
+        }
+
+
+        /**
+         * 竞业公司ID
+         * <p> 示例值：123
+         *
+         * @param noncompeteAgreementCompany
+         * @return
+         */
+        public Builder noncompeteAgreementCompany(String noncompeteAgreementCompany) {
+            this.noncompeteAgreementCompany = noncompeteAgreementCompany;
+            return this;
+        }
+
+
+        /**
+         * 竞业开始日期
+         * <p> 示例值：2022-02-08
+         *
+         * @param noncompeteAgreementStartDate
+         * @return
+         */
+        public Builder noncompeteAgreementStartDate(String noncompeteAgreementStartDate) {
+            this.noncompeteAgreementStartDate = noncompeteAgreementStartDate;
+            return this;
+        }
+
+
+        /**
+         * 竞业结束日期
+         * <p> 示例值：2022-02-08
+         *
+         * @param noncompeteAgreementEndDate
+         * @return
+         */
+        public Builder noncompeteAgreementEndDate(String noncompeteAgreementEndDate) {
+            this.noncompeteAgreementEndDate = noncompeteAgreementEndDate;
+            return this;
+        }
+
+
+        /**
+         * 签署方式
+         * <p> 示例值：2022-02-08
+         *
+         * @param signType
+         * @return
+         */
+        public Builder signType(Enum signType) {
+            this.signType = signType;
+            return this;
+        }
+
+
+        /**
+         * 签署文件ID列表
+         * <p> 示例值：["123","456"]
+         *
+         * @param signatureFile
+         * @return
+         */
+        public Builder signatureFile(String signatureFile) {
+            this.signatureFile = signatureFile;
+            return this;
+        }
+
+
+        /**
+         * 最后出勤日
+         * <p> 示例值：2022-02-08
+         *
+         * @param lastAttendanceDate
+         * @return
+         */
+        public Builder lastAttendanceDate(String lastAttendanceDate) {
+            this.lastAttendanceDate = lastAttendanceDate;
+            return this;
+        }
+
+
+        /**
+         * 是否带编转移
+         * <p> 示例值：false
+         *
+         * @param isTransferWithWorkforce
+         * @return
+         */
+        public Builder isTransferWithWorkforce(Boolean isTransferWithWorkforce) {
+            this.isTransferWithWorkforce = isTransferWithWorkforce;
             return this;
         }
 

@@ -54,6 +54,12 @@ public class DepartmentChange {
     @SerializedName("department_change_type")
     private String departmentChangeType;
     /**
+     * 调整状态
+     * <p> 示例值：0
+     */
+    @SerializedName("department_change_status")
+    private Integer departmentChangeStatus;
+    /**
      * 调整详细信息
      * <p> 示例值：
      */
@@ -85,6 +91,11 @@ public class DepartmentChange {
          * <p> 示例值：Create
          */
         this.departmentChangeType = builder.departmentChangeType;
+        /**
+         * 调整状态
+         * <p> 示例值：0
+         */
+        this.departmentChangeStatus = builder.departmentChangeStatus;
         /**
          * 调整详细信息
          * <p> 示例值：
@@ -128,6 +139,14 @@ public class DepartmentChange {
         this.departmentChangeType = departmentChangeType;
     }
 
+    public Integer getDepartmentChangeStatus() {
+        return this.departmentChangeStatus;
+    }
+
+    public void setDepartmentChangeStatus(Integer departmentChangeStatus) {
+        this.departmentChangeStatus = departmentChangeStatus;
+    }
+
     public ReorganizationInfo getReorganizationInfo() {
         return this.reorganizationInfo;
     }
@@ -157,6 +176,11 @@ public class DepartmentChange {
          * <p> 示例值：Create
          */
         private String departmentChangeType;
+        /**
+         * 调整状态
+         * <p> 示例值：0
+         */
+        private Integer departmentChangeStatus;
         /**
          * 调整详细信息
          * <p> 示例值：
@@ -223,6 +247,31 @@ public class DepartmentChange {
          */
         public Builder departmentChangeType(com.lark.oapi.service.corehr.v2.enums.DepartmentChangeDepartmentChangeTypeEnum departmentChangeType) {
             this.departmentChangeType = departmentChangeType.getValue();
+            return this;
+        }
+
+
+        /**
+         * 调整状态
+         * <p> 示例值：0
+         *
+         * @param departmentChangeStatus
+         * @return
+         */
+        public Builder departmentChangeStatus(Integer departmentChangeStatus) {
+            this.departmentChangeStatus = departmentChangeStatus;
+            return this;
+        }
+
+        /**
+         * 调整状态
+         * <p> 示例值：0
+         *
+         * @param departmentChangeStatus {@link com.lark.oapi.service.corehr.v2.enums.DepartmentChangeDepartmentChangeStatusEnum}
+         * @return
+         */
+        public Builder departmentChangeStatus(com.lark.oapi.service.corehr.v2.enums.DepartmentChangeDepartmentChangeStatusEnum departmentChangeStatus) {
+            this.departmentChangeStatus = departmentChangeStatus.getValue();
             return this;
         }
 

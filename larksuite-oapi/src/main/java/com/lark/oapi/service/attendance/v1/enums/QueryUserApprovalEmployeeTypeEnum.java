@@ -19,6 +19,7 @@ package com.lark.oapi.service.attendance.v1.enums;
 public enum QueryUserApprovalEmployeeTypeEnum {
     EMPLOYEE_ID("employee_id"), // 员工employeeId
     EMPLOYEE_NO("employee_no"), // 员工工号
+    OPEN_ID("open_id"), // 用户在某个应用中的身份
     ;
     private String value;
 

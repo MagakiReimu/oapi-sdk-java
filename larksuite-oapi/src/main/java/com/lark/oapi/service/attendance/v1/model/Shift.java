@@ -143,6 +143,12 @@ public class Shift {
      */
     @SerializedName("id")
     private String id;
+    /**
+     * 休息弹性设置
+     * <p> 示例值：
+     */
+    @SerializedName("rest_time_flexible_configs")
+    private RestTimeFlexibleConfig[] restTimeFlexibleConfigs;
 
     // builder 开始
     public Shift() {
@@ -244,6 +250,11 @@ public class Shift {
          * <p> 示例值：6919358778597097404
          */
         this.id = builder.id;
+        /**
+         * 休息弹性设置
+         * <p> 示例值：
+         */
+        this.restTimeFlexibleConfigs = builder.restTimeFlexibleConfigs;
     }
 
     public static Builder newBuilder() {
@@ -402,6 +413,14 @@ public class Shift {
         this.id = id;
     }
 
+    public RestTimeFlexibleConfig[] getRestTimeFlexibleConfigs() {
+        return this.restTimeFlexibleConfigs;
+    }
+
+    public void setRestTimeFlexibleConfigs(RestTimeFlexibleConfig[] restTimeFlexibleConfigs) {
+        this.restTimeFlexibleConfigs = restTimeFlexibleConfigs;
+    }
+
     public static class Builder {
         /**
          * 班次 ID
@@ -498,6 +517,11 @@ public class Shift {
          * <p> 示例值：6919358778597097404
          */
         private String id;
+        /**
+         * 休息弹性设置
+         * <p> 示例值：
+         */
+        private RestTimeFlexibleConfig[] restTimeFlexibleConfigs;
 
         /**
          * 班次 ID
@@ -742,6 +766,19 @@ public class Shift {
          */
         public Builder id(String id) {
             this.id = id;
+            return this;
+        }
+
+
+        /**
+         * 休息弹性设置
+         * <p> 示例值：
+         *
+         * @param restTimeFlexibleConfigs
+         * @return
+         */
+        public Builder restTimeFlexibleConfigs(RestTimeFlexibleConfig[] restTimeFlexibleConfigs) {
+            this.restTimeFlexibleConfigs = restTimeFlexibleConfigs;
             return this;
         }
 

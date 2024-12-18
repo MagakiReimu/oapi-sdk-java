@@ -23,6 +23,7 @@ public class ListAdminDeptStatSample {
                 .pageSize(10)
                 .pageToken("2")
                 .targetGeo("cn")
+                .withProductVersion(true)
                 .build();
 
         // 发起请求

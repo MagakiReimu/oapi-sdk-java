@@ -35,6 +35,16 @@ public enum VatEntityVatEntityTypeEnum {
     SELLERADDRESSPHONE("seller_address_phone"), // 销售方地址&电话
     SELLERACCOUNT("seller_account"), // 销售方开户行&账号
     PAYEE("payee"), // 收款人
+    INVOICEDATE1("invoice_date"), // 开票日期
+    PASSWORDAREA("password_area"), // 密码区
+    REMARKS("remarks"), // 备注
+    REVIEWER("reviewer"), // 复核人
+    DRAWER("drawer"), // 开票人
+    ISSEALED("is_sealed"), // 是否盖章
+    SELLERNAMEINSEAL("seller_name_in_seal"), // 印章内销售方名称
+    SELLERTAXPAYERNOINSEAL("seller_taxpayer_no_in_seal"), // 印章内销售方纳税人识别号
+    INVOICESPECIALSEAL("invoice_special_seal"), // 印章名称
+    MACHINENUM("machine_num"), // 机器编号
     ;
     private String value;
 

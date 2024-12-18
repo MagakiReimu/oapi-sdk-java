@@ -30,7 +30,7 @@ import com.lark.oapi.core.response.BaseResponse;
 
 public class PrehireSeniorityAdjustInformation {
     /**
-     * 调整值;- 精确度：两位小数;- 单位：年
+     * 调整值;- 精确度：两位小数;- 单位：年;- 自动计算逻辑：如果这个值为空，司龄调整的开始日期和结束日期均不为空，会自动计算出调整值
      * <p> 示例值：0.5
      */
     @SerializedName("seniority_adjustment")
@@ -59,12 +59,6 @@ public class PrehireSeniorityAdjustInformation {
      */
     @SerializedName("end_date")
     private String endDate;
-    /**
-     * 自定义字段
-     * <p> 示例值：
-     */
-    @SerializedName("custom_fields")
-    private ObjectFieldData[] customFields;
 
     // builder 开始
     public PrehireSeniorityAdjustInformation() {
@@ -72,7 +66,7 @@ public class PrehireSeniorityAdjustInformation {
 
     public PrehireSeniorityAdjustInformation(Builder builder) {
         /**
-         * 调整值;- 精确度：两位小数;- 单位：年
+         * 调整值;- 精确度：两位小数;- 单位：年;- 自动计算逻辑：如果这个值为空，司龄调整的开始日期和结束日期均不为空，会自动计算出调整值
          * <p> 示例值：0.5
          */
         this.seniorityAdjustment = builder.seniorityAdjustment;
@@ -96,11 +90,6 @@ public class PrehireSeniorityAdjustInformation {
          * <p> 示例值：2024-11-18
          */
         this.endDate = builder.endDate;
-        /**
-         * 自定义字段
-         * <p> 示例值：
-         */
-        this.customFields = builder.customFields;
     }
 
     public static Builder newBuilder() {
@@ -147,17 +136,9 @@ public class PrehireSeniorityAdjustInformation {
         this.endDate = endDate;
     }
 
-    public ObjectFieldData[] getCustomFields() {
-        return this.customFields;
-    }
-
-    public void setCustomFields(ObjectFieldData[] customFields) {
-        this.customFields = customFields;
-    }
-
     public static class Builder {
         /**
-         * 调整值;- 精确度：两位小数;- 单位：年
+         * 调整值;- 精确度：两位小数;- 单位：年;- 自动计算逻辑：如果这个值为空，司龄调整的开始日期和结束日期均不为空，会自动计算出调整值
          * <p> 示例值：0.5
          */
         private Double seniorityAdjustment;
@@ -181,14 +162,9 @@ public class PrehireSeniorityAdjustInformation {
          * <p> 示例值：2024-11-18
          */
         private String endDate;
-        /**
-         * 自定义字段
-         * <p> 示例值：
-         */
-        private ObjectFieldData[] customFields;
 
         /**
-         * 调整值;- 精确度：两位小数;- 单位：年
+         * 调整值;- 精确度：两位小数;- 单位：年;- 自动计算逻辑：如果这个值为空，司龄调整的开始日期和结束日期均不为空，会自动计算出调整值
          * <p> 示例值：0.5
          *
          * @param seniorityAdjustment
@@ -260,19 +236,6 @@ public class PrehireSeniorityAdjustInformation {
          */
         public Builder endDate(String endDate) {
             this.endDate = endDate;
-            return this;
-        }
-
-
-        /**
-         * 自定义字段
-         * <p> 示例值：
-         *
-         * @param customFields
-         * @return
-         */
-        public Builder customFields(ObjectFieldData[] customFields) {
-            this.customFields = customFields;
             return this;
         }
 

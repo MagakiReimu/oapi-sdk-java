@@ -24,6 +24,8 @@ public class SearchOffboardingSample {
                         .employmentIds(new String[]{})
                         .applyInitiatingTimeStart("2022-01-01 11:22:33")
                         .applyInitiatingTimeEnd("2022-01-01 11:22:33")
+                        .applyFinishedTimeStart("1641007353")
+                        .applyFinishedTimeEnd("1641007353")
                         .expectedOffboardingDateStart("2022-01-01")
                         .expectedOffboardingDateEnd("2022-01-01")
                         .offboardingDateStart("2022-01-01")

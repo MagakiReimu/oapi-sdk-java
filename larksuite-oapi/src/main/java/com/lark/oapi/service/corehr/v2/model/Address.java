@@ -245,6 +245,18 @@ public class Address {
      */
     @SerializedName("region_subdivision_2")
     private String regionSubdivision2;
+    /**
+     * 城市（仅文本）
+     * <p> 示例值：example
+     */
+    @SerializedName("city_text")
+    private String cityText;
+    /**
+     * 城市（仅文本，非拉丁语系的本地文字）
+     * <p> 示例值：example
+     */
+    @SerializedName("local_city_text")
+    private String localCityText;
 
     // builder 开始
     public Address() {
@@ -431,6 +443,16 @@ public class Address {
          * <p> 示例值：123
          */
         this.regionSubdivision2 = builder.regionSubdivision2;
+        /**
+         * 城市（仅文本）
+         * <p> 示例值：example
+         */
+        this.cityText = builder.cityText;
+        /**
+         * 城市（仅文本，非拉丁语系的本地文字）
+         * <p> 示例值：example
+         */
+        this.localCityText = builder.localCityText;
     }
 
     public static Builder newBuilder() {
@@ -725,6 +747,22 @@ public class Address {
         this.regionSubdivision2 = regionSubdivision2;
     }
 
+    public String getCityText() {
+        return this.cityText;
+    }
+
+    public void setCityText(String cityText) {
+        this.cityText = cityText;
+    }
+
+    public String getLocalCityText() {
+        return this.localCityText;
+    }
+
+    public void setLocalCityText(String localCityText) {
+        this.localCityText = localCityText;
+    }
+
     public static class Builder {
         /**
          * 完整地址（本地文字）
@@ -906,6 +944,16 @@ public class Address {
          * <p> 示例值：123
          */
         private String regionSubdivision2;
+        /**
+         * 城市（仅文本）
+         * <p> 示例值：example
+         */
+        private String cityText;
+        /**
+         * 城市（仅文本，非拉丁语系的本地文字）
+         * <p> 示例值：example
+         */
+        private String localCityText;
 
         /**
          * 完整地址（本地文字）
@@ -1371,6 +1419,32 @@ public class Address {
          */
         public Builder regionSubdivision2(String regionSubdivision2) {
             this.regionSubdivision2 = regionSubdivision2;
+            return this;
+        }
+
+
+        /**
+         * 城市（仅文本）
+         * <p> 示例值：example
+         *
+         * @param cityText
+         * @return
+         */
+        public Builder cityText(String cityText) {
+            this.cityText = cityText;
+            return this;
+        }
+
+
+        /**
+         * 城市（仅文本，非拉丁语系的本地文字）
+         * <p> 示例值：example
+         *
+         * @param localCityText
+         * @return
+         */
+        public Builder localCityText(String localCityText) {
+            this.localCityText = localCityText;
             return this;
         }
 

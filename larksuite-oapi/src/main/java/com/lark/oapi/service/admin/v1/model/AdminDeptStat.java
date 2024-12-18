@@ -281,6 +281,12 @@ public class AdminDeptStat {
      */
     @SerializedName("tab_search_count")
     private String tabSearchCount;
+    /**
+     * 产品版本名称
+     * <p> 示例值：全部产品版本
+     */
+    @SerializedName("product_version")
+    private String productVersion;
 
     // builder 开始
     public AdminDeptStat() {
@@ -497,6 +503,11 @@ public class AdminDeptStat {
          * <p> 示例值：7
          */
         this.tabSearchCount = builder.tabSearchCount;
+        /**
+         * 产品版本名称
+         * <p> 示例值：全部产品版本
+         */
+        this.productVersion = builder.productVersion;
     }
 
     public static Builder newBuilder() {
@@ -839,6 +850,14 @@ public class AdminDeptStat {
         this.tabSearchCount = tabSearchCount;
     }
 
+    public String getProductVersion() {
+        return this.productVersion;
+    }
+
+    public void setProductVersion(String productVersion) {
+        this.productVersion = productVersion;
+    }
+
     public static class Builder {
         /**
          * 日期
@@ -1050,6 +1069,11 @@ public class AdminDeptStat {
          * <p> 示例值：7
          */
         private String tabSearchCount;
+        /**
+         * 产品版本名称
+         * <p> 示例值：全部产品版本
+         */
+        private String productVersion;
 
         /**
          * 日期
@@ -1593,6 +1617,19 @@ public class AdminDeptStat {
          */
         public Builder tabSearchCount(String tabSearchCount) {
             this.tabSearchCount = tabSearchCount;
+            return this;
+        }
+
+
+        /**
+         * 产品版本名称
+         * <p> 示例值：全部产品版本
+         *
+         * @param productVersion
+         * @return
+         */
+        public Builder productVersion(String productVersion) {
+            this.productVersion = productVersion;
             return this;
         }
 

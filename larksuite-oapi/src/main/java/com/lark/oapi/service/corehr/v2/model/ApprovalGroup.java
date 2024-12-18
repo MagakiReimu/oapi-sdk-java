@@ -48,6 +48,12 @@ public class ApprovalGroup {
     @SerializedName("approval_group_status")
     private String approvalGroupStatus;
     /**
+     * 组织架构调整流程状态V2
+     * <p> 示例值：
+     */
+    @SerializedName("approval_group_status_v2")
+    private Integer approvalGroupStatusV2;
+    /**
      * 调整主题
      * <p> 示例值：测试组织架构调整
      */
@@ -123,6 +129,11 @@ public class ApprovalGroup {
          */
         this.approvalGroupStatus = builder.approvalGroupStatus;
         /**
+         * 组织架构调整流程状态V2
+         * <p> 示例值：
+         */
+        this.approvalGroupStatusV2 = builder.approvalGroupStatusV2;
+        /**
          * 调整主题
          * <p> 示例值：测试组织架构调整
          */
@@ -195,6 +206,14 @@ public class ApprovalGroup {
 
     public void setApprovalGroupStatus(String approvalGroupStatus) {
         this.approvalGroupStatus = approvalGroupStatus;
+    }
+
+    public Integer getApprovalGroupStatusV2() {
+        return this.approvalGroupStatusV2;
+    }
+
+    public void setApprovalGroupStatusV2(Integer approvalGroupStatusV2) {
+        this.approvalGroupStatusV2 = approvalGroupStatusV2;
     }
 
     public String getTopic() {
@@ -285,6 +304,11 @@ public class ApprovalGroup {
          * <p> 示例值：
          */
         private String approvalGroupStatus;
+        /**
+         * 组织架构调整流程状态V2
+         * <p> 示例值：
+         */
+        private Integer approvalGroupStatusV2;
         /**
          * 调整主题
          * <p> 示例值：测试组织架构调整
@@ -378,6 +402,31 @@ public class ApprovalGroup {
          */
         public Builder approvalGroupStatus(com.lark.oapi.service.corehr.v2.enums.ApprovalGroupApprovalGroupStatusEnum approvalGroupStatus) {
             this.approvalGroupStatus = approvalGroupStatus.getValue();
+            return this;
+        }
+
+
+        /**
+         * 组织架构调整流程状态V2
+         * <p> 示例值：
+         *
+         * @param approvalGroupStatusV2
+         * @return
+         */
+        public Builder approvalGroupStatusV2(Integer approvalGroupStatusV2) {
+            this.approvalGroupStatusV2 = approvalGroupStatusV2;
+            return this;
+        }
+
+        /**
+         * 组织架构调整流程状态V2
+         * <p> 示例值：
+         *
+         * @param approvalGroupStatusV2 {@link com.lark.oapi.service.corehr.v2.enums.ApprovalGroupApprovalGroupStatusV2Enum}
+         * @return
+         */
+        public Builder approvalGroupStatusV2(com.lark.oapi.service.corehr.v2.enums.ApprovalGroupApprovalGroupStatusV2Enum approvalGroupStatusV2) {
+            this.approvalGroupStatusV2 = approvalGroupStatusV2.getValue();
             return this;
         }
 

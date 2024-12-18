@@ -31,13 +31,13 @@ import com.lark.oapi.core.response.BaseResponse;
 public class Task {
     /**
      * 文档原所有者ID
-     * <p> 示例值：
+     * <p> 示例值：1
      */
     @SerializedName("original_user_id")
     private String originalUserId;
     /**
      * 目标用户ID
-     * <p> 示例值：
+     * <p> 示例值：2
      */
     @SerializedName("target_owner_id")
     private String targetOwnerId;
@@ -49,7 +49,7 @@ public class Task {
     private File[] fileList;
     /**
      * 任务id
-     * <p> 示例值：
+     * <p> 示例值：123
      */
     @SerializedName("task_id")
     private String taskId;
@@ -61,16 +61,22 @@ public class Task {
     private Integer status;
     /**
      * 文档原所有者邮箱
-     * <p> 示例值：
+     * <p> 示例值：xxx
      */
     @SerializedName("original_user_email")
     private String originalUserEmail;
     /**
      * 文档新所有者邮箱
-     * <p> 示例值：
+     * <p> 示例值：xxx
      */
     @SerializedName("target_owner_email")
     private String targetOwnerEmail;
+    /**
+     * 任务类型
+     * <p> 示例值：1,2
+     */
+    @SerializedName("type")
+    private Integer type;
 
     // builder 开始
     public Task() {
@@ -79,12 +85,12 @@ public class Task {
     public Task(Builder builder) {
         /**
          * 文档原所有者ID
-         * <p> 示例值：
+         * <p> 示例值：1
          */
         this.originalUserId = builder.originalUserId;
         /**
          * 目标用户ID
-         * <p> 示例值：
+         * <p> 示例值：2
          */
         this.targetOwnerId = builder.targetOwnerId;
         /**
@@ -94,7 +100,7 @@ public class Task {
         this.fileList = builder.fileList;
         /**
          * 任务id
-         * <p> 示例值：
+         * <p> 示例值：123
          */
         this.taskId = builder.taskId;
         /**
@@ -104,14 +110,19 @@ public class Task {
         this.status = builder.status;
         /**
          * 文档原所有者邮箱
-         * <p> 示例值：
+         * <p> 示例值：xxx
          */
         this.originalUserEmail = builder.originalUserEmail;
         /**
          * 文档新所有者邮箱
-         * <p> 示例值：
+         * <p> 示例值：xxx
          */
         this.targetOwnerEmail = builder.targetOwnerEmail;
+        /**
+         * 任务类型
+         * <p> 示例值：1,2
+         */
+        this.type = builder.type;
     }
 
     public static Builder newBuilder() {
@@ -174,15 +185,23 @@ public class Task {
         this.targetOwnerEmail = targetOwnerEmail;
     }
 
+    public Integer getType() {
+        return this.type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
     public static class Builder {
         /**
          * 文档原所有者ID
-         * <p> 示例值：
+         * <p> 示例值：1
          */
         private String originalUserId;
         /**
          * 目标用户ID
-         * <p> 示例值：
+         * <p> 示例值：2
          */
         private String targetOwnerId;
         /**
@@ -192,7 +211,7 @@ public class Task {
         private File[] fileList;
         /**
          * 任务id
-         * <p> 示例值：
+         * <p> 示例值：123
          */
         private String taskId;
         /**
@@ -202,18 +221,23 @@ public class Task {
         private Integer status;
         /**
          * 文档原所有者邮箱
-         * <p> 示例值：
+         * <p> 示例值：xxx
          */
         private String originalUserEmail;
         /**
          * 文档新所有者邮箱
-         * <p> 示例值：
+         * <p> 示例值：xxx
          */
         private String targetOwnerEmail;
+        /**
+         * 任务类型
+         * <p> 示例值：1,2
+         */
+        private Integer type;
 
         /**
          * 文档原所有者ID
-         * <p> 示例值：
+         * <p> 示例值：1
          *
          * @param originalUserId
          * @return
@@ -226,7 +250,7 @@ public class Task {
 
         /**
          * 目标用户ID
-         * <p> 示例值：
+         * <p> 示例值：2
          *
          * @param targetOwnerId
          * @return
@@ -252,7 +276,7 @@ public class Task {
 
         /**
          * 任务id
-         * <p> 示例值：
+         * <p> 示例值：123
          *
          * @param taskId
          * @return
@@ -290,7 +314,7 @@ public class Task {
 
         /**
          * 文档原所有者邮箱
-         * <p> 示例值：
+         * <p> 示例值：xxx
          *
          * @param originalUserEmail
          * @return
@@ -303,13 +327,38 @@ public class Task {
 
         /**
          * 文档新所有者邮箱
-         * <p> 示例值：
+         * <p> 示例值：xxx
          *
          * @param targetOwnerEmail
          * @return
          */
         public Builder targetOwnerEmail(String targetOwnerEmail) {
             this.targetOwnerEmail = targetOwnerEmail;
+            return this;
+        }
+
+
+        /**
+         * 任务类型
+         * <p> 示例值：1,2
+         *
+         * @param type
+         * @return
+         */
+        public Builder type(Integer type) {
+            this.type = type;
+            return this;
+        }
+
+        /**
+         * 任务类型
+         * <p> 示例值：1,2
+         *
+         * @param type {@link com.lark.oapi.service.admin.v1.enums.TaskTypeEnum}
+         * @return
+         */
+        public Builder type(com.lark.oapi.service.admin.v1.enums.TaskTypeEnum type) {
+            this.type = type.getValue();
             return this;
         }
 

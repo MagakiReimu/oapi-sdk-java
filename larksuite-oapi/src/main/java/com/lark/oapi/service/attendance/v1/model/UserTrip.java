@@ -89,6 +89,36 @@ public class UserTrip {
      */
     @SerializedName("process_id")
     private String[] processId;
+    /**
+     * 出发地（只有一个）
+     * <p> 示例值：
+     */
+    @SerializedName("departure")
+    private RegionPlace departure;
+    /**
+     * 目的地（可写多个）
+     * <p> 示例值：
+     */
+    @SerializedName("destinations")
+    private RegionPlace[] destinations;
+    /**
+     * 交通工具（1 飞机，2 火车，3 汽车，4 高铁/动车，5 船，6 其他）
+     * <p> 示例值：
+     */
+    @SerializedName("transportation")
+    private Integer[] transportation;
+    /**
+     * 出差类型(1:单程 2:往返)
+     * <p> 示例值：1
+     */
+    @SerializedName("trip_type")
+    private Integer tripType;
+    /**
+     * 出差备注
+     * <p> 示例值：出差备注
+     */
+    @SerializedName("remarks")
+    private String remarks;
 
     // builder 开始
     public UserTrip() {
@@ -145,6 +175,31 @@ public class UserTrip {
          * <p> 示例值：
          */
         this.processId = builder.processId;
+        /**
+         * 出发地（只有一个）
+         * <p> 示例值：
+         */
+        this.departure = builder.departure;
+        /**
+         * 目的地（可写多个）
+         * <p> 示例值：
+         */
+        this.destinations = builder.destinations;
+        /**
+         * 交通工具（1 飞机，2 火车，3 汽车，4 高铁/动车，5 船，6 其他）
+         * <p> 示例值：
+         */
+        this.transportation = builder.transportation;
+        /**
+         * 出差类型(1:单程 2:往返)
+         * <p> 示例值：1
+         */
+        this.tripType = builder.tripType;
+        /**
+         * 出差备注
+         * <p> 示例值：出差备注
+         */
+        this.remarks = builder.remarks;
     }
 
     public static Builder newBuilder() {
@@ -231,6 +286,46 @@ public class UserTrip {
         this.processId = processId;
     }
 
+    public RegionPlace getDeparture() {
+        return this.departure;
+    }
+
+    public void setDeparture(RegionPlace departure) {
+        this.departure = departure;
+    }
+
+    public RegionPlace[] getDestinations() {
+        return this.destinations;
+    }
+
+    public void setDestinations(RegionPlace[] destinations) {
+        this.destinations = destinations;
+    }
+
+    public Integer[] getTransportation() {
+        return this.transportation;
+    }
+
+    public void setTransportation(Integer[] transportation) {
+        this.transportation = transportation;
+    }
+
+    public Integer getTripType() {
+        return this.tripType;
+    }
+
+    public void setTripType(Integer tripType) {
+        this.tripType = tripType;
+    }
+
+    public String getRemarks() {
+        return this.remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
     public static class Builder {
         /**
          * 审批实例 ID
@@ -282,6 +377,31 @@ public class UserTrip {
          * <p> 示例值：
          */
         private String[] processId;
+        /**
+         * 出发地（只有一个）
+         * <p> 示例值：
+         */
+        private RegionPlace departure;
+        /**
+         * 目的地（可写多个）
+         * <p> 示例值：
+         */
+        private RegionPlace[] destinations;
+        /**
+         * 交通工具（1 飞机，2 火车，3 汽车，4 高铁/动车，5 船，6 其他）
+         * <p> 示例值：
+         */
+        private Integer[] transportation;
+        /**
+         * 出差类型(1:单程 2:往返)
+         * <p> 示例值：1
+         */
+        private Integer tripType;
+        /**
+         * 出差备注
+         * <p> 示例值：出差备注
+         */
+        private String remarks;
 
         /**
          * 审批实例 ID
@@ -409,6 +529,71 @@ public class UserTrip {
          */
         public Builder processId(String[] processId) {
             this.processId = processId;
+            return this;
+        }
+
+
+        /**
+         * 出发地（只有一个）
+         * <p> 示例值：
+         *
+         * @param departure
+         * @return
+         */
+        public Builder departure(RegionPlace departure) {
+            this.departure = departure;
+            return this;
+        }
+
+
+        /**
+         * 目的地（可写多个）
+         * <p> 示例值：
+         *
+         * @param destinations
+         * @return
+         */
+        public Builder destinations(RegionPlace[] destinations) {
+            this.destinations = destinations;
+            return this;
+        }
+
+
+        /**
+         * 交通工具（1 飞机，2 火车，3 汽车，4 高铁/动车，5 船，6 其他）
+         * <p> 示例值：
+         *
+         * @param transportation
+         * @return
+         */
+        public Builder transportation(Integer[] transportation) {
+            this.transportation = transportation;
+            return this;
+        }
+
+
+        /**
+         * 出差类型(1:单程 2:往返)
+         * <p> 示例值：1
+         *
+         * @param tripType
+         * @return
+         */
+        public Builder tripType(Integer tripType) {
+            this.tripType = tripType;
+            return this;
+        }
+
+
+        /**
+         * 出差备注
+         * <p> 示例值：出差备注
+         *
+         * @param remarks
+         * @return
+         */
+        public Builder remarks(String remarks) {
+            this.remarks = remarks;
             return this;
         }
 

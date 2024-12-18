@@ -59,6 +59,12 @@ public class PrehireSeniorityAdjustInformationQuery {
      */
     @SerializedName("end_date")
     private String endDate;
+    /**
+     * 自定义字段
+     * <p> 示例值：
+     */
+    @SerializedName("custom_fields")
+    private CustomFieldData[] customFields;
 
     // builder 开始
     public PrehireSeniorityAdjustInformationQuery() {
@@ -90,6 +96,11 @@ public class PrehireSeniorityAdjustInformationQuery {
          * <p> 示例值：2024-11-18
          */
         this.endDate = builder.endDate;
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         */
+        this.customFields = builder.customFields;
     }
 
     public static Builder newBuilder() {
@@ -136,6 +147,14 @@ public class PrehireSeniorityAdjustInformationQuery {
         this.endDate = endDate;
     }
 
+    public CustomFieldData[] getCustomFields() {
+        return this.customFields;
+    }
+
+    public void setCustomFields(CustomFieldData[] customFields) {
+        this.customFields = customFields;
+    }
+
     public static class Builder {
         /**
          * 调整值;- 精确度：两位小数;- 单位：年
@@ -162,6 +181,11 @@ public class PrehireSeniorityAdjustInformationQuery {
          * <p> 示例值：2024-11-18
          */
         private String endDate;
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         */
+        private CustomFieldData[] customFields;
 
         /**
          * 调整值;- 精确度：两位小数;- 单位：年
@@ -224,6 +248,19 @@ public class PrehireSeniorityAdjustInformationQuery {
          */
         public Builder endDate(String endDate) {
             this.endDate = endDate;
+            return this;
+        }
+
+
+        /**
+         * 自定义字段
+         * <p> 示例值：
+         *
+         * @param customFields
+         * @return
+         */
+        public Builder customFields(CustomFieldData[] customFields) {
+            this.customFields = customFields;
             return this;
         }
 

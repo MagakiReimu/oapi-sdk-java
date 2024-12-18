@@ -204,11 +204,17 @@ public class JobData {
     @SerializedName("created_at")
     private String createdAt;
     /**
-     * 周工作时长
+     * 周工作时长 V2
      * <p> 示例值：10.1
      */
     @SerializedName("weekly_working_hours_v2")
     private Double weeklyWorkingHoursV2;
+    /**
+     * 周工作时长
+     * <p> 示例值：10
+     */
+    @SerializedName("weekly_working_hours")
+    private Integer weeklyWorkingHours;
     /**
      * 人员子类型 ID
      * <p> 示例值：6890452208593372680
@@ -367,10 +373,15 @@ public class JobData {
          */
         this.createdAt = builder.createdAt;
         /**
-         * 周工作时长
+         * 周工作时长 V2
          * <p> 示例值：10.1
          */
         this.weeklyWorkingHoursV2 = builder.weeklyWorkingHoursV2;
+        /**
+         * 周工作时长
+         * <p> 示例值：10
+         */
+        this.weeklyWorkingHours = builder.weeklyWorkingHours;
         /**
          * 人员子类型 ID
          * <p> 示例值：6890452208593372680
@@ -622,6 +633,14 @@ public class JobData {
         this.weeklyWorkingHoursV2 = weeklyWorkingHoursV2;
     }
 
+    public Integer getWeeklyWorkingHours() {
+        return this.weeklyWorkingHours;
+    }
+
+    public void setWeeklyWorkingHours(Integer weeklyWorkingHours) {
+        this.weeklyWorkingHours = weeklyWorkingHours;
+    }
+
     public String getEmployeeSubtypeId() {
         return this.employeeSubtypeId;
     }
@@ -777,10 +796,15 @@ public class JobData {
          */
         private String createdAt;
         /**
-         * 周工作时长
+         * 周工作时长 V2
          * <p> 示例值：10.1
          */
         private Double weeklyWorkingHoursV2;
+        /**
+         * 周工作时长
+         * <p> 示例值：10
+         */
+        private Integer weeklyWorkingHours;
         /**
          * 人员子类型 ID
          * <p> 示例值：6890452208593372680
@@ -1165,7 +1189,7 @@ public class JobData {
 
 
         /**
-         * 周工作时长
+         * 周工作时长 V2
          * <p> 示例值：10.1
          *
          * @param weeklyWorkingHoursV2
@@ -1173,6 +1197,19 @@ public class JobData {
          */
         public Builder weeklyWorkingHoursV2(Double weeklyWorkingHoursV2) {
             this.weeklyWorkingHoursV2 = weeklyWorkingHoursV2;
+            return this;
+        }
+
+
+        /**
+         * 周工作时长
+         * <p> 示例值：10
+         *
+         * @param weeklyWorkingHours
+         * @return
+         */
+        public Builder weeklyWorkingHours(Integer weeklyWorkingHours) {
+            this.weeklyWorkingHours = weeklyWorkingHours;
             return this;
         }
 

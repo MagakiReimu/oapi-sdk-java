@@ -17,6 +17,7 @@ public class SendUserMailboxMessageSample {
         SendUserMailboxMessageReq req = SendUserMailboxMessageReq.newBuilder()
                 .userMailboxId("user@xxx.xx 或 me")
                 .message(Message.newBuilder()
+                        .raw("Q29udGVudC1UeXBlOiB0ZXh0L3BsYWluOyBjaGFyc2V0PSJ1cy1hc2NpaSIKTUlNRS1WZXJzaW9uOiAxLjAKQ29udGVudC1UcmFuc2Zlci1FbmNvZGluZzogN2JpdAp0bzogdG9AeHh4Lnh4CmZyb206IHNlbmRlckB4eHgueHgKc3ViamVjdDogdGhpcyBpcyBhIHN1YmplY3QKCnRoaXMgaXMgdGhlIG1lc3NhZ2UgYm9keS4=")
                         .subject("邮件标题")
                         .to(new MailAddress[]{})
                         .cc(new MailAddress[]{})

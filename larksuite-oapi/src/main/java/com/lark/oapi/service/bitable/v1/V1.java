@@ -27,6 +27,7 @@ public class V1 {
     private final AppTableFormField appTableFormField; // 表单
     private final AppTableRecord appTableRecord; // 记录
     private final AppTableView appTableView; // 视图
+    private final AppWorkflow appWorkflow; // app.workflow
 
     public V1(Config config) {
         this.app = new App(config);
@@ -39,6 +40,7 @@ public class V1 {
         this.appTableFormField = new AppTableFormField(config);
         this.appTableRecord = new AppTableRecord(config);
         this.appTableView = new AppTableView(config);
+        this.appWorkflow = new AppWorkflow(config);
     }
 
     public App app() {
@@ -79,5 +81,9 @@ public class V1 {
 
     public AppTableView appTableView() {
         return appTableView;
+    }
+
+    public AppWorkflow appWorkflow() {
+        return appWorkflow;
     }
 }

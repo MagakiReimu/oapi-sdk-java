@@ -25,6 +25,12 @@ public enum TrainEntityTrainEntityTypeEnum {
     TICKETNUM("ticket_num"), // 车票编号
     TOTALAMOUNT("total_amount"), // 价格
     TIME("time"), // 出发时间
+    PRICE("price"), // 金额
+    SEATNUM1("seat_num"), // 座位号
+    SEATCLS("seat_cls"), // 座位类型
+    IDNUM("id_num"), // 身份证号
+    SALENUM("sale_num"), // 售卖号
+    SALESTATION("sale_station"), // 售卖车站
     ;
     private String value;
 

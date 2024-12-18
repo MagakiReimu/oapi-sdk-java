@@ -31,13 +31,13 @@ import com.lark.oapi.core.response.BaseResponse;
 public class AnnualReportMapFloat {
     /**
      * 年份
-     * <p> 示例值：2022
+     * <p> 示例值：2024
      */
     @SerializedName("year")
     private String year;
     /**
      * float64类型数据
-     * <p> 示例值：100.1
+     * <p> 示例值：88.88
      */
     @SerializedName("num")
     private Double num;
@@ -49,12 +49,12 @@ public class AnnualReportMapFloat {
     public AnnualReportMapFloat(Builder builder) {
         /**
          * 年份
-         * <p> 示例值：2022
+         * <p> 示例值：2024
          */
         this.year = builder.year;
         /**
          * float64类型数据
-         * <p> 示例值：100.1
+         * <p> 示例值：88.88
          */
         this.num = builder.num;
     }
@@ -82,18 +82,18 @@ public class AnnualReportMapFloat {
     public static class Builder {
         /**
          * 年份
-         * <p> 示例值：2022
+         * <p> 示例值：2024
          */
         private String year;
         /**
          * float64类型数据
-         * <p> 示例值：100.1
+         * <p> 示例值：88.88
          */
         private Double num;
 
         /**
          * 年份
-         * <p> 示例值：2022
+         * <p> 示例值：2024
          *
          * @param year
          * @return
@@ -106,7 +106,7 @@ public class AnnualReportMapFloat {
 
         /**
          * float64类型数据
-         * <p> 示例值：100.1
+         * <p> 示例值：88.88
          *
          * @param num
          * @return

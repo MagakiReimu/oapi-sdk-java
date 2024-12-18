@@ -84,6 +84,13 @@ public class ListAdminDeptStatReq {
     @Query
     @SerializedName("target_geo")
     private String targetGeo;
+    /**
+     * 是否返回分产品版本数据
+     * <p> 示例值：true
+     */
+    @Query
+    @SerializedName("with_product_version")
+    private Boolean withProductVersion;
 
     // builder 开始
     public ListAdminDeptStatReq() {
@@ -130,6 +137,11 @@ public class ListAdminDeptStatReq {
          * <p> 示例值：cn
          */
         this.targetGeo = builder.targetGeo;
+        /**
+         * 是否返回分产品版本数据
+         * <p> 示例值：true
+         */
+        this.withProductVersion = builder.withProductVersion;
     }
 
     public static Builder newBuilder() {
@@ -200,6 +212,14 @@ public class ListAdminDeptStatReq {
         this.targetGeo = targetGeo;
     }
 
+    public Boolean getWithProductVersion() {
+        return this.withProductVersion;
+    }
+
+    public void setWithProductVersion(Boolean withProductVersion) {
+        this.withProductVersion = withProductVersion;
+    }
+
     public static class Builder {
         private String departmentIdType; // 部门ID类型
         private String startDate; // 起始日期（包含），格式是YYYY-mm-dd
@@ -209,6 +229,7 @@ public class ListAdminDeptStatReq {
         private Integer pageSize; // 分页大小，默认是10
         private String pageToken; // 分页标记，第一次请求不填，表示从头开始遍历；当返回的has_more为true时，会返回新的page_token，再次调用接口，传入这个page_token，将获得下一页数据
         private String targetGeo; // 跨域访问的geo
+        private Boolean withProductVersion; // 是否返回分产品版本数据
 
         /**
          * 部门ID类型
@@ -322,6 +343,19 @@ public class ListAdminDeptStatReq {
          */
         public Builder targetGeo(String targetGeo) {
             this.targetGeo = targetGeo;
+            return this;
+        }
+
+
+        /**
+         * 是否返回分产品版本数据
+         * <p> 示例值：true
+         *
+         * @param withProductVersion
+         * @return
+         */
+        public Builder withProductVersion(Boolean withProductVersion) {
+            this.withProductVersion = withProductVersion;
             return this;
         }
 
