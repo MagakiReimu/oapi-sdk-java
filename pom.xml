@@ -13,8 +13,8 @@
   -->
 
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <artifactId>larksuite</artifactId>
   <description>Larksuite open platform facilitates the integration of enterprise applications and
     larksuite, making collaboration and management more efficient
@@ -24,7 +24,6 @@
   <modules>
     <module>larksuite-oapi</module>
     <module>sample</module>
-    <module>larksuite-oapi-shaded-protobuf</module>
   </modules>
   <name>larksuite</name>
   <packaging>pom</packaging>

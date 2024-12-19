@@ -3,12 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.larksuite.oapi</groupId>
-        <artifactId>larksuite</artifactId>
-        <version>2.0.0</version>
-    </parent>
-
     <distributionManagement>
         <repository>
             <id>ossrh</id>
@@ -20,9 +14,36 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <description>Larksuite oapi sdk shaded protobuf
+    </description>
+
     <artifactId>larksuite-oapi-shaded-protobuf</artifactId>
+    <groupId>com.larksuite.oapi</groupId>
+    <name>larksuite-oapi-shaded-protobuf</name>
     <packaging>jar</packaging>
-    <version>2.3.6</version>
+    <version>2.4.6</version>
+    <url>https://github.com/larksuite/oapi-sdk-java</url>
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/larksuite/oapi-sdk-java.git</connection>
+        <developerConnection>scm:git:ssh://github.com/larksuite/oapi-sdk-java.git
+        </developerConnection>
+        <url>https://github.com/larksuite/oapi-sdk-java/tree/v2_main</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <email>larkopen@larksuite.com</email>
+            <id>larkopen</id>
+            <name>larkopen</name>
+        </developer>
+    </developers>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -34,7 +55,7 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>3.22.2</version>
+            <version>3.25.5</version>
         </dependency>
     </dependencies>
 
@@ -50,6 +71,42 @@
                 <extensions>true</extensions>
                 <groupId>org.sonatype.plugins</groupId>
                 <version>1.6.12</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+                <version>3.8.1</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+                <version>2.6</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <version>2.12.4</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <version>3.2.0</version>
             </plugin>
             <plugin>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -68,7 +125,7 @@
                         <goals>
                             <goal>jar</goal>
                         </goals>
-                        <id>attach-javadoc</id>
+                        <id>attach-javadoc-pb</id>
                     </execution>
                 </executions>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -82,7 +139,7 @@
                         <goals>
                             <goal>jar</goal>
                         </goals>
-                        <id>attach-sources</id>
+                        <id>attach-sources-pb</id>
                     </execution>
                 </executions>
                 <version>3.0.1</version>
@@ -110,6 +167,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
+                <version>3.6.0</version>
                 <configuration>
                     <createDependencyReducedPom>true</createDependencyReducedPom>
                 </configuration>
